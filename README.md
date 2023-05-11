@@ -1,1 +1,3 @@
 This repository is an attempt to organize and make my Master's project available to my collaborators (in an organized way). It's still a work in progress, there is much to be organized before it can be effectively used, but once it does it would be great to only work in these codes through this repository. I'll not track test files, test scripts, data files and I'll also not track the codes I write when I'm learning a new module, library or code in general. I'll also not track bin directories, I'll leave compiling instructions in all src directories though.
+
+Ao iniciar o trabalho com esse repo, caso você esteja usando um sistema Linux, eu sugiro o uso do software tree para ver a directory tree desse repositório antes de começar a usar.
