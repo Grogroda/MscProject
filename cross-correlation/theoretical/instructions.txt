@@ -1,0 +1,24 @@
+The following compilation lines work on my Ubuntu desktop with GCC 11.3.0.
+
+- find_minimum.cc:
+
+g++ src/find_minimum.cc src/correlations.cc src/cosmology.cc src/survey.cc -o bin/minimize -Isrc/ -I/usr/local/include -L/usr/local/lib -lm -lgsl -lgslcblas
+
+or (when using openmp):
+
+g++ src/find_minimum.cc src/correlations.cc src/cosmology.cc src/survey.cc -o -fopenmp bin/minimize -Isrc/ -I/usr/local/include -L/usr/local/lib -lm -lgsl -lgslcblas
+
+- pk2ctg.cc: 
+
+Compilation: 
+
+g++ src/pk2ctg.cc src/correlations.cc src/cosmology.cc src/survey.cc -o bin/pk2ctg -fopenmp -Isrc/ -I/usr/local/include -L/usr/local/lib -lm -lgsl -lgslcblas
+
+Usage:
+
+./bin/pk2ctg -pk [input power spectrum (ascii)] -wl [Omega Lambda] -wm [Omega matter] -h [H0 in km/s/Mpc] -lmax [maximum multipole] -z0 [selection function z0] -beta [selection function beta] -lbda [selection function lambda] -bg [galaxy bias] -out [output C_tg file (ascii)] -mode [0->quad./1->MC] -ncalls [Number of MC calls by Vegas] -nthreads [Number of OpenMP threads]
+
+Suggestion: Always write the output file into the "ctg_files" directory.
+
+
+If parallelization was used the results will be out of order, the bash script process_funcs.sh can be used in a directory to correct the order of all Cl files in that directory. Warning: It will mess with every single file in the directory you choose, if you use it in files with a different format than that of the ctg files I don't know what can happen, so use it cautiously.

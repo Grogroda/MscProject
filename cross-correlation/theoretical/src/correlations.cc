@@ -1,0 +1,258 @@
+// Hubble reference parameter in km/s/Mpc (the actual value is a fraction of this value)
+#define H0 100.
+
+// speed of light in km/s
+#define CSPEED 3.e+5
+
+#define ZMAX 10.
+
+#include "correlations.h"
+
+using namespace std;
+
+
+void display_results (char *title, double result, double error)
+{
+  printf ("%s ==================\n", title);
+  printf ("result = % .6f\n", result);
+  printf ("sigma  = % .6f\n", error);
+}
+
+double ctg_integrand1(double x, void *p){
+
+ struct f_pars * params = (struct f_pars *)p;
+
+  double wL = params->OmegaL;
+  double wm = params->Omegam;
+  double z0 = params->z0;
+  double beta = params->beta;
+  double lbda = params->lbda;
+  int l     = params->l;
+  double h  = params->h;
+  
+  // x ---> log10 of wavekumber k in units of Mpc^-1
+  double k   = pow(10., x);
+  double wg = Wg(k, wL, wm, l, z0, beta, lbda, h);
+
+  //  double wt = Wt(k, wL, wm, l, h);
+  double wt = WtSpline(l, k);  
+  
+  return Delta2(k,h)*wt*wg;
+
+}
+
+
+double ctg_integrand2(double x, void *p){
+
+ struct f_pars * params = (struct f_pars *)p;
+
+  double wL = params->OmegaL;
+  double wm = params->Omegam;
+  double z0 = params->z0;
+  double beta = params->beta;
+  double lbda = params->lbda;
+  int l     = params->l;
+  double h  = params->h;
+  
+  double zval = x;
+
+  // turn redshift into comoving distance
+  double r = z2r(zval, wL, wm, h);
+  
+  double aval = 1./(1.+zval);
+  double Da1 = growth(1., wL, wm);
+
+  // Attention: this is valid only for LCDM
+  double f = pow(wm/pow(Hubble(aval, wL, wm),2)/aval/aval/aval, 0.6);
+  
+  if ((l+0.5)/r/h<1.e-4 || (l+0.5)/r/h>2.)
+    return 0.;
+
+  double ret = selection(z0, beta, lbda, zval)*pow(growth(aval, wL, wm)/Da1,2)*Hubble(aval, wL, wm)*(f-1.)*PowerSpectrum((l+0.5)/r/h);
+  
+  
+  return ret/h/h/h;
+
+}
+
+
+double ctg_integrand3(double *x, size_t dim, void *p){
+
+ struct f_pars * params = (struct f_pars *)p;
+
+  double wL = params->OmegaL;
+  double wm = params->Omegam;
+  double z0 = params->z0;
+  double beta = params->beta;
+  double lbda = params->lbda;
+  int l     = params->l;
+  double h  = params->h;
+  
+  // x ---> log10 of wavekumber k in units of Mpc^-1
+  double k    = pow(10., x[0]);
+  double z    = x[1];
+  double lnzp = x[2];  
+  //double wg = Wg(k, wL, wm, l, z0, beta, lbda, h);
+
+  //  double wt = Wt(k, wL, wm, l, h);
+  //double wt = WtSpline(l, k);  
+  
+  return Delta2(k,h)*wt_integrand_mc(k, lnzp, l, wL, wm, h)*wg_integrand_mc(k, z, l, wL, wm, h, z0, beta, lbda);
+
+}
+
+
+double ctg_quad(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg){
+
+  gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
+
+  struct f_pars params;
+
+  params.OmegaL = OmegaL;
+  params.Omegam = Omegam;
+  params.z0 = z0;
+  params.beta = beta;
+  params.lbda = lbda;
+  params.l = l;
+  params.h = h;
+
+  double result, error;
+  
+  gsl_function F;
+
+  if (l<=10){
+  
+    F.function = &ctg_integrand1;
+    F.params = &params;
+
+    double logkmin = log10(KOH_MIN*h);
+    double logkmax = log10(KOH_MAX*h);
+
+    gsl_integration_qag (&F, logkmin, logkmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+
+    result *= 4.*M_PI*log(10.)*bg;
+
+  }
+  else{ // if l>=10, we will use the Limber approximation for the spherical Bessel functions
+
+    F.function = &ctg_integrand2;
+    F.params = &params;
+    
+    double zmin = 0.0;
+    double zmax = ZMAX;
+    gsl_integration_qag (&F, zmin, zmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+    
+    result *= -3*bg*TCMB*Omegam*pow(H0*h/CSPEED,3)/pow(l+0.5,2);
+    
+  }
+
+  gsl_integration_workspace_free(w);  
+  
+  return result;  
+
+}
+
+
+
+
+double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int ncalls){
+
+  gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
+
+  struct f_pars params;
+
+  params.OmegaL = OmegaL;
+  params.Omegam = Omegam;
+  params.z0 = z0;
+  params.beta = beta;
+  params.lbda = lbda;
+  params.l = l;
+  params.h = h;
+
+  double result, error;
+
+  double logkmin = log10(KOH_MIN*h);
+  double logkmax = log10(KOH_MAX*h);
+  
+  double xl[3] = { logkmin, ZMIN, log(ZMIN)};
+  double xu[3] = { logkmax, ZMAX, log(ZL)  };
+
+  gsl_function F;
+
+  const gsl_rng_type *T;
+  gsl_rng *r;
+  
+  gsl_monte_function G = { &ctg_integrand3, 3, &params };
+
+  size_t calls = ncalls;
+
+  if (l<=10){
+
+    gsl_rng_env_setup ();
+
+    T = gsl_rng_default;
+    r = gsl_rng_alloc (T);
+
+
+    {
+      gsl_monte_vegas_state *s = gsl_monte_vegas_alloc (3);
+
+      gsl_monte_vegas_integrate (&G, xl, xu, 3, 10000, r, s, &result, &error);
+      
+      display_results ("vegas warm-up", result, error);
+
+      printf ("converging...\n");
+
+      do
+	{
+	  gsl_monte_vegas_integrate (&G, xl, xu, 3, calls/5, r, s, &result, &error);
+	  printf ("result = % .6f sigma = % .6f "
+		  "chisq/dof = %.1f\n", result, error, gsl_monte_vegas_chisq (s));
+	}
+      while (fabs (gsl_monte_vegas_chisq (s) - 1.0) > 0.5);
+      
+      display_results ("vegas final", result, error);
+
+      gsl_monte_vegas_free (s);
+    }
+
+    gsl_rng_free (r);
+   
+
+    result *= 4.*M_PI*log(10.)*bg;
+
+  }
+  else{ // if l>=10, we will use the Limber approximation for the spherical Bessel functions
+
+    F.function = &ctg_integrand2;
+    F.params = &params;
+    
+    double zmin = 0.0;
+    double zmax = ZMAX;
+    gsl_integration_qag (&F, zmin, zmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+    
+    result *= -3*bg*TCMB*Omegam*pow(H0*h/CSPEED,3)/pow(l+0.5,2);
+    
+  }
+
+  gsl_integration_workspace_free(w);  
+  
+  return result;  
+
+}
+
+
+double ctg(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls){
+
+  double ret;
+  
+  if (mode == 0){
+    ret = ctg_quad(OmegaL, Omegam, l, z0, beta, lbda, h, bg);
+    }
+  else{
+    ret = ctg_mc(OmegaL, Omegam, l, z0, beta, lbda, h, bg, ncalls);
+    }
+
+  return ret;
+
+}
