@@ -259,10 +259,13 @@ int main(void){
   pars.bg         = 1.0;
   pars.mode       = 1;
   pars.ncalls     = 1000000;
-  pars.pkname     = "Cl_Pk/pk_3dmatter.dat"; //Generalizar depois
-  pars.gauss_name = "/home/arthur/Documentos/Mestrado/Cross-Correlation/Select_Func/new_hists/gauss_fits.txt"; //Generalizar depois
+  pars.pkname     = "tables/pk_3dmatter.dat"; //Generalizar depois
+  pars.gauss_name = "tables/hists/gauss_fits.txt"; //Generalizar depois
   
-  string fname2mass = "2MASS/band1_bg1.37.dat"; //Generalizar depois
+  string fname2mass = "tables/2MASS/band1_bg1.37.dat"; //Generalizar depois
+  
+  //The paths here are relative to the main directory cross-correlation
+  //I'll work on providing a user option in the future
   
   vector<double> ctg2massvec = read_2MASS(fname2mass);
   
