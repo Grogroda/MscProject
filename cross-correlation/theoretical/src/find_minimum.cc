@@ -339,8 +339,8 @@ int main(void){
                 << scientific << gsl_vector_get(s->x, 0) << " "
                 << scientific << gsl_vector_get(s->x, 1) << " "
                 << scientific << gsl_vector_get(s->x, 2) << " "
-                << std::fixed << std::setprecision(3) << "f() = " << s->fval << " "
-                << setprecision(3) << "size = " << size << endl;
+                << std::fixed << std::setprecision(6) << "f() = " << s->fval << " "
+                << setprecision(6) << "size = " << size << endl;
     }
   while (status == GSL_CONTINUE && iter < 150);
   
