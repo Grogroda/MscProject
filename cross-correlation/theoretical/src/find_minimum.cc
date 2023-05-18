@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 
 #include "correlations.h"
 
@@ -313,6 +314,8 @@ int main(void){
   */
   
   cerr << "About to start loop." << endl; 
+  
+  ofstream output("min_outs/minimizer_output.txt");
 
   do
     {
@@ -328,17 +331,20 @@ int main(void){
 
       if (status == GSL_SUCCESS)
         {
-          printf ("converged to minimum at\n");
+          output << "converged to minimum at" << endl;
         }
 
-      printf ("%5d %10.3e %10.3e %10.3e f() = %7.3f size = %.3f\n",
-              iter,
-              gsl_vector_get (s->x, 0),
-              gsl_vector_get (s->x, 1),
-              gsl_vector_get (s->x, 2),
-              s->fval, size);
+//The following lines should output a table of values to an output file:
+        output  << iter << " "
+                << scientific << gsl_vector_get(s->x, 0) << " "
+                << scientific << gsl_vector_get(s->x, 1) << " "
+                << scientific << gsl_vector_get(s->x, 2) << " "
+                << std::fixed << std::setprecision(3) << "f() = " << s->fval << " "
+                << setprecision(3) << "size = " << size << endl;
     }
-  while (status == GSL_CONTINUE && iter < 100);
+  while (status == GSL_CONTINUE && iter < 150);
+  
+  output.close();
 
   gsl_vector_free(x);
   gsl_vector_free(ss);
