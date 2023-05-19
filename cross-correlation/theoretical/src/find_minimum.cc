@@ -284,8 +284,8 @@ int main(void){
   // Starting point
 
   x = gsl_vector_alloc(3);
-  gsl_vector_set(x, 0, 1.0);
-  gsl_vector_set(x, 1, 0.05);
+  gsl_vector_set(x, 0, 2.5);
+  gsl_vector_set(x, 1, 0.13);
   gsl_vector_set(x, 2, 5.0);
   
   // Set initial step sizes to 1 
