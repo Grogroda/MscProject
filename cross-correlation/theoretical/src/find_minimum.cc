@@ -51,7 +51,7 @@ double gauss(double x, double mu, double var){
 	*/
 
 	double N = 1/(var*sqrt(2*M_PI));
-	double expo = exp(pow((x-mu),2)/(2*var));
+	double expo = exp(-pow((x-mu),2)/(2*var));
 
 	return N*expo;	
 }
@@ -142,6 +142,9 @@ double calc_logP(vector<double> Ctg, gaussians G){
 
 double P_relative(double beta, double z0, double lbda, double OmegaL, double Omegam, double h, double bg, int mode, int ncalls, string pkfname, gaussians Gs, vector<double> ctg2mass){
 	
+	cerr << "beta=" << beta << " & z0=" << z0 << " & lbda=" << lbda << endl;
+	//output point to screen
+
 	InitSpline(pkfname);
 	
 	vector<double> CTG;
@@ -161,7 +164,7 @@ double P_relative(double beta, double z0, double lbda, double OmegaL, double Ome
 		CTG.push_back(ctgval);
 		//}
 
-		cerr << l << " " << ctgval << endl; // write cross-correlation to screen
+		//cerr << l << " " << ctgval << endl; // write cross-correlation to screen
 		//output << l << " " << ctgval << endl; // write cross-correlation to output file
 	}
 
@@ -172,7 +175,7 @@ double P_relative(double beta, double z0, double lbda, double OmegaL, double Ome
 		double ctgval = ctg(OmegaL, Omegam, l, z0, beta, lbda, h, bg, mode, ncalls);
 		CTG.push_back(ctgval);
 
-		cerr << l << " " << ctgval << endl; // write cross-correlation to screen
+		//cerr << l << " " << ctgval << endl; // write cross-correlation to screen
 		//output << l << " " << ctgval << endl; // write cross-correlation to output file
 	}
 	
@@ -284,16 +287,16 @@ int main(void){
   // Starting point
 
   x = gsl_vector_alloc(3);
-  gsl_vector_set(x, 0, 2.5);
-  gsl_vector_set(x, 1, 0.13);
+  gsl_vector_set(x, 0, 3.0);
+  gsl_vector_set(x, 1, 0.05);
   gsl_vector_set(x, 2, 5.0);
   
   // Set initial step sizes to 1 
 
   ss = gsl_vector_alloc(3);
-  gsl_vector_set(ss, 0, 0.1);
-  gsl_vector_set(ss, 1, 0.01);
-  gsl_vector_set(ss, 2, 0.2);
+  gsl_vector_set(ss, 0, 0.2);
+  gsl_vector_set(ss, 1, 0.05);
+  gsl_vector_set(ss, 2, 0.4);
 
   // Initialize method and iterate 
   minex_func.n = 3;
