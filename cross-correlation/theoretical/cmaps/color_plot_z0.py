@@ -12,10 +12,10 @@ def gauss(x,mean,var): #returns f(x) where f is a normalized gaussian distributi
 
 ls=[i for i in range(129)]
 
-lbdamin, lbdamax, dlbda=0.8, 8.0, 0.2
+lbdamin, lbdamax, dlbda=3.54, 6.34, 0.2
 Nlbda=round((lbdamax-lbdamin)/dlbda)
 
-betamin, betamax, dbeta=0.6, 3.8, 0.1
+betamin, betamax, dbeta=2.39, 3.79, 0.1
 Nbeta=round((betamax-betamin)/dbeta)
 
 betas, lbdas=[betamin+dbeta*i for i in range(Nbeta)],[lbdamin+dlbda*i for i in range(Nlbda)]
@@ -28,7 +28,7 @@ for lbda in lbdas: #lbda vai ser o eixo Y da matriz de cores
     sublist=[] #cria uma nova linha para a matriz de cores
     for beta in betas: #z0 vai ser o eixo X da matriz de cores
     	logP=0
-    	Cls=pd.read_csv('../ctg_files/funcs_z0_{0:.2f}/beta_{1:.1f}.lbda_{2:.1f}.dat'.format(z0,beta, lbda), sep=' ', header=None, names=['l', 'Cltg'])
+    	Cls=pd.read_csv('../ctg_files/z0_minimum_{0:.3f}/beta_{1:.2f}.lbda_{2:.2f}.dat'.format(z0,beta, lbda), sep=' ', header=None, names=['l', 'Cltg'])
         #print(Cls.to_string())
         
     	if len(Cls['Cltg'])==129:
@@ -73,13 +73,13 @@ for i in range(len(lbdas)):
 print('Error Points:', error_points)
 print('Minimum Cell (lbda,beta)=({0},{1})'.format(minimum[0], minimum[1]))
 
-tb.tab_export(betas, lbdas, Ps, 'map_files/cmap_z0_{0:.2f}.txt'.format(z0))
+tb.tab_export(betas, lbdas, Ps, 'map_files/cmap_z0_{0:.3f}.txt'.format(z0))
 
 plt.figure()
 plt.title(r'Color map of $P=\prod_{\ell=2}^{128} f(C_\ell^{tg})$, where $z_0=$'+str(z0))
 plt.xlabel(r'$\beta$')
 plt.ylabel(r'$\lambda$')
-plt.pcolormesh(betas, lbdas, Ps, shading='nearest', vmin=0.97, vmax=1.04, cmap='RdYlBu_r')
+plt.pcolormesh(betas, lbdas, Ps, shading='nearest', vmin=0.968, vmax=1, cmap='RdYlBu_r')
 plt.colorbar(label=r'$P/P_1$')
 plt.scatter([point[0] for point in error_points], [point[1] for point in error_points], c='black', marker='x')
-plt.savefig('plots/z0_{0:.2f}.png'.format(z0))
+plt.savefig('plots/z0_{0:.3f}.png'.format(z0))

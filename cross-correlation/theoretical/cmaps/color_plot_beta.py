@@ -10,10 +10,10 @@ def gauss(x,mean,var): #returns f(x) where f is a normalized gaussian distributi
 
 	return 1/(np.sqrt(2*np.pi*var))*np.exp(-(x-mean)**2/(2*var))
 
-z0min, z0max, dz0=0.01, 0.22, 0.01
+z0min, z0max, dz0=0.081, 0.221, 0.01
 Nz0=round((z0max-z0min)/dz0)+1
 
-lbdamin, lbdamax, dlbda=0.8, 8.0, 0.2
+lbdamin, lbdamax, dlbda=3.54, 6.34, 0.2
 Nlbda=round((lbdamax-lbdamin)/dlbda)+1
  
 ls=[i for i in range(129)]
@@ -26,25 +26,25 @@ error_points=[]
 for lbda in lbdas: #lbda vai ser o eixo Y da matriz de cores
     sublist=[] #cria uma nova linha para a matriz de cores
     for z0 in z0s: #z0 vai ser o eixo X da matriz de cores
-    	logP=0
-    	Cls=pd.read_csv('../ctg_files/funcs_beta_{0:.1f}/z0_{1:.2f}.lbda_{2:.1f}.dat'.format(beta,z0, lbda), sep=' ', header=None, names=['l', 'Cltg'])
+        logP=0
+        Cls=pd.read_csv('../ctg_files/beta_minimum_{0:.2f}/z0_{1:.3f}.lbda_{2:.2f}.dat'.format(beta,z0, lbda), sep=' ', header=None, names=['l', 'Cltg'])
     	#print(Cls.to_string())
     	#print(len(Cls['Cltg']))
 
-    	if len(Cls['Cltg'])==129:
+        if len(Cls['Cltg'])==129:
             for l in ls[2:]:
                 #print(l)
                 Ctg=Cls['Cltg'][l]
                 logp=np.log(gauss(Ctg, pdfs['mean'][l], pdfs['variance'][l]))
                 logP=logP+logp
             
-    	else:
-    	    print("Error in (z0,beta)=({0},{1})".format(z0,beta))
-    	    print('len(l)=', len(Cls['l']))
+        else:
+            print("Error in (z0,beta)=({0},{1})".format(z0,beta))
+            print('len(l)=', len(Cls['l']))
             logP=1
             error_points.append((z0,lbda))
 
-    	sublist.append(logP) #vai preenchendo as colunas da matriz de cores
+        sublist.append(logP) #vai preenchendo as colunas da matriz de cores
 
     logPs.append(sublist)
 
@@ -77,14 +77,14 @@ for i in range(len(lbdas)):
 print('Error Points:', error_points)
 print('Minimum Cell (z0,lbda)=({0},{1})'.format(minimum[0], minimum[1]))
 
-tb.tab_export(z0s, lbdas, Ps, 'map_files/cmap_beta_{0:.1f}.txt'.format(beta))
+tb.tab_export(z0s, lbdas, Ps, 'map_files/cmap_beta_{0:.2f}.txt'.format(beta))
 
 plt.figure()
 plt.title(r'Color map of $P=\prod_{\ell=2}^{128} f(C_\ell^{tg})$, where $\beta=$'+str(beta))
 plt.xlabel(r'$z_0$')
 plt.ylabel(r'$\lambda$')
-plt.pcolormesh(z0s, lbdas, Ps, shading='nearest', vmin=0.97, vmax=1.04, cmap='RdYlBu_r')
+plt.pcolormesh(z0s, lbdas, Ps, shading='nearest', vmin=0.968, vmax=1, cmap='RdYlBu_r')
 plt.colorbar(label=r'$P/P_1$')
 plt.scatter([point[0] for point in error_points], [point[1] for point in error_points], c='black', marker='x')
-plt.savefig('plots/beta{0:.1f}.png'.format(beta))
+plt.savefig('plots/beta{0:.2f}.png'.format(beta))
 
