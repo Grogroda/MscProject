@@ -3,3 +3,5 @@ __pycache__
 beta_*.dat
 lbda_*.dat
 z0_*.dat
+*/plots/*
+*/map_files/*
