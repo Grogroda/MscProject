@@ -6,3 +6,5 @@ z0_*.dat
 plots
 map_files
 *.png
+*.swp
+mcmc_outputs

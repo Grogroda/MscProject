@@ -1,1 +1,3 @@
-Prepping for instructions
+mcmc_outputs: This directory contains all the output from all the MCMC runs made using the powertools software, each run will have it's own subdirectory, I'll leave one example here for the lag analysis, the rest of the data will be excluded by the .gitignore.
+
+mcmc_analysis: This directory contains codes and results referring to the analysis of mcmc samples from the powertools software, one example of code included here is the lag_analysis.py script, which estimates an adequate value for the lag by analysing the autocorrelation between the samples.
