@@ -52,7 +52,7 @@ def save_plot(ls, ac, ell, which):
 
 def main():
     sample_file=input('Sample file (with path if necessary): ')
-    samples=pd.read_csv(sample_file, sep=' ', header=None, index_col=False, names=['Sample #', 'l', 'Ctt', 'Ctg', 'Cgt', 'Cgg']) #Not sure if this is the correct order
+    samples=pd.read_csv(sample_file, sep=' ', header=None, index_col=False, names=['Sample #', 'l', 'Ctt', 'Ctg', 'Cgg']) #Not sure if this is the correct order
     lmax=int(input("Max. value of lag: "))
 
     ell_list=[2,3,4,10,20,30,40,50]
