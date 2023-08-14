@@ -55,7 +55,7 @@ def main():
     samples=pd.read_csv(sample_file, sep=' ', header=None, index_col=False, names=['Sample #', 'l', 'Ctt', 'Ctg', 'Cgg']) #Not sure if this is the correct order
     lmax=int(input("Max. value of lag: "))
 
-    ell_list=[2,3,4,10,20,30,40,50]
+    ell_list=[2,3,4,10,20,40,42,44,46,48,50]
     for ell in ell_list:
         Ctt, Cgg, Ctg=create_sample(samples, "Ctt", ell), create_sample(samples, "Cgg", ell), create_sample(samples, "Ctg", ell)    
         ac_tt, ac_gg, ac_tg=[],[],[]
