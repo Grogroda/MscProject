@@ -1,0 +1,9 @@
+# Compiling the object files:
+
+g++ -c src/cosmology.cc -o src/cosmology.o -Isrc/ -I/usr/local/include -fPIC
+g++ -c src/survey.cc -o src/survey.o -Isrc/ -I/usr/local/include -fPIC
+g++ -c src/correlations.cc -o src/correlations.o -Isrc/ -I/usr/local/include -fPIC 
+
+# Creating library:
+
+g++ -shared -o libcorrelations.so correlations.o cosmology.o survey.o -L/usr/local/lib -lm -lgsl -lgslcblas
