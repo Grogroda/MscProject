@@ -28,6 +28,7 @@
 
 using namespace std;
 
+extern "C"{
 void display_results (char *title, double result, double error);
 
 double ctg_integrand1(double x, void *p);
@@ -40,6 +41,9 @@ double ctg_quad(double OmegaL, double Omegam, int l, double z0, double beta, dou
 
 double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int ncalls);
 
+double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, char* bstring);
+
 double ctg(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls);
+}
 
 #endif

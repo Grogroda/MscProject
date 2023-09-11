@@ -48,7 +48,8 @@ struct f_pars {
   int l;
 };
 
-
+//Beginning
+extern "C"{
 double Hubble(double a, double OmegaL, double Omegam);
 
 double dHda(double a, double OmegaL, double Omegam);
@@ -101,5 +102,7 @@ void DestroyBesselSpline();
 double WtSpline(int l, double x);
 void InitWtSpline(int l, double OmegaL, double Omegam, double h);
 void DestroyWtSpline();
+}
+//End
 
 #endif

@@ -15,10 +15,14 @@
 
 using namespace std;
 
+extern "C"{
 double selection(double z0, double beta, double lbda, double z);
+
 int ReadRedshiftSelection(string fname);
+
 void InitSelectionFunctionSpline(int band);
 void DestroySelectionSpline();
 double selection2mpz(int band, double z);
+}
 
 #endif

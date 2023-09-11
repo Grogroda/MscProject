@@ -355,9 +355,8 @@ int ReadInputSpectrum(string fname){
 
   input.getline(line, 2048);
   while (line[0]== '#') input.getline(line, 2048);
-  
-  while (!input.eof()){
 
+  while (!input.eof()){
  
     sscanf(line,"%lf %lf\n",&koh,&pk);
     kvec.push_back(koh);
@@ -366,7 +365,7 @@ int ReadInputSpectrum(string fname){
     if (input.eof())
       break;
   }
-  
+
   int nks = pvec.size();
   cerr << nks << " values of k read."<< endl;
   
@@ -398,10 +397,10 @@ void InitSpline(string fname){
   
 }
 
-
 // units = h^-3 Mpc^3
 double PowerSpectrum(double koh){
 
+    //cerr << "PSepec "<< gsl_spline_eval (spline, log10(koh), acc) << endl;
   return gsl_spline_eval (spline, log10(koh), acc);
   
 }
@@ -410,11 +409,14 @@ double PowerSpectrum(double koh){
 // adimensional
 double Delta2(double k, double h){
 
+  //cerr << "Delta2 " << PowerSpectrum(k/h) << endl;
   return 0.5*pow(k/h,3)*PowerSpectrum(k/h)/M_PI/M_PI;
   
 }
 
 void DestroySpline(){
+
+  //cerr << "Spline destroyed" << endl;
 
   if (spline != NULL)
     gsl_spline_free (spline);

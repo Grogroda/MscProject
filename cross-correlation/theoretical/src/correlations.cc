@@ -7,6 +7,7 @@
 #define ZMAX 10.
 
 #include "correlations.h"
+#include <string>
 
 using namespace std;
 
@@ -96,7 +97,9 @@ double ctg_integrand3(double *x, size_t dim, void *p){
 
   //  double wt = Wt(k, wL, wm, l, h);
   //double wt = WtSpline(l, k);  
-  
+
+  //cerr << "integ3" << " " << Delta2(k,h) << " " << wt_integrand_mc(k, lnzp, l, wL, wm, h) << " " << wg_integrand_mc(k, z, l, wL, wm, h, z0, beta, lbda) << endl;
+
   return Delta2(k,h)*wt_integrand_mc(k, lnzp, l, wL, wm, h)*wg_integrand_mc(k, z, l, wL, wm, h, z0, beta, lbda);
 
 }
@@ -153,8 +156,6 @@ double ctg_quad(double OmegaL, double Omegam, int l, double z0, double beta, dou
 }
 
 
-
-
 double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int ncalls){
 
   gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
@@ -193,12 +194,11 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
     T = gsl_rng_default;
     r = gsl_rng_alloc (T);
 
-
     {
       gsl_monte_vegas_state *s = gsl_monte_vegas_alloc (3);
 
-      gsl_monte_vegas_integrate (&G, xl, xu, 3, 10000, r, s, &result, &error);
-      
+      gsl_monte_vegas_integrate (&G, xl, xu, 3, 1000, r, s, &result, &error);
+
       display_results ("vegas warm-up", result, error);
 
       printf ("converging...\n");
@@ -239,6 +239,15 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
   
   return result;  
 
+}
+
+double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, char* bstring){
+	
+	string fname(bstring);
+	InitSpline(fname);
+
+	double ctgl=ctg(OmegaL, Omegam, l, z0, beta, lbda, h, bg, mode, ncalls);
+	return ctgl;
 }
 
 
