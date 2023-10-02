@@ -8,4 +8,4 @@ map_files
 *.png
 *.swp
 mcmc_outputs
-histogram*
+cross-correlation/theoretical/tables/hists/histogram*.txt
