@@ -7,5 +7,5 @@ plots
 map_files
 *.png
 *.swp
-mcmc_outputs
+lag_analysis
 cross-correlation/theoretical/tables/hists/histogram*.txt
