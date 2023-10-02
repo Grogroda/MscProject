@@ -6,7 +6,7 @@ In this repository I'll attempt to organize and make my Master's project availab
 
 I'll not track test files, test scripts, some data files and I'll also not track the codes I write when I'm learning a new module, library or code in general. I'll also not track bin directories. All directory paths will be relative paths because I'm assuming everyone who gets access to these codes will maintain this repo's structure, which makes everything simpler. In case you need to transfer some of this to a cluster for instance, or if you just downloaded a few of the codes, it's likely you will need to adapt the code to account for this. 
 
-For Linux users, I recommend using the "tree" software to take a look at the directory tree of this repo before working on it, I especially recommend using the command "tree -I histogram*" to avoid an immense list of files in the "histograms" subdirectory. Compilation and running instructions are available in every main directory of the repo, all of them taking into account I use Ubuntu 22.04 as my OS with GCC 11.3.0.  
+For Linux users, I recommend using the "tree" software to take a look at the directory tree of this repo before working on it. Compilation and running instructions are available in every main directory of the repo, all of them taking into account I use Ubuntu 22.04 as my OS with GCC 11.3.0.  
 
 ## About the main directories
 
