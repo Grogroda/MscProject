@@ -8,3 +8,4 @@ map_files
 *.png
 *.swp
 mcmc_outputs
+histogram*
