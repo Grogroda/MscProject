@@ -9,3 +9,5 @@ map_files
 *.swp
 lag_analysis
 cross-correlation/theoretical/tables/hists/histogram*.txt
+*.fits
+*.tgz
