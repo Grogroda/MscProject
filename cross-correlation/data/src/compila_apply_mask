@@ -1,0 +1,5 @@
+gcc -o bin/apply_mask -I$HEALPIX/include -L$HEALPIX/lib -lcfitsio -lchealpix -lhealpix_cxx -lhealpix  src/apply_mask.c 
+
+No meu sistema:
+
+gcc -o bin/apply_mask -I$HEALPIX/include -L$HEALPIX/lib -L/home/arthur/cfitsio-4.1.0/lib -lcfitsio -lchealpix -lhealpix_cxx -lhealpix src/apply_mask.c
