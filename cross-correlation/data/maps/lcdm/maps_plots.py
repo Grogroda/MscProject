@@ -12,9 +12,9 @@ xsc_pattern="contrast_xsc_nside32_5deg_n0p05_"
 
 for i in range(4):
     mpz_nmaski=hp.read_map("{0}nomask_band{1}.fits".format(mpz_pattern, i+1))    
-    mpz_wmaski=hp.read_map("{0}wmask_band{1}.fits".format(mpz_pattern, i+1))
+    mpz_wmaski=hp.read_map("{0}wmask2_band{1}.fits".format(mpz_pattern, i+1))
     xsc_nmaski=hp.read_map("{0}nomask_band{1}.fits".format(xsc_pattern, i+1))
-    xsc_wmaski=hp.read_map("{0}wmask_band{1}.fits".format(xsc_pattern, i+1))
+    xsc_wmaski=hp.read_map("{0}wmask2_band{1}.fits".format(xsc_pattern, i+1))
 
     mpz_nomask.append(mpz_nmaski)
     mpz_wmask.append(mpz_wmaski)
