@@ -36,9 +36,9 @@ if __name__=='__main__':
             'params':{
                 #Fixed first
                 'lmax':32,
-                #'surv_z0':0.15,
-                #'surv_beta':3.1,
-                #'surv_lbda':4.9,
+                'surv_z0':0.15,
+                'surv_beta':3.1,
+                'surv_lbda':4.9,
                 'bg':1,
                 #'fname':pkfname,
                 'ombh2':0.02237,
