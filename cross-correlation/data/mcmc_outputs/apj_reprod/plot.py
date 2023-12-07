@@ -40,34 +40,40 @@ for i in range(len(best_fit["#"])):
 
 ######## Begin figures ########
 
+#Ideia: Criar uma opção que o usuário pode pegar 3 figuras separadas ou uma figura junta
+fig, axes=plt.subplots(1,3, figsize=(20,5))
+'''
 fig_tt, axtt=plt.subplots()
 fig_gg, axgg=plt.subplots()
 fig_tg, axtg=plt.subplots()
 
 axes=[axtt, axgg, axtg]
+'''
 
 lmin, lfinal=2, 50 #samples lists start at l=lmin. Starting from l=lmax, the values are fixed, not sampled.
 final_ind=lfinal-lmin #index of the last sampled value of the list
 lmax=96 #lmax for theoretical data
 
-axtt.plot(ls, ctt_theo['Cl'][2:lmax+1], label='CAMB')
-axtt.scatter(ls[:final_ind], ctt[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
-axtt.set_ylabel(r'$\ell(\ell+1)C_l^{tt}/2\pi$', fontsize=14)
+axes[0].plot(ls, ctt_theo['Cl'][2:lmax+1], label='CAMB')
+axes[0].scatter(ls[:final_ind], ctt[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
+axes[0].set_ylabel(r'$\ell(\ell+1)C_l^{tt}/2\pi$', fontsize=14)
 
-axgg.plot(ls, cgg_theo['Cl'][2:], label='CAMB')
-axgg.scatter(ls[:final_ind], cgg[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
-axgg.set_ylabel(r'$C_l^{gg}$', fontsize=14)
-axgg.set_yscale('log')
+axes[1].plot(ls, cgg_theo['Cl'][2:], label='CAMB')
+axes[1].scatter(ls[:final_ind], cgg[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
+axes[1].set_ylabel(r'$C_l^{gg}$', fontsize=14)
+axes[1].set_yscale('log')
 
-axtg.plot(ls, ctg_theo['Cl'][2:], label='CAMB')
-axtg.scatter(ls[:final_ind], ctg[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
-axtg.set_xlabel(r'$C_l^{tg}$', fontsize=14)
+axes[2].plot(ls, ctg_theo['Cl'][2:], label='CAMB')
+axes[2].scatter(ls[:final_ind], ctg[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
+axes[2].set_ylabel(r'$C_l^{tg}$', fontsize=14)
 
 for ax in axes:
     ax.set_xlabel(r'$\ell$', fontsize=17)
     ax.set_xscale('log')
     ax.legend(fontsize=14)
 
-fig_tt.savefig('cltt.png')
+fig.savefig('cl_triple.png', bbox_inches='tight')
+'''
 fig_gg.savefig('clgg.png')
 fig_tg.savefig('cltg.png')
+'''
