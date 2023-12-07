@@ -11,3 +11,4 @@ lag_analysis
 cross-correlation/theoretical/tables/hists/histogram*.txt
 *.fits
 *.tgz
+log_files

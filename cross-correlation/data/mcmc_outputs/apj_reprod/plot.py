@@ -52,21 +52,21 @@ lmax=96 #lmax for theoretical data
 
 axtt.plot(ls, ctt_theo['Cl'][2:lmax+1], label='CAMB')
 axtt.scatter(ls[:final_ind], ctt[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
-axtt.set_ylabel(r'$\ell(\ell+1)C_l^{tt}/2\pi$')
+axtt.set_ylabel(r'$\ell(\ell+1)C_l^{tt}/2\pi$', fontsize=14)
 
 axgg.plot(ls, cgg_theo['Cl'][2:], label='CAMB')
 axgg.scatter(ls[:final_ind], cgg[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
-axgg.set_ylabel(r'$C_l^{gg}$')
+axgg.set_ylabel(r'$C_l^{gg}$', fontsize=14)
 axgg.set_yscale('log')
 
 axtg.plot(ls, ctg_theo['Cl'][2:], label='CAMB')
 axtg.scatter(ls[:final_ind], ctg[:final_ind], s=5, label='Best-fit of samples', c='tab:orange')
-axtg.set_xlabel(r'$C_l^{tg}$')
+axtg.set_xlabel(r'$C_l^{tg}$', fontsize=14)
 
 for ax in axes:
-    ax.set_xlabel(r'$\ell$')
+    ax.set_xlabel(r'$\ell$', fontsize=17)
     ax.set_xscale('log')
-    ax.legend()
+    ax.legend(fontsize=14)
 
 fig_tt.savefig('cltt.png')
 fig_gg.savefig('clgg.png')
