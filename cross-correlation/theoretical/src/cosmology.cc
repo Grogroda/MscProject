@@ -367,17 +367,18 @@ int ReadInputSpectrum(string fname){
   }
 
   int nks = pvec.size();
-  cerr << nks << " values of k read."<< endl;
+  // Comenting out this screen output
+  // cerr << nks << " values of k read."<< endl;
   
   int i;
   x = (double *) malloc(nks*sizeof(double));
   y = (double *) malloc(nks*sizeof(double));
 
-  cerr << "log10(k [h Mpc^-1])    P(k) [h^-3 Mpc^3]" << endl;
+  //cerr << "log10(k [h Mpc^-1])    P(k) [h^-3 Mpc^3]" << endl;
   for (i = 0; i < nks; i++){
-    x[i] = log10(kvec[i]);
-    y[i] = pvec[i];
-    printf ("%15.6e       %15.6e\n", x[i], y[i]);
+   x[i] = log10(kvec[i]);
+   y[i] = pvec[i];
+   // printf ("%15.6e       %15.6e\n", x[i], y[i]);
   }
 
   input.close();

@@ -13,10 +13,11 @@ using namespace std;
 
 
 void display_results (char *title, double result, double error)
+//Comenting out the screen output
 {
-  printf ("%s ==================\n", title);
-  printf ("result = % .6f\n", result);
-  printf ("sigma  = % .6f\n", error);
+  //  printf ("%s ==================\n", title);
+  //printf ("result = % .6f\n", result);
+  //printf ("sigma  = % .6f\n", error);
 }
 
 double ctg_integrand1(double x, void *p){
@@ -201,13 +202,15 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
 
       display_results ("vegas warm-up", result, error);
 
-      printf ("converging...\n");
+      //Comenting out screen output
+
+      //      printf ("converging...\n");
 
       do
 	{
 	  gsl_monte_vegas_integrate (&G, xl, xu, 3, calls/5, r, s, &result, &error);
-	  printf ("result = % .6f sigma = % .6f "
-		  "chisq/dof = %.1f\n", result, error, gsl_monte_vegas_chisq (s));
+	  //printf ("result = % .6f sigma = % .6f "
+	  //	  "chisq/dof = %.1f\n", result, error, gsl_monte_vegas_chisq (s));
 	}
       while (fabs (gsl_monte_vegas_chisq (s) - 1.0) > 0.5);
       

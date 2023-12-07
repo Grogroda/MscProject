@@ -36,34 +36,28 @@ if __name__=='__main__':
             'params':{
                 #Fixed first
                 'lmax':32,
-                'surv_z0':0.15,
-                'surv_beta':3.1,
-                'surv_lbda':4.9,
+                #'surv_z0':0.15,
+                #'surv_beta':3.1,
+                #'surv_lbda':4.9,
                 'bg':1,
                 #'fname':pkfname,
                 'ombh2':0.02237,
                 'omch2':0.12,
                 #Now sampled
-                'H0':{'ref':70.0, 'prior':{'min':60.0, 'max':80.0}},
+                'H0':{'ref':70.0, 'prior':{'min':30.0, 'max':100.0}},
                 'omega_de':{'ref':0.69, 'prior':{'min':0.0, 'max':1.0}}
                 },
             'likelihood':{
-                'my_like':{'external':correlation_like, 'requires':{'ctg':None}}},
+                'my_like':{'external':correlation_like, 'requires':{'ctg':None}},
+                'planck_2018_lowl.TT': None},
             'theory':{
-                'correlations_theory.ctg':None}}
-             
-        #Original
-#            'likelihood':{
-#                'my_like':{'external':correlation_like, 'requires':{'ctg':None}},
-#                'planck_2018_lowl.TT': None},
-#            'theory':{
- #               'correlations_theory.ctg':None,
-  #              'camb': {'extra_args': {'bbn_predictor': 'PArthENoPE_880.2_standard.dat',
-   #                 'halofit_version': 'mead',
-    #                'lens_potential_accuracy': 1,
-     #               'nnu': 3.044,
-      #              'num_massive_neutrinos': 1,
-       #             'theta_H0_range': [20, 100]}}}}
+                'correlations_theory.ctg':None,
+                'camb': {'extra_args': {'bbn_predictor': 'PArthENoPE_880.2_standard.dat',
+                    'halofit_version': 'mead',
+                    'lens_potential_accuracy': 1,
+                    'nnu': 3.044,
+                    'num_massive_neutrinos': 1,
+                    'theta_H0_range': [20, 100]}}}}
 
     from cobaya.model import get_model
     model=get_model(info)
