@@ -30,19 +30,14 @@ def ctg4py(OmegaM):
 
     return ctg
     
-#ctg4py(0.3)
-
-    
-
-
-
-
 
 #Still need to implement Cgg?
 
-
-
 ###Testing
+
+if __name__=='__main__':
+    print('ctg(0.3)=',ctg4py(0.3))
+
 """
 if __name__=='__main__':
     #Testing area:
