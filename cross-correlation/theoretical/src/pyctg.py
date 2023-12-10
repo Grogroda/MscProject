@@ -20,7 +20,7 @@ def ctg4py(OmegaM):
     h = 0.67
     bg = 1.0
     mode = 1
-    ncalls = 1000
+    ncalls = 10000
     pkfname = "../tables/pk_3dmatter.dat"
     fname   = c_char_p(pkfname.encode("ascii"))
     ctg = []

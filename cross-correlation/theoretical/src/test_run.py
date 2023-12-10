@@ -65,4 +65,4 @@ if __name__=='__main__':
     gdplot = gdplt.get_subplot_plotter(width_inch=5)
     gdplot.triangle_plot(gdsamples, ['OmegaM'], filled=True)
 #    gdplot = gdplt.get_subplot(width_inch=5)
-    plt.savefig("my_samples.png")
+    plt.savefig("my_samples_nMC1e4_lmax20.png")

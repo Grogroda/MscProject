@@ -44,8 +44,8 @@ def save_plot(ls, ac, ell, which):
     plt.figure()
     plt.plot(ls, ac)
     plt.title(r"Autocorrelation for {0} at $\ell={1}$".format(which, ell))
-    plt.xlabel("l")
-    plt.ylabel("Autocorrelation")
+    plt.xlabel("k", fontsize=16)
+    plt.ylabel("AC(k)", fontsiz=16)
     plt.savefig("ac_"+which+"_ell{}.png".format(ell))
     plt.close()
 
