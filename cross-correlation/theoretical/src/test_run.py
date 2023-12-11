@@ -3,6 +3,7 @@ import numpy as np
 import random
 from pyctg import ctg4py
 import ctypes
+import matplotlib.pyplot as plt
 
 #OmegaL, Omegam, h = 0.7, 0.3, 0.67
 #bg, mode, ncalls, lmax = 1.0, 1, 100000, 32 
@@ -17,6 +18,11 @@ import ctypes
 OmegaM_fid = 0.3
 cl_data  = ctg4py(OmegaM_fid)
 cl_sigmas= [i*0.1 for i in cl_data]
+
+#cl_2nd = ctg4py(0.42)
+ls=[i for i in range(len(cl_data))]
+
+test_plots=True
 
 def correlation_like(_self=None):    
     #Descobrir como flexibilizar: Deixar o usuário escolher se quer ctg ou cgg
@@ -40,6 +46,13 @@ def correlation_like(_self=None):
 if __name__=='__main__':
     #Testing area
 
+    if test_plots:
+        plt.figure()
+        plt.plot(ls, cl_data, label='Fake data (OmegaM={})'.format(OmegaM_fid))
+        #plt.plot(ls, cl_2nd, label='OmegaM={}'.format(0.42))
+        #plt.legend()
+        plt.savefig('test_plot.png')
+
     info={
          'params':{
              'OmegaM':{'ref':0.3, 'prior':{'min':0.01, 'max':0.99}}
@@ -59,7 +72,6 @@ if __name__=='__main__':
 
     from getdist.mcsamples import MCSamplesFromCobaya
     import getdist.plots as gdplt
-    import matplotlib.pyplot as plt
 
     gdsamples = MCSamplesFromCobaya(updated_info, sampler.products()["sample"])
     gdplot = gdplt.get_subplot_plotter(width_inch=5)
