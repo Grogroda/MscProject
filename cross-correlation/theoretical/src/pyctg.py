@@ -10,7 +10,7 @@ ctg4py_raw=lib_correlations.ctg4py
 ctg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, c_char_p]
 ctg4py_raw.restype = c_double
 
-lmax = 60
+lmax = 4
 
 def ctg4py(OmegaM):
     OmegaL = 1 - OmegaM
