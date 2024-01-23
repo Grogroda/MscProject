@@ -1,0 +1,20 @@
+likelihood:
+  my_like: 
+    external: import_module("test_run.py").correlation_like
+    requires: {'ctg':None}
+
+params:
+  OmegaM: 
+    ref: 0.3 
+    prior: 
+      min: 0.01 
+      max: 0.99
+
+theory:
+  ctg: import_module('test_pyctg_theory').ctg 
+    
+sampler:
+  mcmc: 
+    Rminus1_stop: 0.003
+    max_tries: 10000
+
