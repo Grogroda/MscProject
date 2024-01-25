@@ -68,7 +68,8 @@ if __name__=='__main__':
 
     from cobaya.run import run
     info['sampler'] = {'mcmc':{'Rminus1_stop':0.001, 'max_tries':10000}}
-    updated_info, sampler=run(info)
+    info['output'] = "scriptrun_test/test_lmax6"
+    updated_info, sampler=run(info, resume=True, no_mpi=False)
 
     from getdist.mcsamples import MCSamplesFromCobaya
     import getdist.plots as gdplt
