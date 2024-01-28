@@ -1,17 +1,8 @@
-from correlations_theory import ctg 
 import numpy as np
 import random
 from pyctg import ctg4py
 import ctypes
 import matplotlib.pyplot as plt
-
-#OmegaL, Omegam, h = 0.7, 0.3, 0.67
-#bg, mode, ncalls, lmax = 1.0, 1, 100000, 32 
-#beta, lbda, z0 = 3.09, 4.94, 0.15
-#fname="../tables/pk_3dmatter.dat"
-#fname=ctypes.c_char_p(fname.encode("ascii"))
-#print("ctg(lmax)=", ctg4py(OmegaL, Omegam, lmax, z0, beta, lbda, h, bg, mode, ncalls, fname))
-
 
 #Fiducial model to generate data with 10% precision. Has to be outside the likelihood function, otherwise will be recomputed
 # for each point. 
@@ -31,11 +22,7 @@ def correlation_like(_self=None):
 
     theory_array, data_array, sigma_array=np.array(cl_theo), np.array(cl_data), np.array(cl_sigmas)
 
-# Old form...   
-#    sum1=sum(2*np.pi*sigma_array**2)
-#    sum2=sum(((theory_array-data_array)/sigma_array)**2)
-#    logp=-0.5*(np.log(sum1)+sum2)
-
+    #Chi2 calculation:
     Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
     sigSum = np.sum(np.log(sigma_array))
     # Constant not included.
