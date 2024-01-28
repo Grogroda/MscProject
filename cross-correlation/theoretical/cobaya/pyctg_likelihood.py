@@ -47,7 +47,7 @@ if __name__=='__main__':
          'likelihood':{
              'my_like':{'external':correlation_like, 'requires':{'ctg':None}}
              },
-         'theory':{'test_pyctg_theory.ctg':None}
+         'theory':{'pyctg_theory.ctg':None}
          }
 
     from cobaya.model import get_model
@@ -65,4 +65,4 @@ if __name__=='__main__':
     gdplot = gdplt.get_subplot_plotter(width_inch=5)
     gdplot.triangle_plot(gdsamples, ['OmegaM'], filled=True)
 #    gdplot = gdplt.get_subplot(width_inch=5)
-    plt.savefig("my_samples_nMC5e4_lmax6.png")
+    plt.savefig("scriptrun_test/my_samples_nMC5e4_lmax6.png")

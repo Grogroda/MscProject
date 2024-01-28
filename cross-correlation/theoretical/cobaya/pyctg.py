@@ -1,7 +1,7 @@
 from ctypes import * 
 
 # Load the shared library
-lib_correlations = CDLL("./libcorrelations.so")
+lib_correlations = CDLL("../src/libcorrelations.so")
 
 # Define the function to calculate Ctg
 ctg4py_raw=lib_correlations.ctg4py
@@ -49,27 +49,3 @@ if __name__=='__main__':
     plt.xscale('log')
     plt.savefig("pyctg_full_test.png")
 
-"""
-if __name__=='__main__':
-    #Testing area:
-
-    # Define test parameters
-    OmegaL = 0.7
-    Omegam = 0.3
-    l = 9 
-    z0 = 0.15
-    beta = 3.09 
-    lbda = 4.94
-    h = 0.67
-    bg = 1.0
-    mode = 1
-    ncalls = 1000
-    pkfname = "../tables/pk_3dmatter.dat"
-    fname=c_char_p(pkfname.encode("ascii"))
-
-    # Test shared library:
-    print("Starting calculation")
-    for l in [2,8,12]:
-        result = ctg4py(OmegaL, Omegam, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
-        print("Result=", result)
-"""
