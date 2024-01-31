@@ -55,7 +55,7 @@ if __name__=='__main__':
 
     from cobaya.run import run
     info['sampler'] = {'mcmc':{'Rminus1_stop':0.001, 'max_tries':10000}}
-    info['output'] = "scriptrun_test/test_lmax6"
+    info['output'] = "scriptrun_test/N2e5_lmax6"
     updated_info, sampler=run(info, resume=True, no_mpi=False)
 
     from getdist.mcsamples import MCSamplesFromCobaya
@@ -65,4 +65,4 @@ if __name__=='__main__':
     gdplot = gdplt.get_subplot_plotter(width_inch=5)
     gdplot.triangle_plot(gdsamples, ['OmegaM'], filled=True)
 #    gdplot = gdplt.get_subplot(width_inch=5)
-    plt.savefig("scriptrun_test/my_samples_nMC5e4_lmax6.png")
+    plt.savefig("scriptrun_test/my_samples_nMC2e5_lmax6.png")
