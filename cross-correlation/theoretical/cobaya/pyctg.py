@@ -23,12 +23,14 @@ def ctg4py(OmegaM):
     ncalls = 200000
     pkfname = "../tables/pk_3dmatter.dat"
     fname   = c_char_p(pkfname.encode("ascii"))
+    ls=[]
     ctg = []
     for l in range(2, round(lmax)):
+        ls.append(l)
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         ctg.append(cl)
 
-    return ctg
+    return ls, ctg
     
 
 #Still need to implement Cgg?
@@ -38,8 +40,8 @@ def ctg4py(OmegaM):
 if __name__=='__main__':
     import matplotlib.pyplot as plt
 
-    ls=[2+i for i in range(lmax-2)]
-    ctg=ctg4py(0.3)
+    ls,ctg=ctg4py(0.3)
+    print('ls=', ls)
     print('ctg(0.3)=',ctg)
 
     plt.figure()
