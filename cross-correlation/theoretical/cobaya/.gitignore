@@ -1,1 +1,3 @@
 scriptrun_test
+*.out
+*.log
