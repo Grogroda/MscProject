@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 #1=Cgg
 #2=Ctg
 
-best_fit=pd.read_csv('max_like.dat', sep=' ', names=['#', 'l', 'Cl', 'min(-log(L))'])
+best_fit=pd.read_csv('max_likeQ.dat', sep=' ', names=['#', 'l', 'Cl', 'min(-log(L))'])
 camb_path='../../../../CAMB/LCDM/'
 
 print(best_fit)
@@ -72,7 +72,7 @@ for ax in axes:
     ax.set_xscale('log')
     ax.legend(fontsize=14)
 
-fig.savefig('cl_triple.png', bbox_inches='tight')
+fig.savefig('cl_tripleQ.png', bbox_inches='tight')
 '''
 fig_gg.savefig('clgg.png')
 fig_tg.savefig('cltg.png')
