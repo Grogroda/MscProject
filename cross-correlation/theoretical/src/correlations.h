@@ -31,15 +31,23 @@ using namespace std;
 extern "C"{
 void display_results (char *title, double result, double error);
 
+double cgg_integrand1(double x, void *p);
+
+double cgg_integrand2(double x, void *p);
+
 double ctg_integrand1(double x, void *p);
 
 double ctg_integrand2(double x, void *p);
 
 double ctg_integrand3(double *x, size_t dim, void *p);
 
+double cgg(double OmegaL, double Omegam, int l, int band, double h, double bg);
+
 double ctg_quad(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg);
 
 double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int ncalls);
+
+double cgg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, char* bstring);
 
 double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, char* bstring);
 

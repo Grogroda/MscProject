@@ -7,6 +7,7 @@
 #define ZMAX 10.
 
 #include "correlations.h"
+#include "survey.h"
 #include <string>
 
 using namespace std;
@@ -19,6 +20,61 @@ void display_results (char *title, double result, double error)
   //printf ("result = % .6f\n", result);
   //printf ("sigma  = % .6f\n", error);
 }
+
+double cgg_integrand1(double x, void *p){
+	struct f_pars * params = (struct f_pars *)p;
+
+	double wL = (params->OmegaL);
+	double wm = (params->Omegam);
+	int l     = (params->l);
+	double h  = (params->h);
+
+	double z0   = (params->z0);
+	double beta = (params->beta);
+	double lbda = (params->lbda);
+
+	//x ---> log10 of wavekumber k in units of Mpc^-1
+	
+	double k  = pow(10.,x);
+	double wg2 = pow(Wg(k, wL, wm, l, z0, beta, lbda, h), 2);
+
+	return Delta2(k,h)*wg2;
+
+}
+
+double cgg_integrand2(double x, void *p){
+
+	struct f_pars * params = (struct f_pars *)p;
+
+	double wL = (params->OmegaL);
+	double wm = (params->Omegam);
+	int l     = (params->l);
+	double h  = (params->h);
+	
+	double z0   = (params->z0);
+	double beta = (params->beta);
+	double lbda = (params->lbda);
+
+	// x ---> comoving distance in units of Mpc
+	
+	double zval = r2z(x, wL, wm, h);
+	double aval = 1./(1.+zval);
+	double Da1 = growth(1., wL, wm);
+
+	double kmin = KOH_MIN*h;
+	double kmax = KOH_MAX*h;
+
+	double ret;
+
+	if ((l+0.5)/x>=kmin && (l+0.5)/x<=kmax)
+		ret = pow(selection(z0, beta, lbda, zval)*growth(aval, wL, wm)/Da1/x,2)*PowerSpectrum((l+0.5)/x/h)*pow(Hubble(aval, wL, wm)*H0*h/CSPEED,2);
+	else
+		ret = 0.;
+
+	return ret/h/h/h;
+
+}
+
 
 double ctg_integrand1(double x, void *p){
 
@@ -102,6 +158,57 @@ double ctg_integrand3(double *x, size_t dim, void *p){
   //cerr << "integ3" << " " << Delta2(k,h) << " " << wt_integrand_mc(k, lnzp, l, wL, wm, h) << " " << wg_integrand_mc(k, z, l, wL, wm, h, z0, beta, lbda) << endl;
 
   return Delta2(k,h)*wt_integrand_mc(k, lnzp, l, wL, wm, h)*wg_integrand_mc(k, z, l, wL, wm, h, z0, beta, lbda);
+
+}
+
+
+double cgg(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg){
+	
+	gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
+
+	struct f_pars params;
+
+	params.OmegaL = OmegaL;
+	params.Omegam = Omegam;
+	params.l      = l;
+	params.h      = h;
+
+	params.z0   = z0;
+	params.beta = beta;
+	params.lbda = lbda;
+
+	gsl_function F;
+
+	double result, error;
+
+	if (l<=20){
+		F.function = &cgg_integrand1;
+		F.params = &params;
+
+		double logkmin = -4.+log10(h);
+		double logkmax =  log10(2.)+log10(h);
+
+		gsl_integration_qag (&F, logkmin, logkmax, 0., 1.e-5, 1000, 6, w, &result, &error);
+
+		result *= 4.*M_PI*log(10.)*bg*bg;
+
+	}
+	else{
+		F.function = &cgg_integrand2;
+		F.params = &params;
+
+		double rmin = 0.;
+		double rmax = z2r(ZMAX, OmegaL, Omegam, h);
+
+		gsl_integration_qag (&F, rmin, rmax, 0., 1.e-5, 1000, 6, w, &result, &error);
+
+		result *= bg*bg;
+
+	}
+
+	gsl_integration_workspace_free(w);
+
+	return result;
 
 }
 
@@ -242,6 +349,15 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
   
   return result;  
 
+}
+
+double cgg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, char* bstring){
+
+	string fname(bstring);
+	InitSpline(fname);
+
+	double cggl=cgg(OmegaL, Omegam, l, z0, beta, lbda, h, bg);
+	return cggl;
 }
 
 double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, char* bstring){

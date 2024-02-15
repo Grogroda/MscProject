@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 #Fiducial model to generate data with 10% precision. Has to be outside the likelihood function, otherwise will be recomputed
 # for each point. 
 OmegaM_fid = 0.3
-ls, cl_data  = ctg4py(OmegaM_fid)
-cl_sigmas= [i*0.1 for i in cl_data]
+ls, ctg_data  = ctg4py(OmegaM_fid)
+ctg_sigmas= [i*0.1 for i in cl_data]
 
 #cl_2nd = ctg4py(0.42)
 #ls=[i for i in range(len(cl_data))]
