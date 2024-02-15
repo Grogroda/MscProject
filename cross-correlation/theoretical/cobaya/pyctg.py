@@ -1,4 +1,5 @@
 from ctypes import * 
+#from tqdm import tqdm
 
 # Load the shared library
 lib_correlations = CDLL("../src/libcorrelations.so")
@@ -14,7 +15,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, c_char_p]
 cgg4py_raw.restype = c_double
 
-lmax = 94
+lmax = 54
 
 def ctg4py(OmegaM):
     OmegaL = 1 - OmegaM
@@ -29,8 +30,8 @@ def ctg4py(OmegaM):
     fname   = c_char_p(pkfname.encode("ascii"))
     ls=[]
     ctg = []
-    for l in range(2, round(lmax)):
-        print('ctg for l=', l)
+    for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
+        #print('ctg for l=', l)
         ls.append(l)
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         ctg.append(cl)
@@ -51,8 +52,8 @@ def cgg4py(OmegaM):
     fname   = c_char_p(pkfname.encode("ascii"))
     ls=[]
     cgg = []
-    for l in range(2, round(lmax)):
-        print("cgg for l=", l)
+    for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
+        #print("cgg for l=", l)
         ls.append(l)
         cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         cgg.append(cl)
@@ -76,14 +77,14 @@ if __name__=='__main__':
     plt.figure()
     plt.plot(ls,ctg)
     plt.xlabel(r'$\ell$')
-    plt.ylabel(r'$C^{tg}(\ell)$')
+    plt.ylabel(r'$C^{tg}$')
     plt.xscale('log')
     plt.savefig("pyctg_full_test.png")
 
     plt.figure()
     plt.plot(ls, cgg)
     plt.xlabel(r'$\ell$')
-    plt.ylabel(r'$C^{gg}(\ell)$')
+    plt.ylabel(r'$C^{gg}$')
     plt.xscale('log')
     plt.yscale('log')
     plt.savefig("pycgg_full_test.png")
