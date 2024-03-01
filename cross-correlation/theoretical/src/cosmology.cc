@@ -401,7 +401,7 @@ void InitSpline(string fname){
 // units = h^-3 Mpc^3
 double PowerSpectrum(double koh){
 
-    //cerr << "PSepec "<< gsl_spline_eval (spline, log10(koh), acc) << endl;
+  //cerr << "PSpec "<< gsl_spline_eval (spline, log10(koh), acc) << endl;
   return gsl_spline_eval (spline, log10(koh), acc);
   
 }
@@ -458,13 +458,16 @@ void InitWtSpline(int l, double OmegaL, double Omegam, double h){
   for (int i=0; i<npts; i++){
     x2[i] = log10(kmin)+i*step;
     y2[i] = Wt(pow(10., x2[i]), OmegaL, Omegam, l, h);
-     cerr << i << " " << x2[i] << " " << y2[i] << endl;
+    //cerr << i << " " << x2[i] << " " << y2[i] << endl;
   }
+
+  //cerr << "x2 and y2 calculated" << endl;
   
   acc2 = gsl_interp_accel_alloc ();
   spline2 = gsl_spline_alloc (gsl_interp_cspline, npts);
 
   gsl_spline_init (spline2, x2, y2, npts);
+  //cerr << "spline initiated" << endl;
   
 }
 

@@ -21,6 +21,30 @@ void display_results (char *title, double result, double error)
   //printf ("sigma  = % .6f\n", error);
 }
 
+double ctt_integrand(double x, void *p){
+	struct f_pars * params = (struct f_pars *)p;
+
+	double wL = (params->OmegaL);
+	double wm = (params->Omegam);
+	int l     = (params->l);
+	double h  = (params->h);
+
+	/*
+	double z0   = (params->z0);
+	double beta = (params->beta);
+	double lbda = (params->lbda);
+	*/
+
+	//x ---> log10 of wavekumber k in units of Mpc^-1
+	
+	double k  = pow(10.,x);
+	double wt = Wt(k, wL, wm, l, h);
+	double wt2 = pow(wt, 2);
+
+	return Delta2(k,h)*wt2;
+}
+
+
 double cgg_integrand1(double x, void *p){
 	struct f_pars * params = (struct f_pars *)p;
 
@@ -159,6 +183,49 @@ double ctg_integrand3(double *x, size_t dim, void *p){
 
   return Delta2(k,h)*wt_integrand_mc(k, lnzp, l, wL, wm, h)*wg_integrand_mc(k, z, l, wL, wm, h, z0, beta, lbda);
 
+}
+
+double ctt(double OmegaL, double Omegam, int l, double h, double bg){
+
+  gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
+  
+  string fname = "../tables/pk_3dmatter.dat";
+  
+  InitSpline(fname);
+  //InitWtSpline(l, OmegaL, Omegam, h);
+
+  struct f_pars params;
+
+  params.OmegaL = OmegaL;
+  params.Omegam = Omegam;
+  /*
+  params.z0 = z0;
+  params.beta = beta;
+  params.lbda = lbda;
+  */
+  params.l = l;
+  params.h = h;
+
+  double result, error;
+
+  gsl_function F;
+
+  F.function = &ctt_integrand;
+  F.params = &params;
+
+  double logkmin = log10(KOH_MIN*h);
+  double logkmax = log10(KOH_MAX*h);
+
+  gsl_integration_qag (&F, logkmin, logkmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+
+  result *= 4.*M_PI*log(10.)*bg;
+  
+  gsl_integration_workspace_free(w);
+  DestroySpline();
+  //DestroyWtSpline();
+
+  return result;
+  
 }
 
 

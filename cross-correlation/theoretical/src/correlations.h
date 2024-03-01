@@ -41,7 +41,9 @@ double ctg_integrand2(double x, void *p);
 
 double ctg_integrand3(double *x, size_t dim, void *p);
 
-double cgg(double OmegaL, double Omegam, int l, int band, double h, double bg);
+double ctt(double OmegaL, double Omegam, int l, double h, double bg);
+
+double cgg(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg);
 
 double ctg_quad(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg);
 
