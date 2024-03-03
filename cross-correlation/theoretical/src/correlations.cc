@@ -38,7 +38,7 @@ double ctt_integrand(double x, void *p){
 	//x ---> log10 of wavekumber k in units of Mpc^-1
 	
 	double k  = pow(10.,x);
-	double wt = Wt(k, wL, wm, l, h);
+	double wt = WtSpline(l, k);  
 	double wt2 = pow(wt, 2);
 
 	return Delta2(k,h)*wt2;
@@ -192,7 +192,9 @@ double ctt(double OmegaL, double Omegam, int l, double h, double bg){
   string fname = "../tables/pk_3dmatter.dat";
   
   InitSpline(fname);
-  //InitWtSpline(l, OmegaL, Omegam, h);
+  cerr << "InitSpline() finished" << endl;
+  InitWtSpline(l, OmegaL, Omegam, h);
+  cerr << "InitWtSpline() finished" << endl;
 
   struct f_pars params;
 
@@ -216,13 +218,17 @@ double ctt(double OmegaL, double Omegam, int l, double h, double bg){
   double logkmin = log10(KOH_MIN*h);
   double logkmax = log10(KOH_MAX*h);
 
+  //cerr << "Starting integration" << endl;
+
   gsl_integration_qag (&F, logkmin, logkmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+
+  //cerr << "Integration finished" << endl;
 
   result *= 4.*M_PI*log(10.)*bg;
   
   gsl_integration_workspace_free(w);
+  DestroyWtSpline();
   DestroySpline();
-  //DestroyWtSpline();
 
   return result;
   

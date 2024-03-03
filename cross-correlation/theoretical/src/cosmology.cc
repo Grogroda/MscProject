@@ -444,30 +444,41 @@ void InitWtSpline(int l, double OmegaL, double Omegam, double h){
 
   int npts = 500;
 
-  if (x2==NULL)
-    x2 = (double *) malloc(npts*sizeof(double));
+  /*
+  if (x2!=NULL){
+    free(x2);
+  } 
 
-  if (y2==NULL)
-    y2 = (double *) malloc(npts*sizeof(double));
+  if (y2!=NULL){
+    free(y2);
+  } 
+  */
+
+  x2 = (double *) malloc(npts*sizeof(double));
+  y2 = (double *) malloc(npts*sizeof(double));
 
   double kmax = h*KOH_MAX;
   double kmin = h*KOH_MIN;
   double step = (log10(kmax)-log10(kmin))/(npts-1);
   
-  //cerr << "InitWtSpline " << kmin << " "<< kmax << " " << step << endl;
-  for (int i=0; i<npts; i++){
+  cerr << "InitWtSpline: kmin=" << kmin << " & kmax="<< kmax << " & step=" << step << endl;
+  for (int i=0; i<npts; i++){ //code breaking inside this loop at l=49
+    //cerr << "kmin=" << kmin << " & log10(kmin)=" << log10(kmin) << " & i=" << i << " & step=" << step << " & i*step=" << i*step << endl;
     x2[i] = log10(kmin)+i*step;
     y2[i] = Wt(pow(10., x2[i]), OmegaL, Omegam, l, h);
     //cerr << i << " " << x2[i] << " " << y2[i] << endl;
   }
 
-  //cerr << "x2 and y2 calculated" << endl;
+  cerr << "x2 and y2 calculated" << endl;
   
   acc2 = gsl_interp_accel_alloc ();
+  cerr << "Defining spline2" << endl;
   spline2 = gsl_spline_alloc (gsl_interp_cspline, npts);
 
+  cerr << "gsl_spline_init(spline2 ...)" << endl;
+
   gsl_spline_init (spline2, x2, y2, npts);
-  //cerr << "spline initiated" << endl;
+  cerr << "spline initiated" << endl;
   
 }
 
