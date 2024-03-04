@@ -189,13 +189,6 @@ double ctt(double OmegaL, double Omegam, int l, double h, double bg){
 
   gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
   
-  string fname = "../tables/pk_3dmatter.dat";
-  
-  InitSpline(fname);
-  cerr << "InitSpline() finished" << endl;
-  InitWtSpline(l, OmegaL, Omegam, h);
-  cerr << "InitWtSpline() finished" << endl;
-
   struct f_pars params;
 
   params.OmegaL = OmegaL;
@@ -227,8 +220,6 @@ double ctt(double OmegaL, double Omegam, int l, double h, double bg){
   result *= 4.*M_PI*log(10.)*bg;
   
   gsl_integration_workspace_free(w);
-  DestroyWtSpline();
-  DestroySpline();
 
   return result;
   
