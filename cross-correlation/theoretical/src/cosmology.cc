@@ -463,8 +463,9 @@ void InitWtSpline(int l, double OmegaL, double Omegam, double h){
   
   cerr << "InitWtSpline: kmin=" << kmin << " & kmax="<< kmax << " & step=" << step << endl;
   for (int i=0; i<npts; i++){ //code breaking inside this loop at l=49
-    //cerr << "kmin=" << kmin << " & log10(kmin)=" << log10(kmin) << " & i=" << i << " & step=" << step << " & i*step=" << i*step << endl;
+    cerr << "kmin=" << kmin << " & log10(kmin)=" << log10(kmin) << " & i=" << i << " & step=" << step << " & i*step=" << i*step << endl;
     x2[i] = log10(kmin)+i*step;
+    cerr << "before y2" << endl;
     y2[i] = Wt(pow(10., x2[i]), OmegaL, Omegam, l, h);
     //cerr << i << " " << x2[i] << " " << y2[i] << endl;
   }

@@ -126,7 +126,7 @@ int main(int argc, char **argv){
 //ofstream out2("outputs/z0_"+to_string(z0)+"_beta_"+to_string(beta)+"_lbda_"+to_string(lbda)+".txt");
 
 //#pragma omp parallel for
-  for (int l=2; l<=lmax; l++){
+  for (int l=48; l<=lmax; l++){
   
     InitWtSpline(l, OmegaL, Omegam, h);
 
