@@ -1,5 +1,5 @@
 from ctypes import * 
-#from tqdm import tqdm
+from tqdm import tqdm
 
 # Load the shared library
 lib_correlations = CDLL("../src/libcorrelations.so")
@@ -30,7 +30,7 @@ def ctg4py(OmegaM):
     fname   = c_char_p(pkfname.encode("ascii"))
     ls=[]
     ctg = []
-    for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
+    for l in tqdm(range(2, round(lmax)), desc="ctg"): #around 2-3 minutes for the whole spectrum
         #print('ctg for l=', l)
         ls.append(l)
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
@@ -52,7 +52,7 @@ def cgg4py(OmegaM):
     fname   = c_char_p(pkfname.encode("ascii"))
     ls=[]
     cgg = []
-    for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
+    for l in tqdm(range(2, round(lmax)), desc='cgg'): #about 12 seconds per point, ~6mins for 54 points
         #print("cgg for l=", l)
         ls.append(l)
         cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
