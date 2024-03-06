@@ -1,5 +1,9 @@
 from ctypes import * 
-from tqdm import tqdm
+import os
+import camb
+import numpy as np
+import pandas as pd
+#from tqdm import tqdm
 
 # Load the shared library
 lib_correlations = CDLL("../src/libcorrelations.so")
@@ -18,45 +22,86 @@ cgg4py_raw.restype = c_double
 lmax = 54
 
 def ctg4py(OmegaM):
+    
+    #First calculate matter PS with CAMB:
+    h = 0.67
+    omb=0.02237/(h**2)
+    omch2=(OmegaM-omb)*h**2
+    pkfname = "../tables/pk_3dmatter{:.8f}.dat".format(OmegaM)
+
+    pars=camb.CAMBparams()
+    pars.set_cosmology(H0=67, ombh2=0.02237, omch2=omch2, omk=0, tau=0.0544)
+    pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
+    pars.set_for_lmax(128)
+    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=True)
+
+    results=camb.get_results(pars)
+    power=results.get_cmb_power_spectra(pars, CMB_unit='muK')
+    kh, z, pk=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
+
+    data_matter=pd.DataFrame({'k':kh, 'P(k)':pk[0]}, index=None)
+    data_matter.to_csv(pkfname, sep=' ', header=False, index=False)
+
+    #Then calculate ctg:
     OmegaL = 1 - OmegaM
     z0 = 0.043
     beta = 1.825 
     lbda = 1.524
-    h = 0.67
     bg = 1.37
     mode = 1
     ncalls = 200000
-    pkfname = "../tables/pk_3dmatter.dat"
-    fname   = c_char_p(pkfname.encode("ascii"))
+    fname  = c_char_p(pkfname.encode("ascii"))
     ls=[]
     ctg = []
-    for l in tqdm(range(2, round(lmax)), desc="ctg"): #around 2-3 minutes for the whole spectrum
-        #print('ctg for l=', l)
+    for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
+        print('ctg for l=', l)
         ls.append(l)
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         ctg.append(cl)
+
+    os.remove(pkfname)
 
     return ls, ctg
 
 def cgg4py(OmegaM):
 
+    #First calculate matter PS with CAMB:
+    h = 0.67
+    omb=0.02237/(h**2)
+    omch2=(OmegaM-omb)*h**2
+    pkfname = "../tables/pk_3dmatter{:.8f}.dat".format(OmegaM)
+
+    pars=camb.CAMBparams()
+    pars.set_cosmology(H0=67, ombh2=0.02237, omch2=omch2, omk=0, tau=0.0544)
+    pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
+    pars.set_for_lmax(128)
+    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=True)
+    
+    results=camb.get_results(pars)
+    power=results.get_cmb_power_spectra(pars, CMB_unit='muK')
+    kh, z, pk=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
+
+    data_matter=pd.DataFrame({'k':kh, 'P(k)':pk[0]}, index=None)
+    data_matter.to_csv(pkfname, sep=' ', header=False, index=False)
+
+    #Then calculate cgg:
     OmegaL = 1 - OmegaM
     z0 = 0.043
     beta = 1.825
     lbda = 1.524
-    h = 0.67
     bg = 1.37
     mode = 1 #mode and ncalls don't change the results, bur are still needed
     ncalls = 200000
-    pkfname = "../tables/pk_3dmatter.dat"
     fname   = c_char_p(pkfname.encode("ascii"))
     ls=[]
     cgg = []
-    for l in tqdm(range(2, round(lmax)), desc='cgg'): #about 12 seconds per point, ~6mins for 54 points
-        #print("cgg for l=", l)
+    for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
+        print("cgg for l=", l)
         ls.append(l)
         cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         cgg.append(cl)
+
+    os.remove(pkfname)
 
     return ls, cgg
 
