@@ -54,7 +54,7 @@ def ctg4py(OmegaM):
     ls=[]
     ctg = []
     for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
-        print('ctg for l=', l)
+        #print('ctg for l=', l)
         ls.append(l)
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         ctg.append(cl)
@@ -96,7 +96,7 @@ def cgg4py(OmegaM):
     ls=[]
     cgg = []
     for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
-        print("cgg for l=", l)
+        #print("cgg for l=", l)
         ls.append(l)
         cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
         cgg.append(cl)
