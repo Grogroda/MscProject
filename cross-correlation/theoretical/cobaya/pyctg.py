@@ -33,7 +33,7 @@ def ctg4py(OmegaM):
     pars.set_cosmology(H0=67, ombh2=0.02237, omch2=omch2, omk=0, tau=0.0544)
     pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
     pars.set_for_lmax(128)
-    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=True)
+    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=False)
 
     results=camb.get_results(pars)
     power=results.get_cmb_power_spectra(pars, CMB_unit='muK')
@@ -75,7 +75,7 @@ def cgg4py(OmegaM):
     pars.set_cosmology(H0=67, ombh2=0.02237, omch2=omch2, omk=0, tau=0.0544)
     pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
     pars.set_for_lmax(128)
-    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=True)
+    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=False)
     
     results=camb.get_results(pars)
     power=results.get_cmb_power_spectra(pars, CMB_unit='muK')

@@ -78,7 +78,7 @@ if __name__=='__main__':
 
     info={
          'params':{
-             'OmegaM':{'ref':0.3, 'prior':{'min':0.01, 'max':0.99}}
+             'OmegaM':{'ref':0.3, 'prior':{'min':0.05, 'max':0.80}}
              },
          'likelihood':{
              'ctg_like':{'external':ctg_like, 'requires':{'ctg':None}}
