@@ -321,7 +321,6 @@ double Wt(double k, double OmegaL, double Omegam, int l, double h){
   params.h      = h;
   params.k      = k;
   params.l      = l;
-
   
   gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
 
@@ -342,7 +341,23 @@ double Wt(double k, double OmegaL, double Omegam, int l, double h){
 
 }
 
+int DefineSpectrum(double karr[], double pkarr[]){
+	
+	if sizeof(karr)!=sizeof(pkarr){
+		cerr << "Arrays for k and P(k) can't have different sizes!" << endl;
+	}
+	
+	int length = sizeof(karr)/sizeof(karr[0]);
+	x = (double *) malloc(nks*sizeof(double));
+	y = (double *) malloc(nks*sizeof(double));
 
+	for (int i=0; i<length; i++){
+		x[i] = log10(karr[i]);
+		y[i] = pkarr[i];		
+	}
+	
+	return length;
+}
 
 int ReadInputSpectrum(string fname){
 
@@ -387,9 +402,15 @@ int ReadInputSpectrum(string fname){
 
 }
 
-void InitSpline(string fname){
+void InitSpline(bool read_input, string fname = "", double karr[]={}, double pkarr={}){
+  // If read_input==true, uses file named fname to define the power spectrum
+  // Otherwise, user has to manually define arrays for k and P(k)
 
-  int nks = ReadInputSpectrum(fname);
+  if (read_input==true){
+	  int nks = ReadInputSpectrum(fname);
+  } else{
+	  int nks = DefineSpectrum(karr, pkarr);
+  }
   
   acc = gsl_interp_accel_alloc ();
   spline = gsl_spline_alloc (gsl_interp_cspline, nks);
@@ -461,11 +482,11 @@ void InitWtSpline(int l, double OmegaL, double Omegam, double h){
   double kmin = h*KOH_MIN;
   double step = (log10(kmax)-log10(kmin))/(npts-1);
   
-  cerr << "InitWtSpline: kmin=" << kmin << " & kmax="<< kmax << " & step=" << step << endl;
+  //cerr << "InitWtSpline: kmin=" << kmin << " & kmax="<< kmax << " & step=" << step << endl;
   for (int i=0; i<npts; i++){ //code breaking inside this loop at l=49
-    cerr << "kmin=" << kmin << " & log10(kmin)=" << log10(kmin) << " & i=" << i << " & step=" << step << " & i*step=" << i*step << endl;
+    //cerr << "kmin=" << kmin << " & log10(kmin)=" << log10(kmin) << " & i=" << i << " & step=" << step << " & i*step=" << i*step << endl;
     x2[i] = log10(kmin)+i*step;
-    cerr << "before y2" << endl;
+    //cerr << "before y2" << endl;
     y2[i] = Wt(pow(10., x2[i]), OmegaL, Omegam, l, h);
     //cerr << i << " " << x2[i] << " " << y2[i] << endl;
   }
