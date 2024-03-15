@@ -82,9 +82,11 @@ double wt_integrand_mc(double k, double z, int l, double wL, double wm, double h
 
 double Wt(double k, double OmegaL, double Omegam, int l, double h);
 
+int DefineSpectrum(double karr[], double pkarr[], int nks);
+
 int ReadInputSpectrum(string fname);
 
-void InitSpline(string fname);
+void InitSpline(bool read_input, string fname, double karr[], double pkarr[], int nks);
 
 // units = h^-3 Mpc^3
 double PowerSpectrum(double koh);

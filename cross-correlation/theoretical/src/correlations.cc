@@ -415,17 +415,17 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
 
 }
 
-double cgg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, double karr[], double pkarr[]){
+double cgg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, double karr[], double pkarr[], int nks){
 
-	InitSpline(read_input = false, karr = karr, pkarr = pkarr);
+	InitSpline(false, "", karr, pkarr, nks);
 
 	double cggl=cgg(OmegaL, Omegam, l, z0, beta, lbda, h, bg);
 	return cggl;
 }
 
-double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, double karr[], double pkarr[]){
+double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, double karr[], double pkarr[], int nks){
 	
-	InitSpline(read_input = false, karr = karr, pkarr = pkarr)
+	InitSpline(false, "", karr, pkarr, nks);
 
 	double ctgl=ctg(OmegaL, Omegam, l, z0, beta, lbda, h, bg, mode, ncalls);
 	return ctgl;

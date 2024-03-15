@@ -341,22 +341,20 @@ double Wt(double k, double OmegaL, double Omegam, int l, double h){
 
 }
 
-int DefineSpectrum(double karr[], double pkarr[]){
-	
-	if sizeof(karr)!=sizeof(pkarr){
-		cerr << "Arrays for k and P(k) can't have different sizes!" << endl;
-	}
-	
-	int length = sizeof(karr)/sizeof(karr[0]);
+int DefineSpectrum(double karr[], double pkarr[], int nks){
+	// I didn't find a simple way to count the number of elements 
+	// inside karr when passing them as function variable, so in the
+	// current code the user needs to explicitly pass it as a variable. 
+
 	x = (double *) malloc(nks*sizeof(double));
 	y = (double *) malloc(nks*sizeof(double));
 
-	for (int i=0; i<length; i++){
+	for (int i=0; i<nks; i++){
 		x[i] = log10(karr[i]);
 		y[i] = pkarr[i];		
 	}
 	
-	return length;
+	return nks;
 }
 
 int ReadInputSpectrum(string fname){
@@ -402,15 +400,19 @@ int ReadInputSpectrum(string fname){
 
 }
 
-void InitSpline(bool read_input, string fname = "", double karr[]={}, double pkarr={}){
-  // If read_input==true, uses file named fname to define the power spectrum
-  // Otherwise, user has to manually define arrays for k and P(k)
+void InitSpline(bool read_input, string fname = "", double karr[]={}, double pkarr[]={}, int nks = 0){
+  // If read_input==true, uses file named fname to define the power spectrum,
+  // otherwise, user has to manually define arrays for k and P(k).
+  // If the user chooses to manually define the arrays, a string still has
+  // to be passed as argument, but it will not be used anywhere.
 
   if (read_input==true){
-	  int nks = ReadInputSpectrum(fname);
+	  nks = ReadInputSpectrum(fname);
   } else{
-	  int nks = DefineSpectrum(karr, pkarr);
+	  nks = DefineSpectrum(karr, pkarr, nks);
   }
+
+  cerr << "nks=" << nks << endl;
   
   acc = gsl_interp_accel_alloc ();
   spline = gsl_spline_alloc (gsl_interp_cspline, nks);
