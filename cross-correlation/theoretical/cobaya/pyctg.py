@@ -1,8 +1,10 @@
 from ctypes import * 
 import os
-import camb
+#import camb
+from cobaya.model import get_model
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 #from tqdm import tqdm
 
 # Load the shared library
@@ -13,13 +15,43 @@ ctg4py_raw=lib_correlations.ctg4py
 cgg4py_raw=lib_correlations.cgg4py
 
 # Define the function signature (argument types and return type)
-ctg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, c_char_p]
+ctg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 ctg4py_raw.restype = c_double
 
-cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, c_char_p]
+cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 54
+lmax = 54 
+
+As=1e-10*np.e**(3.044)
+params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
+        'As': As, 'ns':0.9649}
+
+info = {
+        'params':params,
+        'likelihood':{'one':None},
+        'theory':{'camb':None}
+        }
+
+import camb
+
+pars=camb.CAMBparams()
+pars.set_cosmology(H0=67, ombh2=0.02237, omch2=0.12, omk=0, tau=0.0544)
+pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
+pars.set_for_lmax(lmax)
+pars.set_matter_power(redshifts=[0.], kmax=2.0)
+
+results=camb.get_results(pars)
+khs, zs, pks=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
+
+plt.figure()
+plt.plot(khs, pks[0])
+plt.title("P(k) with direct CAMB calculation")
+plt.xlabel("k/h")
+plt.xscale("log")
+plt.yscale("log")
+plt.ylabel("P(k/h)")
+plt.savefig("Pk_directCAMB.png")
 
 def ctg4py(OmegaM):
     
@@ -27,20 +59,28 @@ def ctg4py(OmegaM):
     h = 0.67
     omb=0.02237/(h**2)
     omch2=(OmegaM-omb)*h**2
-    pkfname = "../tables/pk_3dmatter{:.8f}.dat".format(OmegaM)
 
-    pars=camb.CAMBparams()
-    pars.set_cosmology(H0=67, ombh2=0.02237, omch2=omch2, omk=0, tau=0.0544)
-    pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
-    pars.set_for_lmax(128)
-    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=False)
+    params['omch2'] = omch2
+    info['params']=params
+    
+    model = get_model(info)
+    model.add_requirements({"Pk_grid":{"z":0, "k_max":2}})
+    model.logposterior({})
+    karr, zarr, pkarr = model.provider.get_Pk_grid()
 
-    results=camb.get_results(pars)
-    power=results.get_cmb_power_spectra(pars, CMB_unit='muK')
-    kh, z, pk=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
+    #pkarr is a 2D array representing P(k,z), each subarray is P(k) for a z requested in Pk_grid.
 
-    data_matter=pd.DataFrame({'k':kh, 'P(k)':pk[0]}, index=None)
-    data_matter.to_csv(pkfname, sep=' ', header=False, index=False)
+    plt.figure()
+    plt.plot(karr, pkarr[0])
+    plt.title("P(k) with CAMB indirectly used by Cobaya")
+    plt.xlabel("k/h")
+    plt.ylabel("P(k/h)")
+    plt.xscale("log")
+    plt.yscale("log")
+    plt.savefig("Pk_indirectCAMB.png")
+   
+    #karr, pkarr = np.array(kh, dtype=np.float64), np.array(pk, dtype=np.float64)
+    nks = karr.size 
 
     #Then calculate ctg:
     OmegaL = 1 - OmegaM
@@ -50,16 +90,14 @@ def ctg4py(OmegaM):
     bg = 1.37
     mode = 1
     ncalls = 200000
-    fname  = c_char_p(pkfname.encode("ascii"))
+    #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[]
     ctg = []
     for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
-        #print('ctg for l=', l)
+        print('ctg for l=', l)
         ls.append(l)
-        cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
+        cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, karr, pkarr, nks)
         ctg.append(cl)
-
-    os.remove(pkfname)
 
     return ls, ctg
 
@@ -69,20 +107,17 @@ def cgg4py(OmegaM):
     h = 0.67
     omb=0.02237/(h**2)
     omch2=(OmegaM-omb)*h**2
-    pkfname = "../tables/pk_3dmatter{:.8f}.dat".format(OmegaM)
 
-    pars=camb.CAMBparams()
-    pars.set_cosmology(H0=67, ombh2=0.02237, omch2=omch2, omk=0, tau=0.0544)
-    pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
-    pars.set_for_lmax(128)
-    pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=False)
+    params['omch2'] = omch2
+    info['params']=params
     
-    results=camb.get_results(pars)
-    power=results.get_cmb_power_spectra(pars, CMB_unit='muK')
-    kh, z, pk=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
-
-    data_matter=pd.DataFrame({'k':kh, 'P(k)':pk[0]}, index=None)
-    data_matter.to_csv(pkfname, sep=' ', header=False, index=False)
+    model = get_model(info)
+    model.add_requirements({"Pk_grid":{"z":0, "k_max":2.0}})
+    model.logposterior({})
+    karr, zarr, pkarr = model.provider.get_Pk_grid()
+   
+    #karr, pkarr = np.array(kh, dtype=np.float64), np.array(pk, dtype=np.float64)
+    nks = karr.size 
 
     #Then calculate cgg:
     OmegaL = 1 - OmegaM
@@ -92,32 +127,31 @@ def cgg4py(OmegaM):
     bg = 1.37
     mode = 1 #mode and ncalls don't change the results, bur are still needed
     ncalls = 200000
-    fname   = c_char_p(pkfname.encode("ascii"))
     ls=[]
     cgg = []
     for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
-        #print("cgg for l=", l)
+        print("cgg for l=", l)
         ls.append(l)
-        cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, fname)
+        cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, karr, pkarr, nks)
         cgg.append(cl)
-
-    os.remove(pkfname)
 
     return ls, cgg
 
 ###Testing
 
 if __name__=='__main__':
-    import matplotlib.pyplot as plt
+    #import matplotlib.pyplot as plt
+
+    OmegaM=(0.02237+0.12)/(0.67**2)
+    print("OmegaM=", OmegaM)
     
-    ls,ctg=ctg4py(0.3)
+    ls,ctg=ctg4py(OmegaM)
     print('ls=', ls)
-    print('ctg(0.3)=',ctg)
+    print('ctg({0})={1}'.format(OmegaM, ctg))
 
-    ls,cgg=cgg4py(0.3)
+    ls,cgg=cgg4py(OmegaM)
     print('ls=', ls)
-    print('cgg(0.3)=',cgg)
-
+    print('cgg({0})={1}'.format(OmegaM, ctg))
 
     plt.figure()
     plt.plot(ls,ctg)
