@@ -31,6 +31,10 @@ using namespace std;
 extern "C"{
 void display_results (char *title, double result, double error);
 
+double ctt_integrand1(double x, void *p);
+
+double ctt_integrand2(double x, void *p);
+
 double cgg_integrand1(double x, void *p);
 
 double cgg_integrand2(double x, void *p);

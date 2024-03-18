@@ -21,7 +21,7 @@ void display_results (char *title, double result, double error)
   //printf ("sigma  = % .6f\n", error);
 }
 
-double ctt_integrand(double x, void *p){
+double ctt_integrand1(double x, void *p){
 	struct f_pars * params = (struct f_pars *)p;
 
 	double wL = (params->OmegaL);
@@ -42,6 +42,40 @@ double ctt_integrand(double x, void *p){
 	double wt2 = pow(wt, 2);
 
 	return Delta2(k,h)*wt2;
+}
+
+double ctt_integrand2(double x, void *p){
+	
+	struct f_pars * params = (struct f_pars *)p;
+
+        double wL = (params->OmegaL);
+        double wm = (params->Omegam);
+        int l     = (params->l);
+        double h  = (params->h);
+
+        // x ---> comoving distance in units of Mpc
+
+	double r    = x;
+        double zval = r2z(x, wL, wm, h);
+        double aval = 1./(1.+zval);
+        double Da1 = growth(1., wL, wm);
+
+        double kmin = KOH_MIN*h;
+        double kmax = KOH_MAX*h;
+
+	double f = pow(wm/pow(Hubble(aval, wL, wm),2)/aval/aval/aval, 0.6);
+
+        double ret;
+
+
+        if ((l+0.5)/x>=kmin && (l+0.5)/x<=kmax)
+		//Integrand=r^3*[Hg(f-1)]^2*P((l+1/2)/r):
+		ret = pow(r,3)*pow(growth(aval, wL, wm)/Da1*Hubble(aval, wL, wm)*(f-1.),2)*PowerSpectrum((l+0.5)/r/h); 
+        else
+                ret = 0.;
+
+        return ret/h/h/h;
+
 }
 
 
@@ -201,25 +235,41 @@ double ctt(double OmegaL, double Omegam, int l, double h, double bg){
   params.l = l;
   params.h = h;
 
+  int lbreak = 25;
+
   double result, error;
 
   gsl_function F;
 
-  F.function = &ctt_integrand;
-  F.params = &params;
-
-  double logkmin = log10(KOH_MIN*h);
-  double logkmax = log10(KOH_MAX*h);
-
   //cerr << "Starting integration" << endl;
 
-  gsl_integration_qag (&F, logkmin, logkmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+  if (l<=lbreak){
 
-  //cerr << "Integration finished" << endl;
+	  F.function = &ctt_integrand1;
+	  F.params = &params;
 
-  result *= 4.*M_PI*log(10.)*bg;
-  
-  gsl_integration_workspace_free(w);
+	  double logkmin = log10(KOH_MIN*h);
+	  double logkmax = log10(KOH_MAX*h);
+
+	  gsl_integration_qag (&F, logkmin, logkmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+
+	  //cerr << "Integration finished" << endl;
+
+	  result *= 4.*M_PI*log(10.)*bg;
+	  
+	  gsl_integration_workspace_free(w);
+  } else{
+	    F.function = &ctg_integrand2;
+	    F.params = &params;
+	    
+	    double rmin = 0.0;
+	    double rmax = z2r(ZMAX, OmegaL, Omegam, h);
+
+	    gsl_integration_qag (&F, rmin, rmax, 0., 1.e-6, 1000, 6, w, &result, &error);
+
+	    // Constant=18/[(2l+1)*(l+1/2)]*[H_0^2 \Omega_M T bg/c^3]^2
+	    result *= 18/((2*l+1)*(l+0.5))*pow(pow(H0,2)*Omegam*TCMB*bg/(pow(CSPEED,3)),2);
+  }
 
   return result;
   

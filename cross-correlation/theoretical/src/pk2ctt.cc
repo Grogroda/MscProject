@@ -38,7 +38,7 @@ int main(int argc, char **argv){
   int lmax = 128, band = 1;
   
   if (argc<6){
-    cerr << "Usage: ./pk2ctg -pk [input power spectrum (ascii)] -wl [Omega Lambda] -wm [Omega matter] -h [H0 in km/s/Mpc] -lmax [maximum multipole] -bg [galaxy bias] -out [output C_tg file (ascii)]" << endl;
+    cerr << "Usage: ./pk2ctt -pk [input power spectrum (ascii)] -wl [Omega Lambda] -wm [Omega matter] -h [H0 in km/s/Mpc] -lmax [maximum multipole] -bg [galaxy bias] -out [output C_tg file (ascii)]" << endl;
     cerr << "Available selection functions:"<< endl;
     cerr << "-band 1 : Afshordi's parameterization of 2MASS (XSC) band 1 selection function."<< endl;
     cerr << "-band 2 : Afshordi's parameterization of 2MASS (XSC) band 2 selection function."<< endl;
@@ -109,7 +109,7 @@ int main(int argc, char **argv){
   ofstream output(outfname.c_str());
 
   // Initialize the spline over the matter 3D power spectrum  
-  InitSpline(pkfname);
+  InitSpline(true, pkfname, {}, {}, 0);
 
   // in case you've selected to work with the 2MASS/2MPZ photo-z distribuition as selection function,
   // a spline should also be performed for the photo-z histograms
@@ -135,8 +135,8 @@ int main(int argc, char **argv){
     
     #pragma omp critical
     {
-    cerr << l << " " << cttval << endl; // write cross-correlation to screen
-    output << l << " " << cttval << endl; // write cross-correlation to output file
+    cerr << l << " " << cttval << endl; // write autocorrelation to screen
+    output << l << " " << cttval << endl; // write autocorrelation to output file
     }
 
     /*
