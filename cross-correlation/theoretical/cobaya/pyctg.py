@@ -4,6 +4,7 @@ import os
 from cobaya.model import get_model
 import numpy as np
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
 #from tqdm import tqdm
 
@@ -21,7 +22,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 54 
+lmax = 96
 
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
@@ -39,14 +40,16 @@ pars=camb.CAMBparams()
 pars.set_cosmology(H0=67, ombh2=0.02237, omch2=0.12, omk=0, tau=0.0544)
 pars.InitPower.set_params(As=(1e-10)*np.e**(3.044), ns=0.9649)
 pars.set_for_lmax(lmax)
-pars.set_matter_power(redshifts=[0.], kmax=2.0)
+pars.set_matter_power(redshifts=[0.], kmax=2.0, nonlinear=True)
 
 results=camb.get_results(pars)
 khs, zs, pks=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
 
-plt.figure()
+matplotlib.rcParams.update({'font.size': 15})
+
+plt.figure(figsize=(8,6))
 plt.plot(khs, pks[0])
-plt.title("P(k) with direct CAMB calculation")
+#plt.title("Matter Power Spectrum (Halofit)") 
 plt.xlabel("k/h")
 plt.xscale("log")
 plt.yscale("log")
@@ -167,4 +170,24 @@ if __name__=='__main__':
     plt.xscale('log')
     plt.yscale('log')
     plt.savefig("pycgg_full_test.png")
+
+
+    plt.figure(figsize=(12,6))
+    #Double plot for dissertation:
+
+    plt.subplot(121)
+    plt.plot(ls, cgg)
+    plt.xlabel(r'$\ell$')
+    plt.ylabel(r'$C^{gg}$')
+    plt.xscale('log')
+    plt.yscale('log')
+
+    plt.subplot(122)
+    plt.plot(ls,ctg)
+    plt.xlabel(r'$\ell$')
+    plt.ylabel(r'$C^{tg} [\mu K]$')
+    plt.xscale('log')
+
+    plt.savefig("Correlations_DoublePlot.png")
+
 

@@ -235,7 +235,7 @@ double ctt(double OmegaL, double Omegam, int l, double h, double bg){
   params.l = l;
   params.h = h;
 
-  int lbreak = 25;
+  int lbreak = 100;
 
   double result, error;
 
