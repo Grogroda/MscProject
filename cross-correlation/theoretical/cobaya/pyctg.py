@@ -172,17 +172,17 @@ if __name__=='__main__':
     plt.savefig("pycgg_full_test.png")
 
 
-    plt.figure(figsize=(12,6))
+    plt.figure(figsize=(14,6))
     #Double plot for dissertation:
 
-    plt.subplot(121)
+    plt.subplot(121, box_aspect=0.75)
     plt.plot(ls, cgg)
     plt.xlabel(r'$\ell$')
     plt.ylabel(r'$C^{gg}$')
     plt.xscale('log')
     plt.yscale('log')
 
-    plt.subplot(122)
+    plt.subplot(122, box_aspect=0.75)
     plt.plot(ls,ctg)
     plt.xlabel(r'$\ell$')
     plt.ylabel(r'$C^{tg} [\mu K]$')
