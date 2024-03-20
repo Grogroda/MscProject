@@ -48,13 +48,13 @@ khs, zs, pks=results.get_matter_power_spectrum(minkh=1e-4, maxkh=2, npoints=200)
 matplotlib.rcParams.update({'font.size': 15})
 
 plt.figure(figsize=(8,6))
-plt.plot(khs, pks[0])
+plt.plot(khs, pks[0], label="Direct CAMB")
 #plt.title("Matter Power Spectrum (Halofit)") 
-plt.xlabel("k/h")
+plt.xlabel(r"$k/h [Mpc^{-1} h^{-1}]$")
 plt.xscale("log")
 plt.yscale("log")
-plt.ylabel("P(k/h)")
-plt.savefig("Pk_directCAMB.png")
+plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
+#plt.savefig("Pk_directCAMB.png")
 
 def ctg4py(OmegaM):
     
@@ -73,14 +73,15 @@ def ctg4py(OmegaM):
 
     #pkarr is a 2D array representing P(k,z), each subarray is P(k) for a z requested in Pk_grid.
 
-    plt.figure()
-    plt.plot(karr, pkarr[0])
-    plt.title("P(k) with CAMB indirectly used by Cobaya")
-    plt.xlabel("k/h")
-    plt.ylabel("P(k/h)")
-    plt.xscale("log")
-    plt.yscale("log")
-    plt.savefig("Pk_indirectCAMB.png")
+    #plt.figure()
+    plt.plot(karr/h, pkarr[0]*h**3, label="Cobaya wrapper")
+    #plt.title("P(k) with CAMB indirectly used by Cobaya")
+    #plt.xlabel("k/h")
+    #plt.ylabel("P(k/h)")
+    #plt.xscale("log")
+    #plt.yscale("log")
+    plt.legend()
+    plt.savefig("Pk_comparison.png")
    
     #karr, pkarr = np.array(kh, dtype=np.float64), np.array(pk, dtype=np.float64)
     nks = karr.size 
