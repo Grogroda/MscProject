@@ -5,8 +5,7 @@ from pyctg import cgg4py
 import ctypes
 import matplotlib.pyplot as plt
 
-#Fiducial model to generate data with 10% precision. Has to be outside the likelihood function, otherwise will be recomputed
-# for each point. 
+#Fiducial model to generate data with 10% precision. Has to be outside the likelihood function, otherwise will be recomputed for each point
 OmegaM_fid = 0.3
 ls_ctg, ctg_data  = ctg4py(OmegaM_fid)
 ctg_sigmas= [i*0.1 for i in ctg_data]
@@ -89,13 +88,14 @@ if __name__=='__main__':
     print("info dict defined")
 
     from cobaya.model import get_model
+
     model=get_model(info)
 
     print("Model created")
 
     from cobaya.run import run
     info['sampler'] = {'mcmc':{'Rminus1_stop':0.001, 'max_tries':10000}}
-    info['output'] = "scriptrun_test/ctg_Pkupdate_lmax54_N2e5"
+    info['output'] = "scriptrun_test/ctg_Pkarray_lmax54_N2e5"
     print("Run about to start")
     updated_info, sampler=run(info, resume=True, no_mpi=False)
 
@@ -106,4 +106,4 @@ if __name__=='__main__':
     gdplot = gdplt.get_subplot_plotter(width_inch=5)
     gdplot.triangle_plot(gdsamples, ['OmegaM'], filled=True)
 #    gdplot = gdplt.get_subplot(width_inch=5)
-    plt.savefig("scriptrun_test/ctg_Pkupdate_lmax54_N2e5.png")
+    plt.savefig("scriptrun_test/ctg_Pkarray_lmax54_N2e5.png")

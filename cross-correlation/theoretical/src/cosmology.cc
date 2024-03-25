@@ -412,7 +412,7 @@ void InitSpline(bool read_input, string fname = "", double karr[]={}, double pka
 	  nks = DefineSpectrum(karr, pkarr, nks);
   }
 
-  cerr << "nks=" << nks << endl;
+  //cerr << "nks=" << nks << endl;
   
   acc = gsl_interp_accel_alloc ();
   spline = gsl_spline_alloc (gsl_interp_cspline, nks);

@@ -22,7 +22,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 96
+lmax = 54 
 
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
@@ -34,6 +34,7 @@ info = {
         'theory':{'camb':None}
         }
 
+'''
 import camb
 
 pars=camb.CAMBparams()
@@ -55,10 +56,11 @@ plt.xscale("log")
 plt.yscale("log")
 plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 #plt.savefig("Pk_directCAMB.png")
+'''
 
 def ctg4py(OmegaM):
     
-    #First calculate matter PS with CAMB:
+    #First calculate matter PS with Cobaya's CAMB wrapper:
     h = 0.67
     omb=0.02237/(h**2)
     omch2=(OmegaM-omb)*h**2
@@ -71,8 +73,12 @@ def ctg4py(OmegaM):
     model.logposterior({})
     karr, zarr, pkarr = model.provider.get_Pk_grid()
 
+    kh=karr/h
+    pkh=pkarr[0]*h**3
+
     #pkarr is a 2D array representing P(k,z), each subarray is P(k) for a z requested in Pk_grid.
 
+    '''
     #plt.figure()
     plt.plot(karr/h, pkarr[0]*h**3, label="Cobaya wrapper")
     #plt.title("P(k) with CAMB indirectly used by Cobaya")
@@ -82,8 +88,8 @@ def ctg4py(OmegaM):
     #plt.yscale("log")
     plt.legend()
     plt.savefig("Pk_comparison.png")
+    '''
    
-    #karr, pkarr = np.array(kh, dtype=np.float64), np.array(pk, dtype=np.float64)
     nks = karr.size 
 
     #Then calculate ctg:
@@ -98,9 +104,9 @@ def ctg4py(OmegaM):
     ls=[]
     ctg = []
     for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
-        print('ctg for l=', l)
+        #print('ctg for l=', l)
         ls.append(l)
-        cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, karr, pkarr, nks)
+        cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
         ctg.append(cl)
 
     return ls, ctg
@@ -120,6 +126,8 @@ def cgg4py(OmegaM):
     model.logposterior({})
     karr, zarr, pkarr = model.provider.get_Pk_grid()
    
+    kh=karr/h
+    pkh=pkarr[0]*h**3
     #karr, pkarr = np.array(kh, dtype=np.float64), np.array(pk, dtype=np.float64)
     nks = karr.size 
 
@@ -134,9 +142,9 @@ def cgg4py(OmegaM):
     ls=[]
     cgg = []
     for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
-        print("cgg for l=", l)
+        #print("cgg for l=", l)
         ls.append(l)
-        cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, karr, pkarr, nks)
+        cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
         cgg.append(cl)
 
     return ls, cgg
@@ -157,6 +165,8 @@ if __name__=='__main__':
     print('ls=', ls)
     print('cgg({0})={1}'.format(OmegaM, ctg))
 
+    matplotlib.rcParams.update({'font.size': 15})
+
     plt.figure()
     plt.plot(ls,ctg)
     plt.xlabel(r'$\ell$')
@@ -171,7 +181,6 @@ if __name__=='__main__':
     plt.xscale('log')
     plt.yscale('log')
     plt.savefig("pycgg_full_test.png")
-
 
     plt.figure(figsize=(14,6))
     #Double plot for dissertation:
@@ -190,5 +199,3 @@ if __name__=='__main__':
     plt.xscale('log')
 
     plt.savefig("Correlations_DoublePlot.png")
-
-
