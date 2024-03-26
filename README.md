@@ -1,4 +1,4 @@
-# Cosmological Constraints with the Sachs-Wolffe Integrated Effect
+# Cosmological Constraints with the Sachs-Wolfe Integrated Effect
 In this repository I'll attempt to organize and make my Master's project available to my collaborators (in an organized way). It's still a work in progress, there is much to be organized before it can be effectively used, but once it does it would be great to only work in these codes through this repository. To work with this repo, one should read my Master's project, which includes many references necessary to understand what many of the codes present here do.
 
 ## General info
