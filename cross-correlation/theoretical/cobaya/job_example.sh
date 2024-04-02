@@ -1,9 +1,13 @@
 #!/bin/bash  
 #SBATCH --partition=SP2
-#SBATCH --ntasks=2 		# number of tasks / mpi processes
+#SBATCH --ntasks=10 		# number of tasks / mpi processes
 #SBATCH --cpus-per-task=1 	# Number OpenMP Threads per process
-#SBATCH -J cobaya
+#SBATCH -J cobaya_test1
 #SBATCH --time=8-00:00:00
+
+#E-mail notifications:
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=meirellesarthur@usp.br
 
 #OpenMP settings:
 export OMP_NUM_THREADS=1
@@ -16,7 +20,9 @@ echo $SLURM_SUBMIT_DIR		#Directory job where was submitted
 echo $SLURM_JOB_NODELIST	#File containing allocated hostnames
 echo $SLURM_NTASKS		#Total number of cores for job
 
-module load mpich
+module swap openmpi mpich
+module swap gnu gnu7
+
 cd /temporario/10300487/MscProject/cross-correlation/theoretical/cobaya/
 
 mpirun -n 2 python pyctg_likelihood.py > scriptrun_test/out.log 2>&1

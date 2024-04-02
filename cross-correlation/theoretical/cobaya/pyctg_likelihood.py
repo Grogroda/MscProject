@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import numpy as np
 import random
 from pyctg import ctg4py
