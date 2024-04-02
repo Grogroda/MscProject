@@ -35,7 +35,7 @@ class ctg(Theory):
         This function is used to calculate and store the results in the "state" dictionary
         '''
         OmegaM = self.provider.get_param('OmegaM')
-        cl     = ctg4py(OmegaM)
+        ls, cl = ctg4py(OmegaM)
         state['ctg']=cl
 
     def get_ctg(self):
@@ -74,7 +74,7 @@ class cgg(Theory):
         This function is used to calculate and store the results in the "state" dictionary
         '''
         OmegaM = self.provider.get_param('OmegaM')
-        cl     = cgg4py(OmegaM)
+        ls, cl = cgg4py(OmegaM)
         state['cgg']=cl
 
     def get_cgg(self):
