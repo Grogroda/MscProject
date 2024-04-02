@@ -22,7 +22,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 6 
+lmax = 48 
 
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
