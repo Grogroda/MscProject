@@ -31,6 +31,7 @@ def ctg_like(_self=None):
 
     #Chi2 calculation:
     Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
+    #print("Xi2=", Xi2)
     sigSum = np.sum(np.log(sigma_array))
     # Constant not included.
     logp = - sigSum - Xi2/2
