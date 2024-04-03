@@ -5,12 +5,24 @@ from pyctg import ctg4py
 from pyctg import cgg4py
 import ctypes
 import matplotlib.pyplot as plt
+import pandas as pd
 
+'''
 #Fiducial model to generate data with 10% precision. Has to be outside the likelihood function, otherwise will be recomputed for each point
 OmegaM_fid = 0.3
 ls_ctg, ctg_data  = ctg4py(OmegaM_fid)
 ctg_sigmas= [i*0.1 for i in ctg_data]
 print("fake ctg calculated")
+'''
+
+#Data for likelihood calculation:
+
+arr_names=['ls', 'Dtt', 'err_Dtt', 'Cgg', 'err_Cgg', 'Ctg', 'err_Ctg']
+data_band1=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc1_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
+
+ls1=data_band1['ls']
+Ctg1=data_band1['Ctg']
+sigma_ctg1=data_band1['err_Ctg']
 
 '''
 ls, cgg_data = cgg4py(OmegaM_fid)
@@ -27,13 +39,12 @@ def ctg_like(_self=None):
     #Descobrir como flexibilizar: Deixar o usuário escolher se quer ctg ou cgg
     cl_theo=_self.provider.get_ctg()
 #    print(cl_theo,cl_data,cl_sigmas)
-    print("cl_theo=", cl_theo)
 
-    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(ctg_data), np.array(ctg_sigmas)
+    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(Ctg1), np.array(sigma_ctg1)
 
     #Chi2 calculation:
     Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
-    print("Xi2=", Xi2)
+    #print("Xi2=", Xi2)
     sigSum = np.sum(np.log(sigma_array))
     # Constant not included.
     logp = - sigSum - Xi2/2
