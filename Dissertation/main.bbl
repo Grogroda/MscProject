@@ -2209,6 +2209,37 @@
       \verb 2104.04642
       \endverb
     \endentry
+    \entry{lahav2014cosmological}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=d1bdac4e941a3efd95a7310176a880d6}{%
+           family={Lahav},
+           familyi={L\bibinitperiod},
+           given={Ofer},
+           giveni={O\bibinitperiod}}}%
+        {{hash=f1567755c205c573126609c5a1a5fa0a}{%
+           family={Liddle},
+           familyi={L\bibinitperiod},
+           given={Andrew\bibnamedelima R},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6ef3b87383d1142c71a70b747fa3143}
+      \strng{fullhash}{a6ef3b87383d1142c71a70b747fa3143}
+      \strng{bibnamehash}{a6ef3b87383d1142c71a70b747fa3143}
+      \strng{authorbibnamehash}{a6ef3b87383d1142c71a70b747fa3143}
+      \strng{authornamehash}{a6ef3b87383d1142c71a70b747fa3143}
+      \strng{authorfullhash}{a6ef3b87383d1142c71a70b747fa3143}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Cosmological Parameters 2014}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1401.1389
+      \endverb
+    \endentry
     \entry{CPL_DE_parametrization}{article}{}
       \name{author}{1}{}{%
         {{hash=cca5e429f691337f2eae5e627fcce624}{%
@@ -2966,8 +2997,8 @@
       \strng{authornamehash}{5dfdcadb99b33e605d7c68c181edd8de}
       \strng{authorfullhash}{c888a1ee0fba3757a40549a93a75252a}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Astronomy \& Astrophysics}
@@ -3310,8 +3341,8 @@
       \strng{authorbibnamehash}{1f8644e3da0b7fe0b18f503c421d2f12}
       \strng{authornamehash}{1f8644e3da0b7fe0b18f503c421d2f12}
       \strng{authorfullhash}{7522fe49ed7af6e4a6d48a78a85f6acb}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{A22}
