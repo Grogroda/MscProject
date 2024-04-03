@@ -67,7 +67,7 @@ def estimate_proposal(min_max, n=25, plot=True):
 
     expected_pars=['OmegaM']
     #The output matrix is ordered according to expected_pars, not min_max keys order. Make this very clear for the user
-    default_values={'OmegaM':0.31}
+    default_values={'OmegaM':0.31} #use middle value as default instead?
     pars={'OmegaM':0.31}
 
     proposal_matrix=[]
