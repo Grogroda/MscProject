@@ -57,6 +57,65 @@ def cgg_like(_self=None):
 
 print("likelihoods defined")
 
+def estimate_proposal(min_max, n=25, plot=True):
+    '''
+    min_max (dict)=dictionary with parameter name (key) associated with a size 2 array (tuple or list) indication par_min and par_max
+    This function returns a diagonal matrix with proposal variances for the ith parameter in the element [i][i]
+    To do this, the function calculates the likelihood of the parameters for values of that parameter between par_min and par_max (without varying the others) and calculates the variance of the distribution. If plot=True, it plots the distribution so the user can analyse it if necessary. 
+    n (int)=number of points to for which L is being calculated for each parameter.
+    '''
+
+    expected_pars=['OmegaM']
+    #The output matrix is ordered according to expected_pars, not min_max keys order. Make this very clear for the user
+    default_values={'OmegaM':0.31}
+    pars={'OmegaM':0.31}
+
+    proposal_matrix=[]
+    npars=len(expected_pars)
+
+    if len(list(min_max.keys()))!=len(expected_pars):
+        raise Exception("Expected {0} parameters, {1} were passed. List of expected parameters: {2}".format(len(expected_pars),len(list(min_max.keys())), expected_pars))
+    else:
+        counter=0
+        for par in expected_pars:
+            #checks if the user passed a wrong parameter:
+            if par not in min_max:
+                raise Exception("Parameter {0} not expected. List of expected parameters: {1}".format(par, expected_pars))
+
+            proposal_matrix.append([0 for i in range(npars)]) #creates line with npars zeroes
+            #Sets the current parameter to its minimum value:
+            pars[par]=min_max[par][0]
+            delta_par=(min_max[par][1]-min_max[par][0])/n
+            
+            #Sets all parameter values
+            OmegaM=pars['OmegaM']
+
+            xs, ys=[],[]
+
+            for i in range(n+1):
+                ctg_theo=ctg4py(OmegaM)
+
+                theory_array, data_array, sigma_array=np.array(ctg_theo), np.array(cgg_data), np.array(cgg_sigmas)
+
+                #Chi2 calculation:
+                Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
+                sigSum = np.sum(np.log(sigma_array))
+
+                xs.append(pars[par])
+                ys.append(-Xi2-sigSum)
+
+                pars[par]+=delta_par
+
+            pars[par]=default_values[par]
+
+            plt.figure()
+            plt.plot(xs, ys)
+            plt.xaxis(par)
+            plt.yaxis(r'$\mathcal{L}=log(p)$')
+            plt.savefig('LProfile_{}.png'.format(par))
+
+    return None #como retornar a matriz "exata"?
+
 if __name__=='__main__':
     #Testing area
 
