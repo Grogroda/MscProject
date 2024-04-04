@@ -93,6 +93,7 @@ def estimate_proposal(min_max, n=25, plot=True):
             xs, ys=[],[]
 
             for i in range(n+1):
+                print("i=", i)
                 ctg_theo=ctg4py(OmegaM)
 
                 theory_array, data_array, sigma_array=np.array(ctg_theo), np.array(cgg_data), np.array(cgg_sigmas)
@@ -118,6 +119,11 @@ def estimate_proposal(min_max, n=25, plot=True):
 
 if __name__=='__main__':
     #Testing area
+
+    '''
+    print("Inside testing area")
+    estimate_proposal({'OmegaM':(0.01, 0.99)})
+    '''
 
     if test_plots:
         plt.figure()

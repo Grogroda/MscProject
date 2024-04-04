@@ -104,7 +104,7 @@ def ctg4py(OmegaM):
     ls=[]
     ctg = []
     for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
-        #print('ctg for l=', l)
+        print('ctg for l=', l)
         ls.append(l)
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
         ctg.append(cl)
