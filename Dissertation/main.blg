@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'main.blg'
-[130] biber:340> INFO - === Wed Apr  3, 2024, 15:46:26
-[154] Biber.pm:418> INFO - Reading 'main.bcf'
-[348] Biber.pm:972> INFO - Found 54 citekeys in bib section 0
-[381] Biber.pm:4383> INFO - Processing section 0
-[406] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[414] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1605] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[5588] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[5589] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[5589] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[5589] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[5747] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[6355] bbl.pm:757> INFO - Output to main.bbl
-[6355] Biber.pm:130> WARN - legacy month field 'Jan' in entry 'Weinberg_Lambda_1989' is not an integer - this will probably not sort properly.
-[6355] Biber.pm:132> INFO - WARNINGS: 1
+[1] Config.pm:310> INFO - Logfile is 'main.blg'
+[199] biber:340> INFO - === Thu Apr  4, 2024, 15:48:37
+[229] Biber.pm:418> INFO - Reading 'main.bcf'
+[439] Biber.pm:972> INFO - Found 56 citekeys in bib section 0
+[474] Biber.pm:4383> INFO - Processing section 0
+[498] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[506] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1735] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[6980] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[6981] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[6981] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[6981] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[7178] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[8050] bbl.pm:757> INFO - Output to main.bbl
+[8050] Biber.pm:130> WARN - legacy month field 'Jan' in entry 'Weinberg_Lambda_1989' is not an integer - this will probably not sort properly.
+[8050] Biber.pm:132> INFO - WARNINGS: 1

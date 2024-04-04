@@ -203,7 +203,7 @@ One of the fundamental principles of cosmology is called the Cosmological Princi
 
 %\noindent This means that under the assumption of the Cosmological Principle, the metric of the universe can only be that of an euclidian plane, a hypersphere or a hyperbolic space. 
 
-In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology: Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the earth\cite{hubble}, these results were studied using general relativity and cosmological models at the time\cite{Lemaitre:1927zz}. It was then established another principle that physicists were avoiding in their theoretical models for quite some time: The Universe is not static, in fact it is expanding and there is a linear relationship between the redshift of an observed object and its distance to the observer. 
+In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology: Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the earth\cite{hubble}, these results were studied using general relativity and cosmological models at the time\cite{Lemaitre:1927zz}. It was then established another principle that physicists were avoiding in their theoretical models for quite some time: The Universe is not static, in fact it is expanding, and for objects not too far (REFERÊNCIA), there is a linear relationship between the redshift of an observed object and its distance to the observer. 
 
 To describe the Universe, a coordinate system is embedded in the entire Universe, and to describe its dynamical nature, the scale factor $a$ is introduced to the theoretical model: $a$ is set to 1 at the present as a convention (usually called $a_0$), and its value at any given time $a(t)$ is the size of the Universe relative to its present size. A simple relation can be established between the scale factor of an observed object and its redshift $z$:
 
@@ -219,7 +219,7 @@ To describe the Universe, a coordinate system is embedded in the entire Universe
     H(t)=\frac{1}{a}\dv{a}{t}
 \end{equation}
 
-These properties are not exclusive to a particular cosmological model, instead being present in most of them. The standard model of cosmology, called $\Lambda$CDM, usually takes a few assumptions on top of the ones described previously:
+These properties are not exclusive to a particular cosmological model, instead being present in all of them. The standard model of cosmology, called $\Lambda$CDM, usually takes a few assumptions on top of the ones described previously:
 
 \begin{itemize}
     \item The Universe emerged from a space-time singularity that started expanding several billion years ago, in an event called the Big Bang;
@@ -260,7 +260,7 @@ In equation \eqref{field_eqs} and throughout this text (unless otherwise stated)
     \end{pmatrix}.
 \end{align}
 
-The metric $g_{\mu\nu}$ described in equation \eqref{cap2:initial_tensors} is called the Friedmann-Lemaître-Robertson-Walker (FLRW) metric. In order to expand any equation from \eqref{field_eqs}, it is necessary to determine $R=g^{\mu\nu}R_{\mu\nu}$. By expanding the expression using the matrices defined in \eqref{cap2:initial_tensors}, the result is
+The metric $g_{\mu\nu}$ described in equation \eqref{cap2:initial_tensors} is called the Friedmann-Lemaître-Robertson-Walker (FLRW) metric\cite{FLRW_metric}. In order to expand any equation from \eqref{field_eqs}, it is necessary to determine $R=g^{\mu\nu}R_{\mu\nu}$. By expanding the expression using the matrices defined in \eqref{cap2:initial_tensors}, the result is
 
 \begin{equation}\label{riemann_constant}
     R=6\left[\frac{\Ddot{a}}{a}+\left(\frac{\dot{a}}{a}\right)^2\right].
@@ -341,14 +341,14 @@ It is very useful to also define the energy density fraction of each component o
 \noindent where $\rho_\text{crit}$ is the so called critical density, defined as
 
 \begin{equation}\label{def:rho_crit}
-    \rho_\text{crit}\equiv \frac{3H_0^2}{8\pi G},
+    \rho_\text{crit}\equiv \frac{3H_0^2}{8\pi G}\approx \SI{8.5e-27}{\kilogram /\meter^{3}},
 \end{equation}
 
 \noindent where $H_0$ is the Hubble constant, the value of the Hubble parameter $H(t)$ defined in \eqref{def:H(t)} at the present.
 
-This energy density makes it possible to determine what is the curvature of the Universe: If the total sum of energy densities in the Universe is equal to the critical density, the Universe is flat; if this sum is higher than $\rho_\text{crit}$ the Universe would have positive curvature; and if this sum is lower than $\rho_\text{crit}$, the Universe would have negative curvature. 
+This energy density makes it possible to determine what is the curvature of the Universe: if the total sum of energy densities in the Universe is equal to the critical density, the Universe is flat; if this sum is higher than $\rho_\text{crit}$ the Universe would have positive curvature; and if this sum is lower than $\rho_\text{crit}$, the Universe would have negative curvature\cite{schutz2009first}. 
 
-Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these energy fractions for the Universe in the present. It is important to note that commonly in cosmology (and throughout this text), the classification of baryons includes electrons, even though they are classified as leptons.
+Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these energy fractions for the Universe in the present. It is important to note that commonly in cosmology (and throughout this text), the classification of baryons includes electrons, even though, according to the standard model of particle physics, electrons belong, together with their associated neutrinos, to one of the three families of leptons.
 
 \begin{table}[!htb]
 \centering
@@ -368,15 +368,15 @@ Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these en
 
 Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid} and modifications to general relativity\cite{Brane_cosmo_model}. 
 
-The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization:
+The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization\cite{CPL_DE_parametrization,DE_models}:
 
 \begin{equation}\label{CPL}
     w(z)=w_0+\left(1-\frac{1}{1+z}\right)w_a.
 \end{equation}
 
-One important property of this parametrization and most others is that the value of the equation of state parameter today ($z=0$) is a constant term of the equation that can be used as a free parameter during data analysis. 
+%One important property of this parametrization and most others is that the value of the equation of state parameter today ($z=0$) is the same as the equation of state parameter of the $\Lambda$CDM model $w_0$
 
-So far, this parametrization has not solved some of the current limitations being faced by the $\Lambda$CDM model, such as the Hubble tension \cite{Hubble_tension_review} and the $\sigma_8$ tension \cite{Planck_results}, it has not improved over the $\Lambda$CDM predictions, but it shows good compatibility with CMB, type 1A supernovae and baryon acoustic oscillations (BAO) data\cite{Planck_results}. Planck results using this parametrization are shown in Table \ref{tab:planck_CPL}.
+So far, this parametrization has not solved some of the current limitations being faced by the $\Lambda$CDM model, such as the Hubble tension \cite{Hubble_tension_review} and the $\sigma_8$ tension \cite{Planck_results}, it has not improved over the $\Lambda$CDM predictions, but it shows good compatibility with CMB, type IA supernovae and baryon acoustic oscillations (BAO) data\cite{Planck_results}. Planck results using this parametrization are shown in Table \ref{tab:planck_CPL}.
 
 \begin{table}[!htb]
     \centering
@@ -388,12 +388,12 @@ So far, this parametrization has not solved some of the current limitations bein
      $\sigma_8$ & $0.820\pm 0.011$\\ \hline
      $\Delta \chi^2$ & -1.4 \\ \hline
     \end{tabular}
-    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming parametrization \eqref{CPL}, obtained by combining Planck temperature and polarization autocorrelation and cross-correlation spectra\cite{Planck_spectra}, type 1A supernovae data from the Joint Light Curve Analysis (JLA)\cite{JLA} and BAO data from the Sloan Digital Sky Survey (SDSS)\cite{SDSS}. The $\Delta \chi^2$ value was computed with respect to the $\Lambda$CDM best fits computed from the same data set combination.}
+    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming parametrization \eqref{CPL}, obtained by combining Planck temperature and polarization autocorrelation and cross-correlation spectra\cite{Planck_spectra}, type IA supernovae data from the Joint Light Curve Analysis (JLA)\cite{JLA} and BAO data from the Sloan Digital Sky Survey (SDSS)\cite{SDSS}. The $\Delta \chi^2$ value was computed with respect to the $\Lambda$CDM best fits computed from the same data set combination.}
     \label{tab:planck_CPL}
 \end{table}
 
 %COMPLEMENTAR AQUI COM: VELOCIDADE DO HORIZONTE SONORO (OU SEI LÁ)
-%ADICIONAR OS PLOTS QUE EU FIZ DA INFLUÊNCIA DA DARK ENERGY NO CTT
+%ADICIONAR OS PLOTS QUE EU FIZ DA INFLUÊNCIA DA DARK ENERGY NO CTT (colocar essa seção depois de falar do Ctt?)
 
 \subsection{A Brief History of the Universe}
 
