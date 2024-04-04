@@ -3592,6 +3592,104 @@
       \endverb
       \keyw{cosmological parameters,dark energy,Astrophysics - Cosmology and Nongalactic Astrophysics}
     \endentry
+    \entry{DE_sound}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a2ed603f0cd70bb0fa9229ee9725ca1f}{%
+           family={Linton},
+           familyi={L\bibinitperiod},
+           given={Mark\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=33a1f29426c1968feaeb994318e1e402}{%
+           family={Pourtsidou},
+           familyi={P\bibinitperiod},
+           given={Alkistis},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fd52e2aac757409221b2f21c85e219ea}{%
+           family={Crittenden},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4d53d8bcf5590c985ee9d372538de954}{%
+           family={Maartens},
+           familyi={M\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{fullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
+      \strng{bibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authorbibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{month}{4}
+      \field{number}{04}
+      \field{title}{Variable sound speed in interacting dark energy models}
+      \field{volume}{2018}
+      \field{year}{2018}
+      \field{pages}{043}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2018/04/043
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1475-7516/2018/04/043
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1475-7516/2018/04/043
+      \endverb
+    \endentry
+    \entry{DE_variable_soundspeed_Linton2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a2ed603f0cd70bb0fa9229ee9725ca1f}{%
+           family={Linton},
+           familyi={L\bibinitperiod},
+           given={Mark\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=33a1f29426c1968feaeb994318e1e402}{%
+           family={Pourtsidou},
+           familyi={P\bibinitperiod},
+           given={Alkistis},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fd52e2aac757409221b2f21c85e219ea}{%
+           family={Crittenden},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4d53d8bcf5590c985ee9d372538de954}{%
+           family={Maartens},
+           familyi={M\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{fullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
+      \strng{bibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authorbibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Cosmol. Astropart. Phys.}
+      \field{month}{04}
+      \field{number}{04}
+      \field{title}{Variable sound speed in interacting dark energy models}
+      \field{volume}{2018}
+      \field{year}{2018}
+      \field{pages}{043\bibrangedash 043}
+      \range{pages}{1}
+    \endentry
     \entry{Guth81}{article}{}
       \name{author}{1}{}{%
         {{hash=b02ea1692455ac9b821fc714349745d8}{%
@@ -3860,8 +3958,8 @@
       \strng{authornamehash}{474e445168b8b43c845ea1293cdcef60}
       \strng{authorfullhash}{71ced2f0f33117236af0800d52d09837}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Astrophysical Journal}
@@ -4438,8 +4536,8 @@
       \strng{authornamehash}{5dfdcadb99b33e605d7c68c181edd8de}
       \strng{authorfullhash}{26161cc087a78a9b867703ec6a170875}
       \field{extraname}{3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Astronomy \& Astrophysics}
@@ -4475,8 +4573,8 @@
       \strng{authorbibnamehash}{6861904c18fc010074b1feefb4daef9f}
       \strng{authornamehash}{6861904c18fc010074b1feefb4daef9f}
       \strng{authorfullhash}{6861904c18fc010074b1feefb4daef9f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Kinematic effects and the break of statistical isotropy of the cosmic microwave background fluctuations}
@@ -4608,8 +4706,8 @@
       \strng{authornamehash}{e90df9cde99ef67247dd6a7be950edea}
       \strng{authorfullhash}{e90df9cde99ef67247dd6a7be950edea}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{4}
