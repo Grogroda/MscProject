@@ -59,6 +59,8 @@ plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 '''
 
 def ctg4py(OmegaM):
+
+    print("[pyctg.py] Inside ctg4py")
     
     #First calculate matter PS with Cobaya's CAMB wrapper:
     h = 0.67
@@ -106,7 +108,9 @@ def ctg4py(OmegaM):
     for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
         print('ctg for l=', l)
         ls.append(l)
+        print("About to start ctg")
         cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
+        print("ctg calculated")
         ctg.append(cl)
 
     return ls, ctg

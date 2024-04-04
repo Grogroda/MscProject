@@ -380,7 +380,11 @@ double ctg_quad(double OmegaL, double Omegam, int l, double z0, double beta, dou
 
 double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int ncalls){
 
+  cerr << "[ctg_mc] About do allocate integration memory" << endl;
+
   gsl_integration_workspace *w = gsl_integration_workspace_alloc (1000);
+
+  //cerr << "Integration memory allocated" << endl;
 
   struct f_pars params;
 
@@ -393,6 +397,8 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
   params.h = h;
 
   double result, error;
+
+  //cerr << "About to calculate logkmin/logkmax" << endl;
 
   double logkmin = log10(KOH_MIN*h);
   double logkmax = log10(KOH_MAX*h);
@@ -409,6 +415,8 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
 
   size_t calls = ncalls;
 
+  cerr << "Integration parameters defined" << endl;
+
   if (l<=10){
 
     gsl_rng_env_setup ();
@@ -416,27 +424,31 @@ double ctg_mc(double OmegaL, double Omegam, int l, double z0, double beta, doubl
     T = gsl_rng_default;
     r = gsl_rng_alloc (T);
 
+    cerr << "Integration environment for l<=10 set up" << endl;
+
     {
       gsl_monte_vegas_state *s = gsl_monte_vegas_alloc (3);
 
       gsl_monte_vegas_integrate (&G, xl, xu, 3, 1000, r, s, &result, &error);
+      cerr << "First integration" << endl;
 
       display_results ("vegas warm-up", result, error);
 
       //Comenting out screen output
 
-      //      printf ("converging...\n");
+            printf ("converging...\n");
 
       do
 	{
 	  gsl_monte_vegas_integrate (&G, xl, xu, 3, calls/5, r, s, &result, &error);
-	  //printf ("result = % .6f sigma = % .6f "
-	  //	  "chisq/dof = %.1f\n", result, error, gsl_monte_vegas_chisq (s));
+	  printf ("result = % .6f sigma = % .6f "
+	  	  "chisq/dof = %.1f\n", result, error, gsl_monte_vegas_chisq (s));
 	}
       while (fabs (gsl_monte_vegas_chisq (s) - 1.0) > 0.5);
       
       display_results ("vegas final", result, error);
 
+      cerr << "About to free memory" << endl;
       gsl_monte_vegas_free (s);
     }
 
@@ -475,9 +487,13 @@ double cgg4py(double OmegaL, double Omegam, int l, double z0, double beta, doubl
 
 double ctg4py(double OmegaL, double Omegam, int l, double z0, double beta, double lbda, double h, double bg, int mode, int ncalls, double karr[], double pkarr[], int nks){
 	
+	cerr << "[correlations.cc] Inside ctg4py" << endl;
 	InitSpline(false, "", karr, pkarr, nks);
 
+	//cerr << "Spline done" << endl;
+
 	double ctgl=ctg(OmegaL, Omegam, l, z0, beta, lbda, h, bg, mode, ncalls);
+	cerr << "ctgl calculated" << endl;
 	return ctgl;
 }
 
