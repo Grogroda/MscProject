@@ -1,10 +1,20 @@
 import numpy as np
 from pyctg import ctg4py
+import pandas as pd
 
+'''
 OmegaM_fid=0.3
 ls_data, ctg_data = ctg4py(OmegaM_fid)
 ctg_sigmas=[i*0.1 for i in ctg_data]
 print("[profile_OmegaM.py] Fake ctg calculated")
+'''
+arr_names=['ls', 'Dtt', 'err_Dtt', 'Cgg', 'err_Cgg', 'Ctg', 'err_Ctg']
+data_band1=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc1_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
+
+ls1=data_band1['ls']
+Ctg1=data_band1["Ctg"]
+print("ls=", ls1)
+sigma_ctg1=data_band1['err_Ctg']
 
 def Likelihood(OmegaM):
 
@@ -14,7 +24,7 @@ def Likelihood(OmegaM):
 
     print("ctg_theo calculated")
 
-    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(ctg_data), np.array(ctg_sigmas)
+    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(Ctg1), np.array(sigma_ctg1)
 
     Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
     sigSum = np.sum(np.log(sigma_array))
@@ -22,7 +32,7 @@ def Likelihood(OmegaM):
 
     return logp
 
-Omega_min, Omega_max=0.2, 0.4 #minimum value
+Omega_min, Omega_max=0.15, 0.6 
 n_vals=100
 
 delta_Om=(Omega_max-Omega_min)/n_vals

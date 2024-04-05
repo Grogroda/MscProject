@@ -22,7 +22,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 46 
+lmax = 51 
 
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
@@ -105,7 +105,7 @@ def ctg4py(OmegaM):
     #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[]
     ctg = []
-    for l in range(2, round(lmax)): #around 2-3 minutes for the whole spectrum
+    for l in range(2, round(lmax)+1): #around 2-3 minutes for the whole spectrum
         print('ctg for l=', l)
         ls.append(l)
         print("About to start ctg")
