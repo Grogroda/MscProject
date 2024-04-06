@@ -22,7 +22,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 51 
+lmax = 98 
 
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
@@ -145,8 +145,8 @@ def cgg4py(OmegaM):
     ncalls = 200000
     ls=[]
     cgg = []
-    for l in range(2, round(lmax)): #about 12 seconds per point, ~6mins for 54 points
-        #print("cgg for l=", l)
+    for l in range(2, round(lmax)+1): #about 12 seconds per point, ~6mins for 54 points
+        print("cgg for l=", l)
         ls.append(l)
         cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
         cgg.append(cl)
@@ -196,10 +196,11 @@ if __name__=='__main__':
     plt.xscale('log')
     plt.yscale('log')
 
+    dtg=[ls[i]*(ls[1]+1)/(2*np.pi)*ctg[i] for i in range(len(ls))]
     plt.subplot(122, box_aspect=0.75)
-    plt.plot(ls,ctg)
+    plt.plot(ls,dtg)
     plt.xlabel(r'$\ell$')
-    plt.ylabel(r'$C^{tg} [\mu K]$')
+    plt.ylabel(r'$\ell(\ell+1)/(2\pi) C^{tg}$ $[\mu K]$')
     plt.xscale('log')
 
     plt.savefig("Correlations_DoublePlot.png")

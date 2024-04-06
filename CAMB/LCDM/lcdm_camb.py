@@ -1,6 +1,8 @@
 import camb
 import numpy as np
 import pandas as pd
+import matplotlib
+from matplotlib import pyplot as plt
 
 approx=input("Linear (L) or halofit (H)? ")
 if approx=='H':
@@ -28,3 +30,15 @@ data_matter=pd.DataFrame({'k':kh, 'P(k)':pk[0]}, index=None)
 data_matter.to_csv('matterPS.dat', sep=' ', header=False, index=False)
 
 # add plot option later
+
+# P(k) plot:
+
+matplotlib.rcParams.update({'font.size':15})
+
+plt.figure(figsize=(8,6))
+plt.plot(kh, pk[0])
+plt.xlabel(r'$k/h$ $[h^{-1}Mpc^{-1}]$')
+plt.ylabel(r'$P(k/h)$ $[h^{-3}Mpc^{-3}]$')
+plt.xscale('log')
+plt.yscale('log')
+plt.savefig('Pk_3dmatter_LCDM.png')

@@ -330,7 +330,7 @@ This solution ignores further interaction between components, it would apply to 
 
 The rigorous form of determining $w_s$ for some components of the Universe requires the usage of statistical physics. In cases where we have limited information on the physical properties of a certain component, such as dark energy, theoretical frameworks and assumptions have to be used, as well as the analysis of data.
 
-In the case of dark energy, assuming its origin is related to the cosmological constant, the data strongly suggests a value of $w_\Lambda=-1$, which also indicates a constant density for dark energy. From the quantum field theory point of view, the cosmological constant energy density would be associated to zero point energy of a quantum field. However, so far, no calculation has been successful in predicting a zero point energy whose density is consistent with the cosmological observations\cite{Weinberg_Lambda_1989}. Many models propose alternative possibilities, such as dynamical dark energy in which $w_{DE}$ is a function of $a$\cite{DE_models}, which would still be able to explain the accelerated expansion of the Universe as long as $w_{DE}<-\frac{1}{3}$. Table \ref{tab:rhos&Omegas} summarizes the equation of state properties of each known component in the Universe.
+In the case of dark energy, assuming its origin is related to the cosmological constant, the data strongly suggests a value of $w_\Lambda=-1$, which also indicates a constant density for dark energy. From the quantum field theory point of view, the cosmological constant energy density would be associated to zero point energy of a quantum field. However, so far, no calculation has been successful in predicting a zero point energy whose density is consistent with the cosmological observations\cite{Weinberg_Lambda_1989}. Many models propose alternative possibilities, such as dynamical dark energy in which $w_{DE}$ is a function of $a$\cite{DE_models}, which would still be able to explain the accelerated expansion of the Universe as long as $w_{DE}<-\frac{1}{3}$, these are discussed in more detail in section \ref{sect:dark_energy}. Table \ref{tab:rhos&Omegas} summarizes the equation of state properties of each known component in the Universe.
 
 It is very useful to also define the energy density fraction of each component of the Universe using
 
@@ -364,60 +364,15 @@ Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these en
     \label{tab:rhos&Omegas}
 \end{table}
 
-\subsection{Dark Energy Models}
-
-Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid} and modifications to general relativity\cite{Brane_cosmo_model}. 
-
-The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization\cite{CPL_DE_parametrization,DE_models}:
-
-\begin{equation}\label{CPL}
-    w(z)=w_0+\left(1-\frac{1}{1+z}\right)w_a.
-\end{equation}
-
-%One important property of this parametrization and most others is that the value of the equation of state parameter today ($z=0$) is the same as the equation of state parameter of the $\Lambda$CDM model $w_0$
-
-So far, this parametrization has not solved some of the current limitations being faced by the $\Lambda$CDM model, such as the Hubble tension \cite{Hubble_tension_review} and the $\sigma_8$ tension \cite{Planck_results}, it has not improved over the $\Lambda$CDM predictions, but it shows good compatibility with CMB, type IA supernovae and baryon acoustic oscillations (BAO) data\cite{Planck_results}. Planck results using this parametrization are shown in Table \ref{tab:planck_CPL}.
-
-\begin{table}[!htb]
-    \centering
-    \begin{tabular}{cc} \hline
-     Parameter & Marginalized Value \\ \hline
-     $w_0$ & $-0.957\pm0.080$\\
-     $w_a$ & $-0.29\substack{+0.32 \\ -0.26}$\\
-     $H_0 [\text{km s}^{-1}\text{Mpc}^{-1}]$ & $68.31\pm0.82$ \\
-     $\sigma_8$ & $0.820\pm 0.011$\\ \hline
-     $\Delta \chi^2$ & -1.4 \\ \hline
-    \end{tabular}
-    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming parametrization \eqref{CPL}, obtained by combining Planck temperature and polarization autocorrelation and cross-correlation spectra\cite{Planck_spectra}, type IA supernovae data from the Joint Light Curve Analysis (JLA)\cite{JLA} and BAO data from the Sloan Digital Sky Survey (SDSS)\cite{SDSS}. The $\Delta \chi^2$ value was computed with respect to the $\Lambda$CDM best fits computed from the same data set combination.}
-    \label{tab:planck_CPL}
-\end{table}
-
-Another important parameter related to dark energy is its speed of sound, defined as\cite{DE_sound}:
-
-\begin{equation}\label{ch2:cs_definition}
-	c_s^2=\frac{\delta P_{DE}}{\delta \rho_{DE}}
-\end{equation}
-
-\noindent where $\rho_{DE}$ and $P_{DE}$ are the dark energy's pressure and density contribution and $\delta$ indicates the perturbation of these quantities. 
-
-The value of this parameter influences, for instance, the evolution of the gravitational potentials\cite{DE_variable_soundspeed_Linton2018}, and many other factors that relate to the evolution of the universe, thus having an impact on observables. 
-
-Figure ??? shows this influence on the CMB temperature autocorrelation spectrum.
-
-IMAGENS
-
-%%COMPLEMENTAR AQUI COM: VELOCIDADE DO SOM (OU SEI LÁ)
-%ADICIONAR OS PLOTS QUE EU FIZ DA INFLUÊNCIA DA DARK ENERGY NO CTT (colocar essa seção depois de falar do Ctt?)
-
 \subsection{A Brief History of the Universe}
 
-There are many details and equations that are used to describe the Universe, and we commonly categorize many stages of the Universe according to important events that happened during its history. The $\Lambda$CDM model assumes the Universe started as a singularity; as it started expanding, quantum fluctuations at that time would eventually result in inhomogeneities thought to be the source for the formation of structure in the Universe. 
+We commonly categorize different stages of the Universe according to important events that happened during its history. The $\Lambda$CDM model assumes the Universe started as a singularity; as it started expanding, quantum fluctuations at that time would eventually result in inhomogeneities thought to be the source for the formation of structures.
 
-The next important period of the Universe's evolution was a highly accelerated expansion epoch driven by an effect called cosmic inflation, first proposed as a solution to the horizon problem\cite{Guth81,linde82}, a problem that questioned how can the CMB temperature differences across the sky be so small ($\sim 10^{-5}$ K), even between points apparently causally disconnected during all epochs of the Universe's thermal history. The $\Lambda$CDM model assumes inflation was driven by a quantum scalar field\cite{dodelson2020modern}. Definitive evidence of the inflation model may be reached with the detection of a certain type of polarization of the CMB called the B-modes, which have not been detected yet, but have reached good constraints.\cite{BMode_constraints}
+The next important period of the Universe's evolution was a highly accelerated expansion epoch driven by an effect called cosmic inflation, first proposed as a solution to the horizon problem\cite{Guth81,linde82}, related to how can the CMB temperature differences across the sky be so small ($\sim 10^{-5}$ K), even between points apparently causally disconnected during all epochs of the Universe's thermal history. The $\Lambda$CDM model assumes inflation was driven by a quantum scalar field\cite{dodelson2020modern}. Definitive evidence of the inflationary model may be reached with the detection of a certain type of polarization of the CMB called the B-modes, which have not been detected yet, but have reached good constraints.\cite{BMode_constraints}
 
-Briefly after inflation, baryons and photons are still coupled through Compton scattering, thus photons are still unable to travel freely, the Universe at this point is composed of photons coupled with baryons, helium nuclei, and trace amounts of Lithium. With the decrease in temperature, hydrogen atoms can form without being quickly ionized, Compton scattering eventually can no longer maintain baryons and photons coupled, resulting in a decoupling of these components. The photons are released to travel across the Universe, the radiation field formed from this period is what we currently measure as the CMB. 
+Briefly after inflation, baryons and photons are still coupled through Compton scattering, thus photons are still unable to travel freely. The Universe at this point is composed of photons coupled with baryons, helium nuclei, and trace amounts of lithium. With the decrease in temperature, hydrogen atoms can form without being quickly ionized, Compton scattering eventually can no longer maintain baryons and photons coupled, resulting in a decoupling of these components. The photons are released to travel across the Universe, the radiation field formed from this period is what we currently measure as the CMB. 
 
-After this, an epoch called "the Dark Ages" starts, most of the photons in the Universe are the result of the decoupling described before and stars are yet to be formed, which is the reason why it is called a dark age. Matter dominates this period and many to follow, greatly decreasing the rate of expansion of the Universe. As a result of the quantum fluctuations in the early Universe, stars, galaxies, and other structures form. The study of the formation of structure is completely dependent on the study of the inhomogeneous aspect of the Universe, for which some of the detailed theoretical framework will be covered in the next section.
+After this, an epoch called "the Dark Ages" starts, in which the photons in the Universe are the result of the decoupling described before and stars are yet to be formed, which is the reason why it is called a dark age. Matter dominates this period, greatly decreasing the rate of expansion of the Universe. As a result of the quantum fluctuations in the early Universe, stars, galaxies, and other structures form. The study of the formation of structure is completely dependent on the study of the inhomogeneities of the Universe at small scales, where the cosmological principle is no longer expected to be valid. Some details of this theoretical framework will be covered in the next section.
 
 Figure \ref{fig:cosmo_brief_history} shows a summarized and visual representation of some of the events described in this section.
 
@@ -430,9 +385,9 @@ Figure \ref{fig:cosmo_brief_history} shows a summarized and visual representatio
 
 \section{Inhomogeneities and Anisotropies}
 
-The existence of structure -- nebulae, stars, galaxies, clusters -- in the Universe indicates that, throughout its history, it has been inhomogeneous and anisotropic at some scale, these perturbations to the uniform background are relatively small though, take the CMB for instance: CMB anisotropies are around 5 orders of magnitude lower than its average black body temperature\cite{WMAP_results}. 
+The existence of structures -- nebulae, stars, galaxies, clusters -- in the Universe indicates that, throughout its history, it has been inhomogeneous and anisotropic at some scale. These perturbations to the uniform background are relatively small though, take the CMB for instance: CMB anisotropies are around 5 orders of magnitude lower than its average blackbody temperature\cite{WMAP_results}. 
 
-In this scenario, there is no known theoretical model that can predict the exact behavior of every particle in the Universe, instead we turn to a statistical prediction taking into account the properties of space-time and the components of the Universe. In this section, the first order equations that govern these properties will be shown by introducing perturbations both to the metric and to the stress-energy tensor. 
+In this scenario, there is no known theoretical model that can predict the exact behavior of every particle in the Universe. Therefore, we turn to a statistical prediction taking into account the properties of space-time and the components of the Universe. In this section, the first order equations that govern these properties will be shown by introducing perturbations both to the metric and to the stress-energy tensor. 
 
 \subsection{Perturbed Space-Time}
 
@@ -446,7 +401,9 @@ In the $\Lambda$CDM model, to account for perturbations in the uniform backgroun
 \end{cases}
 \end{equation}
 
-With the use of the geodesic equation on this new tensor and using a first order approximation, it is possible to obtain the following results for the motion equations of particles traveling through this perturbed space-time:
+In equation \eqref{eq:tensor_perturbations}, $\Psi$ corresponds to the Newtonian potential and governs the movement of nonrelativistic objects\cite{dodelson2020modern}, while $\Phi$ is a perturbation to the spatial curvature.
+
+With the use of the geodesic equation on this new tensor and using a first order approximation, it is possible to obtain the following results for the motion equations of particles traveling through the perturbed space-time:
 
 \begin{equation}\label{ch2:dxidt}
     \dv{x^i}{t}=\frac{\hat{p}_i}{a}\frac{p}{E}(1-\Phi+\Psi),
@@ -479,13 +436,13 @@ As for the dynamics of the field perturbations, it is possible to use Einstein's
     k^2(\Phi+\Psi)=-32\pi Ga^2(\rho_\gamma \Theta_2+\rho_\nu \mathcal{N}_2).
 \end{equation}
 
-Here, the terms $\Theta_0$, $\Theta_2$, $\mathcal{N}_0$ and $\mathcal{N}_2$ are obtained in the calculation of the perturbed energy-momentum tensor, they are defined as
+Here, $\rho$ indicates the average density of a component, $\delta$ represents the perturbation to these densities, and the indexes $DM$, $b$, $\gamma$ and $\nu$ indicate the quantities related to dark matter, baryons, radiation and neutrinos respectively. The terms $\Theta_0$, $\Theta_2$, $\mathcal{N}_0$ and $\mathcal{N}_2$ are obtained in the calculation of the perturbed energy-momentum tensor, they are defined as
 
 \begin{equation}\label{ch2:Fl}
     F_\ell=\frac{1}{(-i)^\ell}\int_{-1}^1 \frac{\mathcal{P}_\ell(\mu)F(\mu)}{2}d\mu,
 \end{equation}
 
-\noindent where $F$ can either represent $\Theta$ or $\mathcal{N}$; $\mu=\hat{k}\cdot \hat{p}$ is the cosine between the momentum direction of the photon and the Fourier space wavevector; $P_\ell$ are Legendre polynomials; the functions $\Theta(\mu)$ and $\mathcal{N}(\mu)$ are the distributions of photon and neutrino perturbations; and $i$ is the imaginary unit $i^2=-1$. 
+\noindent where $F$ can either represent $\Theta$ or $\mathcal{N}$; $\mu=\hat{k}\cdot \hat{p}$ is the cosine between the momentum direction of the photon and the Fourier space wavevector; $P_\ell$ are Legendre polynomials; the functions $\Theta(\mu)$ and $\mathcal{N}(\mu)$ are dimensionless fields that quantify the perturbations of photon and neutrino distributions with respect to the homogeneous background; and $i$ is the imaginary unit $i^2=-1$. 
 
 \subsection{The Boltzmann Equation}
 
@@ -520,13 +477,13 @@ This is an important equation for the description of the CMB, but the descriptio
 
 The only difference between these equations is the term $E/p$ which, in the case of radiation, is equal to 1. The first order approximation for non-relativistic matter breaks down in the late Universe, a non-linear model is necessary in this scenario. 
 
-To arrive at a differential equation from this, a function to describe the perturbations needs to be defined, and so does the distribution function. Taking the CMB as an example, the perturbed form of the temperature distribution for CMB photons in general can be defined as
+To arrive at a differential equation, a function to describe the perturbations needs to be defined, and so does the distribution function. Taking the CMB as an example, the perturbed form of the temperature distribution for CMB photons in general can be defined as
 
 \begin{equation}\label{T(x,p,t)}
     T(\mathbf{x}, \hat{\mathbf{p}}, t)=\bar{T}(t)[1+\Theta(\mathbf{x}, \hat{\mathbf{p}}, t)],
 \end{equation}
 
-\noindent where $\bar{T}$ is the average temperature in a given time and $\Theta$ is a dimensionless field that quantifies the perturbations of the CMB distribution with respect to its average value. This perturbation field can be expressed in terms of the set of functions $\Theta_\ell$ defined in \eqref{ch2:Fl} by the following equation in Fourier space:
+\noindent where $\bar{T}$ is the average temperature in a given time and $\Theta$ is the same field presented in equation \eqref{ch2:Fl}, that quantifies the perturbations of the CMB distribution with respect to its average value. This perturbation field can be expressed in terms of the set of functions $\Theta_\ell$ defined in \eqref{ch2:Fl} by the following equation in Fourier space:
 
 \begin{equation}\label{Theta_&_Thetal}
     \Theta(\hat{\mathbf{k}}, \mu)=\sum_{\ell=0}^\infty (2\ell+1)(-i)^\ell \Theta_\ell(\hat{\mathbf{k}}) \mathcal{P}_\ell(\mu).
@@ -571,15 +528,15 @@ These equations, alongside equations \eqref{ch2:first_dynamic_equation} and \eqr
 
 \section{The Cosmic Microwave Background}
 
-With the dynamical equations for photons determined, one can obtain the temperature perturbation distribution $\Theta$ if initial conditions are provided. With the equations already presented, it is possible to show that the initial conditions at the early Universe depend only on the initial conditions for $\Phi$\cite{dodelson2020modern}, these conditions are then evolved through the inflationary period, which assumes the existence of a quantum scalar field $\phi(\mathbf{x}, t)$ that drives a brief accelerated expansion. 
+With the dynamical equations for photons determined, one can obtain the temperature perturbation distribution $\Theta$ if initial conditions are provided. With the equations already presented, it is possible to show that the initial conditions at the early Universe depend only on the initial conditions for $\Phi$\cite{dodelson2020modern}, which are then evolved through the inflationary period assuming the existence of a quantum scalar field $\phi(\mathbf{x}, t)$ that drives a brief accelerated expansion. 
 
-At this point, baryons have formed and the photons are tightly coupled to them, forming a baryon-photon fluid that can be described by the differential equations \eqref{diff_eq_radiation_perturbs} - \eqref{diff_eqs:neutrino_perturbations}, the initial distribution obtained for this fluid can then be used as the initial condition and evolved to predict the present anisotropies to the uniform background. To analyze these predictions, the statistical behavior of each component of the Universe is taken: either their spectral densities (see Appendix \ref{appendix:FourierSpace}) -- usually called their power spectra -- or what is known as their correlation spectra. 
+With time, particles start to form: Quarks, hadrons, neutrinos, amongst others, at different times. Eventually baryons have formed and the photons are tightly coupled to them, forming a baryon-photon fluid that can be described by the differential equations \eqref{diff_eq_radiation_perturbs} - \eqref{diff_eqs:neutrino_perturbations}, the initial distribution obtained for this fluid can then be used as the initial condition and evolved to predict the present anisotropies to the uniform background. To analyze these predictions, the statistical behavior of each component of the Universe is taken: either their spectral densities (see Appendix \ref{appendix:FourierSpace}) -- usually called their power spectra -- or what is known as their correlation spectra. 
 
 \subsection{CMB Autocorrelation Spectrum}
 
-Equation \eqref{T(x,p,t)} explicitly assumes a dependence in position, time, and momentum direction, measurements made on Earth can assume a fixed value for time since our measurements related to the Universe are taken in a period negligible in the cosmological scale, but the translational movement of the Earth is relevant to our measurements: measurements of the CMB over a time period made by a non-comoving observer, when projected onto a sphere, lead to a strong dipole pattern in the temperature distribution, modulation of the multipole terms of this temperature distribution and a small relativistic aberration \cite{COBE_calibration, Planck_doppler, esteban_msc}.
+Equation \eqref{T(x,p,t)} explicitly assumes a dependence in position, time, and momentum direction. Measurements made on Earth can assume a fixed value for time since our measurements related to the Universe are taken in a period negligible in the cosmological scale, but the translational movement of the Earth is relevant to our measurements: measurements of the CMB made by a non-comoving observer, when projected onto a sphere, lead to a strong dipole pattern in the temperature distribution, modulation of the multipole terms and a small relativistic aberration at angular scales of a few arcminutes\cite{COBE_calibration, Planck_doppler, esteban_msc}.
 
-Despite these effects, measurements of this temperature distribution can be projected onto a sphere independent of the Earth's position, with corrections taking these effects into account, making it possible to describe this distribution simply using two angle variables, or simply $\hat{\mathbf{p}}$.
+Despite these effects, measurements of the temperature distribution can be projected onto a sphere independent of the Earth's position, making it possible to describe this distribution simply using two angle variables, or simply $\hat{\mathbf{p}}$.
 
 We can expand the temperature perturbations in spherical harmonics:
 
@@ -587,7 +544,7 @@ We can expand the temperature perturbations in spherical harmonics:
     \Theta(\mathbf{x}, \hat{\mathbf{p}}, t)=\sum_{\ell=1}^\infty \sum_{m=-\ell}^\ell a_{\ell m}(\mathbf{x}, t)Y_{\ell m}(\hat{\mathbf{p}}).
 \end{equation}
 
-All the information about temperature maps of the CMB measured on Earth are contained in the set of $a_{\ell m}$ values. Given the limited number of pixels $N_\text{pix}$ of any of these maps, there is a maximum value of $\ell$ ($\ell_\text{max}$) beyond which very little additional information would be obtained. For each value of $\ell$, there are $2\ell+1$ values of $m$ -- and $a_{\ell m}$ -- in the series, a hypothetical observed map with precision $p_r$ in squared radians would have $4\pi/p_r$ pixels, setting this number of pixels equal to the number of $a_{\ell m}$ used to describe this map gives a reasonable estimation of $\ell_\text{max}$\cite{dodelson2020modern}, so %a specific example of this is in page 252 of the 2020 edition of Dodelson, I just generalized it in terms of a general precision p_r instead of using the example's p_r=7º.
+All the information about temperature maps of the CMB measured on Earth are contained in the set of $a_{\ell m}$ values. Given the limited number of pixels $N_\text{pix}$ of any of these maps, there is a maximum value of $\ell$ ($\ell_\text{max}$) up to which statistically meaningful information can be retrieved. For each value of $\ell$, there are $2\ell+1$ values of $m$ -- and $a_{\ell m}$ -- in the series, a hypothetical observed map with precision $p_r$ in squared radians would have $4\pi/p_r$ pixels, setting this number of pixels equal to the number of $a_{\ell m}$ used to describe this map gives a reasonable estimation of $\ell_\text{max}$\cite{dodelson2020modern}, so %a specific example of this is in page 252 of the 2020 edition of Dodelson, I just generalized it in terms of a general precision p_r instead of using the example's p_r=7º.
 
 \begin{equation}\label{Npix}
     \sum_{\ell=0}^{\ell=\ell_\text{max}}(2\ell+1)=(\ell_\text{max}+1)^2=N_\text{pix}=\frac{4\pi}{p_r}.
@@ -618,9 +575,9 @@ The temperature autocorrelation defined in equation \eqref{def:autocorrelation} 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=.9\linewidth]{Imagens/planck_spectrum.pdf}
-    \caption{Planck 2018 CMB temperature power spectrum: the blue line corresponds to a $\Lambda$CDM cosmology best-fit to the data points in orange. For $\ell<30$ a logarithmic scale was used and the data points correspond to the $D_\ell^{TT}$ for each value of $\ell$, while for $\ell\ge 30$ a linear scale was used and the data points correspond to binned values for the data for $D_{\ell}^{TT}$, which are represented as gray dots. The error bars show $\pm 1\sigma$ uncertainties, including cosmic variance. The middle panel shows the $1\sigma$ lines for the unbinned data points, while the bottom panel shows the difference between the 2015 and 2018 coadded high-multipole spectra (green points). Extracted from \cite{Planck_spectra}.}
+    \caption{Planck 2018 CMB temperature power spectrum: the blue line corresponds to a $\Lambda$CDM cosmology best-fit to the data points in orange. For $\ell<30$ a logarithmic scale was used and the data points correspond to the $D_\ell^{TT}$ for each value of $\ell$, while for $\ell\ge 30$ a linear scale was used and the data points correspond to binned values for the data for $D_{\ell}^{TT}$. The error bars show $\pm 1\sigma$ uncertainties, including cosmic variance. Extracted from \cite{Planck_results}.}
     \label{fig:Planck_spectrum}
-\end{figure}
+\end{figure} 
 
 \subsection{Analytical Approximation}
 
@@ -668,6 +625,50 @@ With this in mind, we can use only the ISW term in the temperature perturbations
 
 We can also go further, and analyze the contribution of this term to other types of spectra, such as the matter contrast distribution spectrum and do the same. In section \ref{ch2:ISW_effect_section} we will determine the final theoretical predictions for the ISW effect's contribution to three types of spectra and discuss their uses as probes of this effect. Later, in chapter \ref{chapter:extracting_correlations_from_data}, we will discuss how to draw these spectra from cosmological data, which can be compared with the theoretical predictions in order to determine cosmological constraints, including constraints related to dark energy.
 
+\section{Dark Energy Models}\label{sect:dark_energy}
+
+Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid} and modifications to general relativity\cite{Brane_cosmo_model}. 
+
+The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization\cite{CPL_DE_parametrization,DE_models}:
+
+\begin{equation}\label{CPL}
+    w(z)=w_0+\left(1-\frac{1}{1+z}\right)w_a.
+\end{equation}
+
+%One important property of this parametrization and most others is that the value of the equation of state parameter today ($z=0$) is the same as the equation of state parameter of the $\Lambda$CDM model $w_0$
+
+So far, this parametrization has not solved some of the current limitations being faced by the $\Lambda$CDM model, such as the Hubble tension \cite{Hubble_tension_review} and the $\sigma_8$ tension \cite{Planck_results}, it has not improved over the $\Lambda$CDM predictions, but it shows good compatibility with CMB, type IA supernovae and baryon acoustic oscillations (BAO) data\cite{Planck_results}. Planck results using this parametrization are shown in Table \ref{tab:planck_CPL}.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{cc} \hline
+     Parameter & Marginalized Value \\ \hline
+     $w_0$ & $-0.957\pm0.080$\\
+     $w_a$ & $-0.29\substack{+0.32 \\ -0.26}$\\
+     $H_0 [\text{km s}^{-1}\text{Mpc}^{-1}]$ & $68.31\pm0.82$ \\
+     $\sigma_8$ & $0.820\pm 0.011$\\ \hline
+     $\Delta \chi^2$ & -1.4 \\ \hline
+    \end{tabular}
+    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming parametrization \eqref{CPL}, obtained by combining Planck temperature and polarization autocorrelation and cross-correlation spectra\cite{Planck_spectra}, type IA supernovae data from the Joint Light Curve Analysis (JLA)\cite{JLA} and BAO data from the Sloan Digital Sky Survey (SDSS)\cite{SDSS}. The $\Delta \chi^2$ value was computed with respect to the $\Lambda$CDM best fits computed from the same data set combination.}
+    \label{tab:planck_CPL}
+\end{table}
+
+Another important parameter related to dark energy is its speed of sound, defined as\cite{DE_sound}:
+
+\begin{equation}\label{ch2:cs_definition}
+	c_s^2=\frac{\delta P_{DE}}{\delta \rho_{DE}}
+\end{equation}
+
+\noindent where $\rho_{DE}$ and $P_{DE}$ are the dark energy's density and pressure respectively, and $\delta$ indicates the perturbation of these quantities. 
+
+The value of this parameter influences, for instance, the evolution of the gravitational potentials\cite{DE_variable_soundspeed_Linton2018}, and many other factors that relate to the evolution of the universe, thus having an impact on observables. 
+
+Figures ??? show the influence of different parametrizations and parameter values on the CMB temperature autocorrelation spectrum.
+
+IMAGENS
+
+DISCUTIR AS IMAGENS
+
 \section{The Integrated Sachs Wolfe Effect}\label{ch2:ISW_effect_section}
 
 It was proposed that the cross-correlation spectrum between CMB maps and matter contrast could be used to detect the ISW effect\cite{Turok96}, and since then many works have reported the detection of this signal\cite{cross_corr:Afshordi, cross_corr:Crittenden2005a, cross_corr:Crittenden2005b, cross_corr:Planck}. In this section, a framework for theoretical estimations of the ISW contribution to this cross-correlation will be discussed.
@@ -680,12 +681,12 @@ To study the distribution of matter we observe, there is a difference compared t
     \av{\delta(\mathbf{k}, z) \delta^*(\mathbf{k}', z)}=(2\pi)^3 P(k,z) \delta_D(\mathbf{k}-\mathbf{k}'),
 \end{equation}
 
-\noindent where $\delta_D$ is the Dirac delta, $\delta$ is the previously shown matter perturbation distribution in the Universe and the $*$ superscript indicates the complex conjugate of a quantity. Again, using appropriate initial conditions, one can determine $\delta(\mathbf{k})$ and thus $P(k,z)$, and again these results can be obtained numerically using CAMB, Figure \ref{fig:matter_PS} shows the results for this calculation using the Halofit model\cite{Halofit2020}, a semi-analytical method to determine a non-linear solution for $P(k,z)$.  
+\noindent where $\delta_D$ is the Dirac delta, $\delta$ is the previously shown matter perturbation distribution in the Universe and the $*$ superscript indicates the complex conjugate of a quantity. Again, using appropriate initial conditions, one can determine $\delta(\mathbf{k})$ and thus $P(k,z)$, and again these results can be obtained numerically using CAMB, Figure \ref{fig:matter_PS} shows the results for this calculation using the HALOFIT model\cite{Halofit2020}, a semi-analytical method to determine a non-linear solution for $P(k,z)$.  
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=.75\linewidth]{Imagens/Pk_directCAMB_edited.png}
-    \caption{Matter power spectrum calculated as a function of $k/h$, where $h=H_0/100$ using the Halofit with cosmological parameters according to Planck's best fit results\cite{Planck_results}.}
+    \includegraphics[width=.75\linewidth]{Imagens/Pk_3dmatter_LCDM.png}
+    \caption{Matter power spectrum calculated as a function of $k/h$, where $h=H_0/(100\text{ km/s/Mpc})$, using the HALOFIT with cosmological parameters according to Planck's best fit results\cite{Planck_results}.}
     \label{fig:matter_PS}
 \end{figure}
 
@@ -693,7 +694,7 @@ The dependence of the ISW effect on the matter distribution makes it so that thi
 
 \subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
 
-One can follow a similar process to the one presented for the CMB to obtain the autocorrelation for a spherical projection of a matter density distribution on a spherical shell on a certain redshift $z$, but to do that in a way that can be compared with cosmological data, one has to choose a way to trace the matter density with an observable. One way of doing this is by tracing the mass distribution with galaxy density on a certain redshift, it is common to assume the density contrast of galaxy density takes the form $\delta_g=b_g\delta$ where $b_g$ is a constant value (for each redshift $z$) called the bias factor. From this point, the same process would apply: Expand the distribution in spherical harmonics with factors $a_{\ell m}^g$ and calculate the variance of these variables to obtain an autocorrelation spectrum $C^{gg}(\ell)$.
+One can follow a similar process to the one presented for the CMB to obtain the autocorrelation for a spherical projection of a matter density distribution on a spherical shell on a certain redshift $z$, but to do that in a way that can be compared with cosmological data, one has to choose a way to trace the matter density with an observable. One way of doing this is by tracing the mass distribution with galaxy density on a certain redshift. It is common to assume the density contrast of galaxy density takes the form $\delta_g=b_g\delta$ where $b_g$ is a constant value (for each redshift $z$) called the bias factor. From this point, the same process would apply: Expand the distribution in spherical harmonics with factors $a_{\ell m}^g$ and calculate the variance of these variables to obtain an autocorrelation spectrum $C^{gg}(\ell)$.
 
 Similarly, instead of calculating an autocorrelation spectrum, one can calculate a cross-correlation between two perturbation distributions, which is analogous to definition \eqref{def:autocorrelation}:
 
