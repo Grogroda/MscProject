@@ -10,21 +10,30 @@ print("[profile_OmegaM.py] Fake ctg calculated")
 '''
 arr_names=['ls', 'Dtt', 'err_Dtt', 'Cgg', 'err_Cgg', 'Ctg', 'err_Ctg']
 data_band1=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc1_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
+data_band2=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc2_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
+data_band3=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc3_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
+data_band4=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc4_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
 
-ls1=data_band1['ls']
-Ctg1=data_band1["Ctg"]
-print("ls=", ls1)
-sigma_ctg1=data_band1['err_Ctg']
+bands=[data_band1, data_band2, data_band3, data_band4]
 
-def Likelihood(OmegaM):
+bands_dict={1:{},
+            2:{},
+            3:{},
+            4:{}}
+
+for band in range(1, 5):
+    for col in arr_names:
+        bands_dict[band][col]=bands[band-1][col]
+
+def Likelihood(OmegaM, band=1):
 
     print("Inside Likelihood")
 
-    cl_theo=ctg4py(OmegaM)
+    ls_theo, cl_theo=ctg4py(OmegaM, band)
 
     print("ctg_theo calculated")
 
-    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(Ctg1), np.array(sigma_ctg1)
+    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(bands_dict[band]['Ctg']), np.array(bands_dict[band]['err_Ctg'])
 
     Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
     sigSum = np.sum(np.log(sigma_array))
