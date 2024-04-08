@@ -22,7 +22,7 @@ ctg4py_raw.restype = c_double
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
 
-lmax = 98 
+lmax = 51 
 
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
@@ -58,7 +58,13 @@ plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 #plt.savefig("Pk_directCAMB.png")
 '''
 
-def ctg4py(OmegaM):
+#dictionary containing the parametrization for each band of the 2MASS catalog
+band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524}, 
+           2:{'z0':0.054,'beta':1.800,'lambda':1.600}, 
+           3:{'z0':0.067,'beta':1.765,'lambda':1.636}, 
+           4:{'z0':0.084,'beta':1.723,'lambda':1.684}}
+
+def ctg4py(OmegaM, band=1): #band is an optional argument. Default band=1
 
     print("[pyctg.py] Inside ctg4py")
     
@@ -96,12 +102,12 @@ def ctg4py(OmegaM):
 
     #Then calculate ctg:
     OmegaL = 1 - OmegaM
-    z0 = 0.043
-    beta = 1.825 
-    lbda = 1.524
+    z0 = band_pars[band]['z0']
+    beta = band_pars[band]['beta']
+    lbda = band_pars[band]['lambda']
     bg = 1.37
     mode = 1
-    ncalls = 200000
+    ncalls = 10000000 #1e7
     #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[]
     ctg = []
