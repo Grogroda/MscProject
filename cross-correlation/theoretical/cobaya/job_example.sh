@@ -23,7 +23,7 @@ echo $SLURM_NTASKS		#Total number of cores for job
 module swap openmpi mpich
 module swap gnu gnu7
 
-cd /temporario/10300487/MscProject/cross-correlation/theoretical/cobaya/
+cd /temporario2/10300487/MscProject/cross-correlation/theoretical/cobaya/
 
 mpirun -n 2 python pyctg_likelihood.py > scriptrun_test/out.log 2>&1
 
