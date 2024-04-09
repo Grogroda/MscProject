@@ -32,4 +32,4 @@ echo "Lib compiled!"
 
 cd /temporario2/10300487/MscProject/cross-correlation/theoretical/cobaya/
 
-python3 profile_OmegaM.py 1 > band1_profile.log 2>&1 #number after script name=2MASS band
+python3 profile_OmegaM.py 1 > like_profiles/band1_profile.log 2>&1 #number after script name=2MASS band
