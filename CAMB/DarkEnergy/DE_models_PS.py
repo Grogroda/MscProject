@@ -1,8 +1,10 @@
 from matplotlib import pyplot as plt
+import matplotlib
 import camb
 import numpy as np
 import pandas as pd
 
+matplotlib.rcParams.update({'font.size':15})
 pars_std=camb.CAMBparams()
 
 #Usando as constantes definidas na dissertação do Esteban:
@@ -19,12 +21,18 @@ data=pd.read_csv('COM_PowerSpect_CMB-TT-binned_R301.csv')
 
 for cs2 in cs2_list:
 
-	plt.figure(c)
-	plt.title(r'Espectro TT para $w(a)=w+(1-a)w_a$ com $c_s^2={0}$'.format(cs2))
+
+	fig1=plt.figure(c)
+	#plt.title(r'Espectro TT para $w(a)=w+(1-a)w_a$ com $c_s^2={0}$'.format(cs2))
+    #figure(c)=full linear spectrum
 	plt.figure(c+1)
-	plt.title('Escala log x log')
+	#plt.title('Escala log x log')
+    #figure(c+1)=full log/log spectrum
+    '''
 	plt.figure(c+2)
-	plt.title('Diferença relativa para o modelo \u039BCDM')
+	#plt.title('Diferença relativa para o modelo \u039BCDM')
+    #figure(c+2)=residue
+    '''
 	
 	#Para cada cs2, criarei um dataframe pandas no formato | l | ClTT0 | ClTT033 | ClTT067 | ClTT1 onde o numero depois do ClTT indica o valor de wa
 	#Esse dataframe vai ser armazenado na lista wa_sims
@@ -48,13 +56,16 @@ for cs2 in cs2_list:
 		ls=np.arange(Cl_Tot.shape[0])
 		ClTT=Cl_Tot[:,0]
 		
-		plt.figure(c)
-		plt.plot(ls[2:], ClTT[2:], label=r'$w_a={0:.2f}$, $\sigma_8={1:.3f}$'.format(wa, sigma8))
-		plt.figure(c+1)
-		plt.plot(ls[2:], ClTT[2:], label=r'$w_a={0:.2f}$'.format(wa))
-		
 		sim['l']=ls
+        
+        frame11=fig1.add_axes((.1,.3,.8,.6))
+        plt.plot(ls[2:], ClTT[2:], label=r'$w_a={0:.2f}$'.format(wa))
 		
+        frame21=fig2.add_axes((.1,.3,.8,.6))
+        plt.plot(ls[2:], ClTT[2:], label=r'$w_a={0:.2f}$'.format(wa))
+
+        #code will probably break at some point after this. I realized I didn't need it for now so I stopped working on it
+
 		if wa==0:
 			LCDM=ClTT
 			sim['ClTT0']=ClTT
@@ -67,23 +78,29 @@ for cs2 in cs2_list:
 			
 		if wa==1:
 			sim['ClTT1']=ClTT
-			
-		plt.figure(c+2)
+
 		dif=[(ClTT[i]-LCDM[i])/LCDM[i] for i in range(len(ClTT))]
+        '''
+		plt.figure(c+2)
 		plt.plot(ls, dif, label=r'$w_a={0:.2f}$'.format(wa))
+        '''
 	
 	sim.to_csv(r'ClTT_for_cs2{0:.2f}.csv'.format(cs2))
 			
-	plt.figure(c)
-	plt.xlabel(r'$\ell$')
+    #plt.figure(c)
 	plt.ylabel(r'$\ell(\ell+1)C_l/2\pi \; (\mu K)^2$')
 	plt.xlim([0,max(ls)])
-	plt.errorbar(data['l'], data['Dl'], fmt='.',label='Dados Planck', yerr=[data['-dDl'], data['+dDl']])
+	plt.errorbar(data['l'], data['Dl'], fmt='.',label='Planck Data', yerr=[data['-dDl'], data['+dDl']])
 	plt.legend()
+
+    frame2=fig1.add_axes((.1,.1,.8,.2))
+	plt.xlabel(r'$\ell$')
+    plt.plot(ls, dif)
 	#plt.show()
 	plt.savefig('DE_cs_fixo{0}.png'.format(cs2))
 	
-	plt.figure(c+1)
+    plt.figure(c+1)
+    frame1=fig1.add_axes((.1,.3,.8,.6))
 	plt.xlabel(r'$\ell$')
 	plt.ylabel(r'$\ell(\ell+1)C_l/2\pi \; (\mu K)^2$')
 	plt.errorbar(data['l'], data['Dl'], fmt='.',label='Dados Planck', yerr=[data['-dDl'], data['+dDl']])
