@@ -11,18 +11,18 @@
 \contentsline {section}{\numberline {2.3}The Cosmic Microwave Background}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}CMB Autocorrelation Spectrum}{16}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Analytical Approximation}{18}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Dark Energy Models}{20}{section.2.4}%
-\contentsline {section}{\numberline {2.5}The Integrated Sachs Wolfe Effect}{22}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}The Matter Power Spectrum}{22}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}The Galaxy-CMB Correlation Spectra}{22}{subsection.2.5.2}%
-\contentsline {chapter}{\numberline {3}Optimizing the Selection Function}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{25}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{25}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Two Point Functions}{26}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Gibbs Sampling}{27}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Data Sets and Analysis Methodology}{28}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusions}{30}{chapter.7}%
-\contentsline {chapter}{\numberline {A}Fourier Space}{32}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{33}{appendix.B}%
+\contentsline {section}{\numberline {2.4}The Integrated Sachs Wolfe Effect}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}The Matter Power Spectrum}{20}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}The Galaxy-CMB Correlation Spectra}{20}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Dependence on Dark Energy Models}{23}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {3}Optimizing the Selection Function}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{26}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{26}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Two Point Functions}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Gibbs Sampling}{28}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Data Sets and Analysis Methodology}{29}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Results}{30}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusions}{31}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Fourier Space}{33}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{34}{appendix.B}%

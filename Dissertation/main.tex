@@ -586,7 +586,7 @@ Although solving equations such as \eqref{diff_eq_radiation_perturbs} numericall
 \begin{equation}\label{ch2:Thetal_approx}
 \begin{split}
     \Theta_\ell(k,\eta_0)\approx &[\Theta_0(k,\eta_*)+\Psi(k,\eta_*)]j_\ell[k(\eta_0-\eta_*)]\\
-    &+3\Theta_1(k,\eta_*)\left\{j_\ell[k(\eta_0-\eta_*)]-(l+1)\frac{j_\ell[k(\eta_0-\eta_*)]}{k(\eta_0-\eta_*)}\right\}\\
+    &+iv_b(k,\eta_*)\left\{j_\ell[k(\eta_0-\eta_*)]-(l+1)\frac{j_\ell[k(\eta_0-\eta_*)]}{k(\eta_0-\eta_*)}\right\}\\
     &+\int_0^{\eta_0} d\eta e^{-\tau}[\Psi'(k,\eta)-\Phi'(k,\eta)]j_\ell[k(\eta_0-\eta)],
 \end{split}
 \end{equation}
@@ -609,23 +609,79 @@ There are three main contributors to the solution \eqref{ch2:Thetal_approx}:
 
 \begin{itemize}
     \item The $(\Theta_0+\Psi)$ term is usually called the Sachs-Wolfe term, which is associated with Baryon Acoustic Oscillations (BAO), which are fluctuations in the density of the visible baryonic matter of the Universe, caused by acoustic density waves in the primordial plasma of the early Universe\cite{dodelson2020modern};
-    \item The $3\Theta_1$ term shows the same acoustic oscillations out of phase due to a Doppler shift;
+    \item The $iv_b$ term shows a contribution to the spectrum related to a Doppler shift of the BAO, due to its dependence on a non-zero bulk velocity of the baryons during recombination;
     \item The last term, an integral involving the time variations of the gravitational potentials, represents the Integrated Sachs-Wolfe (ISW) effect. Its dependence on the variation of the gravitational potential makes it so that it only has a non-negligible effect on the CMB at cosmological periods with high variation of these potentials: At around $a\approx 10^{-4}$ the Universe transitioned from a radiation-dominated to a matter-dominated Universe (early ISW), and recently -- around $a\approx 0.61$ or $z\approx 0.63$\cite{dark_energy_era} according to the $\Lambda$CDM model -- the Universe transitioned from a matter-dominated Universe to the current dark energy dominated Universe (late ISW). 
 \end{itemize}
 
-With this in mind, we can use only the ISW term in the temperature perturbations to estimate its contribution to the CMB autocorrelation spectrum and use the results as a probe of the ISW effect. Figure \ref{fig:Ctt_ISW_comparison} shows a comparison of the late-ISW contribution to the CMB spectrum compared to its full calculation in the large scale (low multipole) terms.
+\section{The Integrated Sachs Wolfe Effect}\label{ch2:ISW_effect_section}
 
-\begin{figure}
+It was proposed that the cross-correlation spectrum between CMB maps and matter contrast could be used to detect the ISW effect\cite{Turok96}, and since then many works have reported the detection of this signal\cite{cross_corr:Afshordi, cross_corr:Crittenden2005a, cross_corr:Crittenden2005b, cross_corr:Planck}. In this section, a framework for theoretical estimations of the ISW contribution to this cross-correlation will be discussed.
+
+\subsection{The Matter Power Spectrum}
+
+While the CMB is usually described as a two dimensional map measured around the Earth, the matter distribution in the Universe is first analyzed taking the distance from the Earth into consideration, so three coordinates are necessary, and then one can take a 2D projection for a certain redshift $z$. Again using Fourier space, we first define the 3D matter power spectrum for the distribution of matter perturbations in the Universe $P(k)$ as
+
+\begin{equation}\label{def:P(k)}
+    \av{\delta(\mathbf{k}, z) \delta^*(\mathbf{k}', z)}=(2\pi)^3 P(k,z) \delta_D(\mathbf{k}-\mathbf{k}'),
+\end{equation}
+
+\noindent where $\delta_D$ is the Dirac delta, $\delta$ is the previously shown matter perturbation distribution in the Universe and the $*$ superscript indicates the complex conjugate of a quantity. Again, using appropriate initial conditions, one can determine $\delta(\mathbf{k})$ and thus $P(k,z)$, and again these results can be obtained numerically using CAMB, Figure \ref{fig:matter_PS} shows the results for this calculation using the HALOFIT model\cite{Halofit2020}, a semi-analytical method to determine a non-linear solution for $P(k,z)$.  
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=.75\linewidth]{Imagens/Pk_3dmatter_LCDM.png}
+    \caption{Matter power spectrum calculated as a function of $k/h$, where $h=H_0/(100\text{ km/s/Mpc})$, using the HALOFIT model with cosmological parameters according to Planck's best fit results\cite{Planck_results}.}
+    \label{fig:matter_PS}
+\end{figure}
+
+\subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
+
+To obtain the autocorrelation for a spherical projection of a matter density distribution on a spherical shell on a certain redshift $z$, one has to choose a way to trace the matter density with an observable. One way of doing this is by tracing the mass distribution with galaxy density on a certain redshift. It is common to assume that the galaxy density perturbations, usually called galaxy contrast maps, take the form $\delta_g=b_g\delta$ where $b_g$ is a constant value (for each redshift $z$) called the bias factor. From this point, the same process needed to calculate \eqref{def:autocorrelation} can be applied: Expand the distribution in spherical harmonics with factors $a_{\ell m}^g$ and calculate the variance of these variables to obtain an autocorrelation spectrum $C^{gg}(\ell)$.
+
+Similarly, instead of calculating an autocorrelation spectrum, one can calculate a cross-correlation between two perturbation distributions, which is analogous to definition \eqref{def:autocorrelation}:
+
+\begin{equation}\label{av(ag, at)}
+    \av{a_{\ell m}^ta_{\ell' m'}^g}=C^{tg}(\ell)\delta_{\ell \ell'}\delta_{mm'}.
+\end{equation}
+
+One can determine a general and direct equation to calculate these spectra. In this work we have used the form shown in \cite{Moura-Santos_2016}, which is specific to the ISW contribution to these correlation spectra:
+
+\begin{equation}\label{Cl_direct_calculation}
+    C_\ell^{xy}=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
+\end{equation}
+
+\noindent where $x$ and $y$ can represent $g$ or $t$, and $W_\ell$ are called the kernel functions, which can be calculated using
+
+\begin{equation}\label{Wt}
+    W_\ell^t=-3\Omega_m\left(\frac{H_0}{k}\right)^2\int dz \dv{[(1+z)D(z)]}{z} j_\ell[k\chi(z)],
+\end{equation}
+\begin{equation}\label{Wg}
+    W_\ell^g=\int dz b_g(z)\dv{N}{z}D(z)j_\ell[k\chi(z)],
+\end{equation}
+
+\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}.
+
+With equation \eqref{Cl_direct_calculation}, we can determine the theoretical spectra for CMB and galaxy autocorrelations and CMB-galaxy cross-correlation directly. Figure \ref{fig:Ctt_ISW_comparison} shows the total CMB autocorrelation and the ISW contribution, both at $z=0$.
+
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=.75\linewidth]{Imagens/Ctt_comparison.png}
 	\caption{CMB autocorrelation comparison for the late-ISW term and the full spectrum. Calculations were made using CAMB (for the full spectrum) and codes developed during the project. The parameters used are those corresponding to the Planck best fit parameters\cite{Planck_results}.}
     \label{fig:Ctt_ISW_comparison}
 \end{figure}
 
+Figure \ref{fig:correlations_theoretical} shows the galaxy autocorrelation spectrum and the galaxy-CMB cross-correlation spectrum. All of these spectra have been integrated numerically.
 
-We can also go further, and analyze the contribution of this term to other types of spectra, such as the matter contrast distribution spectrum and do the same. In section \ref{ch2:ISW_effect_section} we will determine the final theoretical predictions for the ISW effect's contribution to three types of spectra and discuss their uses as probes of this effect. Later, in chapter \ref{chapter:extracting_correlations_from_data}, we will discuss how to draw these spectra from cosmological data, which can be compared with the theoretical predictions in order to determine cosmological constraints, including constraints related to dark energy.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.98\linewidth]{Imagens/Correlations_DoublePlot.png}
+	\caption{Galaxy autocorrelation spectrum (left) and late-ISW contribution to the galaxy-CMB cross-correlation (right). The selection function used to calculate these spectra was parametrized to be compatible with 2MASS' galaxy redshift distribution\cite{select_func_par:Afshordi2004, Moura-Santos_2016}.}
+	\label{fig:correlations_theoretical}
+\end{figure}
 
-\section{Dark Energy Models}\label{sect:dark_energy}
+These plots, show very clearly that the ISW effect has a lot more relevance in the lower multipoles, where cosmic variance has a significant influence. The selection function is an important aspect of this signal, in chapter \ref{chapter:select_func_optimal} the matter of how to optimize the signal with the use of an idealized selection function will be discussed.
+
+\subsection{Dependence on Dark Energy Models}\label{sect:dark_energy}
 
 Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid} and modifications to general relativity\cite{Brane_cosmo_model}. 
 
@@ -663,76 +719,65 @@ Another important parameter related to dark energy is its speed of sound, define
 
 The value of this parameter influences, for instance, the evolution of the gravitational potentials\cite{DE_variable_soundspeed_Linton2018}, and many other factors that relate to the evolution of the universe, thus having an impact on observables. 
 
-Figures ??? show the influence of different parametrizations and parameter values on the CMB temperature autocorrelation spectrum.
+Figure \ref{fig:Dark_energy_tests} shows the influence of different parameter values, using the CPL parametrization, on the CMB temperature autocorrelation spectrum, and compares the expected theoretical spectra with Planck's data.
 
-IMAGENS
+%%% DARK ENERGY IMAGES %%%
 
-DISCUTIR AS IMAGENS
-
-\section{The Integrated Sachs Wolfe Effect}\label{ch2:ISW_effect_section}
-
-It was proposed that the cross-correlation spectrum between CMB maps and matter contrast could be used to detect the ISW effect\cite{Turok96}, and since then many works have reported the detection of this signal\cite{cross_corr:Afshordi, cross_corr:Crittenden2005a, cross_corr:Crittenden2005b, cross_corr:Planck}. In this section, a framework for theoretical estimations of the ISW contribution to this cross-correlation will be discussed.
-
-\subsection{The Matter Power Spectrum}
-
-To study the distribution of matter we observe, there is a difference compared to the CMB: While the CMB is usually described as a two dimensional map measured around the Earth, the matter distribution in the Universe is first analyzed taking the distance from the Earth into consideration, so three coordinates are necessary, and then one can take a 2D projection for a certain redshift $z$. Again using Fourier space, we first define the 3D matter power spectrum for the distribution of matter perturbations in the Universe $P(k)$ as
-
-\begin{equation}\label{def:P(k)}
-    \av{\delta(\mathbf{k}, z) \delta^*(\mathbf{k}', z)}=(2\pi)^3 P(k,z) \delta_D(\mathbf{k}-\mathbf{k}'),
-\end{equation}
-
-\noindent where $\delta_D$ is the Dirac delta, $\delta$ is the previously shown matter perturbation distribution in the Universe and the $*$ superscript indicates the complex conjugate of a quantity. Again, using appropriate initial conditions, one can determine $\delta(\mathbf{k})$ and thus $P(k,z)$, and again these results can be obtained numerically using CAMB, Figure \ref{fig:matter_PS} shows the results for this calculation using the HALOFIT model\cite{Halofit2020}, a semi-analytical method to determine a non-linear solution for $P(k,z)$.  
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=.75\linewidth]{Imagens/Pk_3dmatter_LCDM.png}
-    \caption{Matter power spectrum calculated as a function of $k/h$, where $h=H_0/(100\text{ km/s/Mpc})$, using the HALOFIT with cosmological parameters according to Planck's best fit results\cite{Planck_results}.}
-    \label{fig:matter_PS}
-\end{figure}
-
-The dependence of the ISW effect on the matter distribution makes it so that this power spectrum is necessary for calculations regarding the influence of the ISW effect on certain observables.
-
-\subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
-
-One can follow a similar process to the one presented for the CMB to obtain the autocorrelation for a spherical projection of a matter density distribution on a spherical shell on a certain redshift $z$, but to do that in a way that can be compared with cosmological data, one has to choose a way to trace the matter density with an observable. One way of doing this is by tracing the mass distribution with galaxy density on a certain redshift. It is common to assume the density contrast of galaxy density takes the form $\delta_g=b_g\delta$ where $b_g$ is a constant value (for each redshift $z$) called the bias factor. From this point, the same process would apply: Expand the distribution in spherical harmonics with factors $a_{\ell m}^g$ and calculate the variance of these variables to obtain an autocorrelation spectrum $C^{gg}(\ell)$.
-
-Similarly, instead of calculating an autocorrelation spectrum, one can calculate a cross-correlation between two perturbation distributions, which is analogous to definition \eqref{def:autocorrelation}:
-
-\begin{equation}\label{av(ag, at)}
-    \av{a_{\ell m}^ta_{\ell' m'}^g}=C^{tg}(\ell)\delta_{\ell \ell'}\delta_{mm'}.
-\end{equation}
-
-For simplicity and computational purposes, one can determine a general equation to calculate these spectra, and taking this one step further, one can calculate the perturbations only due to ISW effect using only its term in equation \eqref{ch2:Thetal_approx} and determine a formula that calculates its contribution to any spectra. In this work we have used the form shown in \cite{Moura-Santos_2016}:
-
-\begin{equation}\label{Cl_direct_calculation}
-    C_\ell^{xy}=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
-\end{equation}
-
-\noindent where $x$ and $y$ can represent $g$ or $t$, and $W_\ell$ are called the kernel functions, which can be calculated using
-
-\begin{equation}\label{Wt}
-    W_\ell^t=-3\Omega_m\left(\frac{H_0}{k}\right)^2\int dz \dv{[(1+z)D(z)]}{z} j_\ell[k\chi(z)],
-\end{equation}
-\begin{equation}\label{Wg}
-    W_\ell^g=\int dz b_g(z)\dv{N}{z}D(z)j_\ell[k\chi(z)],
-\end{equation}
-
-\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}.
-
-With equation \eqref{Cl_direct_calculation}, we can determine the theoretical spectra for CMB and galaxy autocorrelations and CMB-galaxy cross-correlation directly. Figure \ref{fig:correlations_theoretical} shows examples of these correlation spectra for all three possible combinations, calculated numerically.
-
-\begin{figure}[!htb]
+\begin{figure}
 	\centering
-	\includegraphics[width=.95\linewidth]{Imagens/Correlations_DoublePlot.png}
-	\caption{Galaxy autocorrelation spectrum (left) and late-ISW contribution to the galaxy-CMB cross-correlation (right). The selection function used to calculate these spectra was parametrized to be compatible with 2MASS' galaxy redshift distribution\cite{select_func_par:Afshordi2004, Moura-Santos_2016}.}
-	\label{fig:correlations_theoretical}
+	\makebox[.87\paperwidth]{
+	\begin{subfigure}[t]{.43\paperwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Imagens/full_doublscale_Wafixo0.33.png}
+		\caption{}
+		\label{fig:dark_energy_wa=0.33}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.43\paperwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Imagens/full_doublscale_Wafixo0.67.png}
+		\caption{}
+		\label{fig:dark_energy_wa=0.67}
+	\end{subfigure}
+}	
+\makebox[.87\paperwidth]{
+	\begin{subfigure}[t]{.43\paperwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Imagens/full_doublscale_Wafixo1.00.png}
+		\caption{}
+		\label{fig:dark_energy_wa=1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.43\paperwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Imagens/full_doublscale_Cs2fixo0.01.png}
+		\caption{}
+		\label{fig:dark_energy_cs2=0.01}
+	\end{subfigure}
+}
+	\makebox[.87\paperwidth]{
+	\begin{subfigure}[t]{.43\paperwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Imagens/full_doublscale_Cs2fixo0.10.png}
+		\caption{}
+		\label{fig:dark_energy_cs2=0.1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.43\paperwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Imagens/full_doublscale_Cs2fixo1.00.png}
+		\caption{}
+		\label{fig:dark_energy_cs2=1}
+	\end{subfigure}
+}
+\caption{The solid lines in the plots correspond to theoretical predictions for the CMB temperature autocorrelation spectra corresponding to different parameter values of the dark energy equation of state, the black data points correspond to Planck's data\cite{Planck_results}. Figures \ref{fig:dark_energy_wa=0.33}, \ref{fig:dark_energy_wa=0.67} and \ref{fig:dark_energy_wa=1} show how the spectrum changes for a constant value of $w_a$ shown on the top left of the axis and varying speeds of sound, while the other three figures show how the curve behaves with varying values of $w_a$ and a constant speed of sound. All theoretical calculations were done using CAMB.}
+\label{fig:Dark_energy_tests}
+	
 \end{figure}
 
-These plots, alongside \ref{fig:Ctt_ISW_comparison}, show very clearly that the ISW effect has a lot more relevance in the lower multipoles, where cosmic variance has a significant influence. The selection function is an important aspect of this signal, in chapter \ref{chapter:Results} the matter of how to optimize the signal with the use of an idealized selection function will be discussed.
+DISCUTIR AS IMAGENS??
 
-%\subsection{Dark Energy Influence}
-
-%STUDY THE INFLUENCE OF DARK ENERGY IN THESE SPECTRA
+%IF THERE IS TIME, STUDY THE INFLUENCE OF DARK ENERGY IN THE OTHER SPECTRA
 
 \chapter{Optimizing the Selection Function}\label{chapter:select_func_optimal}
 
