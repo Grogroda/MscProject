@@ -55,7 +55,7 @@ import sys
 if len(sys.argv)<2:
 	band=1
 else:
-	band=sys.argv[1]
+	band=int(sys.argv[1])
 
 for i in range(n_vals+1):
     print("i=", i)
