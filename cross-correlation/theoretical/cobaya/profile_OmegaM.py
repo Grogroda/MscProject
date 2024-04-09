@@ -50,10 +50,16 @@ Omegas, Likes=[],[]
 OmegaM=Omega_min
 
 print("[profile_OmegaM] About to start profiling loop.")
+import sys
+
+if len(sys.argv)<2:
+	band=1
+else:
+	band=sys.argv[1]
 
 for i in range(n_vals+1):
     print("i=", i)
-    Like=Likelihood(OmegaM)
+    Like=Likelihood(OmegaM, band)
     
     Omegas.append(OmegaM)
     Likes.append(Like)
@@ -68,6 +74,9 @@ import matplotlib.pyplot as plt
 
 print("Omegas=", Omegas)
 print("Exp(logp-logpmax)=", exp_like)
+
+data=pd.DataFrame({"Omega":Omegas, "Like":exp_like})
+data.to_csv("ProfileData_band{0}_Nmc{1}.dat".format(band, '1e7'))
 
 plt.figure()
 plt.plot(Omegas, exp_like)
