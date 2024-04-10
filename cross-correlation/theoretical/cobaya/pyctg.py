@@ -113,7 +113,7 @@ def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
     lbda = band_pars[band]['lambda']
     bg = 1.37
     mode = 1
-    ncalls = 200000 #1e7
+    ncalls = 10000000 #1e7
     #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[l for l in range(2, round(lmax)+1)]
     ctg = []
