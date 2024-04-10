@@ -1,6 +1,6 @@
 from ctypes import * 
 import os
-#import camb
+import multiprocessing as mp
 from cobaya.model import get_model
 import numpy as np
 import pandas as pd
@@ -21,6 +21,12 @@ ctg4py_raw.restype = c_double
 
 cgg4py_raw.argtypes = [c_double, c_double, c_int, c_double, c_double, c_double, c_double, c_double, c_int, c_int, np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), np.ctypeslib.ndpointer(dtype=np.float64, flags="C_CONTIGUOUS"), c_int]
 cgg4py_raw.restype = c_double
+
+def ctg_MP(args):
+
+    OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks=args
+
+    return ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
 
 lmax = 51 
 
@@ -64,7 +70,7 @@ band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524},
            3:{'z0':0.067,'beta':1.765,'lambda':1.636}, 
            4:{'z0':0.084,'beta':1.723,'lambda':1.684}}
 
-def ctg4py(OmegaM, band=1): #band is an optional argument. Default band=1
+def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
 
     print("[pyctg.py] Inside ctg4py")
     
@@ -107,19 +113,28 @@ def ctg4py(OmegaM, band=1): #band is an optional argument. Default band=1
     lbda = band_pars[band]['lambda']
     bg = 1.37
     mode = 1
-    ncalls = 10000000 #1e7
+    ncalls = 200000 #1e7
     #fname  = c_char_p(pkfname.encode("ascii"))
-    ls=[]
+    ls=[l for l in range(2, round(lmax)+1)]
     ctg = []
+
+    args_list=[(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks) for l in ls]
+
+    pool=mp.Pool(processes=n)
+    ctg=pool.map(ctg_MP, args_list)
+
+    '''
     for l in range(2, round(lmax)+1): #around 2-3 minutes for the whole spectrum
         print('ctg for l=', l)
         ls.append(l)
         print("About to start ctg")
-        cl= ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
+        cl= 
         print("ctg calculated")
         ctg.append(cl)
 
+    '''
     return ls, ctg
+    
 
 def cgg4py(OmegaM):
 
@@ -163,18 +178,38 @@ def cgg4py(OmegaM):
 
 if __name__=='__main__':
     #import matplotlib.pyplot as plt
+    import argparse
+    import time
+
+    band, n=1,1
+    parser=argparse.ArgumentParser()
+    parser.add_argument('-b', '--band')
+    parser.add_argument('-n','--nprocess')
+    args=parser.parse_args()
+
+    if args.band!=None:
+        band=int(args.band)
+    print("band=", band)
+    if args.nprocess!=None:
+        n=int(args.nprocess)
+    print("n=", n)
 
     OmegaM=(0.02237+0.12)/(0.67**2)
     print("OmegaM=", OmegaM)
     
-    ls,ctg=ctg4py(OmegaM)
+    ti=time.time()
+    ls,ctg=ctg4py(OmegaM, band, n)
+    tf=time.time()
+
     print('ls=', ls)
     print('ctg({0})={1}'.format(OmegaM, ctg))
+    print('For n={0}, run time={1}'.format(n, tf-ti))
 
-    ls,cgg=cgg4py(OmegaM)
-    print('ls=', ls)
-    print('cgg({0})={1}'.format(OmegaM, ctg))
+#    ls,cgg=cgg4py(OmegaM)
+#    print('ls=', ls)
+#    print('cgg({0})={1}'.format(OmegaM, ctg))
 
+    '''
     matplotlib.rcParams.update({'font.size': 15})
 
     plt.figure()
@@ -210,3 +245,4 @@ if __name__=='__main__':
     plt.xscale('log')
 
     plt.savefig("Correlations_DoublePlot.png")
+    '''

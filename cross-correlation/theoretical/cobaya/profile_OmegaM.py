@@ -1,6 +1,20 @@
 import numpy as np
 from pyctg import ctg4py
 import pandas as pd
+import argparse
+
+band, n=1,1
+parser=argparse.ArgumentParser()
+parser.add_argument('-b', '--band')
+parser.add_argument('-n','--nprocess')
+args=parser.parse_args()
+
+if args.band!=None:
+    band=int(args.band)
+print("band=", band)
+if args.nprocess!=None:
+    n=int(args.nprocess)
+print("n=", n)
 
 '''
 OmegaM_fid=0.3
@@ -25,11 +39,11 @@ for band in range(1, 5):
     for col in arr_names:
         bands_dict[band][col]=bands[band-1][col]
 
-def Likelihood(OmegaM, band=1):
+def Likelihood(OmegaM, band=1, n=1):
 
     print("Inside Likelihood")
 
-    ls_theo, cl_theo=ctg4py(OmegaM, band)
+    ls_theo, cl_theo=ctg4py(OmegaM, band, n)
 
     print("ctg_theo calculated")
 
@@ -50,16 +64,10 @@ Omegas, Likes=[],[]
 OmegaM=Omega_min
 
 print("[profile_OmegaM] About to start profiling loop.")
-import sys
-
-if len(sys.argv)<2:
-	band=1
-else:
-	band=int(sys.argv[1])
 
 for i in range(n_vals+1):
     print("i=", i)
-    Like=Likelihood(OmegaM, band)
+    Like=Likelihood(OmegaM, band, n)
     
     Omegas.append(OmegaM)
     Likes.append(Like)
