@@ -781,11 +781,33 @@ DISCUTIR AS IMAGENS??
 
 \chapter{Optimizing the Selection Function}\label{chapter:select_func_optimal}
 
-INTRODUCTORY TEXT
+Equation \eqref{Wg} introduced the selection function $\dv{N}{z}$, which simply corresponds to the redshift distribution of galaxy number $N$ and can vary depending on the galaxy catalog used, thus having an influence on the expected signal that can be extracted from that catalog. As shown in Figure \ref{fig:correlations_theoretical}, the ISW signal is mostly present in low multipoles, where cosmic variance has a strong influence, this motivated us to study the possibility of optimizing the cross-correlation signal by determining a selection function that could theoretically maximize it, this study will be presented in this chapter.
 
 \section{Parametrization of the Selection Function}
 
-TALK ABOUT THE PARAMETRIZATION, SHOW THE PLOTS EXPLORING THIS PARAMETRIZATION AND WHICH AREAS SHOULD BE USED AS STARTING POINTS TO EXPLORE THE CROSS-CORRELATION OPTIMIZATION
+Following \cite{cross_corr:Afshordi}, we are assuming the selection function can be parametrized as
+
+\begin{equation}\label{select_func_par}
+\dv{N}{z}\left(z|\lambda, \beta, z_0\right)dz=\frac{\beta}{\Gamma(\lambda)}\left(\frac{z}{z_0}\right)^{\beta\gamma-1}\text{exp}\left[-\left(\frac{z}{z_0}\right)^\beta\right]d\left(\frac{z}{z_0}\right)
+\end{equation}
+
+\noindent where the parameters $\beta$, $\lambda$ and $z_0$ are all positive. The values used to calculate \ref{fig:correlations_theoretical} are those corresponding to the so called band 1 of the 2MASS catalog. Table \ref{tab:bands_2MASS} shows the parameter values for each band of this catalog, the details on what each of these bands correspond will be presented in chapter \ref{chapter:extracting_correlations_from_data}.
+
+\begin{table}[!htb]
+\centering
+    \begin{tabular}{cccc} \hline
+     Band & $z_0$ & $\beta$ & $\lambda$ \\ \hline
+     1 & $0.043$ & $1.825$ & $1.524$\\
+     2 & $0.054$ & $1.800$ & $1.600$ \\
+     3 & $0.067$ & $1.765$ & $1.636$\\
+     4 & $0.084$ & $1.723$ & $1.684$\\ \hline
+    \end{tabular}
+    \caption{. Values extracted from \cite{cross_corr:Afshordi}.}
+    \label{tab:bands_2MASS}
+\end{table}
+
+Figure ?? shows the selection function for these bands and (DISCUSS HOW THEY DON'T SEEM TO FAVOR PERIODS IN WHICH DARK ENERGY IS PREVALENT IN THE UNIVERSE TO THEN STUDY THE TIME WHEN DARK ENERGY BECOMES RELEVANT, SHOW THE EQUATION FOR THIS ESTIMATION, AND SHOW THE PLOTS MADE TO USE AS FIRST GUESSES FOR THE IDEAL PARAMETRIZATION)
+
 
 \section{Maximizing the Cross-Correlation Signal}
 
@@ -845,7 +867,9 @@ If $B_\ell$ is the multipole function of the $\ell$ multipole, and given a noise
 
 \section{Gibbs Sampling}
 
-\chapter{Data Sets and Analysis Methodology}\label{chapter:data_sets&analysis}
+\section{Data Sets and Analysis}
+
+2MASS CATALOG, INCLUDE EXPLANATION OF 2MASS BANDS, PLANCK DATA, ETC
 
 \chapter{Results}\label{chapter:Results}
 
