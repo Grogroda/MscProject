@@ -791,7 +791,7 @@ Following \cite{cross_corr:Afshordi}, we are assuming the selection function can
 \dv{N}{z}\left(z|\lambda, \beta, z_0\right)dz=\frac{\beta}{\Gamma(\lambda)}\left(\frac{z}{z_0}\right)^{\beta\gamma-1}\text{exp}\left[-\left(\frac{z}{z_0}\right)^\beta\right]d\left(\frac{z}{z_0}\right)
 \end{equation}
 
-\noindent where the parameters $\beta$, $\lambda$ and $z_0$ are all positive. The values used to calculate \ref{fig:correlations_theoretical} are those corresponding to the so called band 1 of the 2MASS catalog. Table \ref{tab:bands_2MASS} shows the parameter values for each band of this catalog, the details on what each of these bands correspond will be presented in chapter \ref{chapter:extracting_correlations_from_data}.
+\noindent where the parameters $\beta$, $\lambda$ and $z_0$ are all positive. The values used to calculate the spectra in \ref{fig:correlations_theoretical} are those corresponding to the so called band 1 of the 2MASS catalog. Table \ref{tab:bands_2MASS} shows the parameter values for each band of this catalog, while Figure \ref{fig:2MASS_selections} shows the plots for their corresponding selection functions. The details on what each of these bands represent will be presented in chapter \ref{chapter:extracting_correlations_from_data}.
 
 \begin{table}[!htb]
 \centering
@@ -806,7 +806,31 @@ Following \cite{cross_corr:Afshordi}, we are assuming the selection function can
     \label{tab:bands_2MASS}
 \end{table}
 
-Figure ?? shows the selection function for these bands and (DISCUSS HOW THEY DON'T SEEM TO FAVOR PERIODS IN WHICH DARK ENERGY IS PREVALENT IN THE UNIVERSE TO THEN STUDY THE TIME WHEN DARK ENERGY BECOMES RELEVANT, SHOW THE EQUATION FOR THIS ESTIMATION, AND SHOW THE PLOTS MADE TO USE AS FIRST GUESSES FOR THE IDEAL PARAMETRIZATION)
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.7\linewidth]{Imagens/selection_2MASS.png}
+	\caption{Selection function calculated for the 4 bands of the 2MASS catalog according to equation \eqref{select_func_par}.}
+	\label{fig:2MASS_selections}
+\end{figure}
+
+To start the search for an ideal selection, a good first guess would be to find functions that favor galaxies at redshifts close to the period of transition to the current dark energy dominated universe, which has beens stated before in this text to be $z\approx0.63$, a value that I calculated inputing the $\Lambda$CDM values for cosmological parameter in equation\cite{dark_energy_era}
+
+\begin{equation}\label{dark_energy_era_redshift}
+	z^*=\left[-(1+3w_{DE})\frac{\Omega_{DE}}{\Omega_m}\right]^{-\frac{1}{3w_{DE}}}-1,
+\end{equation}
+
+\noindent which assumes a constant equation of state parameter $w_{DE}$ for dark energy. 
+
+To determine the region in the parameter space that favors this redshift, a study of the influence of each parameter in the selection function was necessary. Figure \ref{fig:selection_tripleplot} shows how the selection function varies with changes in each of its parameters.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.98\linewidth]{Imagens/Selection_TriplePlot.png}
+	\caption{Selection function calculated for various parameter values according to the parametrization \eqref{select_func_par}. Each plot is made with constant values for two parameters, corresponding to the band 2 of the 2MASS catalog (see Table \ref{tab:bands_2MASS}), and the parameter on the right is varied.}
+	\label{fig:selection_tripleplot}
+\end{figure}
+
+(DISCUSS HOW THEY DON'T SEEM TO FAVOR PERIODS IN WHICH DARK ENERGY IS PREVALENT IN THE UNIVERSE TO THEN STUDY THE TIME WHEN DARK ENERGY BECOMES RELEVANT, SHOW THE EQUATION FOR THIS ESTIMATION, AND SHOW THE PLOTS MADE TO USE AS FIRST GUESSES FOR THE IDEAL PARAMETRIZATION)
 
 
 \section{Maximizing the Cross-Correlation Signal}
