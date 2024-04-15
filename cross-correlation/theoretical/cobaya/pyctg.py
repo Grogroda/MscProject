@@ -65,10 +65,11 @@ plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 '''
 
 #dictionary containing the parametrization for each band of the 2MASS catalog
-band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524}, 
-           2:{'z0':0.054,'beta':1.800,'lambda':1.600}, 
-           3:{'z0':0.067,'beta':1.765,'lambda':1.636}, 
-           4:{'z0':0.084,'beta':1.723,'lambda':1.684}}
+band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, bg=1.32}, 
+           2:{'z0':0.054,'beta':1.800,'lambda':1.600, bg=1.34}, 
+           3:{'z0':0.067,'beta':1.765,'lambda':1.636, bg=1.29}, 
+           4:{'z0':0.084,'beta':1.723,'lambda':1.684, bg=1.28}} 
+#bg for lmax=50
 
 def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
 
@@ -108,12 +109,14 @@ def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
 
     #Then calculate ctg:
     OmegaL = 1 - OmegaM
+    print("[pyctg.py (ctg4py)] band=", band)
     z0 = band_pars[band]['z0']
     beta = band_pars[band]['beta']
     lbda = band_pars[band]['lambda']
-    bg = 1.37
+    bg = band_pars[band]['bg']
+    print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
     mode = 1
-    ncalls = 10000000 #1e7
+    ncalls = 1000000 #1e6
     #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[l for l in range(2, round(lmax)+1)]
     ctg = []
