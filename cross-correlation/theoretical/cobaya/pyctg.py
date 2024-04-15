@@ -65,10 +65,10 @@ plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 '''
 
 #dictionary containing the parametrization for each band of the 2MASS catalog
-band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, bg=1.32}, 
-           2:{'z0':0.054,'beta':1.800,'lambda':1.600, bg=1.34}, 
-           3:{'z0':0.067,'beta':1.765,'lambda':1.636, bg=1.29}, 
-           4:{'z0':0.084,'beta':1.723,'lambda':1.684, bg=1.28}} 
+band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, 'bg':1.32}, 
+	   2:{'z0':0.054,'beta':1.800,'lambda':1.600, 'bg':1.34}, 
+	   3:{'z0':0.067,'beta':1.765,'lambda':1.636, 'bg':1.29}, 
+	   4:{'z0':0.084,'beta':1.723,'lambda':1.684, 'bg':1.28}} 
 #bg for lmax=50
 
 def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
