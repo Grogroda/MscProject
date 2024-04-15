@@ -3,19 +3,6 @@ from pyctg import ctg4py
 import pandas as pd
 import argparse
 
-band, n=1,1
-parser=argparse.ArgumentParser()
-parser.add_argument('-b', '--band')
-parser.add_argument('-n','--nprocess')
-args=parser.parse_args()
-
-if args.band!=None:
-    band=int(args.band)
-print("band=", band)
-if args.nprocess!=None:
-    n=int(args.nprocess)
-print("n=", n)
-
 '''
 OmegaM_fid=0.3
 ls_data, ctg_data = ctg4py(OmegaM_fid)
@@ -63,6 +50,19 @@ delta_Om=(Omega_max-Omega_min)/n_vals
 Omegas, Likes=[],[]
 OmegaM=Omega_min
 
+band, n=1,1
+parser=argparse.ArgumentParser()
+parser.add_argument('-b', '--band')
+parser.add_argument('-n','--nprocess')
+args=parser.parse_args()
+
+if args.band!=None:
+    band=int(args.band)
+print("band=", band)
+if args.nprocess!=None:
+    n=int(args.nprocess)
+print("n=", n)
+
 print("[profile_OmegaM] About to start profiling loop.")
 
 for i in range(n_vals+1):
@@ -80,6 +80,7 @@ exp_like=[np.exp(logp) for logp in like_diff]
 
 import matplotlib.pyplot as plt
 
+print("Band=", band)
 print("Omegas=", Omegas)
 print("Exp(logp-logpmax)=", exp_like)
 
