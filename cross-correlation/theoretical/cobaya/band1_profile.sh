@@ -26,9 +26,9 @@ module swap gnu gnu7
 
 source /temporario2/10300487/miniconda3/bin/activate
 
-cd /temporario2/10300487/MscProject/cross-correlation/theoretical/src/
+#cd /temporario2/10300487/MscProject/cross-correlation/theoretical/src/
 
-./compile_lib.sh
+#./compile_lib.sh
 
 echo "Lib compiled!"
 

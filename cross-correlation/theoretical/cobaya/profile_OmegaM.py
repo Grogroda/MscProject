@@ -85,7 +85,7 @@ print("Omegas=", Omegas)
 print("Exp(logp-logpmax)=", exp_like)
 
 data=pd.DataFrame({"Omega":Omegas, "Like":exp_like})
-data.to_csv("like_profiles/ProfileData_band{0}_Nmc{1}.dat".format(band, '1e7'))
+data.to_csv("like_profiles/ProfileData_band{0}_Nmc{1}.dat".format(band, '1e7'), sep=' ')
 
 plt.figure()
 plt.plot(Omegas, exp_like)
