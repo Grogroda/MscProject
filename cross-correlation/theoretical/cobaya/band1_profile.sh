@@ -30,8 +30,8 @@ source /temporario2/10300487/miniconda3/bin/activate
 
 #./compile_lib.sh
 
-echo "Lib compiled!"
+#echo "Lib compiled!"
 
 cd /temporario2/10300487/MscProject/cross-correlation/theoretical/cobaya/
 
-python3 profile_OmegaM.py -n 9 -b 1 > like_profiles/band1_profile_parallel.log 2>&1 #number after script name=2MASS band
+python3 profile_OmegaM.py -n 9 -b 1 > like_profiles/band1_profile_parallel.log 2>&1 
