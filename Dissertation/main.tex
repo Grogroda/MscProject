@@ -855,7 +855,7 @@ Upon thorough inspection of the histograms, we decided to fit each histogram usi
 With that, we can finally define the probability $P_\text{null}$ that a correlation spectrum $C^{tg}$ follows the null hypothesis:
 
 \begin{equation}\label{def:Pnull}
-	P_\text{null}=\prod_{l=2}^{\ell_\text{max}} f_\ell\left[C^{tg}(\ell)\right]
+	P_\text{null}=\prod_{\ell=2}^{\ell_\text{max}} f_\ell\left[C^{tg}(\ell)\right]
 \end{equation}
 
 With this, we can then explore the parameter space $(z_0, \beta, \lambda)$ and estimate the theoretical cross-correlation spectrum for each point in it, and determine $P_\text{null}$ for each of them. If we are able to find the point in this parameter space that minimizes $P_\text{null}$, that should contribute to the improvement of the cross-correlation signal and reduce the dependence on cosmic variance. 
