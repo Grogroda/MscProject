@@ -800,7 +800,7 @@ Following \cite{cross_corr:Afshordi}, we are assuming the selection function can
      3 & $0.067$ & $1.765$ & $1.636$\\
      4 & $0.084$ & $1.723$ & $1.684$\\ \hline
     \end{tabular}
-    \caption{. Values extracted from \cite{cross_corr:Afshordi}.}
+    \caption{Parameter values for the 4 bands of the 2MASS catalog. Values extracted from \cite{cross_corr:Afshordi}.}
     \label{tab:bands_2MASS}
 \end{table}
 
@@ -834,7 +834,35 @@ These observations make it easier to change the parameters and see their influen
 
 \section{Maximizing the Cross-Correlation Signal}
 
-SHOW THE PROBABILITY FUNCTION WE ARE ATTEMPTING TO OPTIMIZE, WHICH IS COMPARED WITH THE HISTOGRAMS OF 0 CROSS-CORRELATION I MADE, THE HEAT PLOTS EXPLORING THE REGIONS OF INTEREST AND THE FINAL RESULT OF THE MINIMIZER
+To maximize the signal we are in search of, we compare it with the null hypothesis that there is no cross-correlation induced by the ISW effect, i.e $C^{tg}(\ell)=0$ for every multipole. To do this is, we need to estimate the probability distribution of $C^{tg}$ for each multipole $\ell$ extracted from an uncorrelated map. 
+
+In this part of the project, the HEALPix software was used extensively, and to validate the procedure for the search of a probability distribution for the null hypothesis, we first tested how the software would be able to retrieve the signal of a non-null cross-correlation spectrum. To do this, the full autocorrelation spectrum in \ref{fig:Ctt_ISW_comparison} calculated using CAMB was used as well as the cross-correlations \ref{fig:correlations_theoretical} as inputs for a HEALPix function that can sample values of $a_{\ell m}$ for the temperature and galaxy contrast maps that follow both the autocorrelation functions given, as well as the cross-correlation function, and a map representation can be calculated with this using another HEALPix functionality.
+
+Figure ?? illustrates one galaxy contrast map and one CMB temperature map calculated using this procedure.
+
+FIGURA DO MAPA HEALPIX 
+
+It is necessary that multiple maps are synthesized this way in order to use these maps to actually retrieve the correlation spectra properly. During our tests, the autocorrelations quickly converged to their corresponding theoretical spectra, but not the cross-correlation. Figure ?? shows a comparison between the theoretical cross-correlation spectrum and the one estimated from ten thousand synthesized maps, which was the value we considered a reasonable tradeoff between quality and time efficiency for this project.
+
+FIGURA DO CTG SINTÉTICO+TEÓRICO
+
+The same process can be done using $C^{tg}=0$ for every multipole, giving us an estimation of the distribution of $C^{tg}(\ell)$ that can be used as a probability distribution for the null hypothesis. Figure ?? shows two histograms representing this distribution.
+
+FIGURA DOS HISTOGRAMAS
+
+Upon thorough inspection of the histograms, we decided to fit each histogram using the gaussian distribution function, and using that as the distribution function of $C^{tg}$ for that multipole, each of them will be indicated by $f_\ell[C^{tg}(\ell)]$.
+
+With that, we can finally define the probability $P_\text{null}$ that a correlation spectrum $C^{tg}$ follows the null hypothesis:
+
+\begin{equation}\label{def:Pnull}
+	P_\text{null}=\prod_{l=2}^{\ell_\text{max}} f_\ell\left[C^{tg}(\ell)\right]
+\end{equation}
+
+With this, we can then explore the parameter space $(z_0, \beta, \lambda)$ and estimate the theoretical cross-correlation spectrum for each point in it, and determine $P_\text{null}$ for each of them. If we are able to find the point in this parameter space that minimizes $P_\text{null}$, that should contribute to the improvement of the cross-correlation signal and reduce the dependence on cosmic variance. 
+
+\section{Results}
+
+SHOW THE HEAT PLOTS, THE MINIMIZER FINAL RESULT AND DISCUSS HOW IT DOESN'T SEEM TO HAVE A RELEVANT EFFECT ON THE FINAL RESULTS
 
 \chapter{Extracting Correlations from Data} \label{chapter:extracting_correlations_from_data}
 
