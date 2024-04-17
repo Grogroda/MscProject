@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  16 APR 2024 18:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  17 APR 2024 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,7 +1059,7 @@ l.150 \cleardoublepage
 
 ]
 Chapter 1.
-<Imagens/satellites.jpg, id=316, 722.7pt x 401.5pt>
+<Imagens/satellites.jpg, id=328, 722.7pt x 401.5pt>
 File: Imagens/satellites.jpg Graphic file (type jpg)
 <use Imagens/satellites.jpg>
 Package pdftex.def Info: Imagens/satellites.jpg  used on input line 169.
@@ -1078,7 +1078,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [5] [6] [7]
 [8] [9]
-<Imagens/CMB_Timeline300_no_WMAP.jpg, id=440, 1927.2pt x 1271.75125pt>
+<Imagens/CMB_Timeline300_no_WMAP.jpg, id=452, 1927.2pt x 1271.75125pt>
 File: Imagens/CMB_Timeline300_no_WMAP.jpg Graphic file (type jpg)
 <use Imagens/CMB_Timeline300_no_WMAP.jpg>
 Package pdftex.def Info: Imagens/CMB_Timeline300_no_WMAP.jpg  used on input lin
@@ -1089,13 +1089,13 @@ e 381.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Imagens/planck_spectrum.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Imagens/planck_spectrum.pdf, id=546, 475.05078pt x 329.1196pt>
+<Imagens/planck_spectrum.pdf, id=557, 475.05078pt x 329.1196pt>
 File: Imagens/planck_spectrum.pdf Graphic file (type pdf)
 <use Imagens/planck_spectrum.pdf>
 Package pdftex.def Info: Imagens/planck_spectrum.pdf  used on input line 577.
 (pdftex.def)             Requested size: 409.71692pt x 283.86595pt.
 [18 <./Imagens/planck_spectrum.pdf>] [19]
-<Imagens/Pk_3dmatter_LCDM.png, id=836, 578.16pt x 433.62pt>
+<Imagens/Pk_3dmatter_LCDM.png, id=847, 578.16pt x 433.62pt>
 File: Imagens/Pk_3dmatter_LCDM.png Graphic file (type png)
 <use Imagens/Pk_3dmatter_LCDM.png>
 Package pdftex.def Info: Imagens/Pk_3dmatter_LCDM.png  used on input line 632.
@@ -1108,12 +1108,12 @@ unc-tion of $\OML/cmm/m/it/12 k=h$\T1/ptm/m/n/12 (+20) , where $\OML/cmm/m/it/1
  []
 
 [20] [21 <./Imagens/Pk_3dmatter_LCDM.png>]
-<Imagens/Ctt_comparison.png, id=863, 578.16pt x 433.62pt>
+<Imagens/Ctt_comparison.png, id=874, 578.16pt x 433.62pt>
 File: Imagens/Ctt_comparison.png Graphic file (type png)
 <use Imagens/Ctt_comparison.png>
 Package pdftex.def Info: Imagens/Ctt_comparison.png  used on input line 668.
 (pdftex.def)             Requested size: 341.43307pt x 256.07178pt.
-<Imagens/Correlations_DoublePlot.png, id=867, 918.5517pt x 375.804pt>
+<Imagens/Correlations_DoublePlot.png, id=878, 918.5517pt x 375.804pt>
 File: Imagens/Correlations_DoublePlot.png Graphic file (type png)
 <use Imagens/Correlations_DoublePlot.png>
 Package pdftex.def Info: Imagens/Correlations_DoublePlot.png  used on input lin
@@ -1121,37 +1121,37 @@ e 677.
 (pdftex.def)             Requested size: 446.13727pt x 182.5285pt.
  [22 <./Imagens/Ctt_comparison.png>]
 [23 <./Imagens/Correlations_DoublePlot.png>]
-<Imagens/full_doublscale_Wafixo0.33.png, id=912, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Wafixo0.33.png, id=924, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Wafixo0.33.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo0.33.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo0.33.png  used on input 
 line 742.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Wafixo0.67.png, id=913, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Wafixo0.67.png, id=925, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Wafixo0.67.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo0.67.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo0.67.png  used on input 
 line 742.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Wafixo1.00.png, id=914, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Wafixo1.00.png, id=926, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Wafixo1.00.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo1.00.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo1.00.png  used on input 
 line 757.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Cs2fixo0.01.png, id=915, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Cs2fixo0.01.png, id=927, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Cs2fixo0.01.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo0.01.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo0.01.png  used on input
  line 757.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Cs2fixo0.10.png, id=916, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Cs2fixo0.10.png, id=928, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Cs2fixo0.10.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo0.10.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo0.10.png  used on input
  line 772.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Cs2fixo1.00.png, id=917, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Cs2fixo1.00.png, id=929, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Cs2fixo1.00.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo1.00.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo1.00.png  used on input
@@ -1180,7 +1180,7 @@ Wafixo0.67.png> <./Imagens/full_doublscale_Wafixo1.00.png> <./Imagens/full_doub
 lscale_Cs2fixo0.01.png> <./Imagens/full_doublscale_Cs2fixo0.10.png> <./Imagens/
 full_doublscale_Cs2fixo1.00.png>]
 Chapter 3.
-<Imagens/selection_2MASS.png, id=951, 456.0237pt x 338.2236pt>
+<Imagens/selection_2MASS.png, id=962, 456.0237pt x 338.2236pt>
 File: Imagens/selection_2MASS.png Graphic file (type png)
 <use Imagens/selection_2MASS.png>
 Package pdftex.def Info: Imagens/selection_2MASS.png  used on input line 809.
@@ -1188,36 +1188,66 @@ Package pdftex.def Info: Imagens/selection_2MASS.png  used on input line 809.
 [26
 
 ]
-<Imagens/Selection_TriplePlot.png, id=961, 930.8376pt x 336.0555pt>
+<Imagens/Selection_TriplePlot.png, id=972, 930.8376pt x 336.0555pt>
 File: Imagens/Selection_TriplePlot.png Graphic file (type png)
 <use Imagens/Selection_TriplePlot.png>
 Package pdftex.def Info: Imagens/Selection_TriplePlot.png  used on input line 8
 26.
 (pdftex.def)             Requested size: 446.13727pt x 161.06892pt.
  [27 <./Imagens/selection_2MASS.png> <./Imagens/Selection_TriplePlot.png>]
-[28] [29]
-Chapter 4.
-[30
+<Imagens/SynthMap_CMB.png, id=987, 513.92pt x 326.21875pt>
+File: Imagens/SynthMap_CMB.png Graphic file (type png)
+<use Imagens/SynthMap_CMB.png>
+Package pdftex.def Info: Imagens/SynthMap_CMB.png  used on input line 846.
+(pdftex.def)             Requested size: 223.07211pt x 141.60036pt.
+<Imagens/SynthMap_Galaxy.png, id=988, 513.92pt x 326.21875pt>
+File: Imagens/SynthMap_Galaxy.png Graphic file (type png)
+<use Imagens/SynthMap_Galaxy.png>
+Package pdftex.def Info: Imagens/SynthMap_Galaxy.png  used on input line 852.
+(pdftex.def)             Requested size: 223.07211pt x 141.60036pt.
 
-] [31]
-Chapter 5.
+[28]
+<Imagens/hist_l4.png, id=994, 722.7pt x 533.3526pt>
+File: Imagens/hist_l4.png Graphic file (type png)
+<use Imagens/hist_l4.png>
+Package pdftex.def Info: Imagens/hist_l4.png  used on input line 871.
+(pdftex.def)             Requested size: 223.07211pt x 164.62956pt.
+<Imagens/hist_l30.png, id=995, 722.7pt x 534.798pt>
+File: Imagens/hist_l30.png Graphic file (type png)
+<use Imagens/hist_l30.png>
+Package pdftex.def Info: Imagens/hist_l30.png  used on input line 877.
+(pdftex.def)             Requested size: 223.07211pt x 165.07571pt.
+ [29 <./Imagens/SynthMap_CMB.png> <./Imagens/SynthMap_Galaxy.png> <./Imagens/hi
+st_l4.png> <./Imagens/hist_l30.png>]
+<Imagens/triple_colorplot.png, id=1007, 462.528pt x 323.0469pt>
+File: Imagens/triple_colorplot.png Graphic file (type png)
+<use Imagens/triple_colorplot.png>
+Package pdftex.def Info: Imagens/triple_colorplot.png  used on input line 901.
+(pdftex.def)             Requested size: 364.19667pt x 254.38106pt.
+ [30 <./Imagens/triple_colorplot.png>]
+[31]
+Chapter 4.
 [32
+
+] [33]
+Chapter 5.
+[34
 
 ]
 Chapter 6.
-[33
-
-] [34]
-Appendix A.
 [35
+
+] [36]
+Appendix A.
+[37
 
 ]
 Appendix B.
-[36
+[38
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 96
-3.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
+16.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1226,33 +1256,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (3.09627pt too wide) in paragraph at lines 964--964
+Overfull \hbox (3.09627pt too wide) in paragraph at lines 1017--1017
 []\T1/ptm/m/n/12 (-20) D. J. Fixsen. ^^P  THE TEM-PER-A-TURE OF THE COS-MIC MI-
 CROWAVE BACK-GROUND^^Q.
  []
 
-[37
+[39
 
 ]
-Overfull \hbox (25.28688pt too wide) in paragraph at lines 964--964
+Overfull \hbox (25.28688pt too wide) in paragraph at lines 1017--1017
 []\T1/ptm/m/n/12 (-20) S. Do-del-son and F. Schmidt. \T1/ptm/m/it/12 (-20) Mod-
 ern Cos-mol-ogy\T1/ptm/m/n/12 (-20) . El-se-vier Sci-ence, 2020. \T1/ptm/m/sc/1
 2 (-20) isbn\T1/ptm/m/n/12 (-20) : 9780128159484.
  []
 
-[38]
+[40]
 
 Package biblatex Warning: No driver for entry type 'masterthesis'.
-(biblatex)                Using fallback driver on input line 963.
+(biblatex)                Using fallback driver on input line 1016.
 
 
-Overfull \hbox (20.03078pt too wide) in paragraph at lines 964--964
+Overfull \hbox (20.03078pt too wide) in paragraph at lines 1017--1017
 \T1/pcr/m/n/12 1016 / j . astropartphys . 2004 . 12 . 004$[]\T1/ptm/m/n/12 (-20
 ) . \T1/ptm/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : /
  / www . sciencedirect .
  []
 
-[39] [40] [41] (./main.aux)
+[41] [42] [43] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3404CC93F19174ED521C5F52A31177F3;5323.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1260,34 +1290,35 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27451 strings out of 478287
- 523425 string characters out of 5849289
- 1241298 words of memory out of 5000000
- 44761 multiletter control sequences out of 15000+600000
- 532092 words of font info for 279 fonts, out of 8000000 for 9000
+ 27525 strings out of 478287
+ 525182 string characters out of 5849289
+ 1244404 words of memory out of 5000000
+ 44822 multiletter control sequences out of 15000+600000
+ 533948 words of font info for 286 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,17n,77p,1203b,1870s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on main.pdf (52 pages, 1652253 bytes).
+type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (54 pages, 2272209 bytes).
 PDF statistics:
- 1336 PDF objects out of 1440 (max. 8388607)
- 962 compressed objects within 10 object streams
- 211 named destinations out of 1000 (max. 500000)
- 63279 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1390 PDF objects out of 1440 (max. 8388607)
+ 1001 compressed objects within 11 object streams
+ 218 named destinations out of 1000 (max. 500000)
+ 64328 words of extra memory for PDF output out of 74296 (max. 10000000)
 

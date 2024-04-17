@@ -5698,6 +5698,22 @@
       \field{pages}{043\bibrangedash 043}
       \range{pages}{1}
     \endentry
+    \entry{gsl-manual}{manual}{}
+      \list{organization}{1}{%
+        {GNU Project}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{GNU Scientific Library Reference Manual}
+      \verb{urlraw}
+      \verb http://www.gnu.org/software/gsl/
+      \endverb
+      \verb{url}
+      \verb http://www.gnu.org/software/gsl/
+      \endverb
+    \endentry
     \entry{GNU-parallel}{article}{}
       \name{author}{1}{}{%
         {{hash=9f147229ed6b13fc6dbf05bfae29611b}{%

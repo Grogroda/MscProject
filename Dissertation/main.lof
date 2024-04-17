@@ -10,6 +10,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Selection function calculated for the 4 bands of the 2MASS catalog according to equation \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {select_func_par}\unskip \@@italiccorr )}}.\relax }}{27}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Selection function calculated for various parameter values according to the parametrization \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {select_func_par}\unskip \@@italiccorr )}}. Each plot is made with constant values for two parameters, corresponding to the band 2 of the 2MASS catalog (see Table \ref {tab:bands_2MASS}), and the parameter on the right is varied.\relax }}{27}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Big caption\relax }}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Big caption\relax }}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces For each plot, one parameter is fixed at a certain value. The color of the plot indicates the ratio $P_\text {null}(z_0, \beta ,\lambda )/P_\text {null}^\text {2MASS}$, according to the bar on the right. Dark blue regions indicate the lower values of this ratio, these are the regions that improve the signal according to our analysis, and can indicate regions where a minimum value can be found. The constant values are: $\lambda =5$ (upper left), $\beta =1$ (lower left) and $z_0=0.17$ (lower right).\relax }}{30}{figure.caption.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -20,7 +20,7 @@ if args.multipole!=None:
 print("l=", l)
 
 import matplotlib
-matplotlib.rcParams.update({'font.size':17})
+matplotlib.rcParams.update({'font.size':20})
 
 hist=pd.read_csv('hists/histogram_l{}.txt'.format(l), header=None, sep=' ')
 bins, weights=hist[0], hist[1][:-1]
@@ -45,10 +45,10 @@ for i in range(Npoints):
     x+=dx
 
 plt.figure(figsize=(10,8))
-plt.hist(bins[:-1], bins, density=True,weights=weights, label='Normalized Distribution')
+plt.hist(bins[:-1], bins, density=True,weights=weights, label='Normalized\ndistribution')
 plt.plot(xs, ys, label='Gaussian Fit')
-plt.title(r'$\ell={}$'.format(l))
-plt.xlabel(r'$C^{tg}$')
-plt.ylabel(r'$P(C^{tg})$')
+#plt.title(r'$\ell={}$'.format(l))
+plt.xlabel(r'$C^{tg}$', fontsize=25)
+plt.ylabel(r'$P(C^{tg})$', fontsize=25)
 plt.legend(loc='upper left')
 plt.savefig('hist_l{}.png'.format(l))
