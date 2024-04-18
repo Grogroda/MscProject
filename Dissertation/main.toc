@@ -19,11 +19,11 @@
 \contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{26}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{28}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Results}{30}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Two Point Functions}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Gibbs Sampling}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Data Sets and Analysis}{33}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Results}{34}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions}{35}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Fourier Space}{37}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{38}{appendix.B}%
+\contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Two Point Functions}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Gibbs Sampling}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Data Sets and Analysis}{34}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Results}{35}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions}{36}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Fourier Space}{38}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{39}{appendix.B}%

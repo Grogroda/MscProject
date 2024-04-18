@@ -647,7 +647,7 @@ Similarly, instead of calculating an autocorrelation spectrum, one can calculate
 One can determine a general and direct equation to calculate these spectra. In this work we have used the form shown in \cite{Moura-Santos_2016}, which is specific to the ISW contribution to these correlation spectra:
 
 \begin{equation}\label{Cl_direct_calculation}
-    C_\ell^{xy}=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
+    C^{xy}(\ell)=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
 \end{equation}
 
 \noindent where $x$ and $y$ can represent $g$ or $t$, and $W_\ell$ are called the kernel functions, which can be calculated using
@@ -779,7 +779,7 @@ Figure \ref{fig:Dark_energy_tests} shows the influence of different parameter va
 
 \chapter{Optimizing the Selection Function}\label{chapter:select_func_optimal}
 
-Equation \eqref{Wg} introduced the selection function $\dv{N}{z}$, which simply corresponds to the redshift distribution of galaxy number $N$ and can vary depending on the galaxy catalog used, thus having an influence on the expected signal that can be extracted from that catalog. As shown in Figure \ref{fig:correlations_theoretical}, the ISW signal is mostly present in low multipoles, where cosmic variance has a strong influence, this motivated us to study the possibility of optimizing the cross-correlation signal by determining a selection function that could theoretically maximize it, this study will be presented in this chapter.
+Equation \eqref{Wg} introduced the selection function $\dv{N}{z}$, which simply corresponds to the redshift distribution of galaxy number $N$ and can vary depending on the galaxy catalog used, thus having an influence on the expected cross-correlation and galaxy autocorrelation signals that can be extracted from that catalog. As shown in Figure \ref{fig:correlations_theoretical}, the ISW signal is mostly present in low multipoles, where cosmic variance has a strong influence, this makes it hard to determine wether the data follows the model or the null hypothesis of no cross-correlation. This motivated us to study the possibility of optimizing the cross-correlation signal by determining a selection function that could theoretically maximize it, this study will be presented in this chapter.
 
 \section{Parametrization of the Selection Function}
 
@@ -789,7 +789,7 @@ Following \cite{cross_corr:Afshordi}, we are assuming the selection function can
 \dv{N}{z}\left(z|\lambda, \beta, z_0\right)dz=\frac{\beta}{\Gamma(\lambda)}\left(\frac{z}{z_0}\right)^{\beta\gamma-1}\text{exp}\left[-\left(\frac{z}{z_0}\right)^\beta\right]d\left(\frac{z}{z_0}\right)
 \end{equation}
 
-\noindent where the parameters $\beta$, $\lambda$ and $z_0$ are all positive. The values used to calculate the spectra in \ref{fig:correlations_theoretical} are those corresponding to the so called band 1 of the 2MASS catalog. Table \ref{tab:bands_2MASS} shows the parameter values for each band of this catalog, while Figure \ref{fig:2MASS_selections} shows the plots for their corresponding selection functions. The details on what each of these bands represent will be presented in chapter \ref{chapter:extracting_correlations_from_data}.
+\noindent where the parameters $\beta$, $\lambda$ and $z_0$ are all positive. The values used to calculate the spectra in Figure \ref{fig:correlations_theoretical} are those corresponding to the so called band 1 of the 2MASS infrared galaxy catalog. Table \ref{tab:bands_2MASS} shows the parameter values for each band of this catalog, while Figure \ref{fig:2MASS_selections} shows the plots for their corresponding selection functions. The details on what each of these bands represent will be presented in chapter \ref{chapter:extracting_correlations_from_data}.
 
 \begin{table}[!htb]
 \centering
@@ -811,34 +811,32 @@ Following \cite{cross_corr:Afshordi}, we are assuming the selection function can
 	\label{fig:2MASS_selections}
 \end{figure}
 
-To start the search for an ideal selection, a good first guess would be to find functions that favor galaxies at redshifts close to the period of transition to the current dark energy dominated universe, which has beens stated before in this text to be $z^*\approx0.63$, a value that I calculated inputing the $\Lambda$CDM values for cosmological parameter in equation\cite{dark_energy_era}
+To start the search for an ideal selection function, a good first guess would be to find functions that favor galaxies at redshifts close to the period of transition to the current dark energy dominated universe. The beginning of the period of accelerated expansion can be estimated by inputing the $\Lambda$CDM values for cosmological parameters in equation\cite{dark_energy_era}
 
 \begin{equation}\label{dark_energy_era_redshift}
 	z^*=\left[-(1+3w_{DE})\frac{\Omega_{DE}}{\Omega_m}\right]^{-\frac{1}{3w_{DE}}}-1,
 \end{equation}
 
-\noindent which assumes a constant equation of state parameter $w_{DE}$ for dark energy. 
+\noindent which assumes a constant equation of state parameter $w_{DE}$ for dark energy. If we use the values of Table \ref{tab:rhos&Omegas}, we estimate that $z^*\approx 0.63$. By analysing Figure \ref{fig:2MASS_selections}, it is possible to see that no band of the 2MASS catalog significantly reach this redshift.
 
 To determine the region in the parameter space that favors this redshift, a study of the influence of each parameter in the selection function was necessary. Figure \ref{fig:selection_tripleplot} shows how the selection function varies with changes in each of its parameters.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.98\linewidth]{Imagens/Selection_TriplePlot.png}
-	\caption{Selection function calculated for various parameter values according to the parametrization \eqref{select_func_par}. Each plot is made with constant values for two parameters, corresponding to the band 2 of the 2MASS catalog (see Table \ref{tab:bands_2MASS}), and the parameter on the right is varied.}
+	\caption{Selection function calculated for various parameter values according to the parametrization \eqref{select_func_par}. Each plot is made with constant values for two parameters, corresponding to the band 2 of the 2MASS catalog (see Table \ref{tab:bands_2MASS}), the corresponding values of the varied parameter can be seen on the legend.}
 	\label{fig:selection_tripleplot}
 \end{figure}
 
 Figure \ref{fig:selection_tripleplot} shows that increasing the value of $\lambda$ seems to shift the peak of the selection function towards higher redshifts without significantly changing the width of the curve, while increasing $\beta$ seems to narrow the curve without significantly changing the position of the peak, and increasing $z_0$ seems to increase both the position of the maximum and the width of the curve. 
 
-These observations make it easier to change the parameters and see their influence on the cross-correlation signal and helps choose the starting region of the parameter space to explore, but to do so, the matter of how to quantify the quality of the signal has to be discussed.
+These observations make it easier to change the parameters and see their influence on the cross-correlation signal and helps choose a region of the parameter space to explore, but to do so, the matter of how to quantify the quality of the signal has to be discussed.
 
 \section{Maximizing the Cross-Correlation Signal}
 
-To maximize the signal we are in search of, we compare it with the null hypothesis that there is no cross-correlation induced by the ISW effect, i.e $C^{tg}(\ell)=0$ for every multipole. To do this is, we need to estimate the probability distribution of $C^{tg}$ for each multipole $\ell$ extracted from an uncorrelated map. 
+To maximize the signal we are in search of, we compare it with the null hypothesis that there is no cross-correlation induced by the ISW effect, i.e $C^{tg}(\ell)=0$ for every multipole. One way to do this is to synthesize multiple uncorrelated CMB temperature maps and galaxy contrast maps, calculate the power spectrum $C^{tg}(\ell)$ for each of them and, for each multipole $\ell$, determine the distribution of $C^{tg}(\ell)$, using this as an estimation of the probability distribution of these cross-correlation samples.
 
-In this part of the project, the HEALPix software was used extensively, and to validate the procedure for the search of a probability distribution for the null hypothesis, we first tested how the software would be able to retrieve the signal of a non-null cross-correlation spectrum. To do this, the full autocorrelation spectrum shown in Figure \ref{fig:Ctt_ISW_comparison} calculated using CAMB was used as well as the cross-correlations shown in Figure \ref{fig:correlations_theoretical} as inputs for a HEALPix function that can sample values of $a_{\ell m}$ for the temperature and galaxy contrast maps that follow both the autocorrelation functions given, as well as the cross-correlation function, and a map representation can be calculated with this using another HEALPix functionality.
-
-Figure ?? illustrates one galaxy contrast map and one CMB temperature map calculated using this procedure.
+In this part of the project, the HEALPix software was used extensively, and to validate the procedure for the search of the probability distribution for the null hypothesis, we first tested how the software would be able to retrieve the signal of a non-null cross-correlation spectrum. To do this, the full autocorrelation spectrum shown in Figure \ref{fig:Ctt_ISW_comparison} calculated using CAMB was used alongside the correlation spectra shown in Figure \ref{fig:correlations_theoretical} as inputs for a HEALPix function that can sample values of $a_{\ell m}$ for the temperature and galaxy contrast maps that follow all correlation functions given, and a map representation can be calculated with this using another HEALPix functionality. Figure \ref{fig:SynthMaps} illustrates one galaxy contrast map and one CMB temperature map synthesized using this procedure.
 
 \begin{figure}[!htb]
 	\centering
@@ -853,17 +851,36 @@ Figure ?? illustrates one galaxy contrast map and one CMB temperature map calcul
 		\caption{Galaxy contrast}
 		\label{subfig:galaxy_synthmap}
 	\end{subfigure}
-	\caption{Big caption}
+	\caption{Mollweide projection of two instances of maps synthesized using HEALPix with the procedure presented. (LEGENDAS MUITO PEQUENAS, VOU REFAZER ESSES PLOTS)}
 	\label{fig:SynthMaps}
 \end{figure} 
 
-THE NUMBERS ARE UNREADABLE AND THE CTG PLOT IS ALL IN PORTUGUESE, I'LL NEED SOME TIME TO REDO THESE PLOTS SINCE I DON'T HAVE THE DATA TO PLOT THEM ANYMORE
+Multiple maps need to be synthesized to recover correlation spectra not dominated by noise. During our tests, the autocorrelations quickly converged to their corresponding theoretical spectra, but not the cross-correlation. Figure \ref{fig:SynthMaps_AvPlots} shows a comparison between the theoretical correlation spectra and the ones estimated from averaging the correlation spectra of ten thousand synthesized maps, which was the number of maps we decided to use in this project.
 
-It is necessary that multiple maps are synthesized this way in order to use them to actually retrieve the correlation spectra properly. During our tests, the autocorrelations quickly converged to their corresponding theoretical spectra, but not the cross-correlation. Figure ?? shows a comparison between the theoretical cross-correlation spectrum and the one estimated from ten thousand synthesized maps, which was the value we considered a reasonable tradeoff between quality and time efficiency for this project.
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+	\includegraphics[width=\linewidth]{Imagens/av_plot_ctt_N1e4.png}
+	%\caption{cap1}
+	%\label{subfig:synthmaps_ctt}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.32\textwidth}
+	\includegraphics[width=\linewidth]{Imagens/av_plot_cgg_N1e4.png}
+	%\caption{cap2}
+	%\label{subfig:synthmaps_cgg}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.32\textwidth}
+	\includegraphics[width=\linewidth]{Imagens/av_plot_ctg_N1e4.png}
+	%\caption{cap3}
+	%\label{subfig:synthmaps_ctg}
+	\end{subfigure}
+	\caption{Comparison between theoretical cross-correlation spectrum and the averages of the $C_\ell$ calculated from $10^4$ synthesized maps using the procedure presented in this section. (VOU MUDAR TUDO PARA INGLÊS E AUMENTAR A FONTE)}
+	\label{fig:SynthMaps_AvPlots}
+\end{figure}
 
-FIGURA DO CTG SINTÉTICO+TEÓRICO
-
-In order to determine the probability distribution of the null hypothesis for each multipole, the same process can be done using $C^{tg}=0$ for every multipole, the distribution of $C^{tg}(\ell)$ can be used as a probability distribution for the null hypothesis. Figure \ref{fig:synthmaps_histograms} shows two histograms representing this distribution.
+In order to determine the probability distribution of the null hypothesis for each multipole, a similar process can be used: We use the same $C^{tt}$ and $C^{gg}$ spectra to synthesize the map, but instead of using the theoretical cross-correlation spectrum, we used $C^{tg}(\ell)=0$ for every multipole to synthesize the maps, creating uncorrelated maps. For each multipole, we have a sample of $C^{tg}(\ell)$, one value for each map, the distribution of these values can be used as a probability distribution for the null hypothesis at each multipole. Figure \ref{fig:synthmaps_histograms} shows two histograms representing this distribution.
 
 \begin{figure}[!htb]
 	\centering
@@ -878,11 +895,11 @@ In order to determine the probability distribution of the null hypothesis for ea
 		\caption{Distribution for $\ell=30$}
 		\label{subfig:Hist_l30}
 	\end{subfigure}
-	\caption{Big caption}
+	\caption{Distribution of cross-correlation values on different multipoles for $10^4$ maps synthesized with null cross-correlation. Gaussian fits of the samples are shown alnogside the normalized distributions. As expected, the averages of the distributions are close to zero, and the variance of the distribution is significantly higher in low multipoles due to cosmic variance.}
 	\label{fig:synthmaps_histograms}
 \end{figure}
 
-Upon thorough inspection of the histograms, we decided to fit each histogram using the gaussian distribution function, and using that as the distribution function of $C^{tg}$ for that multipole, each of them will be indicated by $f_\ell[C^{tg}(\ell)]$.
+Upon thorough inspection of the histograms, we decided to fit each histogram using the gaussian distribution function, which are shown in Figure \ref{fig:synthmaps_histograms}, and used that gaussian as the distribution function of $C^{tg}$ for each multipole. Each of these distributions will be indicated by $f_\ell[C^{tg}(\ell)]$.
 
 With that, we can finally define the probability $P_\text{null}$ that a correlation spectrum $C^{tg}$ follows the null hypothesis:
 
@@ -890,11 +907,11 @@ With that, we can finally define the probability $P_\text{null}$ that a correlat
 	P_\text{null}=\prod_{\ell=2}^{\ell_\text{max}} f_\ell\left[C^{tg}(\ell)\right]
 \end{equation}
 
-With this, we can then explore the parameter space $(z_0, \beta, \lambda)$ and estimate the theoretical cross-correlation spectrum for each point in it, and determine $P_\text{null}$ for each of them. If we are able to find the point in this parameter space that minimizes $P_\text{null}$, that should contribute to the improvement of the cross-correlation signal and reduce the dependence on cosmic variance. 
+With this, we can then explore the parameter space $(z_0, \beta, \lambda)$ and estimate the theoretical cross-correlation spectrum for each point in it, and determine $P_\text{null}$ for each of them. If we are able to find the point in this parameter space that minimizes $P_\text{null}$, that point should improve the cross-correlation signal by reducing the influence of cosmic variance. 
 
 \section{Results}
 
-To explore the parameter space for the parametrization \eqref{select_func_par}, 2D heat maps were produced by varying 2 of the 3 parameters while maintaining the third parameter fixed, the function mapped was $P_\text{null}(z_0, \beta,\lambda)/P_\text{null}^\text{2MASS}$, where $P_\text{null}^\text{2MASS}$ is the probability defined in \eqref{def:Pnull} calculated with the parameters of the band 1 of the 2MASS catalog. Figure \ref{fig:Triple_ColorPlots} shows examples of these heat plots.
+To explore the parameter space for the parametrization \eqref{select_func_par}, 2D heat maps were produced by varying 2 of the 3 parameters while maintaining the third parameter fixed, the function mapped was $P_\text{null}(z_0, \beta,\lambda)/P_\text{null}^\text{2MASS}$, where $P_\text{null}(z_0, \beta,\lambda)$ is the probability \eqref{def:Pnull} calculated using power spectra computed with the selection function that corresponds to the given parameters, and $P_\text{null}^\text{2MASS}$ is the same probability calculated with the parameters of the band 1 of the 2MASS catalog. Figure \ref{fig:Triple_ColorPlots} shows examples of these heat plots.
 
 \begin{figure}[!htb]
 	\centering
@@ -903,19 +920,38 @@ To explore the parameter space for the parametrization \eqref{select_func_par}, 
 	\label{fig:Triple_ColorPlots}
 \end{figure}
 
-As shown in Figure \ref{fig:Triple_ColorPlots}, the region explored does not present a significant reduction in the probability of a certain parameter combination being compatible with the null hypothesis relative to the band 1 of the 2MASS catalog, showing no more than a 3\% reduction in the ratio. In spite of this, it is possible to see a region of low values for this function with where a minimizer would possibly be able to start the search for a minimum value.
+As shown in Figure \ref{fig:Triple_ColorPlots}, the region explored does not present a significant reduction in the probability of a certain parameter combination being compatible with the null hypothesis relative to the band 1 of 2MASS, showing no more than a 3\% reduction in the ratio. In spite of this, it is possible to see a region of low values for this function where a function minimizer algorithm could possibly be able to start the search for a minimum value.
 
-A code for minimizing the function $P_\text{null}$ using the GSL library\cite{gsl-manual} was devised, a few points were used as initial guess to the minimizer, some of them in the dark blue region, and some of them in the light blue regions, to make sure the convergence of the minimizer is reliable, and in every case results were very simillar, the final value used for our analysis was
+A code for minimizing the function $P_\text{null}$ using the GSL library\cite{gsl-manual} was devised, a few points were used as initial guess to the minimizer, some of them in the dark blue region, and some of them in the light blue regions, to make sure the convergence of the minimizer is reliable, and in every case results were very simillar. The final value used for our analysis was
 
 \begin{equation}\label{minimizer}
 	(\beta, z_0, \lambda)_\text{min}=(3.088, 0.1508, 4.9401)
 \end{equation}
 
-For this combination of parameters, $P_\text{null}(z_0, \beta,\lambda)/P_\text{null}^\text{2MASS}=0.971$, still a 3\% improvement relative to band 1 of 2MASS. Figure ?? shows the selection and cross-correlation functions for this minimum, while Figure ?? shows heat plots similar to those presented in Figure \ref{fig:Triple_ColorPlots}, but these plots show the same heat maps around the minimum encountered.
+For this combination of parameters, $P_\text{null}(z_0, \beta,\lambda)/P_\text{null}^\text{2MASS}=0.971$, still a 3\% improvement relative to band 1 of 2MASS. Figure \ref{fig:minimum_properties} shows the selection and cross-correlation functions for this point.
 
-FIGURAS CITADAS LOGO AGORA
+\begin{figure}[!htb]
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/minimum_SelFunc.png}
+         \caption{Selection Function}         
+         \label{subfig:minimum_SelFunc}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/minimumX2mass.png}
+         \caption{Power Spectra}
+         \label{subfig:minimum_PowSpec}
+     \end{subfigure}
+        \caption{Comparison between theoretical properties of the point in parameter space that minimizes the null hypothesis and the band 1 of 2MASS. (VOU AUMENTAR AS LEGENDAS DOS PLOTS E TIRAR O "TÍTULO" DA FUNÇÃO DE SELEÇÃO)}
+        \label{fig:minimum_properties}
+\end{figure}
 
-According to our analysis, changing the parameters so that the selection function favors galaxies around $z^*=0.63$ does not significantly improve the signal, and in a hypothetical galaxy catalog that follows the parametrization \eqref{select_func_par}, there is not much statistical gain from using a catalog with a set parameters different from the 2MASS. Because of that, we decided to use the 2MASS catalog for the data analysis.
+The selection function shown in \ref{subfig:minimum_SelFunc} does not favor the predicted $z^*=0.63$, this could possibly be reached by increasing the value of $\lambda$, but both the minimizer and the heat maps shown in \ref{fig:Triple_ColorPlots} show that not much statistical value, if any, would be gained from doing so. The power spectra comparison in Figure \ref{subfig:minimum_PowSpec} indicates an interesting tradeoff to achieve a better signal: it has a resonably higher signal at around $\ell=10$, where cosmic variance is not as relevant as it is at very low multipoles, but the overall function is closer to zero, including at very low mutipoles.
+
+Despite these insights, the statistical gains from this ideal set of parameters are not very high compared with the 2MASS signal if we assume our galaxy catalog follows the parametrization \eqref{select_func_par} and that dark energy has a constant equation of state. Because of that, we decided to use the 2MASS catalog for the data analysis.
 
 \chapter{Extracting Correlations from Data} \label{chapter:extracting_correlations_from_data}
 
