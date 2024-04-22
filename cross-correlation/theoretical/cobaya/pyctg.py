@@ -183,7 +183,7 @@ def cgg4py(OmegaM, band=1, n=1):
     args_list=[(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks) for l in ls]
 
     pool=mp.Pool(processes=n)
-    cgg=pool.map(ctg_MP, args_list)
+    cgg=pool.map(cgg_MP, args_list)
 
     return ls, cgg
 
