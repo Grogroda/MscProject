@@ -28,6 +28,12 @@ def ctg_MP(args):
 
     return ctg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
 
+def cgg_MP(args):
+
+    OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks=args
+
+    return cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
+
 lmax = 51 
 
 As=1e-10*np.e**(3.044)
@@ -116,7 +122,7 @@ def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
     bg = band_pars[band]['bg']
     print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
     mode = 1
-    ncalls = 10000000 #1e7
+    ncalls = 200000 #1e7
     #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[l for l in range(2, round(lmax)+1)]
     ctg = []
@@ -139,7 +145,9 @@ def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
     return ls, ctg
     
 
-def cgg4py(OmegaM):
+def cgg4py(OmegaM, band=1, n=1):
+
+    print("[pyctg.py] Inside ctg4py")
 
     #First calculate matter PS with CAMB:
     h = 0.67
@@ -159,21 +167,23 @@ def cgg4py(OmegaM):
     #karr, pkarr = np.array(kh, dtype=np.float64), np.array(pk, dtype=np.float64)
     nks = karr.size 
 
-    #Then calculate cgg:
     OmegaL = 1 - OmegaM
-    z0 = 0.043
-    beta = 1.825
-    lbda = 1.524
-    bg = 1.37
-    mode = 1 #mode and ncalls don't change the results, bur are still needed
-    ncalls = 200000
-    ls=[]
+    print("[pyctg.py (cgg4py)] band=", band)
+    z0 = band_pars[band]['z0']
+    beta = band_pars[band]['beta']
+    lbda = band_pars[band]['lambda']
+    bg = band_pars[band]['bg']
+    print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
+    mode = 1
+    ncalls = 200000 #1e7
+    #fname  = c_char_p(pkfname.encode("ascii"))
+    ls=[l for l in range(2, round(lmax)+1)]
     cgg = []
-    for l in range(2, round(lmax)+1): #about 12 seconds per point, ~6mins for 54 points
-        print("cgg for l=", l)
-        ls.append(l)
-        cl= cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
-        cgg.append(cl)
+
+    args_list=[(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks) for l in ls]
+
+    pool=mp.Pool(processes=n)
+    cgg=pool.map(ctg_MP, args_list)
 
     return ls, cgg
 
@@ -201,16 +211,20 @@ if __name__=='__main__':
     print("OmegaM=", OmegaM)
     
     ti=time.time()
-    ls,ctg=ctg4py(OmegaM, band, n)
+    ls_ctg,ctg=ctg4py(OmegaM, band, n)
     tf=time.time()
 
-    print('ls=', ls)
+    print('ls=', ls_ctg)
     print('ctg({0})={1}'.format(OmegaM, ctg))
     print('For n={0}, run time={1}'.format(n, tf-ti))
 
-#    ls,cgg=cgg4py(OmegaM)
-#    print('ls=', ls)
-#    print('cgg({0})={1}'.format(OmegaM, ctg))
+    ti=time.time()
+    ls_cgg,cgg=cgg4py(OmegaM, band, n)
+    tf=time.time()
+
+    print('ls=', ls_cgg)
+    print('cgg({0})={1}'.format(OmegaM, cgg))
+    print('For n={0}, run time={1}'.format(n, tf-ti))
 
     '''
     matplotlib.rcParams.update({'font.size': 15})
