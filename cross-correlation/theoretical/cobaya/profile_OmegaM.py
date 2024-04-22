@@ -1,5 +1,5 @@
 import numpy as np
-from pyctg import ctg4py
+from pyctg import ctg4py, cgg4py
 import pandas as pd
 import argparse
 
@@ -30,15 +30,28 @@ def Likelihood(OmegaM, band=1, n=1):
 
     print("Inside Likelihood")
 
-    ls_theo, cl_theo=ctg4py(OmegaM, band, n)
-
+    ls_ctg, ctg_theo=ctg4py(OmegaM, band, n)
     print("ctg_theo calculated")
+    
+    ls_cgg, cgg_theo=cgg4py(OmegaM, band, n)
+    print("cgg_theo calculated")
 
-    theory_array, data_array, sigma_array=np.array(cl_theo), np.array(bands_dict[band]['Ctg']), np.array(bands_dict[band]['err_Ctg'])
+    ctg_theory_array, ctg_data_array, ctg_sigma_array=np.array(ctg_theo), np.array(bands_dict[band]['Ctg']), np.array(bands_dict[band]['err_Ctg'])
+    
+    cgg_theory_array, cgg_data_array, cgg_sigma_array=np.array(cgg_theo), np.array(bands_dict[band]['Cgg']), np.array(bands_dict[band]['err_Cgg'])
 
-    Xi2    = np.sum(((theory_array-data_array)/sigma_array)**2)
-    sigSum = np.sum(np.log(sigma_array))
-    logp = - sigSum - Xi2/2
+    #logp calculation for ctg data:
+    ctg_xi2    = np.sum(((ctg_theory_array-ctg_data_array)/ctg_sigma_array)**2)
+    ctg_sigSum = np.sum(np.log(ctg_sigma_array))
+    ctg_logp   = - ctg_sigSum - ctg_xi2/2
+
+    #logp calculation for cgg data:
+    cgg_xi2    = np.sum(((cgg_theory_array-cgg_data_array)/cgg_sigma_array)**2)
+    cgg_sigSum = np.sum(np.log(cgg_sigma_array))
+    cgg_logp   = - cgg_sigSum - cgg_xi2/2
+
+    #joint logp:
+    logp=ctg_logp+cgg_logp
 
     return logp
 
@@ -85,11 +98,11 @@ print("Omegas=", Omegas)
 print("Exp(logp-logpmax)=", exp_like)
 
 data=pd.DataFrame({"Omega":Omegas, "Like":exp_like})
-data.to_csv("like_profiles/ProfileData_band{0}_Nmc{1}.dat".format(band, '1e7'), sep=' ')
+data.to_csv("like_profiles/ProfileData_band{0}_Nmc{1}.dat".format(band, '2e5'), sep=' ')
 
 plt.figure()
 plt.plot(Omegas, exp_like)
 plt.xlabel(r"$\Omega_m$")
 plt.ylabel(r'$\mathcal{L}(\Omega_m)$')
-plt.savefig('like_profiles/OmegamProfile_band{0}_Nmc{1}.png'.format(band, '1e7'))
+plt.savefig('like_profiles/OmegamProfile_band{0}_Nmc{1}.png'.format(band, '2e5'))
 
