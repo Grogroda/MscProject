@@ -16,5 +16,6 @@ For Linux users, I recommend using the "tree" software to take a look at the dir
 
 - [CAMB](https://camb.info/): Recommended normal installation using pip: pip3 install camb;
 - [Cobaya](https://cobaya.readthedocs.io/en/latest/installation.html): Recommended normal installation with MPI;
+- [HEALPix](https://healpix.sourceforge.io/): More specifically, I've used its Python version called [healpy](https://healpy.readthedocs.io/en/latest/);
 - [GSL](https://www.gnu.org/software/gsl/): Recommended standard installation (let the script choose the installation path, probably using /usr/local/lib and /usr/local/include);
 - Common Python modules/libraries: This project uses [Numpy](https://numpy.org/), [Matplotlib](https://matplotlib.org/) and [Pandas](https://pandas.pydata.org/) for various numerical and graphical tasks.
