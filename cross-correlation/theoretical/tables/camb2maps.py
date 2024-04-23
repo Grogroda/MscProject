@@ -3,6 +3,7 @@ import camb
 import healpy as hp
 import numpy as np
 import pandas as pd
+from matplotlib import pyplot as plt
 
 sys.path.append('../cobaya/')
 import pyctg 
@@ -28,19 +29,22 @@ print("Ctg computed")
 ls_cgg, cgg=pyctg.cgg4py(OmegaM)
 print("Cgg computed")
 
-temp_map=hp.sphtfunc.synfast(ctt, int(len(ctt)-1)/2, lmax=len(ctt)-1)
+print("len(ctt)=", len(ctt[:129]))
+print("nside=", (len(ctt[:129])-1)/2)
+
+temp_map=hp.sphtfunc.synfast(ctt, int((len(ctt[:129])-1)/2), lmax=len(ctt[:129])-1)
 hp.write_cl("CttMap.fits", temp_map, overwrite=True)
-hp.mollview(temp_map, title='Temperature Map', remove_dip=True, norm='hist', unit=r'$\mu K$', cmap='RdYlBu_r')
+hp.mollview(temp_map, title='Temperature Map', remove_dip=True, unit=r'$\mu K$', cmap='RdYlBu_r')
 hp.graticule()
 plt.savefig('CMB_TempMap.png')
 
-galaxy_map=hp.sphtfunc.synfast(cgg, int(len(cgg)-1)/2, lmax=len(cgg)-1)
+galaxy_map=hp.sphtfunc.synfast(cgg, int((len(cgg[:129])-1)/2), lmax=len(cgg[:129])-1)
 hp.write_cl("CggMap.fits", galaxy_map, overwrite=True)
-hp.mollview(temp_map, title='Contraste de Galáxias', remove_dip=True, norm='hist', cmap='RdYlBu_r')
+hp.mollview(temp_map, title='Contraste de Galáxias', remove_dip=True, cmap='RdYlBu_r')
 hp.graticule()
 plt.savefig('Galaxy_Map.png')
 
-ctt_anafast=hp.sphtfunc.anafast(temp_map, lmax=len(ctt)-1)
+ctt_anafast=hp.sphtfunc.anafast(temp_map, lmax=len(ctt[:129])-1)
 ls_anafast=np.arange(len(ctt_anafast))
 
 plt.figure()
