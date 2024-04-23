@@ -29,16 +29,26 @@ print("Ctg computed")
 ls_cgg, cgg=pyctg.cgg4py(OmegaM)
 print("Cgg computed")
 
-print("len(ctt)=", len(ctt[:129]))
-print("nside=", (len(ctt[:129])-1)/2)
+#Remember that, although we set lmax=128, camb still calculated some further multipoles, so we have to force the use of only 0 to 128
 
+ls_tt, ctt=ls_ctt[:129], ctt[:129]
+ls_gg, cgg=ls_cgg[:129], cgg[:129]
+ls_tg, ctg=ls_ctg[:129], ctg[:129]
+
+N=100
+
+alms_test=hp.sphtfunc.synalm([ctt, cgg, ctg], lmax=128)
+print(alms_test)
+
+'''
 temp_map=hp.sphtfunc.synfast(ctt, int((len(ctt[:129])-1)/2), lmax=len(ctt[:129])-1)
+galaxy_map=hp.sphtfunc.synfast(cgg, int((len(cgg[:129])-1)/2), lmax=len(cgg[:129])-1)
+
 hp.write_cl("CttMap.fits", temp_map, overwrite=True)
 hp.mollview(temp_map, title='Temperature Map', remove_dip=True, unit=r'$\mu K$', cmap='RdYlBu_r')
 hp.graticule()
 plt.savefig('CMB_TempMap.png')
 
-galaxy_map=hp.sphtfunc.synfast(cgg, int((len(cgg[:129])-1)/2), lmax=len(cgg[:129])-1)
 hp.write_cl("CggMap.fits", galaxy_map, overwrite=True)
 hp.mollview(temp_map, title='Contraste de Galáxias', remove_dip=True, cmap='RdYlBu_r')
 hp.graticule()
@@ -65,3 +75,4 @@ plt.xlabel(r'$\ell$')
 plt.ylabel(r'$C_{\ell}^{tg}$')
 plt.xscale('log')
 plt.savefig('Ctg_healpix.png')
+'''
