@@ -851,33 +851,17 @@ In this part of the project, the HEALPix software was used extensively, and to v
 		\caption{Galaxy contrast}
 		\label{subfig:galaxy_synthmap}
 	\end{subfigure}
-	\caption{Mollweide projection of two instances of maps synthesized using HEALPix with the procedure presented. (LEGENDAS MUITO PEQUENAS, VOU REFAZER ESSES PLOTS)}
+	\caption{Mollweide projection of two instances of maps synthesized using HEALPix with the procedure presented.}
 	\label{fig:SynthMaps}
 \end{figure} 
 
 Multiple maps need to be synthesized to recover correlation spectra not dominated by noise. During our tests, the autocorrelations quickly converged to their corresponding theoretical spectra, but not the cross-correlation. Figure \ref{fig:SynthMaps_AvPlots} shows a comparison between the theoretical correlation spectra and the ones estimated from averaging the correlation spectra of ten thousand synthesized maps, which was the number of maps we decided to use in this project.
 
 \begin{figure}[!htb]
-	\centering
-	\begin{subfigure}[b]{0.32\textwidth}
-	\includegraphics[width=\linewidth]{Imagens/av_plot_ctt_N1e4.png}
-	%\caption{cap1}
-	%\label{subfig:synthmaps_ctt}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.32\textwidth}
-	\includegraphics[width=\linewidth]{Imagens/av_plot_cgg_N1e4.png}
-	%\caption{cap2}
-	%\label{subfig:synthmaps_cgg}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.32\textwidth}
-	\includegraphics[width=\linewidth]{Imagens/av_plot_ctg_N1e4.png}
-	%\caption{cap3}
-	%\label{subfig:synthmaps_ctg}
-	\end{subfigure}
-	\caption{Comparison between theoretical cross-correlation spectrum and the averages of the $C_\ell$ calculated from $10^4$ synthesized maps using the procedure presented in this section. (VOU MUDAR TUDO PARA INGLÊS E AUMENTAR A FONTE)}
-	\label{fig:SynthMaps_AvPlots}
+\centering
+\includegraphics[width=\linewidth]{Imagens/Synth_TriplePlot.png}
+\caption{Comparison between theoretical cross-correlation spectrum and the averages of the $C_\ell$ calculated from $10^4$ synthesized maps using the procedure presented in this section.}
+\label{fig:SynthMaps_AvPlots}
 \end{figure}
 
 In order to determine the probability distribution of the null hypothesis for each multipole, a similar process can be used: We use the same $C^{tt}$ and $C^{gg}$ spectra to synthesize the map, but instead of using the theoretical cross-correlation spectrum, we used $C^{tg}(\ell)=0$ for every multipole to synthesize the maps, creating uncorrelated maps. For each multipole, we have a sample of $C^{tg}(\ell)$, one value for each map, the distribution of these values can be used as a probability distribution for the null hypothesis at each multipole. Figure \ref{fig:synthmaps_histograms} shows two histograms representing this distribution.
