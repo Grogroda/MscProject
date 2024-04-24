@@ -1,8 +1,11 @@
 from matplotlib import pyplot as plt
+import matplotlib
 import healpy as hp
 import numpy as np
 from tqdm import tqdm
 import pandas as pd
+
+matplotlib.rcParams.update({'font.size':18})
 
 def MultiSynthesize(N, direct='alms', cmb_sample=True, galaxy_sample=True):
 
@@ -30,18 +33,18 @@ def MultiSynthesize(N, direct='alms', cmb_sample=True, galaxy_sample=True):
 	    ctgs.append(ctg)
 	    
 	if cmb_sample==True:
-		hp.mollview(mapCMB, title="Um dos mapas sintetizados (CMB)", unit=r'$\mu K$', cmap='RdYlBu_r')
+		hp.mollview(mapCMB, unit=r'$\mu K$', cmap='RdYlBu_r', title=' ')
 		hp.graticule()
 		plt.savefig('CMB_sintetizado.png')
 		
 	if galaxy_sample==True:
-		hp.mollview(mapgalaxy, title='Um dos mapas sintetizados (galáxias)', cmap='RdYlBu_r')
+		hp.mollview(mapgalaxy, cmap='RdYlBu_r', title=' ')
 		hp.graticule()
 		plt.savefig('galaxias_sintetizado.png')
 	    
 	return ctts, cggs, ctgs
 
-def Avg_Plots(ctts, cggs, ctgs, plot_ctt=False, plot_cgg=False, plot_ctg=True, plot_theory=True):
+def Avg_Plots(ctts, cggs, ctgs, plot_ctt=False, plot_cgg=False, plot_ctg=True, plot_theory=True, double_plot=True):
 
 #Plots the average of the selected spectra. The Ctg plot is always binned, in the future I might work on giving the user the option to choose. If plot_theory=True, plots the theoretical curves with the data. PS.: Binning not implemented yet.
 
@@ -81,52 +84,82 @@ def Avg_Plots(ctts, cggs, ctgs, plot_ctt=False, plot_cgg=False, plot_ctg=True, p
 	ls_gg=np.arange(len(avg_cgg))
 	
 	if plot_ctg:
-		plt.figure('plotCtg')
-		plt.title('Média das correlações cruzadas de {} mapas.'.format(len(ctgs)))
+		plt.figure('plotCtg', figsize=(10,8))
+		#plt.title('Média das correlações cruzadas de {} mapas.'.format(len(ctgs)))
 		plt.xlabel(r'$\ell$')
 		plt.ylabel(r'$\ell(\ell+1)C_{\ell}^{tg}/2\pi$')
 		plt.xscale('log')
 		
 		if plot_theory:
-			plt.plot(ls_th[2:], Dtg_th[2:], label='Espectro teórico')
+			plt.plot(ls_th[2:], Dtg_th[2:], label='Theoretical spectrum')
 			
-		plt.plot(ls_tg[2:], Dtg[2:], label='Mapas sintetizados')
+		plt.plot(ls_tg[2:], Dtg[2:], label='Synthesized average')
 		plt.legend()
 		plt.savefig('media_plot_ctg_for_N{}.png'.format(len(ctgs)))
 		
 	if plot_ctt:
-		plt.figure('plotCtt')
-		plt.title('Média das autocorrelações de {} mapas'.format(len(ctts)))
+		plt.figure('plotCtt', figsize=(10,8))
+		#plt.title('Média das autocorrelações de {} mapas'.format(len(ctts)))
 		plt.xlabel(r'$\ell$')
 		plt.ylabel(r'$\ell(\ell+1)C_{\ell}^{tt}/2\pi$')
 		plt.xscale('log')
 		
 		if plot_theory:
-			plt.plot(ls_th[2:], Dtt_th[2:], label='Espectro teórico')
+			plt.plot(ls_th[2:], Dtt_th[2:], label='Theoretical spectrum')
 			
-		plt.plot(ls_tt[2:], Dtt[2:], label='Mapas sintetizados')
+		plt.plot(ls_tt[2:], Dtt[2:], label='Synthesized average')
 		plt.legend()
 		plt.savefig('media_plot_ctt_for_N{}.png'.format(len(ctts)))
 		
 	if plot_cgg:
 		plt.figure('plotCgg')
-		plt.title('Média das autocorrelações de {} mapas'.format(len(cggs)))
+		#plt.title('Média das autocorrelações de {} mapas'.format(len(cggs)))
 		plt.xlabel(r'$\ell$')
 		plt.ylabel(r'$C_{\ell}^{gg}$')
 		plt.xscale('log')
 		plt.yscale('log')
 		
 		if plot_theory:
-			plt.plot(ls_th[2:], cgg_th[2:], label='Espectro teórico')
+			plt.plot(ls_th[2:], cgg_th[2:], label='Theoretical spectrum')
 			
-		plt.plot(ls_gg[2:], avg_cgg[2:], label='Mapas sintetizados')
+		plt.plot(ls_gg[2:], avg_cgg[2:], label='Synthesized average')
 		plt.legend()
 		plt.savefig('media_plot_cgg_for_N{}.png'.format(len(cggs)))
+
+        #Triple plot for dissertation:
+
+	plt.figure(figsize=(18,5))
+
+	plt.subplot(131)
+	plt.plot(ls_th[2:], Dtt_th[2:], label='Theoretical spectrum')
+	plt.plot(ls_tt[2:], Dtt[2:], label='Synthesized average')
+	plt.xlabel(r'$\ell$')
+	plt.ylabel(r'$\ell(\ell+1)/2\pi C^{tt}$')
+	plt.xscale('log')
+	plt.legend()
+
+	plt.subplot(132)
+	plt.plot(ls_th[2:], cgg_th[2:], label='Theoretical spectrum')
+	plt.plot(ls_gg[2:], avg_cgg[2:], label='Synthesized average')
+	plt.xlabel(r'$\ell$')
+	plt.ylabel(r'$C^{gg}$')
+	plt.yscale('log')
+	plt.xscale('log')
+
+	plt.subplot(133)
+	plt.plot(ls_th[2:], Dtg_th[2:], label='Theoretical spectrum')
+	plt.plot(ls_tg[2:], Dtg[2:], label='Synthesized average')
+	plt.xlabel(r'$\ell$')
+	plt.ylabel(r'$\ell(\ell+1)/2\pi C^{tg}$')
+	plt.xscale('log')
+
+	plt.tight_layout()
+	plt.savefig('Synth_TriplePlot.png')
 		
 def main():
 	N=int(input('Quantos mapas a serem sintetizados? (máximo=1e4)\n'))
-	ctts, cggs, ctgs=MultiSynthesize(N, cmb_sample=False, galaxy_sample=False)
-	Avg_Plots(ctts,cggs,ctgs,plot_ctt=True, plot_cgg=True)
+	ctts, cggs, ctgs=MultiSynthesize(N, cmb_sample=True, galaxy_sample=True)
+	Avg_Plots(ctts,cggs,ctgs,plot_ctt=True, plot_cgg=True, double_plot=True)
 	
 if __name__=='__main__':
 	main()

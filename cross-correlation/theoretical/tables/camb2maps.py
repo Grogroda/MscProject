@@ -92,14 +92,19 @@ plt.savefig('Ctg_healpix.png')
 
 #Actual code:
 
-N=100
+N=10000
 
 for i in tqdm(range(N), desc='Synthesizing maps'):
+    '''
     temp_map=hp.sphtfunc.synfast(ctt, int((len(ctt)-1)/2), lmax=len(ctt)-1)
     galaxy_map=hp.sphtfunc.synfast(cgg, int((len(cgg)-1)/2), lmax=len(cgg)-1)
-
     almt=hp.sphtfunc.map2alm(temp_map, lmax=128)
     almg=hp.sphtfunc.map2alm(galaxy_map, lmax=128)
+    '''
+
+    alms=hp.sphtfunc.synalm([ctt, ctg, cgg], lmax=128)
+
+    almt, almg=alms[0], alms[1]
 
     hp.fitsfunc.write_alm('alms/cmb_alm{0}.fits'.format(i+1), almt, overwrite=True)
     hp.fitsfunc.write_alm('alms/galaxy_alm{0}.fits'.format(i+1), almg, overwrite=True)
