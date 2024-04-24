@@ -74,7 +74,8 @@ plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, 'bg':1.32}, 
 	   2:{'z0':0.054,'beta':1.800,'lambda':1.600, 'bg':1.34}, 
 	   3:{'z0':0.067,'beta':1.765,'lambda':1.636, 'bg':1.29}, 
-	   4:{'z0':0.084,'beta':1.723,'lambda':1.684, 'bg':1.28}} 
+	   4:{'z0':0.084,'beta':1.723,'lambda':1.684, 'bg':1.28},
+       'min':{'z0':0.1508,'beta':3.088,'lambda':4.9401, 'bg':1}} 
 #bg for lmax=50
 
 def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
@@ -201,7 +202,10 @@ if __name__=='__main__':
     args=parser.parse_args()
 
     if args.band!=None:
-        band=int(args.band)
+        if args.band!='min':
+            band=int(args.band)
+        else:
+            band=args.band
     print("band=", band)
     if args.nprocess!=None:
         n=int(args.nprocess)
@@ -209,7 +213,13 @@ if __name__=='__main__':
 
     OmegaM=(0.02237+0.12)/(0.67**2)
     print("OmegaM=", OmegaM)
+
+    ls, ctg=ctg4py(OmegaM, band, n)
+
+    tab=pd.DataFrame({'ls':ls, 'ctg':ctg})
+    tab.to_csv('ctg_band{0}.dat'.format(band), sep=' ', header=None)
     
+    '''
     ti=time.time()
     ls_ctg,ctg=ctg4py(OmegaM, band, n)
     tf=time.time()
@@ -225,6 +235,7 @@ if __name__=='__main__':
     print('ls=', ls_cgg)
     print('cgg({0})={1}'.format(OmegaM, cgg))
     print('For n={0}, run time={1}'.format(n, tf-ti))
+    '''
 
     '''
     matplotlib.rcParams.update({'font.size': 15})
