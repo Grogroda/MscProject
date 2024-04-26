@@ -56,8 +56,8 @@ def Likelihood_cgg(OmegaM, band=1, n=1, ncalls=1000000):
 
 def Likelihood_both(OmegaM, band=1, n=1, ncalls=1000000):
 
-    cgg_logp, cgg_xi2=Likelihood_cgg(OmegaM, band=1, n=1, ncalls=1000000)
-    ctg_logp, ctg_xi2=Likelihood_ctg(OmegaM, band=1, n=1, ncalls=1000000)
+    cgg_logp, cgg_xi2=Likelihood_cgg(OmegaM, band=band, n=n, ncalls=ncalls)
+    ctg_logp, ctg_xi2=Likelihood_ctg(OmegaM, band=band, n=n, ncalls=ncalls)
 
     return ctg_logp+cgg_logp, ctg_xi2+cgg_xi2
 
