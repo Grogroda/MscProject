@@ -84,12 +84,12 @@ if args.ncalls!=None:
 print('ncalls=', ncalls)
 if args.npoints!=None:
     n_vals=int(args.npoints)
+print('npoints=', n_vals)
 if args.Omin!=None:
     Omega_min=float(args.Omin)
 if args.Omax!=None:
     Omega_max=float(args.Omax)
 print('Omega_min={0} & Omega_max={1}'.format(Omega_min, Omega_max))
-
 
 delta_Om=(Omega_max-Omega_min)/n_vals
 
