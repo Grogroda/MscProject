@@ -73,6 +73,7 @@ parser.add_argument('-c', '--correlation', type=str, help="Either 'ctg' or 'cgg'
 parser.add_argument('--npoints', type=int, help="Number of points (OmegaM's) to calculate")
 parser.add_argument('--Omin', type=float, help="Minimum value of OmegaM to profile")
 parser.add_argument('--Omax', type=float, help="Maximum value of OmegaM to profile")
+parser.add_argument('-i', '--identifier', type=str, help="If you want to run multiple instances of the same profile separately, use different identifiers to make sure the output files are not being overwritten.")
 
 args=parser.parse_args()
 
@@ -143,12 +144,17 @@ print("Omegas=", Omegas)
 print("Exp(logp-logpmax)=", exp_like)
 print("Exp(Xi2-Xi2max)=", exp_Xi2)
 
-data=pd.DataFrame({"Omega":Omegas, "P":exp_like, "expXi2":exp_Xi2})
-data.to_csv("like_profiles/ProfileData_{0}_band{1}_Nmc{2:.0e}.dat".format(corr, band, ncalls), sep=' ')
+ident=1
+if args.identifier!=None:
+    ident=args.identifier
 
+data=pd.DataFrame({"Omega":Omegas, "P":exp_like, "expXi2":exp_Xi2})
+data.to_csv("like_profiles/ProfileData{0}_{1}_band{2}_Nmc{3:.0e}.dat".format(ident, corr, band, ncalls), sep=' ')
+
+'''
 plt.figure()
 plt.plot(Omegas, exp_like)
 plt.xlabel(r"$\Omega_m$")
 plt.ylabel(r'$\mathcal{L}(\Omega_m)$')
 plt.savefig('like_profiles/OmegamProfile_{0}_band{1}_Nmc{2:.0e}.png'.format(corr, band, ncalls))
-
+'''
