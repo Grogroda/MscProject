@@ -3,17 +3,13 @@ from pyctg import ctg4py, cgg4py
 import pandas as pd
 import argparse
 
-'''
-OmegaM_fid=0.3
-ls_data, ctg_data = ctg4py(OmegaM_fid)
-ctg_sigmas=[i*0.1 for i in ctg_data]
-print("[profile_OmegaM.py] Fake ctg calculated")
-'''
 arr_names=['ls', 'Dtt', 'err_Dtt', 'Cgg', 'err_Cgg', 'Ctg', 'err_Ctg']
 data_band1=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc1_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
 data_band2=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc2_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
 data_band3=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc3_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
 data_band4=pd.read_csv('../../data/Data_2016/errors_data_wmap9QVW_xsc4_jeffrey_dipfix_50000_ttggtg_new.dat', header=None, names=arr_names, sep=' ')
+
+#Not ready to run with band='min'
 
 bands=[data_band1, data_band2, data_band3, data_band4]
 
@@ -58,6 +54,13 @@ def Likelihood_cgg(OmegaM, band=1, n=1, ncalls=1000000):
 
     return cgg_logp, cgg_xi2
 
+def Likelihood_both(OmegaM, band=1, n=1, ncalls=1000000):
+
+    cgg_logp, cgg_xi2=Likelihood_cgg(OmegaM, band=1, n=1, ncalls=1000000)
+    ctg_logp, ctg_xi2=Likelihood_ctg(OmegaM, band=1, n=1, ncalls=1000000)
+
+    return ctg_logp+cgg_logp, ctg_xi2+cgg_xi2
+
 Omega_min, Omega_max=0.05, 0.95 
 n_vals=100
 band, n, ncalls=1,1,1000000
@@ -66,7 +69,7 @@ parser=argparse.ArgumentParser(description="Profile OmegaM Likelihood distributi
 parser.add_argument('-b', '--band', type=int, help="Band of the 2MASS catalog (1,2,3,4) or 'min' to use minimizer parameters")
 parser.add_argument('-n','--nprocess', type=int, help="Number of parallelized processes")
 parser.add_argument('-N', '--ncalls', type=int, help="Number of Monte Carlo integration calls")
-parser.add_argument('-c', '--correlation', type=str, help="Either 'ctg' or 'cgg' to calculate the likelihood for the corresponding correlation function") #=ctg or cgg
+parser.add_argument('-c', '--correlation', type=str, help="Either 'ctg' or 'cgg' to calculate the likelihood for the corresponding correlation function. If 'both', returns the product of the likelihoods.") 
 parser.add_argument('--npoints', type=int, help="Number of points (OmegaM's) to calculate")
 parser.add_argument('--Omin', type=float, help="Minimum value of OmegaM to profile")
 parser.add_argument('--Omax', type=float, help="Maximum value of OmegaM to profile")
@@ -105,12 +108,14 @@ if corr=='ctg':
     Likelihood=Likelihood_ctg
 elif corr=='cgg':
     Likelihood=Likelihood_cgg
+elif corr=='both':
+    Likelihood=Likelihood_both
 else:
-    raise Exception("-c [--correlation] must be either None, 'ctg' or 'cgg'!")
+    raise Exception("-c [--correlation] must be either None, 'ctg', 'cgg' or 'both'. Possibly running with 'ctg'.")
 
 print("[profile_OmegaM] About to start profiling loop for {0}.".format(corr))
 
-for i in range(n_vals+1):
+for i in range(n_vals): #Open in Omegamax, makes divided runs easier
     print("i=", i)
     Like, Xi2=Likelihood(OmegaM, band, n, ncalls)
     

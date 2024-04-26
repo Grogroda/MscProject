@@ -34,7 +34,7 @@ source /temporario2/10300487/miniconda3/bin/activate
 
 cd /temporario2/10300487/MscProject/cross-correlation/theoretical/cobaya/
 
-python3 profile_OmegaM.py -n 9 -b 1 -N 20000000 -c 'ctg' --npoints 50 --Omin 0.2 --Omax 0.3 > like_profiles/band1_profile_parallel.log 2>&1 
+python3 profile_OmegaM.py -n 9 -b 1 -N 20000000 -c 'ctg' --npoints 50 --Omin 0.1 --Omax 0.9 > like_profiles/band1_profile_parallel.log 2>&1 
 
 #python3 profile_OmegaM.py -h -b -n -N -c --npoints --Omin --Omax
 #h=help, b=band (1,2,3,4 or 'min'), n=number of processes
