@@ -59,13 +59,15 @@ def Likelihood_cgg(OmegaM, band=1, n=1, ncalls=1000000):
     return cgg_logp, cgg_xi2
 
 Omega_min, Omega_max=0.05, 0.95 
-
+n_vals=100
 band, n, ncalls=1,1,1000000
+
 parser=argparse.ArgumentParser(description="Profile OmegaM Likelihood distribution using 2MASS+WMAP data.")
 parser.add_argument('-b', '--band', type=int, help="Band of the 2MASS catalog (1,2,3,4) or 'min' to use minimizer parameters")
 parser.add_argument('-n','--nprocess', type=int, help="Number of parallelized processes")
 parser.add_argument('-N', '--ncalls', type=int, help="Number of Monte Carlo integration calls")
 parser.add_argument('-c', '--correlation', type=str, help="Either 'ctg' or 'cgg' to calculate the likelihood for the corresponding correlation function") #=ctg or cgg
+parser.add_argument('--npoints', type=int, help="Number of points (OmegaM's) to calculate")
 parser.add_argument('--Omin', type=float, help="Minimum value of OmegaM to profile")
 parser.add_argument('--Omax', type=float, help="Maximum value of OmegaM to profile")
 
@@ -80,13 +82,14 @@ print("nmp=", n)
 if args.ncalls!=None:
     ncalls=int(args.ncalls)
 print('ncalls=', ncalls)
+if args.npoints!=None:
+    n_vals=int(args.npoints)
 if args.Omin!=None:
     Omega_min=float(args.Omin)
 if args.Omax!=None:
     Omega_max=float(args.Omax)
 print('Omega_min={0} & Omega_max={1}'.format(Omega_min, Omega_max))
 
-n_vals=100
 
 delta_Om=(Omega_max-Omega_min)/n_vals
 
