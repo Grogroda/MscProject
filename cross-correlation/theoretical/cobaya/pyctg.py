@@ -78,7 +78,7 @@ band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, 'bg':1.32},
        'min':{'z0':0.1508,'beta':3.088,'lambda':4.9401, 'bg':1}} 
 #bg for lmax=50
 
-def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
+def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000): #band is an optional argument. Default band=1
 
     print("[pyctg.py] Inside ctg4py")
     
@@ -123,14 +123,13 @@ def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
     bg = band_pars[band]['bg']
     print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
     mode = 1
-    ncalls = 1000000 #1e7
-    #fname  = c_char_p(pkfname.encode("ascii"))
+    #ncalls = function variable
     ls=[l for l in range(2, round(lmax)+1)]
     ctg = []
 
     args_list=[(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks) for l in ls]
 
-    pool=mp.Pool(processes=n)
+    pool=mp.Pool(processes=nmp)
     ctg=pool.map(ctg_MP, args_list)
 
     '''
@@ -146,7 +145,7 @@ def ctg4py(OmegaM, band=1, n=1): #band is an optional argument. Default band=1
     return ls, ctg
     
 
-def cgg4py(OmegaM, band=1, n=1):
+def cgg4py(OmegaM, band=1, nmp=1, ncalls=1000000):
 
     print("[pyctg.py] Inside ctg4py")
 
@@ -176,14 +175,14 @@ def cgg4py(OmegaM, band=1, n=1):
     bg = band_pars[band]['bg']
     print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
     mode = 1
-    ncalls = 1000000 #1e7
+    #ncalls = Function variable 
     #fname  = c_char_p(pkfname.encode("ascii"))
     ls=[l for l in range(2, round(lmax)+1)]
     cgg = []
 
     args_list=[(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks) for l in ls]
 
-    pool=mp.Pool(processes=n)
+    pool=mp.Pool(processes=nmp)
     cgg=pool.map(cgg_MP, args_list)
 
     return ls, cgg
@@ -199,6 +198,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('-b', '--band')
     parser.add_argument('-n','--nprocess')
+    parser.add_argument('-N', '--ncalls')
     args=parser.parse_args()
 
     if args.band!=None:
@@ -210,11 +210,14 @@ if __name__=='__main__':
     if args.nprocess!=None:
         n=int(args.nprocess)
     print("n=", n)
+    if args.ncalls!=None:
+        ncalls=int(args.ncalls)
+        print('ncalls=', ncalls)
 
     OmegaM=(0.02237+0.12)/(0.67**2)
     print("OmegaM=", OmegaM)
 
-    ls, ctg=ctg4py(OmegaM, band, n)
+    ls, ctg=ctg4py(OmegaM, band=band, nmp=n, ncalls=ncalls)
 
     tab=pd.DataFrame({'ls':ls, 'ctg':ctg})
     tab.to_csv('ctg_band{0}.dat'.format(band), sep=' ', header=None)
