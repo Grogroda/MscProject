@@ -6,7 +6,7 @@ import matplotlib
 import pandas as pd
 import scipy.special as scp
 
-matplotlib.rcParams.update({'font.size':18})
+matplotlib.rcParams.update({'font.size':21})
 
 LCDM_correlations=pd.read_csv('./tables/final_table.dat', sep=' ', header=None, names=['ls', 'ctt', 'cgg', 'ctg'])
 min_correlations=pd.read_csv('./cobaya/ctg_bandmin.dat', sep=' ', header=None, names=['ind', 'ls', 'ctg'])
