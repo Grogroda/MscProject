@@ -148,7 +148,7 @@ ident=1
 if args.identifier!=None:
     ident=args.identifier
 
-data=pd.DataFrame({"Omega":Omegas, "P":exp_like, "expXi2":exp_Xi2})
+data=pd.DataFrame({"Omega":Omegas, "P":exp_like, "expXi2":exp_Xi2, 'raw_logp':Likes, 'raw_xi2':Xi2s})
 data.to_csv("like_profiles/ProfileData{0}_{1}_band{2}_Nmc{3:.0e}.dat".format(ident, corr, band, ncalls), sep=' ')
 
 '''
