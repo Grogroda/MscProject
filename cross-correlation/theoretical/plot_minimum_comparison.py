@@ -6,7 +6,7 @@ import matplotlib
 import pandas as pd
 import scipy.special as scp
 
-matplotlib.rcParams.update({'font.size':15})
+matplotlib.rcParams.update({'font.size':18})
 
 LCDM_correlations=pd.read_csv('./tables/final_table.dat', sep=' ', header=None, names=['ls', 'ctt', 'cgg', 'ctg'])
 min_correlations=pd.read_csv('./cobaya/ctg_bandmin.dat', sep=' ', header=None, names=['ind', 'ls', 'ctg'])
@@ -45,8 +45,9 @@ def plot_selections(zmin=0, zmax=0.5, npoints=10000, name='select_compare.png'):
     plt.plot(zs_2mass, selection_2mass, label='2MASS')
     plt.plot(zs_min, selection_min, label='Minimum')
     plt.xlabel(r'$z$')
-    plt.ylabel(r'$\frac{dN}{dz}$')
+    plt.ylabel(r'$\frac{dN}{dz}$', fontsize=24)
     plt.legend()
+    plt.tight_layout()
     plt.savefig(name)
 
     return None
@@ -66,6 +67,7 @@ def plot_ctg():
     plt.ylabel(r'$\ell(\ell+1)/2\pi$ $C^{tg}$')
     plt.xscale('log')
     plt.legend()
+    plt.tight_layout()
     plt.savefig('minimum_Ctg_compare.png')
 
     return None
