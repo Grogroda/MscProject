@@ -943,9 +943,9 @@ In this chapter, the process of converting this signal, taking into account the 
 
 \section{Two Point Functions}
 
-To estimate any correlation spectrum, we first need to estimate the values of the multipole terms $a_{\ell m}$, but applying equation (Cl definition) using these does not yield accurate results, one has to introduce factors such as noise and map masks first. 
+To estimate any correlation spectrum, we first need to estimate the values of the multipole terms $a_{\ell m}$, but applying equation \eqref{def:autocorrelation} to these directly does not yield accurate results, one has to introduce factors such as noise and map masks first. 
 
-In general, it is common to introduce a weight function $W(\hat{\mathbf{n}})$ to account for various possible effects of the map measured, such as galactic contamination, edge effects, and down-weighting more noisy pixels(CITAR HIVON 2002). If we ignore other effects for now (such as noise), the multipole terms $\tilde{a}_{\ell m}$ as defined in (ref. alm definition), assuming a high number of small pixels to approximate a sum with an integral, becomes
+In general, it is common to introduce a weight function $W(\hat{\mathbf{n}})$ to account for various possible effects on the measured maps, such as galactic contamination, edge effects, and down-weighting more noisy pixels\cite{Hivon_2002}. If we ignore other effects for now (such as noise), the multipole terms $\tilde{a}_{\ell m}$ as defined in \eqref{ch2:alm=int...}, assuming a high number of small pixels to approximate a sum with an integral, becomes
 
 \begin{equation}\label{ch3:tilde_a}
     \tilde{a}_{\ell m}=\int d\Omega \Theta(\hat{\mathbf{n}})W(\hat{\mathbf{n}})Y_{\ell m}^* (\hat{\mathbf{n}}).
@@ -956,8 +956,6 @@ With this, one can define the so-called pseudo-power spectrum $\tilde{C}_\ell$:
 \begin{equation}\label{ch3:tilde_Cl}
     \tilde{C}_\ell=\frac{1}{2\ell+1}\sum_{m=-\ell}^\ell |\tilde{a}_{\ell m}|^2.
 \end{equation}
-
-(para ctg, posso trocar $|alm|^2$ por $(alm^t)(alm^g*)$ por exemplo?)
 
 Still ignoring noise and other factors, one can relate the ensemble average of the pseudo-power spectrum with the true power spectrum with a simple system of equations
 
@@ -972,10 +970,10 @@ Still ignoring noise and other factors, one can relate the ensemble average of t
     \begin{pmatrix}
         \ell & \ell' & \ell''\\
         0 & 0 & 0
-    \end{pmatrix}^2.
+    \end{pmatrix}^2,
 \end{equation}
 
-(como pode elevar essa matriz ao quadrado see o numero de linhas é diferente do número de colunas?)
+\noindent in which the term in parenthesis is a Wigner $3j$-symbol.
 
 To determine the full form of the system of equations used to determine the real power spectrum, one has to take noise into consideration and the so-called beam pattern. 
 

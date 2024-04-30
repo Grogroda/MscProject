@@ -5714,6 +5714,67 @@
       \verb http://www.gnu.org/software/gsl/
       \endverb
     \endentry
+    \entry{Hivon_2002}{article}{}
+      \name{author}{6}{}{%
+        {{hash=18c0a465699dfb9fd70996c3504a1471}{%
+           family={Hivon},
+           familyi={H\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ecf6e3bf491baddc5ff2c773abad3cc3}{%
+           family={Górski},
+           familyi={G\bibinitperiod},
+           given={Krzysztof\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fff9b591be63b655c09371aa19803a98}{%
+           family={Netterfield},
+           familyi={N\bibinitperiod},
+           given={C.\bibnamedelimi Barth},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2e265e1968fdff05f0f7a5078360398e}{%
+           family={Crill},
+           familyi={C\bibinitperiod},
+           given={Brendan\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=024617938bccdcb30b9b922ce500b56f}{%
+           family={Prunet},
+           familyi={P\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cb6e9d884584df82e07d4291f109c9a4}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Frode},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{366e30ce7caf68813d1f59c72414828a}
+      \strng{fullhash}{cfaf1a4be3b8dfd6047b7bf06bd37377}
+      \strng{bibnamehash}{366e30ce7caf68813d1f59c72414828a}
+      \strng{authorbibnamehash}{366e30ce7caf68813d1f59c72414828a}
+      \strng{authornamehash}{366e30ce7caf68813d1f59c72414828a}
+      \strng{authorfullhash}{cfaf1a4be3b8dfd6047b7bf06bd37377}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{MASTER of the Cosmic Microwave Background Anisotropy Power Spectrum: A Fast Method for Statistical Analysis of Large and Complex Cosmic Microwave Background Data Sets}
+      \field{volume}{567}
+      \field{year}{2002}
+      \field{pages}{2}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/338126
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/338126
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/338126
+      \endverb
+    \endentry
     \entry{GNU-parallel}{article}{}
       \name{author}{1}{}{%
         {{hash=9f147229ed6b13fc6dbf05bfae29611b}{%
