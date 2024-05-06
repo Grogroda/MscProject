@@ -5775,6 +5775,251 @@
       \verb https://dx.doi.org/10.1086/338126
       \endverb
     \endentry
+    \entry{Jewell_2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=65aafbba3c93851b2f9f34bfb0381220}{%
+           family={Jewell},
+           familyi={J\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=edbf783f5b59ad72ae19bbeeaa21fd3f}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=468f7bcbf37d95a8baef4672458bd1ed}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={C.\bibnamedelimi H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9203be2216b462e5819747c5e52bfab}
+      \strng{fullhash}{e9203be2216b462e5819747c5e52bfab}
+      \strng{bibnamehash}{e9203be2216b462e5819747c5e52bfab}
+      \strng{authorbibnamehash}{e9203be2216b462e5819747c5e52bfab}
+      \strng{authornamehash}{e9203be2216b462e5819747c5e52bfab}
+      \strng{authorfullhash}{e9203be2216b462e5819747c5e52bfab}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{Application of Monte Carlo Algorithms to the Bayesian Analysis of the Cosmic Microwave Background}
+      \field{volume}{609}
+      \field{year}{2004}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/383515
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/383515
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/383515
+      \endverb
+    \endentry
+    \entry{Eriksen_2004}{article}{}
+      \name{author}{9}{}{%
+        {{hash=64bd0df945d4f2a6ecb2b80de474ab41}{%
+           family={Eriksen},
+           familyi={E\bibinitperiod},
+           given={H.\bibnamedelimi K.},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=36c87da7165108585408bed013c655c0}{%
+           family={O’Dwyer},
+           familyi={O\bibinitperiod},
+           given={I.\bibnamedelimi J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b2c3bb916f8f31021ca435e01659bcb4}{%
+           family={Jewell},
+           familyi={J\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=889a1896f2e2b2b3b3e5e5d23ae13c72}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0f7aeec07a44c6e4d045dcb127378cd4}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=23e4ad315635e35af89b2fc44906f01a}{%
+           family={Górski},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=edbf783f5b59ad72ae19bbeeaa21fd3f}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f3d862cbc08a419afdc99977d27338bc}{%
+           family={Banday},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3a161132a09f5e623290a67f153df092}{%
+           family={Lilje},
+           familyi={L\bibinitperiod},
+           given={P.\bibnamedelimi B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f23742da8b988d0f4774453afec5d5f7}
+      \strng{fullhash}{38ba9fbeff043eb34a7f9d8079d3cec7}
+      \strng{bibnamehash}{f23742da8b988d0f4774453afec5d5f7}
+      \strng{authorbibnamehash}{f23742da8b988d0f4774453afec5d5f7}
+      \strng{authornamehash}{f23742da8b988d0f4774453afec5d5f7}
+      \strng{authorfullhash}{38ba9fbeff043eb34a7f9d8079d3cec7}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal Supplement Series}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{Power Spectrum Estimation from High-Resolution Maps by Gibbs Sampling}
+      \field{volume}{155}
+      \field{year}{2004}
+      \field{pages}{227}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/425219
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/425219
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/425219
+      \endverb
+    \endentry
+    \entry{Wandelt_2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=63f05e18032df46f413ae4d011f9120e}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={Benjamin\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0b4ff97547779f51623bc92c66b23fe7}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4d036e656575b74258bb7baeaa58f3fd}{%
+           family={Lakshminarayanan},
+           familyi={L\bibinitperiod},
+           given={Arun},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{8f9a0738dd41523991206bd98120aadf}
+      \strng{fullhash}{8f9a0738dd41523991206bd98120aadf}
+      \strng{bibnamehash}{8f9a0738dd41523991206bd98120aadf}
+      \strng{authorbibnamehash}{8f9a0738dd41523991206bd98120aadf}
+      \strng{authornamehash}{8f9a0738dd41523991206bd98120aadf}
+      \strng{authorfullhash}{8f9a0738dd41523991206bd98120aadf}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{8}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{10}
+      \field{title}{Global, exact cosmic microwave background data analysis using Gibbs sampling}
+      \field{volume}{70}
+      \field{year}{2004}
+      \field{pages}{083511}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.70.083511
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.70.083511
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.70.083511
+      \endverb
+    \endentry
+    \entry{Chu_2005}{article}{}
+      \name{author}{8}{}{%
+        {{hash=65d02d7f6c0c40262ff6a0310ba7754c}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=64bd0df945d4f2a6ecb2b80de474ab41}{%
+           family={Eriksen},
+           familyi={E\bibinitperiod},
+           given={H.\bibnamedelimi K.},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=c924fe05abab1b05073ad2ab61e85c82}{%
+           family={Knox},
+           familyi={K\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=23e4ad315635e35af89b2fc44906f01a}{%
+           family={Górski},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b2c3bb916f8f31021ca435e01659bcb4}{%
+           family={Jewell},
+           familyi={J\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=0f7aeec07a44c6e4d045dcb127378cd4}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7b4011366df12a19e8a6722f851860d7}{%
+           family={O'Dwyer},
+           familyi={O\bibinitperiod},
+           given={I.\bibnamedelimi J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=889a1896f2e2b2b3b3e5e5d23ae13c72}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{10610f44f4f3a94a6a872b3f4a4124f8}
+      \strng{fullhash}{5d6c98c883ac6c7a2a2d98e574a77173}
+      \strng{bibnamehash}{10610f44f4f3a94a6a872b3f4a4124f8}
+      \strng{authorbibnamehash}{10610f44f4f3a94a6a872b3f4a4124f8}
+      \strng{authornamehash}{10610f44f4f3a94a6a872b3f4a4124f8}
+      \strng{authorfullhash}{5d6c98c883ac6c7a2a2d98e574a77173}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{10}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{5}
+      \field{title}{Cosmological parameter constraints as derived from the Wilkinson Microwave Anisotropy Probe data via Gibbs sampling and the Blackwell-Rao estimator}
+      \field{volume}{71}
+      \field{year}{2005}
+      \field{pages}{103002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.71.103002
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.71.103002
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.71.103002
+      \endverb
+    \endentry
     \entry{GNU-parallel}{article}{}
       \name{author}{1}{}{%
         {{hash=9f147229ed6b13fc6dbf05bfae29611b}{%

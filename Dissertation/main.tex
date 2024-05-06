@@ -681,7 +681,7 @@ Figure \ref{fig:correlations_theoretical} shows the galaxy autocorrelation spect
 
 These plots, show very clearly that the ISW effect has a lot more relevance in the lower multipoles, where cosmic variance has a significant influence. The selection function is an important aspect of this signal, in chapter \ref{chapter:select_func_optimal} the matter of how to optimize the signal with the use of an idealized selection function will be discussed.
 
-\subsection{Dependence on Dark Energy Models}\label{sect:dark_energy}
+\section{Dependence on Dark Energy Models}\label{sect:dark_energy}
 
 Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid} and modifications to general relativity\cite{Brane_cosmo_model}. 
 
@@ -963,7 +963,7 @@ Still ignoring noise and other factors, one can relate the ensemble average of t
     \av{\tilde{C}_\ell}=\sum_{\ell'} M_{\ell \ell'} \av{C_\ell},
 \end{equation}
 
-\noindent where $M_{\ell \ell'}$ is a matrix that describes the coupling between modes, called the multipole mixing matrix. For a map masking the CMB map (for instance, the galactic contamination map) with multipole functions $\mathcal{W}_\ell$, the mixing matrix corresponds to
+\noindent where $M_{\ell \ell'}$ is a matrix that describes the coupling between modes, called the multipole mixing matrix. If the mask applied to a CMB map is described by multipole functions $\mathcal{W}_\ell$, the mixing matrix corresponds to
 
 \begin{equation}
     M_{\ell \ell'}=\frac{2\ell'+1}{4\pi}\sum_{\ell''}(2\ell''+1)\mathcal{W}_\ell''
@@ -973,19 +973,81 @@ Still ignoring noise and other factors, one can relate the ensemble average of t
     \end{pmatrix}^2,
 \end{equation}
 
-\noindent in which the term in parenthesis is a Wigner $3j$-symbol.
+\noindent in which the term in parenthesis is a Wigner-$3j$ symbol.
 
 To determine the full form of the system of equations used to determine the real power spectrum, one has to take noise into consideration and the so-called beam pattern. 
 
-(EXPLICAR O QUE É UM "BEAM" E EXPLICAR O BEAM PATTERN COM IMAGEM DE EXEMPLO)
+In radio astronomy, the name beam is used to designate an area of the sky in which radiation will be measured, this area will usually have a central pixel positioned at sky location $\hat{n}$. The beam pattern $B(\hat{n}, \hat{n}')$ corresponds to the distribution of the signal on that area. Figure \ref{fig:beam_pattern} shows the beam pattern for the Planck instrument at $30\text{ GHz}$.
 
-If $B_\ell$ is the multipole function of the $\ell$ multipole, and given a noise map $N$ that can also be expanded in multipoles $N_\ell$, the correlation functions can be extracted by solving the following system of equations:
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.55\linewidth]{Imagens/beam_pattern.png}
+	\caption{Beam pattern for the Planck instrument at $30\text{ GHz}$. Contours delineate the regions where the beam function drops from its maximum to $50\%$, $10\%$, $1\%$ and $0.1\%$ respectively. Source: \href{https://wiki.cosmos.esa.int/planckpla/index.php/Effective_Beams}{Planck wiki}.}
+	\label{fig:beam_pattern}
+\end{figure}
+
+With the multipole terms $B_\ell$ of the beam pattern $B(\hat{n}, \hat{n}')$, and given a noise map $N$ that can also be expanded in multipoles $N_\ell$, the correlation functions can be extracted by solving the following system of equations:
 
 \begin{equation}\label{ch3:av(tilde_Cl)}
     \av{\tilde{C}_\ell}=\sum_{\ell'} M_{\ell \ell'}B_{\ell'}^2\av{C_{\ell'}}+\av{N_\ell}.
 \end{equation}
 
+Although this solution converges to the true power spectrum in the limit of a large number of sky realizations, having a single universe to retrieve sky map multipoles makes this solution highly affected by cosmic variance\cite{Moura-Santos_2016}. Another limitation of this method is its computational complexity of $O(N_p^3)$, where $N_p$ is the number of pixels of the sample maps. For experiments such as WMAP ($N_p\sim 10^6$) and Planck ($N_p \sim 10^7$), this time complexity becomes computationally unviable, thus motivating the introduction of a new technique, which will be presented now.
+
 \section{Gibbs Sampling}
+
+To avoid the approach presented previously, Monte Carlo (MC) methods to sample maps of the primordial signal from the a posteriori probability distribution taking into account cosmic variance, instrumental noise, and residual foregrounds\cite{Jewell_2004,Eriksen_2004,Wandelt_2004}. 
+
+Let $d$ be a pixelized temperature map consisting of primordial signal $\mathbf{s}$ and instrumental noise $\mathbf{n}$, both following Gaussian distributions with covariance matrices $\mathbf{S}$ and $\mathbf{N}$ respectively, with a full covariance matrix $\mathbf{C}=\mathbf{S}+\mathbf{N}$. The likelihood for observing such a map, after marginalizing over the unknown signal $\mathbf{s}$, can be calculated using
+
+\begin{equation}\label{ch4:Likelihood}
+	\mathcal{L}=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right),
+\end{equation}
+
+\noindent where $n_\text{dim}=N_p^2$.
+
+Using Bayes' theorem, this likelihood can be written as $P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C})$, where $\pi(\mathbf{S})$ is the prior on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. 
+
+The calculation $P(\mathbf{C}|\mathbf{d})$ can be done using an MC method called Gibbs sampling. Suppose we can sample from the conditional probabilities $P(\mathbf{C}|\mathbf{s}, \mathbf{d})$ and $P(\mathbf{s}|\mathbf{C}, \mathbf{d})$, we can then sample a set of $\{(\mathbf{s}^i, \mathbf{C}^i)\}$ by iterating the following sampling process\cite{Chu_2005}:
+
+\begin{equation}\label{gibbs_sample1}
+\mathbf{s}^{i+1}\leftarrow P(\mathbf{s}|\mathbf{C}^i, \mathbf{d}),
+\end{equation}
+\begin{equation}\label{gibbs_sample2}
+\mathbf{C}^{i+1}\leftarrow P(\mathbf{C}|\mathbf{s}^{i+1}, \mathbf{d}).
+\end{equation}
+
+From this sample, one has an estimation of $P(\mathbf{C}, \mathbf{s}|\mathbf{d})$, thus only needing to marginalize over $\mathbf{s}$ to obtain the posterior distribution $P(\mathbf{C}|\mathbf{d})$.
+
+From this point, one can assume a theoretical model for $\mathbf{C}$ using a set of parameters $\theta$ and estimate the posterior distribution of these parameters $P(\theta|\mathbf{d})$ using the so called Blackwell-Rao estimator\cite{Chu_2005}.
+
+To construct this estimator, we first expand each element of the vector $\mathbf{s}$ in terms of spherical harmonics:
+
+\begin{equation}\label{s_harmonics}
+	s(\theta, \phi)=\sum_{\ell=0}^\infty \sum_{m=-\ell}^\ell s_{\ell m}Y_{\ell m}(\theta, \phi),
+\end{equation}
+
+\noindent and define
+
+\begin{equation}\label{sigma_l}
+	\sigma_\ell=\frac{1}{2\ell+1}\sum_{m=-\ell}^\ell |s_{\ell m}|^2.
+\end{equation}
+
+%Next, we note that
+
+%\begin{equation}\label{P=P=P}
+%	P(C_\ell(\theta)|\mathbf{s}, \mathbf{d})=P(C_\ell(\theta)|\mathbf{s})=P(C_\ell(\theta)|\sigma_\ell).
+%\end{equation}
+
+%The first equality holds due to $C_\ell$ only depending on the signal, and the second holds because 
+
+With this, it is possible to arrive at the Blackwell-Rao estimator for the density $P(C_\ell|\mathbf{d})$.
+
+\begin{equation}\label{BR_estimator}
+	P(C_\ell(\theta)|\mathbf{d})\approx \frac{1}{N_G}\sum_{i=1}^{N_G}P(C_\ell|\sigma_\ell^i),
+\end{equation}
+
+\noindent where $N_G$ is the number of Gibbs samples. 
 
 \section{Data Sets and Analysis}
 
