@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
 
-xi_data=pd.read_csv('xi_list_10M.dat', header=None, names=['OmegaM', 'logP'], sep=' ')
+xi_data=pd.read_csv('xi_list_band_best.dat', header=None, names=['OmegaM', 'logP'], sep=' ')
 
 Omegas=xi_data['OmegaM']
 
@@ -17,4 +17,4 @@ plt.plot(Omegas, P)
 #plt.show()
 plt.xlabel(r'$\Omega_m$')
 plt.ylabel(r'$\mathcal{L}(\Omega_m)$')
-plt.savefig('OmegaM_prof_data.png')
+plt.savefig('OmegaM_prof_BestBand.png')
