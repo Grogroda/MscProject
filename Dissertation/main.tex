@@ -675,7 +675,7 @@ Figure \ref{fig:correlations_theoretical} shows the galaxy autocorrelation spect
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.98\linewidth]{Imagens/Correlations_DoublePlot.png}
-	\caption{Galaxy autocorrelation spectrum (left) and late-ISW contribution to the galaxy-CMB cross-correlation (right). The selection function used to calculate these spectra was parametrized to be compatible with 2MASS' galaxy redshift distribution\cite{select_func_par:Afshordi2004, Moura-Santos_2016}.}
+	\caption{Galaxy autocorrelation spectrum (left) and late-ISW contribution to the galaxy-CMB cross-correlation (right). The selection function used to calculate these spectra was parametrized to be compatible with 2MASS' galaxy redshift distribution\cite{cross_corr:Afshordi, Moura-Santos_2016}.}
 	\label{fig:correlations_theoretical}
 \end{figure}
 
@@ -781,7 +781,7 @@ Figure \ref{fig:Dark_energy_tests} shows the influence of different parameter va
 
 Equation \eqref{Wg} introduced the selection function $\dv{N}{z}$, which simply corresponds to the redshift distribution of galaxy counts $N$ and can vary depending on the galaxy catalog used, thus having an influence on the expected cross-correlation and galaxy autocorrelation signals that can be extracted from that catalog. As shown in Figure \ref{fig:correlations_theoretical}, the ISW signal is mostly present at low multipoles, where cosmic variance has a strong influence, making it hard to determine whether the data follow the model or the null hypothesis of zero cross-correlation. This motivated us to study the possibility of optimizing the cross-correlation signal by determining a selection function that could theoretically maximize it, this study will be presented in this chapter.
 
-\section{Parametrization of the Selection Function}
+\section{Parametrization of the Selection Function}\label{sect:sel_func_par}
 
 Following \cite{cross_corr:Afshordi}, we are assuming the selection function can be parametrized as
 
@@ -1085,15 +1085,21 @@ It is also assumed that the noise covariance is diagonal: $N=\text{diag}(N_{11}^
 
 \section{Data Sets and Analysis}
 
-In this project, we have used two main datasets for our analysis: CMB data from the Planck (or WMAP) ... and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog. In this section, the details about these data sets and their respective analysis pipelines will be explored.
+In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored.
 
 \subsection{2MASS Catalog}
 
-2MASS CATALOG, INCLUDE EXPLANATION OF 2MASS BANDS, PLANCK DATA, ETC
+From 1997 to 2001, the 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This analysis produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
 
-\subsection{Planck (or WMAP) Data}
+The $K_s$ band's $20 \text{ mag arcsec}^{-2}$ isophotal circular aperture magnitudes (here simply called $K_{20}$) were corrected for galactic extinction using the reddening maps $E(B-V)$ at $\SI{100}{\mu \meter}$ in \cite{Schlegel_1998}, according to the expression $K_{20} \rightarrow K_{20}'=K_{20}-A_k$, where $A_k=0.367E(B-V)$.
 
-WMAP (or Planck?) DATA
+HEALPix was used to produce and analyse the maps with resolution parameter $nside=32$, a mask was applied to every pixel with $A_k>0.05$. This left the catalog at $801,476$ objects with $12<K_{20}'<14$, which were further divided into the four bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$). As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}, the parametrizations for each band is shown in Table \ref{tab:bands_2MASS} and the plots of these selection functions is shown in Figure \ref{fig:2MASS_selections}. Figure ?? shows the final maps produced after this process.
+
+%IMAGENS DOS MAPAS COM MÁSCARA
+
+\subsection{WMAP Data}
+
+WMAP DATA
 
 \chapter{Results}\label{chapter:Results}
 
