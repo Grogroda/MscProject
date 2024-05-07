@@ -883,12 +883,12 @@ In order to determine the probability distribution of the null hypothesis for ea
 	\label{fig:synthmaps_histograms}
 \end{figure}
 
-Upon thorough inspection of the histograms, we decided to fit each histogram using Gaussian distributions, which are shown in Figure \ref{fig:synthmaps_histograms}, and used the fitted Gaussians as the probability density functions of $C^{tg}_{\ell}$ under the null hypothesis. Each of these distributions will be indicated by $f_\ell[C^{tg}_\ell]$.
+Upon thorough inspection of the histograms, we decided to fit each histogram using Gaussian distributions, which are shown in Figure \ref{fig:synthmaps_histograms}, and used the fitted Gaussians as the probability density functions of $C^{tg}_{\ell}$ under the null hypothesis. Each of these distributions will be indicated by $f_\ell\left(C^{tg}_\ell\right)$.
 
 With that, we can finally define the probability $P_\text{null}$ that a correlation spectrum $C^{tg}$ follows the null hypothesis:
 
 \begin{equation}\label{def:Pnull}
-	P_\text{null}=\prod_{\ell=2}^{\ell_\text{max}} f_\ell\left[C^{tg}_\ell\right]
+	P_\text{null}=\prod_{\ell=2}^{\ell_\text{max}} f_\ell\left(C^{tg}_\ell\right)
 \end{equation}
 
 We can now explore the parameter space $(z_0,\beta,\lambda)$ and look for the values that minimize $P_\textbf{null}$. In other words, for a given cosmological model chosen a priori (in this case $\Lambda$CDM) where a CMB-galaxy non-null cross-correlation signal is expected, what is the selection function that minimizes the consistency with a null signal.
@@ -1004,7 +1004,7 @@ Let $d$ be a pixelized temperature map consisting of primordial signal $\mathbf{
 	\mathcal{L}=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right),
 \end{equation}
 
-\noindent where $n_\text{dim}=N_p^2$.
+\noindent where $n_\text{dim}=N_p^2$. The direct evaluation of this likelihood is not computationally viable due to the calculation of the determinant of $\mathbf{C}$, since $\mathbf{N}$ is typically close to diagonal in pixel space.
 
 Using Bayes' theorem, this likelihood can be written as $P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C})$, where $\pi(\mathbf{S})$ is the prior on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. 
 
@@ -1017,9 +1017,7 @@ The calculation $P(\mathbf{C}|\mathbf{d})$ can be done using an MC method called
 \mathbf{C}^{i+1}\leftarrow P(\mathbf{C}|\mathbf{s}^{i+1}, \mathbf{d}).
 \end{equation}
 
-From this sample, one has an estimation of $P(\mathbf{C}, \mathbf{s}|\mathbf{d})$, thus only needing to marginalize over $\mathbf{s}$ to obtain the posterior distribution $P(\mathbf{C}|\mathbf{d})$.
-
-From this point, one can assume a theoretical model for $\mathbf{C}$ using a set of parameters $\theta$ and estimate the posterior distribution of these parameters $P(\theta|\mathbf{d})$ using the so called Blackwell-Rao estimator\cite{Chu_2005}.
+From this sample, one has an estimation of $P(\mathbf{C}, \mathbf{s}|\mathbf{d})$, thus only needing to marginalize over $\mathbf{s}$ to obtain the posterior distribution $P(\mathbf{C}|\mathbf{d})$. To do this marginalization, one can use the so called Blackwell-Rao estimator\cite{Chu_2005}.
 
 To construct this estimator, we first expand each element of the vector $\mathbf{s}$ in terms of spherical harmonics:
 
@@ -1041,17 +1039,61 @@ To construct this estimator, we first expand each element of the vector $\mathbf
 
 %The first equality holds due to $C_\ell$ only depending on the signal, and the second holds because 
 
-With this, it is possible to arrive at the Blackwell-Rao estimator for the density $P(C_\ell|\mathbf{d})$.
+With this, it is possible to derive the Blackwell-Rao estimator for the density $P(C_\ell|\mathbf{d})$:
 
 \begin{equation}\label{BR_estimator}
-	P(C_\ell(\theta)|\mathbf{d})\approx \frac{1}{N_G}\sum_{i=1}^{N_G}P(C_\ell|\sigma_\ell^i),
+	P(C_\ell|\mathbf{d})\approx \frac{1}{N_G}\sum_{i=1}^{N_G}P(C_\ell|\sigma_\ell^i),
 \end{equation}
 
-\noindent where $N_G$ is the number of Gibbs samples. 
+\noindent where $N_G$ is the number of Gibbs samples and $C_\ell$ are the multipole values due to the true signal $\mathbf{s}$.
+
+In this project, the same process presented in \cite{Moura-Santos_2016}, which is an extended version of what is presented in \cite{Larson_2007}, has been used. In this framework, the vector $\mathbf{s}$ and the matrix $\mathbf{S}$ are defined as
+
+\begin{equation}\label{vec_s}
+	\mathbf{s}^T=(s_{00}^{tg}, s_{01}^{tg}, s_{11}^{tg}, \dots, s_{\ell_\text{max}0}^{tg}, \dots, s_{\ell_\text{max} \ell_\text{max}}^{tg}),
+\end{equation}
+\begin{equation}\label{matrix_S}
+	\mathbf{S}=\text{diag}(S_0^{tg}, S_1^{tg}, S_1^{tg},\dots, S_{\ell_\text{max}}^{tg}, \dots, S_{\ell_\text{max}}^{tg}),
+\end{equation}
+
+\noindent where 
+
+\begin{align}\label{s_lm=}
+	\mathbf{s}_{\ell m}^{tg}&=
+	\begin{pmatrix}
+	a_{\ell m}^t\\
+	a_{\ell m}^g
+	\end{pmatrix}, &
+	\mathbf{S}_\ell^{tg}&=
+	\begin{pmatrix}
+	C_\ell^{tt} & C_\ell^{tg}\\
+	C_\ell^{tg} & C_\ell^{gg}
+	\end{pmatrix}.
+\end{align}
+
+It is also assumed that the noise covariance is diagonal: $N=\text{diag}(N_{11}^{tg}, \dots, N_{ii}^{tg}, \dots, N_{pp}^{tg})$ where
+
+\begin{equation}\label{Niitg}
+	N_{ii}^{tg}=
+	\begin{pmatrix}
+	N_{ii}^{tt} & 0 \\
+	0 & N_{ii}^{gg}
+	\end{pmatrix},
+\end{equation}
+
+\noindent since the noises affecting the temperature anisotropies and galaxy contrast are uncorrelated. Also, for the purposes of calculations regarding the cross-correlation, we substitute $|\mathbf{s}_{\ell m}|^2$ for $\mathbf{s}_{\ell m}^t \mathbf{s}_{\ell m}^{g\dagger}$ in equation \eqref{sigma_l}.
 
 \section{Data Sets and Analysis}
 
+In this project, we have used two main datasets for our analysis: CMB data from the Planck (or WMAP) ... and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog. In this section, the details about these data sets and their respective analysis pipelines will be explored.
+
+\subsection{2MASS Catalog}
+
 2MASS CATALOG, INCLUDE EXPLANATION OF 2MASS BANDS, PLANCK DATA, ETC
+
+\subsection{Planck (or WMAP) Data}
+
+WMAP (or Planck?) DATA
 
 \chapter{Results}\label{chapter:Results}
 

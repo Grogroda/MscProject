@@ -21,8 +21,10 @@
 \contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{33}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Two Point Functions}{33}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Gibbs Sampling}{35}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Data Sets and Analysis}{36}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Results}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions}{38}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Fourier Space}{40}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{41}{appendix.B}%
+\contentsline {section}{\numberline {4.3}Data Sets and Analysis}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}2MASS Catalog}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Planck (or WMAP) Data}{37}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Results}{38}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions}{39}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Fourier Space}{41}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{42}{appendix.B}%

@@ -6020,6 +6020,72 @@
       \verb https://link.aps.org/doi/10.1103/PhysRevD.71.103002
       \endverb
     \endentry
+    \entry{Larson_2007}{article}{}
+      \name{author}{7}{}{%
+        {{hash=0f7aeec07a44c6e4d045dcb127378cd4}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=64bd0df945d4f2a6ecb2b80de474ab41}{%
+           family={Eriksen},
+           familyi={E\bibinitperiod},
+           given={H.\bibnamedelimi K.},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=889a1896f2e2b2b3b3e5e5d23ae13c72}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=23e4ad315635e35af89b2fc44906f01a}{%
+           family={Górski},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3f539aae33e6dd2c67889fb0502d3d96}{%
+           family={Huey},
+           familyi={H\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b2c3bb916f8f31021ca435e01659bcb4}{%
+           family={Jewell},
+           familyi={J\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=36c87da7165108585408bed013c655c0}{%
+           family={O’Dwyer},
+           familyi={O\bibinitperiod},
+           given={I.\bibnamedelimi J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1adda03865a43f4b9662e33ef7050c6}
+      \strng{fullhash}{c1d420768cc75a22f67bc7b671bc49e2}
+      \strng{bibnamehash}{a1adda03865a43f4b9662e33ef7050c6}
+      \strng{authorbibnamehash}{a1adda03865a43f4b9662e33ef7050c6}
+      \strng{authornamehash}{a1adda03865a43f4b9662e33ef7050c6}
+      \strng{authorfullhash}{c1d420768cc75a22f67bc7b671bc49e2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Estimation of Polarized Power Spectra by Gibbs Sampling}
+      \field{volume}{656}
+      \field{year}{2007}
+      \field{pages}{653}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/509802
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/509802
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/509802
+      \endverb
+    \endentry
     \entry{GNU-parallel}{article}{}
       \name{author}{1}{}{%
         {{hash=9f147229ed6b13fc6dbf05bfae29611b}{%
@@ -6068,8 +6134,8 @@
       \strng{authornamehash}{f793e621da5150f74017ebcac267f02b}
       \strng{authorfullhash}{f793e621da5150f74017ebcac267f02b}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{ascl:1910.019}
@@ -6108,8 +6174,8 @@
       \strng{authornamehash}{f793e621da5150f74017ebcac267f02b}
       \strng{authorfullhash}{f793e621da5150f74017ebcac267f02b}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
@@ -6152,8 +6218,8 @@
       \strng{authorbibnamehash}{ea9e9d52806ff59457cc724db96e5b3f}
       \strng{authornamehash}{ea9e9d52806ff59457cc724db96e5b3f}
       \strng{authorfullhash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00031305}
