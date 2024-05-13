@@ -427,7 +427,7 @@ We can use
     \dv{\hat{p}^i}{t}=\frac{E}{ap}[\delta^{ik}-\hat{p}^i\hat{p}^k]\partial_k\left(\frac{p^2}{E^2}\Phi-\Psi\right).
 \end{equation}
 
-As for the dynamics of the field perturbations, it is possible to use Einstein's field equations to obtain, in Fourier space (see Appendix \ref{appendix:FourierSpace}), the equations for scalar perturbations on the gravitational potentials\cite{dodelson2020modern}
+As for the dynamics of the field perturbations, it is possible to use Einstein's field equations to obtain, in Fourier space, the equations for scalar perturbations on the gravitational potentials\cite{dodelson2020modern}
 
 \begin{equation}\label{ch2:first_dynamic_equation}
     k^2\Phi+3H(\dot{\Phi}-H\Psi)=-4\pi Ga^2(\rho_{DM}\delta_{DM}+\rho_b\delta_b+4\rho_\gamma \Theta_0+4\rho_\nu \mathcal{N}_0),
@@ -530,7 +530,7 @@ These equations, alongside equations \eqref{ch2:first_dynamic_equation} and \eqr
 
 With the dynamical equations for photons determined, one can obtain the temperature perturbation distribution $\Theta$ if initial conditions are provided. With the equations already presented, it is possible to show that the initial conditions at the early Universe depend only on the initial conditions for $\Phi$\cite{dodelson2020modern}, which are then evolved through the inflationary period assuming the existence of a quantum scalar field $\phi(\mathbf{x}, t)$ that drives a brief accelerated expansion. 
 
-With time, particles start to form: Quarks, hadrons, neutrinos, amongst others, at different times. Eventually baryons have formed and the photons are tightly coupled to them, forming a baryon-photon fluid that can be described by the differential equations \eqref{diff_eq_radiation_perturbs} - \eqref{diff_eqs:neutrino_perturbations}, the initial distribution obtained for this fluid can then be used as the initial condition and evolved to predict the present anisotropies to the uniform background. To analyze these predictions, the statistical behavior of each component of the Universe is taken: either their spectral densities (see Appendix \ref{appendix:FourierSpace}) -- usually called their power spectra -- or what is known as their correlation spectra. 
+With time, particles start to form: Quarks, hadrons, neutrinos, amongst others, at different times. Eventually baryons have formed and the photons are tightly coupled to them, forming a baryon-photon fluid that can be described by the differential equations \eqref{diff_eq_radiation_perturbs} - \eqref{diff_eqs:neutrino_perturbations}, the initial distribution obtained for this fluid can then be used as the initial condition and evolved to predict the present anisotropies to the uniform background. To analyze these predictions, the statistical behavior of each component of the Universe is taken: either their spectral densities -- usually called their power spectra -- or what is known as their correlation spectra. 
 
 \subsection{CMB Autocorrelation Spectrum}
 
@@ -647,7 +647,7 @@ Similarly, instead of calculating an autocorrelation spectrum, one can calculate
 One can determine a general and direct equation to calculate these spectra. In this work we have used the form shown in \cite{Moura-Santos_2016}, which is specific to the ISW contribution to these correlation spectra:
 
 \begin{equation}\label{Cl_direct_calculation}
-    C^{xy}(\ell)=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
+    C^{xy}_\ell=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
 \end{equation}
 
 \noindent where $x$ and $y$ can represent $g$ or $t$, and $W_\ell$ are called the kernel functions, which can be calculated using
@@ -659,7 +659,7 @@ One can determine a general and direct equation to calculate these spectra. In t
     W_\ell^g=\int dz b_g(z)\dv{N}{z}D(z)j_\ell[k\chi(z)],
 \end{equation}
 
-\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}.
+\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}. A demonstration of this equation can be found in Appendix \ref{App:correlations_demo}
 
 With equation \eqref{Cl_direct_calculation}, we can determine the theoretical spectra for CMB and galaxy autocorrelations and CMB-galaxy cross-correlation directly. Figure \ref{fig:Ctt_ISW_comparison} shows the total CMB autocorrelation and the ISW contribution, both at $z=0$.
 
@@ -1133,13 +1133,68 @@ Gibbs Sampling: \cite{Gibbs_sampling}
 \vspace*{\fill}
 \end{center}
 
+\iffalse %multiline comment
 \chapter{Fourier Space}\label{appendix:FourierSpace}
 
+Say we have a function $\delta(\mathbf{x},t)$ that follows a linear partial differential equation, such as
+
+\begin{equation}\label{Four_Space:example_diff_eq}
+	\pdv[2]{}{t} \delta(\mathbf{x},t) +f(t)\delta(\mathbf{x},t) + g(t)\nabla^2\Psi(\mathbf{x},t)=0.
+\end{equation}
+
+Notice that the terms in the equation are only time dependent. These properties make this equation suitable to use a Fourier transform to analyse it: If we take
+
+\begin{equation}
+	\delta(\mathbf{k},t)=\int d^3x e^{-i\mathbf{k}\cdot \mathbf{x}}\delta(\mathbf{x}),
+\end{equation}
+
+\noindent to be the Fourier transform of $\delta(\mathbf{x},t)$, then space derivatives of $\delta(\mathbf{x},t)$ become simple multiplicative terms:
+
+\begin{equation}
+	\pdv{\delta(\mathbf{x},t)}{x^i}=ik_i\delta(\mathbf{k},t).
+\end{equation}
+
+Because of that, if one takes the Fourier transform of the entire equation, it becomes simplified:
+
+\begin{equation}\label{Four_Space:final_eq}
+	\pdv[2]{}{t}\delta(\mathbf{k},t)+f(t)\pdv{}{t}\delta(\mathbf{k},t)-g(t)k^2\Psi(\mathbf{k},t)=0.
+\end{equation}
+
+Fourier space is commonly used to study functions related to waves, and in that case $\mathbf{k}$ corresponds to the wavevector of that signal. In that context, it is useful to define the spectral density.
+
 Falar sobre espaço de fourier
-
 Falar do conceito de spectral density/power spectrum
+\fi
 
-\chapter{Monte Carlo Markov Chains}
+\chapter{Demonstration of Correlation Functions}\label{App:correlations_demo}
+
+Expanding the definition of $C_\ell$ given in \eqref{def:autocorrelation} one can show that\cite{dodelson2020modern}:
+
+\begin{equation}\label{demo:Start_eq}
+	C_\ell=\frac{2}{\pi}\int dk k^2P(k)\left|\frac{\Theta_\ell(k,\eta_0)}{\delta(k,\eta_0)}\right|^2.
+\end{equation}
+
+Using the ISW term of equation \eqref{ch2:Thetal_approx}
+
+\begin{equation}
+	\Theta_\ell^{\text{ISW}}=\int_0^{\eta_0} d\eta e^{-\tau}[\Psi'(k,\eta)-\Phi'(k,\eta)]j_\ell[k(\eta_0-\eta)],
+\end{equation}
+
+\noindent with $e^{-\tau}\approx 1$ since, as shown, the ISW effect is only relevant at small scales\footnote{The Planck best-fit for the optical depth in the present is $\tau=0.054\pm 0.007$}. So
+
+\begin{equation}
+	\Theta_\ell^{\text{ISW}}=\int_0^{\eta_0} d\eta \dv{}{\eta}\left[\Psi(k,\eta)-\Phi(k,\eta)\right]j_\ell[k(\eta_0-\eta)],
+\end{equation}
+
+%1. Desprezar o efeito de reionização, já que o ISW é importante em grandes escalas e reionização é importante em escalas l >~ 200.
+
+%2. Fazer uma mudança de variáveis de tempo conforme para redshift
+
+%3. Desprezar o stress anisotrópico em tempos recentes, isso permite escrever que \Psi ~ \Phi at late times
+
+%4. Usar a equação de Poisson para relacionar o potencial gravitacional \Phi com o contraste \delta
+
+%5. Usar a definição de função de crescimento.
 
 \end{spacing}
 \endgroup

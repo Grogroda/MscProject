@@ -11,10 +11,10 @@
 \contentsline {section}{\numberline {2.3}The Cosmic Microwave Background}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}CMB Autocorrelation Spectrum}{16}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Analytical Approximation}{18}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}The Integrated Sachs Wolfe Effect}{20}{section.2.4}%
+\contentsline {section}{\numberline {2.4}The Integrated Sachs Wolfe Effect}{19}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}The Matter Power Spectrum}{20}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}The Galaxy-CMB Correlation Spectra}{20}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Dependence on Dark Energy Models}{23}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Dependence on Dark Energy Models}{22}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Optimizing the Selection Function}{26}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{26}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{28}{section.3.2}%
@@ -26,5 +26,4 @@
 \contentsline {subsection}{\numberline {4.3.2}WMAP Data}{38}{subsection.4.3.2}%
 \contentsline {chapter}{\numberline {5}Results}{39}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Conclusions}{40}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Fourier Space}{42}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Monte Carlo Markov Chains}{43}{appendix.B}%
+\contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{42}{appendix.A}%
