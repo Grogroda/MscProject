@@ -1180,39 +1180,103 @@ Falar do conceito de spectral density/power spectrum
 
 \chapter{Demonstration of Correlation Functions}\label{App:correlations_demo}
 
-Expanding the definition of $C_\ell$ given in \eqref{def:autocorrelation} one can show that\cite{dodelson2020modern}:
+Expanding the definition of $C_\ell^{TT}$ given in \eqref{def:autocorrelation} one can show that\cite{dodelson2020modern}:
 
 \begin{equation}\label{demo:Start_eq}
-	C_\ell=\frac{2}{\pi}\int dk k^2P(k)\left|\frac{\Theta_\ell(k,\eta_0)}{\delta(k,\eta_0)}\right|^2.
+	C_\ell^{tt}=\frac{2}{\pi}\int dk k^2P(k)\left|\frac{\Theta_\ell(k,\eta_0)}{\delta(k,\eta_0)}\right|^2.
 \end{equation}
+
+Similar expressions can be found for $C_\ell^{tg}$ and $C_\ell^{gg}$, we will focus the demonstration on the temperature autocorrelation case.
 
 Using the ISW term of equation \eqref{ch2:Thetal_approx}
 
 \begin{equation}
-	\Theta_\ell^{\text{ISW}}=\int_0^{\eta_0} d\eta e^{-\tau}[\Psi'(k,\eta)-\Phi'(k,\eta)]j_\ell[k(\eta_0-\eta)],
+	\Theta_\ell^{\text{ISW}}(k,\eta_0)=\int_0^{\eta_0} d\eta e^{-\tau}[\Psi'(k,\eta)-\Phi'(k,\eta)]j_\ell[k(\eta_0-\eta)],
 \end{equation}
 
 \noindent with $e^{-\tau}\approx 1$ since, as shown, the ISW effect is only relevant at small scales\footnote{The Planck best-fit for the optical depth in the present is $\tau=0.054\pm 0.007$}. So
 
-\begin{equation}
-	\Theta_\ell^{\text{ISW}}=\int_0^{\eta_0} d\eta \dv{}{\eta}\left[\Psi(k,\eta)-\Phi(k,\eta)\right]j_\ell[k(\eta_0-\eta)],
+\begin{equation}\label{appA:step1}
+	\Theta_\ell^{\text{ISW}}(k,\eta_0)=\int_0^{\eta_0} d\eta \dv{}{\eta}\left[\Psi(k,\eta)-\Phi(k,\eta)\right]j_\ell[k(\eta_0-\eta)],
 \end{equation}
 
 Using the definition of $\eta$ in \eqref{def:conformal_time}
 
 \begin{equation}
-	\eta=\int_0^t \frac{dt}{a(t)}=\int_0^a\frac{da'}{a'^2H(a')}=\int_{z}^\infty \frac{dz'}{H(z)}
+	\eta=\int_0^t \frac{dt}{a(t)}=\int_0^a\frac{da'}{a'^2H(a')}=\int_{z}^\infty \frac{dz'}{H(z)},
 \end{equation}
+
+\noindent we can do a change in variables of the integral to redshift. Since
+
+\begin{equation}
+	\eta_0-\eta=\int_0^\infty \frac{dz'}{H(z')}-\int_z^\infty \frac{dz'}{H(z')}=\int_z^\infty \frac{dz'}{H(z')}=\chi(z),
+\end{equation}
+
+\noindent where $\chi(z)$ is the comoving distance, equation \eqref{appA:step1} becomes
+
+\begin{equation}
+	\Theta_\ell^\text{ISW}(k,z=0)=\int_0^\infty dz \dv{}{z}\left[\Psi(k,z)-\Phi(k,z)\right]j_\ell[k\chi(z)].
+\end{equation}
+
+At late times, we can neglect anisotropic stress, taking $\Psi\approx \Phi$, therefore
+
+\begin{equation}
+	\Theta_\ell^\text{ISW}(k,0)=-2\int_0^\infty dz \dv{\Phi}{z}j_\ell [k\chi(z)].
+\end{equation}
+
+Finally, we can use the Poisson equation
+
+\begin{equation}
+	\Phi(k,z)=\frac{3}{2}\Omega_m \left(\frac{H_0}{k}\right)^2(1+z)\delta(k,z),
+\end{equation}
+
+\noindent to show that
+
+\begin{equation}
+	\delta(k,0)=\frac{2}{3\Omega_m}\left(\frac{k}{H_0}\right)^2\Phi(k,0).
+\end{equation}
+
+With this:
+
+\begin{equation}
+	\frac{\Theta_\ell(k,\eta_0)}{\delta(k,\eta_0)}=\frac{\Theta_\ell(k,z=0)}{\delta(k,z=0)}=-3\Omega_m\left(\frac{H_0}{k}\right)^2\int_0^\infty dz \dv{}{z}\left[\frac{\Phi(k,z)}{\Phi(k,0)}\right]j_\ell[k\chi(z)].
+\end{equation}
+
+Cosmologists define the growth function $D(z)$ as
+
+\begin{equation}
+	\frac{\Phi(k,a)}{\Phi(k,1)}\equiv\frac{D(a)}{a}=(1+z)D(z)=\frac{\Phi(k,z)}{\Phi(k,0)},
+\end{equation}
+
+so
+
+\begin{equation}
+	\frac{\Theta_\ell(k,\eta_0)}{\delta(k,\eta_0)}=-3\Omega_m\left(\frac{H_0}{k}\right)^2\int_0^\infty \dv{(1+z)D(z)}{z}j_\ell[k\chi(z)].
+\end{equation}
+
+Using this result, equation \eqref{demo:Start_eq} in terms of redshift instead of $\eta$ becomes
+
+\begin{equation}\label{AppA:eq_final}
+	C_\ell^{tt}=\frac{2}{\pi}\int_0^\infty dk k^2P(k)|W_\ell^t|^2
+\end{equation}
+
+\noindent with 
+
+\begin{equation}
+	W_\ell^t=-3\Omega_m\left(\frac{H_0}{k}\right)^2\int_0^\infty \dv{(1+z)D(z)}{z}j_\ell[k\chi(z)].
+\end{equation}
+
+Equation \eqref{appA:step1} expresses the present contribution of the late ISW  effect to the CMB temperature autocorrelation spectrum.
 
 %1. Desprezar o efeito de reionização, já que o ISW é importante em grandes escalas e reionização é importante em escalas l >~ 200. (X)
 
-%2. Fazer uma mudança de variáveis de tempo conforme para redshift ()
+%2. Fazer uma mudança de variáveis de tempo conforme para redshift (X)
 
-%3. Desprezar o stress anisotrópico em tempos recentes, isso permite escrever que \Psi ~ \Phi at late times ()
+%3. Desprezar o stress anisotrópico em tempos recentes, isso permite escrever que \Psi ~ \Phi at late times (X)
 
-%4. Usar a equação de Poisson para relacionar o potencial gravitacional \Phi com o contraste \delta ()
+%4. Usar a equação de Poisson para relacionar o potencial gravitacional \Phi com o contraste \delta (X)
 
-%5. Usar a definição de função de crescimento. ()
+%5. Usar a definição de função de crescimento. (X)
 
 \end{spacing}
 \endgroup
