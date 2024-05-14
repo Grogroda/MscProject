@@ -24,6 +24,6 @@
 \contentsline {section}{\numberline {4.3}Data Sets and Analysis}{37}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}2MASS Catalog}{37}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}WMAP Data}{38}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Results}{39}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions}{40}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{42}{appendix.A}%
+\contentsline {chapter}{\numberline {5}Results}{40}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{43}{appendix.A}%

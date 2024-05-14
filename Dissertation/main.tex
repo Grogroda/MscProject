@@ -975,9 +975,15 @@ Still ignoring noise and other factors, one can relate the ensemble average of t
 
 \noindent in which the term in parenthesis is a Wigner-$3j$ symbol.
 
-To determine the full form of the system of equations used to determine the real power spectrum, one has to take noise into consideration and the so-called beam pattern. 
+To determine the full form of the system of equations used to determine the real power spectrum, one has to take noise into consideration the so-called beam pattern. 
 
-In radio astronomy, the name beam is used to designate an area of the sky in which radiation will be measured, this area will usually have a central pixel positioned at sky location $\hat{n}$. The beam pattern $B(\hat{n}, \hat{n}')$ corresponds to the distribution of the signal on that area. Figure \ref{fig:beam_pattern} shows the beam pattern for the Planck instrument at $30\text{ GHz}$.
+In radio astronomy, telescopes take measurements in various angles in the sky, and for each direction $\hat{n}$, there is an area of the sky being covered by the measurement, each of these areas is called a beam. In an apparatus that measures CMB photons' temperatures, the measurement in each direction $\hat{n}$ is a temperature $T^\text{obs}(\hat{n})$, this measurement corresponds to a weighted combination of the real temperatures $T(\hat{n}')$ over the beam plus a noise $\eta(\hat{n})$:
+
+\begin{equation}\label{def:beam_pattern}
+	T^\text{obs}(\hat{n})=\int_\text{beam} d\Omega B(\hat{n},\hat{n}')T(\hat{n}')+\eta(\hat{n}).
+\end{equation}
+
+The function $B(\hat{n}, \hat{n}')$ is called the beam pattern, it weights the contributions of photons coming in the directions around the beam, and it can be estimated during the calibration of the apparatus, it is usually assumed to be Gaussian. Figure \ref{fig:beam_pattern} shows the beam pattern for the Planck instrument at $30\text{ GHz}$.
 
 \begin{figure}[!htb]
 	\centering
@@ -996,7 +1002,7 @@ Although this solution converges to the true power spectrum in the limit of a la
 
 \section{Gibbs Sampling}
 
-To avoid the approach presented previously, Monte Carlo (MC) methods to sample maps of the primordial signal from the a posteriori probability distribution taking into account cosmic variance, instrumental noise, and residual foregrounds\cite{Jewell_2004,Eriksen_2004,Wandelt_2004}. 
+For a more efficient method than the one presented previously, Monte Carlo (MC) methods to sample maps of the primordial signal from the a posteriori probability distribution taking into account cosmic variance, instrumental noise, and residual foregrounds were developed\cite{Jewell_2004,Eriksen_2004,Wandelt_2004}. 
 
 Let $d$ be a pixelized temperature map consisting of primordial signal $\mathbf{s}$ and instrumental noise $\mathbf{n}$, both following Gaussian distributions with covariance matrices $\mathbf{S}$ and $\mathbf{N}$ respectively, with a full covariance matrix $\mathbf{C}=\mathbf{S}+\mathbf{N}$. The likelihood for observing such a map, after marginalizing over the unknown signal $\mathbf{s}$, can be calculated using
 
@@ -1004,7 +1010,7 @@ Let $d$ be a pixelized temperature map consisting of primordial signal $\mathbf{
 	\mathcal{L}=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right),
 \end{equation}
 
-\noindent where $n_\text{dim}=N_p^2$. The direct evaluation of this likelihood is not computationally viable due to the calculation of the determinant of $\mathbf{C}$, since $\mathbf{N}$ is typically close to diagonal in pixel space.
+\noindent where $n_\text{dim}=N_p^2$. The direct evaluation of this likelihood is not computationally viable due to the calculation of the determinant of $\mathbf{C}$, a matrix that cannot be represented in diagonal form, since $\mathbf{N}$ is typically close to diagonal in pixel space and $S$ is diagonal in harmonic space.
 
 Using Bayes' theorem, this likelihood can be written as $P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C})$, where $\pi(\mathbf{S})$ is the prior on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. 
 
@@ -1017,18 +1023,18 @@ The calculation $P(\mathbf{C}|\mathbf{d})$ can be done using an MC method called
 \mathbf{C}^{i+1}\leftarrow P(\mathbf{C}|\mathbf{s}^{i+1}, \mathbf{d}).
 \end{equation}
 
-From this sample, one has an estimation of $P(\mathbf{C}, \mathbf{s}|\mathbf{d})$, thus only needing to marginalize over $\mathbf{s}$ to obtain the posterior distribution $P(\mathbf{C}|\mathbf{d})$. To do this marginalization, one can use the so called Blackwell-Rao estimator\cite{Chu_2005}.
+From this sample, one can use the so called Blackwell-Rao estimator to determine an approximation for $P(\mathbf{C}|\mathbf{d})$\cite{Chu_2005}. To construct this estimator, we first expand each element of the vector $\mathbf{s}$ in terms of spherical harmonics:
 
-To construct this estimator, we first expand each element of the vector $\mathbf{s}$ in terms of spherical harmonics:
+%has an estimation of $P(\mathbf{C}, \mathbf{s}|\mathbf{d})$, thus only needing to marginalize over $\mathbf{s}$ to obtain the posterior distribution $P(\mathbf{C}|\mathbf{d})$. To do this marginalization, one can use the so called Blackwell-Rao estimator\cite{Chu_2005}.
 
 \begin{equation}\label{s_harmonics}
-	s(\theta, \phi)=\sum_{\ell=0}^\infty \sum_{m=-\ell}^\ell s_{\ell m}Y_{\ell m}(\theta, \phi),
+	\mathbf{s}(\theta, \phi)=\sum_{\ell=0}^\infty \sum_{m=-\ell}^\ell \mathbf{s}_{\ell m}Y_{\ell m}(\theta, \phi),
 \end{equation}
 
 \noindent and define
 
 \begin{equation}\label{sigma_l}
-	\sigma_\ell=\frac{1}{2\ell+1}\sum_{m=-\ell}^\ell |s_{\ell m}|^2.
+	\sigma_\ell=\frac{1}{2\ell+1}\sum_{m=-\ell}^\ell \mathbf{s}_{\ell m}\mathbf{s}_{\ell m}^{\dagger}.
 \end{equation}
 
 %Next, we note that
@@ -1081,26 +1087,32 @@ It is also assumed that the noise covariance is diagonal: $N=\text{diag}(N_{11}^
 	\end{pmatrix},
 \end{equation}
 
-\noindent since the noises affecting the temperature anisotropies and galaxy contrast are uncorrelated. Also, for the purposes of calculations regarding the cross-correlation, we substitute $|\mathbf{s}_{\ell m}|^2$ for $\mathbf{s}_{\ell m}^t \mathbf{s}_{\ell m}^{g\dagger}$ in equation \eqref{sigma_l}.
+\noindent since the noises affecting the temperature anisotropies and galaxy contrast are uncorrelated. 
 
 \section{Data Sets and Analysis}
 
-In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored.
+In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results,WMAP_data} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored.
 
 \subsection{2MASS Catalog}
 
-From 1997 to 2001, the 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This analysis produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
+From 1997 to 2001, the 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
 
 The $K_s$ band's $20 \text{ mag arcsec}^{-2}$ isophotal circular aperture magnitudes (here simply called $K_{20}$) were corrected for galactic extinction using the reddening maps $E(B-V)$ at $\SI{100}{\mu \meter}$ in \cite{Schlegel_1998}, according to the expression $K_{20} \rightarrow K_{20}'=K_{20}-A_k$, where $A_k=0.367E(B-V)$.
 
-HEALPix was used to produce and analyse the maps with resolution parameter $nside=32$, a mask was applied to every pixel with $A_k>0.05$. This left the catalog at $801,476$ objects with $12<K_{20}'<14$, which were further divided into the four bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$). As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}, the parametrizations for each band is shown in Table \ref{tab:bands_2MASS} and the plots of these selection functions is shown in Figure \ref{fig:2MASS_selections}. Figure ?? shows the final maps produced after this process.
+HEALPix was used to produce and analyse the maps with resolution parameter $nside=32$, a mask was applied to every pixel with $A_k>0.05$. This left the catalog at $801,476$ objects with $12<K_{20}'<14$, which were further divided into the four bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$). 
+
+This catalog is made using photometric measurements, meaning redshift information is not directly obtained with the measurements, but there are techniques to estimate photometric redshifts. In \cite{K20_lum_func} the luminosity function of 4192 2MASS galaxies were used to estimate the luminosity function of the entirety of the $K_s$ band, and then the photometric redshifts of these galaxies. In \cite{2MPZ} the authors trained a neural network and cross-correlated XSC with WISE\cite{WISE} and SuperCOSMOS\cite{SuperCOSMOS} to obtain the photometric redshifts of a big fraction of the sources in XSC, creating what is called the 2MPZ catalog. As shown in \cite{Moura-Santos_2016}, using the 2MPZ catalog over XSC does not yield significant changes in the results, so in this project we maintained the usage of the XSC data.
+
+As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}, the parametrizations for each band is shown in Table \ref{tab:bands_2MASS} and the plots of these selection functions is shown in Figure \ref{fig:2MASS_selections}. Figure ?? shows the final maps produced after this process.
+
+IMAGENS DOS MAPAS COM MÁSCARA
 
 %IMAGENS DOS MAPAS COM MÁSCARA
 
 \subsection{WMAP Data}
 
 WMAP used radiometers and differential microwave receivers to measure the CMB temperature over the entire sky across five frequency bands in the spectral region where the
-CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these 5 frequency bands, we have used in this project the data corresponding to the Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$) bands. Its last data realease, WMAP9, which is the one used in this project, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated and Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$ and $\sigma_0$ for each channel.
+CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these 5 frequency bands, we have used in this project the data corresponding to the Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$) bands, which are the ones suitable for data analysis. Its last data realease, WMAP9, which is the one used in this project, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a parameter present in the data for each channel.
 
 Figure ?? shows the maps used for the analysis with the so called KQ85 mask applied to them.
 
@@ -1186,15 +1198,21 @@ Using the ISW term of equation \eqref{ch2:Thetal_approx}
 	\Theta_\ell^{\text{ISW}}=\int_0^{\eta_0} d\eta \dv{}{\eta}\left[\Psi(k,\eta)-\Phi(k,\eta)\right]j_\ell[k(\eta_0-\eta)],
 \end{equation}
 
-%1. Desprezar o efeito de reionização, já que o ISW é importante em grandes escalas e reionização é importante em escalas l >~ 200.
+Using the definition of $\eta$ in \eqref{def:conformal_time}
 
-%2. Fazer uma mudança de variáveis de tempo conforme para redshift
+\begin{equation}
+	\eta=\int_0^t \frac{dt}{a(t)}=\int_0^a\frac{da'}{a'^2H(a')}=\int_{z}^\infty \frac{dz'}{H(z)}
+\end{equation}
 
-%3. Desprezar o stress anisotrópico em tempos recentes, isso permite escrever que \Psi ~ \Phi at late times
+%1. Desprezar o efeito de reionização, já que o ISW é importante em grandes escalas e reionização é importante em escalas l >~ 200. (X)
 
-%4. Usar a equação de Poisson para relacionar o potencial gravitacional \Phi com o contraste \delta
+%2. Fazer uma mudança de variáveis de tempo conforme para redshift ()
 
-%5. Usar a definição de função de crescimento.
+%3. Desprezar o stress anisotrópico em tempos recentes, isso permite escrever que \Psi ~ \Phi at late times ()
+
+%4. Usar a equação de Poisson para relacionar o potencial gravitacional \Phi com o contraste \delta ()
+
+%5. Usar a definição de função de crescimento. ()
 
 \end{spacing}
 \endgroup

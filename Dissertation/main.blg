@@ -1,26 +1,26 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[1] Config.pm:310> INFO - Logfile is 'main.blg'
-[138] biber:340> INFO - === Mon May 13, 2024, 16:11:14
-[159] Biber.pm:418> INFO - Reading 'main.bcf'
-[293] Biber.pm:972> INFO - Found 67 citekeys in bib section 0
-[315] Biber.pm:4383> INFO - Processing section 0
-[331] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[338] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1418] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[4695] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4695] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4695] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[4695] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[4874] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[5535] bbl.pm:757> INFO - Output to main.bbl
-[5535] Biber.pm:130> WARN - legacy month field 'Jan' in entry 'Weinberg_Lambda_1989' is not an integer - this will probably not sort properly.
-[5535] Biber.pm:130> WARN - legacy month field 'mar' in entry 'Hivon_2002' is not an integer - this will probably not sort properly.
-[5535] Biber.pm:130> WARN - legacy month field 'jul' in entry 'Jewell_2004' is not an integer - this will probably not sort properly.
-[5535] Biber.pm:130> WARN - legacy month field 'dec' in entry 'Eriksen_2004' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:130> WARN - legacy month field 'Oct' in entry 'Wandelt_2004' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:130> WARN - legacy month field 'May' in entry 'Chu_2005' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:130> WARN - legacy month field 'feb' in entry 'Larson_2007' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:130> WARN - legacy month field 'feb' in entry '2MASS' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:130> WARN - legacy month field 'jun' in entry 'Schlegel_1998' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:130> WARN - legacy month field 'sep' in entry 'WMAP_data' is not an integer - this will probably not sort properly.
-[5536] Biber.pm:132> INFO - WARNINGS: 10
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[142] biber:340> INFO - === Tue May 14, 2024, 16:00:14
+[163] Biber.pm:418> INFO - Reading 'main.bcf'
+[299] Biber.pm:972> INFO - Found 71 citekeys in bib section 0
+[323] Biber.pm:4383> INFO - Processing section 0
+[339] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[346] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1308] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[5272] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[5272] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[5272] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[5272] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[5465] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[6145] bbl.pm:757> INFO - Output to main.bbl
+[6145] Biber.pm:130> WARN - legacy month field 'Jan' in entry 'Weinberg_Lambda_1989' is not an integer - this will probably not sort properly.
+[6145] Biber.pm:130> WARN - legacy month field 'mar' in entry 'Hivon_2002' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'jul' in entry 'Jewell_2004' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'dec' in entry 'Eriksen_2004' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'Oct' in entry 'Wandelt_2004' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'May' in entry 'Chu_2005' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'feb' in entry 'Larson_2007' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'sep' in entry 'WMAP_data' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'feb' in entry '2MASS' is not an integer - this will probably not sort properly.
+[6146] Biber.pm:130> WARN - legacy month field 'jun' in entry 'Schlegel_1998' is not an integer - this will probably not sort properly.
+[6147] Biber.pm:132> INFO - WARNINGS: 10
