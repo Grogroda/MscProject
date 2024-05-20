@@ -24,6 +24,10 @@
 \contentsline {section}{\numberline {4.3}Data Sets and Analysis}{37}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}2MASS Catalog}{37}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}WMAP Data}{38}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Results}{40}{chapter.5}%
+\contentsline {section}{\numberline {4.4}Correlation Spectra Obtained}{39}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Cosmological Constraints}{40}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Monte Carlo Markov Chains}{40}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Likelihood Profiling}{40}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Results}{40}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Conclusions}{41}{chapter.6}%
 \contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{43}{appendix.A}%

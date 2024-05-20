@@ -1118,21 +1118,35 @@ Figure ?? shows the maps used for the analysis with the so called KQ85 mask appl
 
 IMAGENS DOS MAPAS WMAP
 
-\chapter{Results}\label{chapter:Results}
+\section{Correlation Spectra Obtained}
+
+It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. 
+
+To estimate the systematic uncertainties in the final spectrum obtained from the maps coming from the Gibbs sampling algorithm, PERGUNTAR PRO EDIVALDO COMO FOI FEITA ESSA ESTIMATIVA, NÃO ENTENDI 
+
+This procedure has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided in order to perform the analysis on cosmological constraints. Figure ?? shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels, alongside cosmic variance bands.
+
+IMAGEM TIPO A FIGURA 15 DO ARTIGO
+
+Figure ?? clearly shows that cosmic variance strongly dominates the signal at low multipoles, the region that is most influenced by the ISW effect, though it is important to highlight that the blue bands cannot be taken as the full systematic uncertainties, since only a few contributions to it have been investigated.
+
+\chapter{Cosmological Constraints}\label{chapter:constraints}
+
+With the data points and theoretical spectra shown in Figure ??, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the cosmological constraints of multiple cosmological parameters, but eventually we decided to calculate the likelihood profile for $\Omega_m$, where $m$ indicates the matter content in the universe (see equation \eqref{eq:Omega_def}), allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
+
+\section{Monte Carlo Markov Chains}
+
+EXPLAIN THE IDEA OF POSSIBLY USING MCMC FOR MULTIPLE PARAMETER CONSTRAINTS AND WHY IT BECAME UNVIABLE
+
+\section{Likelihood Profiling}
+
+EXPLAIN WHAT I ACTUALLY DID 
+
+\section{Results}
+
+RESULTS
 
 \chapter{Conclusions}
-
-Artigo do Edivaldo: \cite{Moura-Santos_2016}
-
-ISW artigo original: \cite{Sachs:1967er}
-
-The GNU parallel software was used: \cite{GNU-parallel}
-
-%Parametrização da função de seleção: \cite{PhysRevD.69.083524}
-
-Cobaya: \cite{CobayaASCL, Cobaya_preprint}
-
-Gibbs Sampling: \cite{Gibbs_sampling}
 
 \appendix
 
