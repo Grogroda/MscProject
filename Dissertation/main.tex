@@ -354,11 +354,11 @@ Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these en
 \centering
     \begin{tabular}{cccc} \hline
      Component & $\rho(a)$ & $w$ & $\Omega$ \\ \hline
-     Baryonic matter & $\rho_0a^{-3}$ & $0$ & $0.05$\\
-     Cold dark matter & $\rho_0a^{-3}$ & $0$ & $0.26$ \\
-     Radiation & $\rho_0a^{-4}$ & $\frac{1}{3}$ & $5.29\times 10^{-5}$\\
-     Dark energy & $\rho_0$ & $-1$ & $0.68$\\
-     Curvature & $\rho_0 a^{-2}$ & $-\frac{1}{3}$ & $0.001$\\ \hline
+     Baryonic matter ($\Omega_b$) & $\rho_0a^{-3}$ & $0$ & $0.05$\\
+     Cold dark matter ($\Omega_c$) & $\rho_0a^{-3}$ & $0$ & $0.26$ \\
+     Radiation ($\Omega_r$) & $\rho_0a^{-4}$ & $\frac{1}{3}$ & $5.29\times 10^{-5}$\\
+     Dark energy ($\Omega_\Lambda$) & $\rho_0$ & $-1$ & $0.68$\\
+     Curvature ($\Omega_k$) & $\rho_0 a^{-2}$ & $-\frac{1}{3}$ & $0.001$\\ \hline
     \end{tabular}
     \caption{Equation of state parameters $w$, energy density functions $\rho(a)$ and energy density fractions for each known component of the Universe according to the $\Lambda$CDM model. Most data were adapted from Planck\cite{Planck_results}, the radiation data was calculated based on \cite{lahav2014cosmological}.}
     \label{tab:rhos&Omegas}
@@ -578,6 +578,28 @@ The temperature autocorrelation defined in equation \eqref{def:autocorrelation} 
     \caption{Planck 2018 CMB temperature power spectrum: the blue line corresponds to a $\Lambda$CDM cosmology best-fit to the data points in orange. For $\ell<30$ a logarithmic scale was used and the data points correspond to the $D_\ell^{TT}$ for each value of $\ell$, while for $\ell\ge 30$ a linear scale was used and the data points correspond to binned values for the data for $D_{\ell}^{TT}$. The error bars show $\pm 1\sigma$ uncertainties, including cosmic variance. Extracted from \cite{Planck_results}.}
     \label{fig:Planck_spectrum}
 \end{figure} 
+
+Reference \cite{Planck_results} also provides a table with the best fit values for cosmological parameters obtained by analysing the data shown in Figure \ref{fig:Planck_spectrum}, the values are shown in Table ?? and are the values that have been used in this project for the fiducial $\Lambda$CDM model. 
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{cc} \hline
+     Parameter & Best fit \\ \hline
+     $\Omega_b h^2$ & $-0.957\pm0.080$\\
+     $\Omega_c h^2$ & $-0.29\substack{+0.32 \\ -0.26}$\\
+     $100\Theta_{MC}$ & $68.31\pm0.82$ \\
+     $\tau$ & $0.820\pm 0.011$\\ 
+     $\ln{(10^{10}A_s)}$ & -1.4 \\ 
+     $n_s$ & 0 \\ \hline
+     $\Omega_m$ & 0 \\
+     $H_0$ & 0 \\
+     $\sigma_8$ & 0 \\ \hline
+    \end{tabular}
+    \caption{EXPLANATION OF THE VALUES. Here $\Omega_m=\Omega_c+\Omega_b$ is the matter energy density, $h=H_0/(100\text{ km/s/Mpc})$ is the reduced Hubble constant, $\sigma_8$ is ...}
+    \label{tab:planck_CPL}
+\end{table}
+
+COMPLETAR A TABELA
 
 \subsection{Analytical Approximation}
 
@@ -1120,27 +1142,30 @@ IMAGENS DOS MAPAS WMAP
 
 \section{Correlation Spectra Obtained}
 
-It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. 
+It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. A study of the systematic errors was also made in the same reference.
 
-To estimate the systematic uncertainties in the final spectrum obtained from the maps coming from the Gibbs sampling algorithm, PERGUNTAR PRO EDIVALDO COMO FOI FEITA ESSA ESTIMATIVA, NÃO ENTENDI 
+This procedure has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided in order to perform the analysis on cosmological constraints. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels, alongside cosmic variance bands.
 
-This procedure has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided in order to perform the analysis on cosmological constraints. Figure ?? shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels, alongside cosmic variance bands.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\linewidth]{Imagens/Full_Data_Plot.png}
+	\caption{My caption}
+	\label{fig:correlation_data_final_plots}
+\end{figure}
 
-IMAGEM TIPO A FIGURA 15 DO ARTIGO
-
-Figure ?? clearly shows that cosmic variance strongly dominates the signal at low multipoles, the region that is most influenced by the ISW effect, though it is important to highlight that the blue bands cannot be taken as the full systematic uncertainties, since only a few contributions to it have been investigated.
+Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance strongly dominates the signal at low multipoles, the region that is most influenced by the ISW effect, though it is important to highlight that the blue bands cannot be taken as the full systematic uncertainties, since only a few contributions to it have been investigated.
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
-With the data points and theoretical spectra shown in Figure ??, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the cosmological constraints of multiple cosmological parameters, but I was not able to implement out theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, where $m$ indicates the matter content in the universe (see equation \eqref{eq:Omega_def} and Table \ref{tab:rhos&Omegas}), allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
+With the data points and theoretical spectra shown in Figure ??, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the cosmological constraints of multiple cosmological parameters, but I was not able to implement out theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
 
-\section{Monte Carlo Markov Chains}
+%\section{Monte Carlo Markov Chains}
 
-EXPLAIN THE IDEA OF POSSIBLY USING MCMC FOR MULTIPLE PARAMETER CONSTRAINTS AND WHY IT BECAME UNVIABLE
+%EXPLAIN THE IDEA OF POSSIBLY USING MCMC FOR MULTIPLE PARAMETER CONSTRAINTS AND WHY IT BECAME UNVIABLE
 
 \section{Likelihood Profiling}
 
-EXPLAIN WHAT I ACTUALLY DID 
+EXPLAIN WHAT I DID 
 
 \section{Results}
 
