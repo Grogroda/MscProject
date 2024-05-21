@@ -6862,34 +6862,6 @@
       \endverb
       \keyw{astronomical data bases: miscellaneous,catalogues,surveys,stars: general,galaxies: general,cosmology: observations,Astrophysics}
     \endentry
-    \entry{GNU-parallel}{article}{}
-      \name{author}{1}{}{%
-        {{hash=9f147229ed6b13fc6dbf05bfae29611b}{%
-           family={Tange},
-           familyi={T\bibinitperiod},
-           given={O.},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{9f147229ed6b13fc6dbf05bfae29611b}
-      \strng{fullhash}{9f147229ed6b13fc6dbf05bfae29611b}
-      \strng{bibnamehash}{9f147229ed6b13fc6dbf05bfae29611b}
-      \strng{authorbibnamehash}{9f147229ed6b13fc6dbf05bfae29611b}
-      \strng{authornamehash}{9f147229ed6b13fc6dbf05bfae29611b}
-      \strng{authorfullhash}{9f147229ed6b13fc6dbf05bfae29611b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{title}{GNU Parallel 2018}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://doi.org/10.5281/zenodo.1146014
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.5281/zenodo.1146014
-      \endverb
-    \endentry
     \entry{CobayaASCL}{misc}{}
       \name{author}{2}{}{%
         {{hash=bdc5441492358f62f7eec6bb0ba2468a}{%
@@ -6970,51 +6942,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1088%5C%2F1475-7516%5C%2F2021%5C%2F05%5C%2F057
-      \endverb
-    \endentry
-    \entry{Gibbs_sampling}{article}{}
-      \name{author}{2}{}{%
-        {{hash=c7abc90e14f2761d9325ee092fda0de7}{%
-           family={Casella},
-           familyi={C\bibinitperiod},
-           given={George},
-           giveni={G\bibinitperiod}}}%
-        {{hash=9aef0eb8a8f52665ab3b4fbad41f63d4}{%
-           family={George},
-           familyi={G\bibinitperiod},
-           given={Edward\bibnamedelima I.},
-           giveni={E\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {[American Statistical Association, Taylor & Francis, Ltd.]}%
-      }
-      \strng{namehash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \strng{fullhash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \strng{bibnamehash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \strng{authorbibnamehash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \strng{authornamehash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \strng{authorfullhash}{ea9e9d52806ff59457cc724db96e5b3f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{00031305}
-      \field{journaltitle}{The American Statistician}
-      \field{number}{3}
-      \field{title}{Explaining the Gibbs Sampler}
-      \field{urlday}{7}
-      \field{urlmonth}{8}
-      \field{urlyear}{2023}
-      \field{volume}{46}
-      \field{year}{1992}
-      \field{urldateera}{ce}
-      \field{pages}{167\bibrangedash 174}
-      \range{pages}{8}
-      \verb{urlraw}
-      \verb http://www.jstor.org/stable/2685208
-      \endverb
-      \verb{url}
-      \verb http://www.jstor.org/stable/2685208
       \endverb
     \endentry
   \enddatalist
