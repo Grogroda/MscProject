@@ -2,9 +2,16 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
+LCDM_correlations=pd.read_csv('../../theoretical/tables/final_table.dat', sep=' ', header=None, names=['ls', 'ctt', 'cgg', 'ctg'])
+ls_theo=LCDM_correlations['ls']
+ctt_theo=LCDM_correlations['ctt']
+cgg_theo=LCDM_correlations['cgg']
+ctg_theo=LCDM_correlations['ctg']
+
+Dtt_theo=[ls_theo[i]*(ls_theo[i]+1)*ctt_theo[i]/(2*np.pi) for i in range(len(ls_theo))]
+
 #dict={n_band:{col_name:[values], ...}, ...}
 band_dict={}
-
 arr_names=['ls', 'Dtt', 'err_Dtt', 'Cgg', 'err_Cgg', 'Ctg', 'err_Ctg']
 
 band=1
@@ -26,6 +33,7 @@ while band<=4:
     print("Starting band {}".format(band))
     #Dtt plot for each band:
     axs[band-1,0].errorbar(band_dict[band]['ls'], band_dict[band]['Dtt'], yerr=band_dict[band]['err_Dtt'], label="Best-fit+total error", fmt='ko')
+    #axs[band-1,0].plot(ls_theo[2:], Dtt_theo[2:], label=r'$\Lamda$CDM fiducial spectrum')
     axs[band-1,0].set_ylabel(r'$(\ell+1)\ell/2\pi C_\ell^{tt}$ $[\mu K^2]$', fontsize=20)
     axs[band-1,0].set_xlabel(r'$\ell$', fontsize=20)
     axs[band-1,0].set_xscale('log')
@@ -35,6 +43,7 @@ while band<=4:
 
     #Cgg plot for each band:
     axs[band-1,1].errorbar(band_dict[band]['ls'], band_dict[band]['Cgg'], yerr=band_dict[band]['err_Cgg'], fmt='ko')
+    #axs[band-1,1].plot(ls_theo[2:], cgg_theo[2:]) 
     axs[band-1,1].set_xlabel(r'$\ell$', fontsize=20)
     axs[band-1,1].set_ylabel(r'$C_\ell^{gg}$', fontsize=20)
     axs[band-1,1].set_ylim(1e-4, 1e-1)
@@ -44,6 +53,7 @@ while band<=4:
 
     #Ctg plot for each band:
     axs[band-1,2].errorbar(band_dict[band]['ls'], band_dict[band]['Ctg'], yerr=band_dict[band]['err_Ctg'], fmt='ko')
+    #axs[band-1,2].plot(ls_theo[2:], ctg_theo[2:])
     axs[band-1,2].set_xlabel(r'$\ell$', fontsize=20)
     axs[band-1,2].set_ylabel(r'$C_\ell^{tg}$ $[\mu K]$', fontsize=20)
     axs[band-1,2].set_ylim(-0.8, 0.8)

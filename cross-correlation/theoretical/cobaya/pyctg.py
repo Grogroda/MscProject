@@ -34,8 +34,6 @@ def cgg_MP(args):
 
     return cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
 
-lmax = 51 
-
 As=1e-10*np.e**(3.044)
 params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
         'As': As, 'ns':0.9649}
@@ -78,7 +76,7 @@ band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, 'bg':1.32},
        'min':{'z0':0.1508,'beta':3.088,'lambda':4.9401, 'bg':1}} 
 #bg for lmax=50
 
-def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000): #band is an optional argument. Default band=1
+def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51): #band is an optional argument. Default band=1
 
     print("[pyctg.py] Inside ctg4py")
     
@@ -145,7 +143,7 @@ def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000): #band is an optional argument
     return ls, ctg
     
 
-def cgg4py(OmegaM, band=1, nmp=1, ncalls=1000000):
+def cgg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51):
 
     print("[pyctg.py] Inside ctg4py")
 
@@ -199,6 +197,7 @@ if __name__=='__main__':
     parser.add_argument('-b', '--band')
     parser.add_argument('-n','--nprocess')
     parser.add_argument('-N', '--ncalls')
+    parser.add_argument('-l', '--lmax')
     args=parser.parse_args()
 
     if args.band!=None:
@@ -213,14 +212,18 @@ if __name__=='__main__':
     if args.ncalls!=None:
         ncalls=int(args.ncalls)
         print('ncalls=', ncalls)
+    if args.ncalls!=None:
+        lmax=int(args.lmax)
+        print('lmax=', lmax)
 
     OmegaM=(0.02237+0.12)/(0.67**2)
     print("OmegaM=", OmegaM)
 
-    ls, ctg=ctg4py(OmegaM, band=band, nmp=n, ncalls=ncalls)
+    ls, ctg=ctg4py(OmegaM, band=band, nmp=n, ncalls=ncalls, lmax=lmax)
+    ls, cgg=cgg4py(OmegaM, band=band, nmp=n, ncalls=ncalls, lmax=lmax)
 
-    tab=pd.DataFrame({'ls':ls, 'ctg':ctg})
-    tab.to_csv('ctg_band{0}.dat'.format(band), sep=' ', header=None)
+    tab=pd.DataFrame({'ls':ls, 'ctg':ctg, 'cgg':cgg})
+    tab.to_csv('ctg_cgg_band{0}.dat'.format(band), sep=' ', header=None)
     
     '''
     ti=time.time()
