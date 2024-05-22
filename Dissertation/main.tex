@@ -579,27 +579,28 @@ The temperature autocorrelation defined in equation \eqref{def:autocorrelation} 
     \label{fig:Planck_spectrum}
 \end{figure} 
 
-Reference \cite{Planck_results} also provides a table with the best fit values for cosmological parameters obtained by analysing the data shown in Figure \ref{fig:Planck_spectrum}, the values are shown in Table ?? and are the values that have been used in this project for the fiducial $\Lambda$CDM model. 
+Reference \cite{Planck_results} also provides a table with the best fit values for cosmological parameters obtained by analysing the data shown in Figure \ref{fig:Planck_spectrum}, the values are shown in Table \ref{tab:planck_parameters}, except for the energy densities already shown in Table \ref{tab:rhos&Omegas}.  
 
 \begin{table}[!htb]
     \centering
     \begin{tabular}{cc} \hline
      Parameter & Best fit \\ \hline
-     $\Omega_b h^2$ & $-0.957\pm0.080$\\
-     $\Omega_c h^2$ & $-0.29\substack{+0.32 \\ -0.26}$\\
-     $100\Theta_{MC}$ & $68.31\pm0.82$ \\
-     $\tau$ & $0.820\pm 0.011$\\ 
-     $\ln{(10^{10}A_s)}$ & -1.4 \\ 
-     $n_s$ & 0 \\ \hline
-     $\Omega_m$ & 0 \\
-     $H_0$ & 0 \\
-     $\sigma_8$ & 0 \\ \hline
+     $\Omega_b h^2$ & $0.02237$\\
+     $\Omega_c h^2$ & $0.1200$\\
+     $100\Theta_{MC}$ & $1.04092$ \\
+     $\tau$ & $0.0544$\\ 
+     $\ln{(10^{10}A_s)}$ & $3.044$ \\ 
+     $n_s$ & $0.9649$ \\ \hline
+     %$\Omega_k$ & $0.0$ \\ \hline
+     $\Omega_m$ & $0.3135$ \\
+     $H_0$ & $67.36$ km/s/Mpc \\
+     $\sigma_8$ & $0.8111$ \\ \hline
     \end{tabular}
-    \caption{EXPLANATION OF THE VALUES. Here $\Omega_m=\Omega_c+\Omega_b$ is the matter energy density, $h=H_0/(100\text{ km/s/Mpc})$ is the reduced Hubble constant, $\sigma_8$ is ...}
-    \label{tab:planck_CPL}
+    \caption{Best fit values of cosmological parameters reported by the Planck collaboration using a combined likelihood with temperature and polarization spectra and lensing data. Here $h=H_0/(100\text{ km/s/Mpc})$ is the reduced Hubble constant, $\Theta_{MC}$ is the angular scale of the sound horizon at the surface of last scattering, $A_s$ is the amplitude of the primordial scalar perturbations, $n_s$ is the spectral index of the primordial scale perturbations, $\Omega_m=\Omega_c+\Omega_b$ is the matter energy density and $\sigma_8$ measures the amplitude of density fluctuations at the scale of $8h^{-1}$ Mpc. The first 4 parameters, alongside  are used for solving the perturbation equations with CAMB and the last 3 are derived from the solution.}
+    \label{tab:planck_parameters}
 \end{table}
 
-COMPLETAR A TABELA
+The best fit values shown in Tables \ref{tab:rhos&Omegas} and \ref{tab:planck_parameters} are the values that have been used in this project for the fiducial $\Lambda$CDM model.
 
 \subsection{Analytical Approximation}
 
@@ -652,7 +653,7 @@ While the CMB is usually described as a two dimensional map measured around the 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=.75\linewidth]{Imagens/Pk_3dmatter_LCDM.png}
-    \caption{Matter power spectrum calculated as a function of $k/h$, where $h=H_0/(100\text{ km/s/Mpc})$, using the HALOFIT model with cosmological parameters according to Planck's best fit results\cite{Planck_results}.}
+    \caption{Matter power spectrum calculated as a function of $k/h$, where $h$ is the already defined reduced Hubble constant, using the HALOFIT model with cosmological parameters according to our fiducial $\Lambda$CDM model.}
     \label{fig:matter_PS}
 \end{figure}
 
@@ -792,12 +793,9 @@ Figure \ref{fig:Dark_energy_tests} shows the influence of different parameter va
 		\label{fig:dark_energy_cs2=1}
 	\end{subfigure}
 }
-\caption{The solid lines in the plots correspond to theoretical predictions for the CMB temperature autocorrelation spectra corresponding to different parameter values of the dark energy equation of state, the black data points correspond to Planck's data\cite{Planck_results}. Figures \ref{fig:dark_energy_wa=0.33}, \ref{fig:dark_energy_wa=0.67} and \ref{fig:dark_energy_wa=1} show how the spectrum changes for a constant value of $w_a$ shown on the top left of the axis and varying speeds of sound, while the other three figures show how the curve behaves with varying values of $w_a$ and a constant speed of sound. All theoretical calculations were done using CAMB.}
+\caption{The solid lines in the plots correspond to theoretical predictions for the CMB temperature autocorrelation spectra corresponding to different parameter values of the dark energy equation of state with $w_0=-1$, the black data points correspond to Planck's data\cite{Planck_results}. Figures \ref{fig:dark_energy_wa=0.33}, \ref{fig:dark_energy_wa=0.67} and \ref{fig:dark_energy_wa=1} show how the spectrum changes for a constant value of $w_a$ shown on the top left of the axis and varying speeds of sound, while the other three figures show how the curve behaves with varying values of $w_a$ and a constant speed of sound. All theoretical calculations were done using CAMB.}
 \label{fig:Dark_energy_tests}
-	
 \end{figure}
-
-%IF THERE IS TIME, STUDY THE INFLUENCE OF DARK ENERGY IN THE OTHER SPECTRA
 
 \chapter{Optimizing the Selection Function}\label{chapter:select_func_optimal}
 
@@ -1142,18 +1140,24 @@ IMAGENS DOS MAPAS WMAP
 
 \section{Correlation Spectra Obtained}
 
-It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. A study of the systematic errors was also made in the same reference.
+It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. A study of the systematic errors was also made in the same reference. 
 
-This procedure has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided in order to perform the analysis on cosmological constraints. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels, alongside cosmic variance bands.
+For a masked map, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, aside from that one can simply multiply that result by the $\ell(\ell+1)/2\pi$ term that we are using to represent the spectra (or not in the spectra that don't use this term), obtaining the following equation for the cosmic variance affecting $D_\ell^{tt}$ of the given data\cite{wmap_supplement}: 
+
+\begin{equation}\label{data_cosmic_variance}
+	\sigma_{CV}=\frac{\ell(\ell+1)}{2\pi}\frac{C_\ell^{tt}}{f_{\text{sky},\ell}}\sqrt{\frac{2}{2\ell+1}}
+\end{equation}
+
+The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels' data, alongside cosmic variance bands.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\linewidth]{Imagens/Full_Data_Plot.png}
-	\caption{My caption}
+	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The (color) band corresponds to the cosmic variance, calculated using equation \eqref{data_cosmic_variance}.}
 	\label{fig:correlation_data_final_plots}
 \end{figure}
 
-Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance strongly dominates the signal at low multipoles, the region that is most influenced by the ISW effect, though it is important to highlight that the blue bands cannot be taken as the full systematic uncertainties, since only a few contributions to it have been investigated.
+Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance strongly dominates the signal at low multipoles, the region that is most influenced by the ISW effect.
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 

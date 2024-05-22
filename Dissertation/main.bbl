@@ -1767,8 +1767,8 @@
       \strng{authorbibnamehash}{53f244e4637ad4195691332a873462b9}
       \strng{authornamehash}{53f244e4637ad4195691332a873462b9}
       \strng{authorfullhash}{53f244e4637ad4195691332a873462b9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{astro-ph}
@@ -2102,8 +2102,8 @@
       \strng{authorbibnamehash}{d8eeffef32dbf31b3ae225290a3acbb6}
       \strng{authornamehash}{d8eeffef32dbf31b3ae225290a3acbb6}
       \strng{authorfullhash}{d8eeffef32dbf31b3ae225290a3acbb6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780128159484}
@@ -3240,8 +3240,8 @@
       \strng{authorbibnamehash}{1d9ee49f1da3fb12791f203960214672}
       \strng{authornamehash}{1d9ee49f1da3fb12791f203960214672}
       \strng{authorfullhash}{bf2fb5c4b72568630705450c579930b3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ApJ}
@@ -4234,8 +4234,8 @@
       \strng{authorbibnamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authornamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authorfullhash}{5123506542509cdec9b3cb16dcfe07b9}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-8711}
@@ -4382,8 +4382,8 @@
       \strng{authorbibnamehash}{42dc1c3413419702284c47ae89fcb0ec}
       \strng{authornamehash}{42dc1c3413419702284c47ae89fcb0ec}
       \strng{authorfullhash}{b6dca0929e5cf5cb1c87695d0c8293ef}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{6}
@@ -4438,8 +4438,8 @@
       \strng{authorbibnamehash}{df0a96c23f25f10f6b59874b079516f6}
       \strng{authornamehash}{df0a96c23f25f10f6b59874b079516f6}
       \strng{authorfullhash}{9368bb5d5c9472741d41eaf7a1d907d4}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
@@ -5579,8 +5579,8 @@
       \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
       \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
@@ -5651,8 +5651,8 @@
       \list{organization}{1}{%
         {GNU Project}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
       \field{title}{GNU Scientific Library Reference Manual}
@@ -5702,8 +5702,8 @@
       \strng{authorbibnamehash}{366e30ce7caf68813d1f59c72414828a}
       \strng{authornamehash}{366e30ce7caf68813d1f59c72414828a}
       \strng{authorfullhash}{cfaf1a4be3b8dfd6047b7bf06bd37377}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Astrophysical Journal}
@@ -6384,8 +6384,8 @@
       \strng{authorbibnamehash}{b3d24d467b7f0139aae48d3d0d69b249}
       \strng{authornamehash}{b3d24d467b7f0139aae48d3d0d69b249}
       \strng{authorfullhash}{b3d24d467b7f0139aae48d3d0d69b249}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Astrophysical Journal}
@@ -6460,8 +6460,8 @@
       \strng{authorbibnamehash}{7e53c72f1880c9abe55c4f4616cff5d0}
       \strng{authornamehash}{7e53c72f1880c9abe55c4f4616cff5d0}
       \strng{authorfullhash}{8f1d7c704a6ea02af33bbfc7f49d7be6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{astro-ph}
@@ -6516,8 +6516,8 @@
       \strng{authorbibnamehash}{ca499ed06cd026672b99fc36402c86a2}
       \strng{authornamehash}{ca499ed06cd026672b99fc36402c86a2}
       \strng{authorfullhash}{6ab232922743c71cd2109be218bd6d28}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{9}
@@ -6861,6 +6861,49 @@
       \verb astro-ph/0108286
       \endverb
       \keyw{astronomical data bases: miscellaneous,catalogues,surveys,stars: general,galaxies: general,cosmology: observations,Astrophysics}
+    \endentry
+    \entry{wmap_supplement}{manual}{}
+      \name{author}{4}{}{%
+        {{hash=e6299e98be55bb66c071abbf8f55f638}{%
+           family={Greason},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2727116d6c77e614b841e503ad97ac29}{%
+           family={Limon},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c408c007d5dd9d1efce49e23ab902045}{%
+           family={Wollack},
+           familyi={W\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Greenbelt, MD}%
+      }
+      \list{organization}{1}{%
+        {NASA/GSFC}%
+      }
+      \strng{namehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{fullhash}{83140db96dc8f62463955adf1a954786}
+      \strng{bibnamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{authorbibnamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{authornamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{authorfullhash}{83140db96dc8f62463955adf1a954786}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Available in electronic form at \url{http://lambda.gsfc.nasa.gov/}}
+      \field{title}{{Wilkinson Microwave Anisotropy Probe (WMAP): Nine-Year Explanatory Supplement}}
+      \field{year}{2012}
     \endentry
     \entry{CobayaASCL}{misc}{}
       \name{author}{2}{}{%

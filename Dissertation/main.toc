@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.2.2}The Boltzmann Equation}{13}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}The Cosmic Microwave Background}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}CMB Autocorrelation Spectrum}{16}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Analytical Approximation}{19}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Analytical Approximation}{18}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}The Integrated Sachs Wolfe Effect}{20}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}The Matter Power Spectrum}{20}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}The Galaxy-CMB Correlation Spectra}{21}{subsection.2.4.2}%
