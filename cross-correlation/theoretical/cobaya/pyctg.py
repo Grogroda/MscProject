@@ -69,12 +69,11 @@ plt.ylabel(r"$P(k/h) [h^{-3} Mpc^3]$")
 '''
 
 #dictionary containing the parametrization for each band of the 2MASS catalog
-band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, 'bg':1.32}, 
-	   2:{'z0':0.054,'beta':1.800,'lambda':1.600, 'bg':1.34}, 
-	   3:{'z0':0.067,'beta':1.765,'lambda':1.636, 'bg':1.29}, 
-	   4:{'z0':0.084,'beta':1.723,'lambda':1.684, 'bg':1.28},
-       'min':{'z0':0.1508,'beta':3.088,'lambda':4.9401, 'bg':1}} 
-#bg for lmax=50
+band_pars={1:{'z0':0.043,'beta':1.825,'lambda':1.524, 'bg50':1.32, 'bg96':1.37}, 
+	   2:{'z0':0.054,'beta':1.800,'lambda':1.600, 'bg50':1.34, 'bg96':1.35}, 
+	   3:{'z0':0.067,'beta':1.765,'lambda':1.636, 'bg50':1.29, 'bg96':1.34}, 
+	   4:{'z0':0.084,'beta':1.723,'lambda':1.684, 'bg50':1.28, 'bg96':1.29},
+       'min':{'z0':0.1508,'beta':3.088,'lambda':4.9401, 'bg50':1, 'bg96':1}} 
 
 def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51): #band is an optional argument. Default band=1
 
@@ -118,7 +117,10 @@ def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51): #band is an optional
     z0 = band_pars[band]['z0']
     beta = band_pars[band]['beta']
     lbda = band_pars[band]['lambda']
-    bg = band_pars[band]['bg']
+    if lmax>76:
+        bg = band_pars[band]['bg96']
+    else:
+        bg = band_pars[band]['bg50']
     print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
     mode = 1
     #ncalls = function variable
@@ -170,7 +172,10 @@ def cgg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51):
     z0 = band_pars[band]['z0']
     beta = band_pars[band]['beta']
     lbda = band_pars[band]['lambda']
-    bg = band_pars[band]['bg']
+    if lmax>76:
+        bg = band_pars[band]['bg96']
+    else:
+        bg = band_pars[band]['bg50']
     print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
     mode = 1
     #ncalls = Function variable 
@@ -243,7 +248,6 @@ if __name__=='__main__':
     print('For n={0}, run time={1}'.format(n, tf-ti))
     '''
 
-    '''
     matplotlib.rcParams.update({'font.size': 15})
 
     plt.figure()
@@ -279,4 +283,3 @@ if __name__=='__main__':
     plt.xscale('log')
 
     plt.savefig("Correlations_DoublePlot.png")
-    '''
