@@ -41,19 +41,22 @@ while band<=4:
     #Dtt plot for each band:
     axs[band-1,0].errorbar(band_dict[band]['ls'], band_dict[band]['Dtt'], yerr=band_dict[band]['err_Dtt'], label="Best-fit+total error", fmt='ko')
     axs[band-1,0].plot(ls_ctt, Dtt_theo, label=r'$\Lambda$CDM fiducial spectrum')
-    axs[band-1,0].set_ylabel(r'$(\ell+1)\ell/2\pi C_\ell^{tt}$ $[\mu K^2]$', fontsize=20)
-    axs[band-1,0].set_xlabel(r'$\ell$', fontsize=20)
+    axs[band-1,0].set_ylabel(r'$(\ell+1)\ell/2\pi C_\ell^{tt}$ $[\mu K^2]$', fontsize=22)
+    if band==4:#xlabel only in bottom plots
+        axs[band-1,0].set_xlabel(r'$\ell$', fontsize=25)
     axs[band-1,0].set_xscale('log')
     axs[band-1,0].set_xlim(1.8, 90)
     axs[band-1,0].set_ylim(0, 4000)
-    axs[band-1,0].legend()
+    if band==1:#legend only in the top-left plot 
+        axs[band-1,0].legend()
     print("Ctt finished")
 
     #Cgg plot for each band:
     axs[band-1,1].errorbar(band_dict[band]['ls'], band_dict[band]['Cgg'], yerr=band_dict[band]['err_Cgg'], fmt='ko')
     axs[band-1,1].plot(theo_dict[band]['ls'], theo_dict[band]['cgg']) 
-    axs[band-1,1].set_xlabel(r'$\ell$', fontsize=20)
-    axs[band-1,1].set_ylabel(r'$C_\ell^{gg}$', fontsize=20)
+    if band==4:
+        axs[band-1,1].set_xlabel(r'$\ell$', fontsize=25)
+    axs[band-1,1].set_ylabel(r'$C_\ell^{gg}$', fontsize=22)
     axs[band-1,1].set_xlim(1.8, 90)
     axs[band-1,1].set_ylim(5e-5, 3e-2)
     axs[band-1,1].set_xscale('log')
@@ -63,12 +66,13 @@ while band<=4:
     #Ctg plot for each band:
     axs[band-1,2].errorbar(band_dict[band]['ls'], band_dict[band]['Ctg'], yerr=band_dict[band]['err_Ctg'], fmt='ko')
     axs[band-1,2].plot(theo_dict[band]['ls'], theo_dict[band]['ctg']) 
-    axs[band-1,2].set_xlabel(r'$\ell$', fontsize=20)
-    axs[band-1,2].set_ylabel(r'$C_\ell^{tg}$ $[\mu K]$', fontsize=20)
+    if band==4:
+        axs[band-1,2].set_xlabel(r'$\ell$', fontsize=25)
+    axs[band-1,2].set_ylabel(r'$C_\ell^{tg}$ $[\mu K]$', fontsize=22)
     axs[band-1,2].set_xlim(1.8, 90)
     axs[band-1,2].set_ylim(-0.8,0.8)
     axs[band-1,2].set_xscale('log')
-    axs[band-1,2].text(32, 0.6, 'Band {}'.format(band))
+    axs[band-1,2].text(32, 0.6, 'Band {}'.format(band), fontsize=26)
     print("Band {} finished, moving to next".format(band))
     band+=1
 
