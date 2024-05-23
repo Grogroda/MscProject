@@ -1142,18 +1142,24 @@ IMAGENS DOS MAPAS WMAP
 
 It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. A study of the systematic errors was also made in the same reference. 
 
-For a masked map, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, aside from that one can simply multiply that result by the $\ell(\ell+1)/2\pi$ term that we are using to represent the spectra (or not in the spectra that don't use this term), obtaining the following equation for the cosmic variance affecting $D_\ell^{tt}$ of the given data\cite{wmap_supplement}: 
+For a masked map, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, so that in general an autocorrelation spectrum's $C_\ell^{tt}$ cosmic variance contribution can be calculated with: 
 
 \begin{equation}\label{data_cosmic_variance}
-	\sigma_{CV}=\frac{\ell(\ell+1)}{2\pi}\frac{C_\ell^{tt}}{f_{\text{sky},\ell}}\sqrt{\frac{2}{2\ell+1}}
+	(\Delta C_\ell^{xx})_\text{CV}=\frac{C_\ell^{xx}}{f_{\text{sky},\ell}}\sqrt{\frac{2}{2\ell+1}}.
 \end{equation}
 
-The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels' data, alongside cosmic variance bands.
+$C_\ell^{xx}$ can be subtituted for both $C_\ell^{tt}$ and $C_\ell^{gg}$, but can also be substituted by $D_\ell^{tt}=\ell(\ell+1)C_\ell^{tt}/2\pi$ on both sides of the equation. For the cross-correlation spectrum, the cosmic variance band is slightly different:
+
+\begin{equation}
+	(\Delta C_\ell^{tg})_\text{CV}=\sqrt{\frac{2}{2\ell+1}\frac{C_\ell^{tt}C_\ell^{tg}+(C_\ell^{tg})^2}{f_{\text{sky},\ell}^2}}.
+\end{equation}
+
+The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels' data, alongside cosmic variance bands. We have taken $f_{\text{sky},\ell}=0.7$, corresponding to the percentage of the sky that was unmasked after a combination of the 2MASS and WMAP's masks.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\linewidth]{Imagens/Full_Data_Plot.png}
-	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The (color) band corresponds to the cosmic variance, calculated using equation \eqref{data_cosmic_variance}.}
+	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The red band corresponds to the cosmic variance, calculated using equation \eqref{data_cosmic_variance}.}
 	\label{fig:correlation_data_final_plots}
 \end{figure}
 
