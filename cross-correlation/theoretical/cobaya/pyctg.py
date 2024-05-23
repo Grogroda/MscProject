@@ -35,7 +35,7 @@ def cgg_MP(args):
     return cgg4py_raw(OmegaL, OmegaM, l, z0, beta, lbda, h, bg, mode, ncalls, kh, pkh, nks)
 
 As=1e-10*np.e**(3.044)
-params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67, 'omk':0., 'tau':0.0544,
+params = {'ombh2':0.02237, 'omch2':0.12, 'H0':67.36, 'omk':0., 'tau':0.0544,
         'As': As, 'ns':0.9649}
 
 info = {
@@ -117,11 +117,12 @@ def ctg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51): #band is an optional
     z0 = band_pars[band]['z0']
     beta = band_pars[band]['beta']
     lbda = band_pars[band]['lambda']
-    if lmax>76:
+    if lmax>95:
         bg = band_pars[band]['bg96']
     else:
         bg = band_pars[band]['bg50']
     print('z0={0}\nbeta={1}\nlbda={2}\n'.format(z0, beta, lbda))
+    print('bg=', bg)
     mode = 1
     #ncalls = function variable
     ls=[l for l in range(2, round(lmax)+1)]
@@ -150,7 +151,7 @@ def cgg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51):
     print("[pyctg.py] Inside ctg4py")
 
     #First calculate matter PS with CAMB:
-    h = 0.67
+    h = 0.6736
     omb=0.02237/(h**2)
     omch2=(OmegaM-omb)*h**2
 
@@ -172,7 +173,7 @@ def cgg4py(OmegaM, band=1, nmp=1, ncalls=1000000, lmax=51):
     z0 = band_pars[band]['z0']
     beta = band_pars[band]['beta']
     lbda = band_pars[band]['lambda']
-    if lmax>76:
+    if lmax>95:
         bg = band_pars[band]['bg96']
     else:
         bg = band_pars[band]['bg50']
@@ -221,7 +222,7 @@ if __name__=='__main__':
         lmax=int(args.lmax)
         print('lmax=', lmax)
 
-    OmegaM=(0.02237+0.12)/(0.67**2)
+    OmegaM=0.3153
     print("OmegaM=", OmegaM)
 
     ls, ctg=ctg4py(OmegaM, band=band, nmp=n, ncalls=ncalls, lmax=lmax)
