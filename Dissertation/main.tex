@@ -114,7 +114,7 @@ FICHA DA BIBLIOTECA
 \begingroup
 \setstretch{1}
 \begin{spacing}{1.5}
-\chapter*{Acknowledgements}
+\chapter*{Agradecimentos}
     testando
 
     testando mais
@@ -995,12 +995,12 @@ Still ignoring noise and other factors, one can relate the ensemble average of t
 
 \noindent in which the term in parenthesis is a Wigner-$3j$ symbol.
 
-To determine the full form of the system of equations used to determine the real power spectrum, one has to take noise into consideration the so-called beam pattern. 
+To find the full form of the system of equations used to determine the real power spectrum, one has to take into consideration the so-called beam pattern. 
 
-In radio astronomy, telescopes take measurements in various angles in the sky, and for each direction $\hat{n}$, there is an area of the sky being covered by the measurement, each of these areas is called a beam. In an apparatus that measures CMB photons' temperatures, the measurement in each direction $\hat{n}$ is a temperature $T^\text{obs}(\hat{n})$, this measurement corresponds to a weighted combination of the real temperatures $T(\hat{n}')$ over the beam plus a noise $\eta(\hat{n})$:
+In radio astronomy, telescopes take measurements in various angles in the sky, and for each direction $\hat{n}$, there is an area of the sky being covered by the measurement, each of these areas is called a beam. In an apparatus that measures CMB photons' temperatures, the measurement in each direction $\hat{n}$ is a temperature $T^\text{obs}(\hat{n})$, this measurement corresponds to a weighted combination of the real temperatures $T(\hat{n}')$ over the beam:% plus a noise $\eta(\hat{n})$:
 
 \begin{equation}\label{def:beam_pattern}
-	T^\text{obs}(\hat{n})=\int_\text{beam} d\Omega B(\hat{n},\hat{n}')T(\hat{n}')+\eta(\hat{n}).
+	T^\text{obs}(\hat{n})=\int_\text{beam} d\Omega B(\hat{n},\hat{n}')T(\hat{n}').
 \end{equation}
 
 The function $B(\hat{n}, \hat{n}')$ is called the beam pattern, it weights the contributions of photons coming in the directions around the beam, and it can be estimated during the calibration of the apparatus, it is usually assumed to be Gaussian. Figure \ref{fig:beam_pattern} shows the beam pattern for the Planck instrument at $30\text{ GHz}$.
@@ -1097,7 +1097,7 @@ In this project, the same process presented in \cite{Moura-Santos_2016}, which i
 	\end{pmatrix}.
 \end{align}
 
-It is also assumed that the noise covariance is diagonal: $N=\text{diag}(N_{11}^{tg}, \dots, N_{ii}^{tg}, \dots, N_{pp}^{tg})$ where
+It is also assumed that the noise's covariance matrix is diagonal: $N=\text{diag}(N_{11}^{tg}, \dots, N_{ii}^{tg}, \dots, N_{pp}^{tg})$ where
 
 \begin{equation}\label{Niitg}
 	N_{ii}^{tg}=
@@ -1142,24 +1142,24 @@ IMAGENS DOS MAPAS WMAP
 
 It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. A study of the systematic errors was also made in the same reference. 
 
-For a masked map, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, so that in general an autocorrelation spectrum's $C_\ell^{tt}$ cosmic variance contribution can be calculated with: 
+To estimate the cosmic variance contribution on a masked map, or any map without full sky coverage, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, obtaining the following equation for the cosmic variance affecting $C_\ell^{xx}$ of the given spectrum\cite{wmap_supplement}: 
 
 \begin{equation}\label{data_cosmic_variance}
-	(\Delta C_\ell^{xx})_\text{CV}=\frac{C_\ell^{xx}}{f_{\text{sky},\ell}}\sqrt{\frac{2}{2\ell+1}}.
+	(\Delta C_\ell^{xx})_\text{cv}=\frac{C_\ell^{xx}}{f_{\text{sky},\ell}}\sqrt{\frac{2}{2\ell+1}}.
 \end{equation}
 
-$C_\ell^{xx}$ can be subtituted for both $C_\ell^{tt}$ and $C_\ell^{gg}$, but can also be substituted by $D_\ell^{tt}=\ell(\ell+1)C_\ell^{tt}/2\pi$ on both sides of the equation. For the cross-correlation spectrum, the cosmic variance band is slightly different:
+Here, $C_\ell^{xx}$ can be substituted by either $C_\ell^{gg}$ or $C_\ell^{tt}$, but it can also be substituted by $D_\ell^{tt}=\ell(\ell+1)/2\pi C_\ell^{tt}$ in both sides of the equation. For the cross-correlation $C_\ell^{tg}$, the equation is adapted to
 
-\begin{equation}
-	(\Delta C_\ell^{tg})_\text{CV}=\sqrt{\frac{2}{2\ell+1}\frac{C_\ell^{tt}C_\ell^{tg}+(C_\ell^{tg})^2}{f_{\text{sky},\ell}^2}}.
+\begin{equation}\label{cosmic_variance_cross}
+	(\Delta C_\ell^{tg})_\text{cv}=\sqrt{\frac{2}{2\ell+1}\frac{C_\ell^{tt}C_\ell^{gg}+(C_\ell^{tg})^2}{f_{\text{sky},\ell}^2}}.
 \end{equation}
 
-The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels' data, alongside cosmic variance bands. We have taken $f_{\text{sky},\ell}=0.7$, corresponding to the percentage of the sky that was unmasked after a combination of the 2MASS and WMAP's masks.
+The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels' data, alongside cosmic variance bands.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\linewidth]{Imagens/Full_Data_Plot.png}
-	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The red band corresponds to the cosmic variance, calculated using equation \eqref{data_cosmic_variance}.}
+	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The red band corresponds to the cosmic variance, calculated using equations \eqref{data_cosmic_variance} and \eqref{cosmic_variance_cross}.}
 	\label{fig:correlation_data_final_plots}
 \end{figure}
 
