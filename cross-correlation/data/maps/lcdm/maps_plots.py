@@ -37,7 +37,7 @@ fnames_wmap=["wmap_Q", "wmap_V", "wmap_W"]
 
 mask=hp.read_map("mask_combined_xsc_kq85_ns32.fits")
 plt.figure()
-hp.mollview(mask, title="Mask", cmap="jet")
+hp.mollview(mask, title="Mask", cmap='RdYlBu_r')
 plt.savefig("mask.png")
 plt.close()
 
@@ -57,26 +57,26 @@ for i in range(4):
     '''
 
     plt.figure()
-    hp.mollview(xsc_nomask[i], title="2MASS contrast - band {} with no mask (xsc)".format(i+1), min=-1, max=1, cmap='jet')
+    hp.mollview(xsc_nomask[i], title="2MASS contrast - band {} with no mask (xsc)".format(i+1), min=-1, max=1, cmap='RdYlBu_r')
     hp.graticule()
     plt.savefig("band{}_nomask_xsc.png".format(i+1))
     plt.close()
 
     plt.figure()
-    hp.mollview(xsc_wmask[i], title="2MASS contrast - band {} with mask (xsc)".format(i+1), min=-1, max=1, cmap='jet')
+    hp.mollview(xsc_wmask[i], title="2MASS contrast - band {} with mask (xsc)".format(i+1), min=-1, max=1, cmap='RdYlBu_r')
     hp.graticule()
     plt.savefig("band{}_wmask_xsc.png".format(i+1))
     plt.close()
 
     if i<3:
         plt.figure()
-        hp.mollview(wmap_nomask[i], title=titles_wmap[i], unit="mK", min=-0.2, max=0.2, cmap="jet")
+        hp.mollview(wmap_nomask[i], title=titles_wmap[i], unit="mK", cmap='RdYlBu_r')#min=-0.15, max=0.15
         hp.graticule()
         plt.savefig("{}_nomask.png".format(fnames_wmap[i]))
         plt.close()
 
         plt.figure()
-        hp.mollview(wmap_wmask[i], title=titles_wmap[i], unit="mK", min=-0.2, max=0.2, cmap="jet")
+        hp.mollview(wmap_wmask[i], title=titles_wmap[i], unit="mK", cmap='RdYlBu_r')
         hp.graticule()
         plt.savefig("{}_wmask.png".format(fnames_wmap[i]))
         plt.close()
