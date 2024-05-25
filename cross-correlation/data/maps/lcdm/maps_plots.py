@@ -32,51 +32,89 @@ wmapW_wmask=hp.read_map("../masking/wmap_band_forered_imap_r9_9yr_W_v5_beam5deg_
 
 wmap_nomask=[wmapQ, wmapV, wmapW]
 wmap_wmask=[wmapQ_wmask, wmapV_wmask, wmapW_wmask]
-titles_wmap=["WMAP (Q channel)", "WMAP (V channel)", "WMAP (W channel)"]
+titles_wmap=["Q channel", "V channel", "W channel"]
 fnames_wmap=["wmap_Q", "wmap_V", "wmap_W"]
 
-mask=hp.read_map("mask_combined_xsc_kq85_ns32.fits")
+import matplotlib
+
+matplotlib.rcParams.update({'font.size':17})
+
+mask=hp.read_map("../masking/mask_combined_xsc_kq85_ns32.fits")
 plt.figure()
 hp.mollview(mask, title="Mask", cmap='RdYlBu_r')
 plt.savefig("mask.png")
 plt.close()
 
+#single plots for 2mass
 for i in range(4):
-    ''' template for 2mpz if needed
     plt.figure()
-    hp.mollview(mpz_nomask[i], title="2MASS contrast - band {} with no mask (2mpz)".format(i+1), min=-1, max=1, cmap='jet')
+    hp.mollview(xsc_wmask[i], title="Band {}".format(i+1), min=-1, max=1, cmap='RdYlBu_r')
     hp.graticule()
-    plt.savefig("band{}_nomask_2mpz.png".format(i+1))
+    plt.tight_layout()
+    plt.savefig('band{}_wmask_xsc.png'.format(i+1))
     plt.close()
-    
-    plt.figure()
-    hp.mollview(mpz_wmask[i], title="2MASS contrast - band {} with mask (2mpz)".format(i+1), min=-1, max=1, cmap='jet')
-    hp.graticule()
-    plt.savefig("band{}_wmask_2mpz.png".format(i+1))
-    plt.close()
-    '''
 
+#single plots for wmap
+for i in range(3):
+    plt.figure()
+    hp.mollview(wmap_wmask[i], title=titles_wmap[i], cmap='RdYlBu_r')
+    hp.graticule()
+    plt.tight_layout()
+    plt.savefig("{}_wmask.png".format(fnames_wmap[i]))
+    plt.close()
+
+# Implementation of full all-maps plot (not looking very good):
+fig_2mass, axs_2mass=plt.subplots(2,2)
+fig_2mass.suptitle('2MASS masked galaxy contrast maps (XSC)')
+
+for i in range(4):
+    line=i//2 #index of plot's line in the figure
+    col=i%2 #index of the plot's column in the figure
+
+    '''
     plt.figure()
     hp.mollview(xsc_nomask[i], title="2MASS contrast - band {} with no mask (xsc)".format(i+1), min=-1, max=1, cmap='RdYlBu_r')
     hp.graticule()
     plt.savefig("band{}_nomask_xsc.png".format(i+1))
     plt.close()
+    '''
 
-    plt.figure()
-    hp.mollview(xsc_wmask[i], title="2MASS contrast - band {} with mask (xsc)".format(i+1), min=-1, max=1, cmap='RdYlBu_r')
+    print('Before 2mass plot for i=', i)
+    print('line={0} & column={1}'.format(line, col))
+
+    plt.axes(axs_2mass[line, col])
+    print('after plt.axes')
+    hp.mollview(xsc_wmask[i], title="Band {}".format(i+1), min=-1, max=1, cmap='RdYlBu_r', hold=True)
+    print('after mollview')
     hp.graticule()
-    plt.savefig("band{}_wmask_xsc.png".format(i+1))
+    #plt.savefig("band{}_wmask_xsc.png".format(i+1))
+    #plt.close()
+    print('Plot finished')
+
+print('about to save 2mass figure')
+plt.tight_layout()
+fig_2mass.savefig('ContrastMap_2MASS_FullPlot_wmask.png') 
+
+fig_wmap, axs_wmap=plt.subplots(2,2)
+fig_wmap.suptitle('WMAP masked CMB temperature maps')
+
+for i in range(3):
+    '''
+    plt.figure()
+    hp.mollview(wmap_nomask[i], title=titles_wmap[i], unit="mK", cmap='RdYlBu_r')#min=-0.15, max=0.15
+    hp.graticule()
+    plt.savefig("{}_nomask.png".format(fnames_wmap[i]))
     plt.close()
+    '''
+    line=i//2 #index of plot's line in the figure
+    col=i%2 #index of the plot's column in the figure
+    print('Before wmap plot for i=', i)
 
-    if i<3:
-        plt.figure()
-        hp.mollview(wmap_nomask[i], title=titles_wmap[i], unit="mK", cmap='RdYlBu_r')#min=-0.15, max=0.15
-        hp.graticule()
-        plt.savefig("{}_nomask.png".format(fnames_wmap[i]))
-        plt.close()
+    plt.axes(axs_wmap[line,col])
+    hp.mollview(wmap_wmask[i], title=titles_wmap[i], unit="mK", cmap='RdYlBu_r', hold=True)
+    hp.graticule()
+    #plt.savefig("{}_wmask.png".format(fnames_wmap[i]))
+    #plt.close()
 
-        plt.figure()
-        hp.mollview(wmap_wmask[i], title=titles_wmap[i], unit="mK", cmap='RdYlBu_r')
-        hp.graticule()
-        plt.savefig("{}_wmask.png".format(fnames_wmap[i]))
-        plt.close()
+plt.tight_layout()
+fig_wmap.savefig('CMB_WMAP_FullPlot_wmask.png')
