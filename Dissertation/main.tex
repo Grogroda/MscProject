@@ -1113,6 +1113,39 @@ It is also assumed that the noise's covariance matrix is diagonal: $N=\text{diag
 
 In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results,WMAP_data} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored.
 
+\subsection{WMAP Data}
+
+WMAP used radiometers and differential microwave receivers to measure the CMB temperature over the entire sky across five frequency bands in the spectral region where the
+CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these 5 frequency bands, we have used in this project the data corresponding to the Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$) bands, which are the ones suitable for data analysis. Its last data realease, WMAP9, which is the one used in this project, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a parameter present in the data for each channel.
+
+Figure \ref{fig:Wmap_maps} shows the maps used for the analysis with the so called KQ85 mask applied to them.
+
+\begin{figure}[!htb]
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/wmap_Q_wmask.png}
+         \caption{Q channel}
+         \label{fig:Qchannel}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/wmap_V_wmask.png}
+         \caption{V channel}
+         \label{fig:Vchannel}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/wmap_W_wmask.png}
+         \caption{W channel}
+         \label{fig:Wchannel}
+     \end{subfigure}
+        \caption{Mollweide projection of the 3 WMAP9 CMB temperature maps with the combined 2MASS+WMAP mask applied.}
+        \label{fig:Wmap_maps}
+\end{figure}
+
 \subsection{2MASS Catalog}
 
 From 1997 to 2001, the 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
@@ -1123,20 +1156,40 @@ HEALPix was used to produce and analyse the maps with resolution parameter $nsid
 
 This catalog is made using photometric measurements, meaning redshift information is not directly obtained with the measurements, but there are techniques to estimate photometric redshifts. In \cite{K20_lum_func} the luminosity function of 4192 2MASS galaxies were used to estimate the luminosity function of the entirety of the $K_s$ band, and then the photometric redshifts of these galaxies. In \cite{2MPZ} the authors trained a neural network and cross-correlated XSC with WISE\cite{WISE} and SuperCOSMOS\cite{SuperCOSMOS} to obtain the photometric redshifts of a big fraction of the sources in XSC, creating what is called the 2MPZ catalog. As shown in \cite{Moura-Santos_2016}, using the 2MPZ catalog over XSC does not yield significant changes in the results, so in this project we maintained the usage of the XSC data.
 
-As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}, the parametrizations for each band is shown in Table \ref{tab:bands_2MASS} and the plots of these selection functions is shown in Figure \ref{fig:2MASS_selections}. Figure ?? shows the final maps produced after this process.
+As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}, the parametrizations for each band is shown in Table \ref{tab:bands_2MASS} and the plots of these selection functions is shown in Figure \ref{fig:2MASS_selections}. Figure \ref{fig:2MASS_maps} shows the final maps produced after this process.
 
-IMAGENS DOS MAPAS COM MÁSCARA
-
-%IMAGENS DOS MAPAS COM MÁSCARA
-
-\subsection{WMAP Data}
-
-WMAP used radiometers and differential microwave receivers to measure the CMB temperature over the entire sky across five frequency bands in the spectral region where the
-CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these 5 frequency bands, we have used in this project the data corresponding to the Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$) bands, which are the ones suitable for data analysis. Its last data realease, WMAP9, which is the one used in this project, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a parameter present in the data for each channel.
-
-Figure ?? shows the maps used for the analysis with the so called KQ85 mask applied to them.
-
-IMAGENS DOS MAPAS WMAP
+\begin{figure}[!htb]
+     \centering
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band1_wmask_xsc.png}
+         \caption{Band 1}
+         \label{fig:contrast_map1}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band2_wmask_xsc.png}
+         \caption{Band 2}
+         \label{fig:contrast_map2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band3_wmask_xsc.png}
+         \caption{Band 3}
+         \label{fig:contrast_map3}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band4_wmask_xsc.png}
+         \caption{Band 4}
+         \label{fig:contrast_map4}
+     \end{subfigure}
+        \caption{Mollweide projection of the 2MASS-XSC galaxy contrast maps with the combined 2MASS+WMAP mask applied.}
+        \label{fig:2MASS_maps}
+\end{figure}
 
 \section{Correlation Spectra Obtained}
 

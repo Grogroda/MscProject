@@ -48,7 +48,7 @@ plt.close()
 #single plots for 2mass
 for i in range(4):
     plt.figure()
-    hp.mollview(xsc_wmask[i], title="Band {}".format(i+1), min=-1, max=1, cmap='RdYlBu_r')
+    hp.mollview(xsc_wmask[i], title=' ', min=-1, max=1, cmap='RdYlBu_r') #title="Band {}".format(i+1), 
     hp.graticule()
     plt.tight_layout()
     plt.savefig('band{}_wmask_xsc.png'.format(i+1))
@@ -57,7 +57,7 @@ for i in range(4):
 #single plots for wmap
 for i in range(3):
     plt.figure()
-    hp.mollview(wmap_wmask[i], title=titles_wmap[i], cmap='RdYlBu_r')
+    hp.mollview(wmap_wmask[i], title=' ', cmap='RdYlBu_r', unit='mK') #title=titles_wmap[i], 
     hp.graticule()
     plt.tight_layout()
     plt.savefig("{}_wmask.png".format(fnames_wmap[i]))
