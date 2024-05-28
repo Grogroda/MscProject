@@ -1220,7 +1220,7 @@ Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
-With the data points and theoretical spectra shown in Figure ??, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the cosmological constraints of multiple cosmological parameters, but I was not able to implement out theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
+With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but I was not able to implement our theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
 
 %\section{Monte Carlo Markov Chains}
 
@@ -1228,7 +1228,27 @@ With the data points and theoretical spectra shown in Figure ??, one can find ne
 
 \section{Likelihood Profiling}
 
-EXPLAIN WHAT I DID 
+For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table\ref{tab:planck_parameters}, we can use CAMB to calculate theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
+
+We have assumed that for each multipole $\ell$ and for all the three different spectra, the likelihood is a Gaussian distribution of the form
+
+\begin{equation}\label{likelihood_cl}
+	\mathcal{L}(C_{\ell\text{, theo}}^{xy}|C_{\ell\text{, data}}^{xy})=\frac{1}{\sigma_\ell \sqrt{2\pi}}\text{exp}\left[-\frac{1}{2}\left(\frac{C_{\ell\text{, data}}^{xy}-C_{\ell\text{, theo}}^{xy}}{\sigma_\ell}\right)^2\right],
+\end{equation}
+
+\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole, so the likelihood function of the cross-correlation spectrum $C^{tg}$ is
+
+\begin{equation}\label{likelihood_ctg}
+	\mathcal{L}(\Omega_m|C^{tg}_\text{data})=\prod_{\ell=2}^{\ell_\text{max}} \mathcal{L}(C_{\ell\text{, theo}}^\text{tg}|C_{\ell\text{, data}}^\text{tg}),
+\end{equation}
+
+and the calculation of this likelihood relative to $C^{gg}$ is analogous. We have analysed the likelihoods relative to these two full correlation functions, as well as their joint likelihood:
+
+\begin{equation}\label{joint-likelihood}
+	\mathcal{L}(\Omega_m|C^{tg}_\text{data},C^{gg}_\text{data})=\mathcal{L}(\Omega_m|C^{tg}_\text{data})\mathcal{L}(\Omega_m|C^{gg}_\text{data}).
+\end{equation}
+
+We have calculated these three likelihoods for all 4 bands of the 2MASS catalog and normalized them relative to the maximum value obtained in each separate instance, the results are shown and discussed in the next section.
 
 \section{Results}
 
@@ -1369,16 +1389,6 @@ Using this result, equation \eqref{demo:Start_eq} in terms of redshift instead o
 \end{equation}
 
 Equation \eqref{appA:step1} expresses the present contribution of the late ISW  effect to the CMB temperature autocorrelation spectrum.
-
-%1. Desprezar o efeito de reionização, já que o ISW é importante em grandes escalas e reionização é importante em escalas l >~ 200. (X)
-
-%2. Fazer uma mudança de variáveis de tempo conforme para redshift (X)
-
-%3. Desprezar o stress anisotrópico em tempos recentes, isso permite escrever que \Psi ~ \Phi at late times (X)
-
-%4. Usar a equação de Poisson para relacionar o potencial gravitacional \Phi com o contraste \delta (X)
-
-%5. Usar a definição de função de crescimento. (X)
 
 \end{spacing}
 \endgroup
