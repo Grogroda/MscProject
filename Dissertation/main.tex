@@ -115,9 +115,12 @@ FICHA DA BIBLIOTECA
 \setstretch{1}
 \begin{spacing}{1.5}
 \chapter*{Agradecimentos}
-    testando
+Este projeto, assim como qualquer outra conquista minha, não foi um trabalho individual, e sim a contribuição de um grande número de pessoas que me ajudaram, tiveram um impacto na minha vida e me influenciaram e motivaram de diversas formas diferentes, e essas influências têm tanta importância, se não mais, quanto apoios acadêmicos e financeiros. Frente à impossibilidade de dar os créditos a todos os contribuintes, tentarei me limitar aos principais.
 
-    testando mais
+Certamente os mais importantes são os membros da minha família, da qual todos contribuíram de alguma forma, mas eu tenho a obrigação de destacar meus pais, que lutaram separadamente contra adversidades diversas para que eu chegasse onde eu cheguei, que me ensinaram o que é certo e como me dedicar, que não deixaram nada faltar para mim, e que até hoje seguem me motivando de formas diferentes, esses 2 anos de muito trabalho e cansaço me fizeram ter muito mais admiração pelo esforço de ambos. Destaco ainda meus avós e minha tia, que tiveram imensa influência em quem eu sou, e cuidaram imensamente de mim, mas também de meus dois vizinhos da frente, que podem não compartilhar do meu DNA, mas ajudaram a me criar como se eu fosse seus filhos, e eu tenho um imenso amor e gratidão por ambos.
+
+Outra detentora de uma parcela significativa dos créditos desse trabalho pertence à minha incrível namorada, que está ao meu lado, me apoiando e tornando meus dias melhores desde os anos em que eu era um aluno de graduação, 
+
 \end{spacing}
 \endgroup
 
@@ -1236,23 +1239,33 @@ We have assumed that for each multipole $\ell$ and for all the three different s
 	\mathcal{L}(C_{\ell\text{, theo}}^{xy}|C_{\ell\text{, data}}^{xy})=\frac{1}{\sigma_\ell \sqrt{2\pi}}\text{exp}\left[-\frac{1}{2}\left(\frac{C_{\ell\text{, data}}^{xy}-C_{\ell\text{, theo}}^{xy}}{\sigma_\ell}\right)^2\right],
 \end{equation}
 
-\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole, so the likelihood function of the cross-correlation spectrum $C^{tg}$ is
+\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole:
 
-\begin{equation}\label{likelihood_ctg}
-	\mathcal{L}(\Omega_m|C^{tg}_\text{data})=\prod_{\ell=2}^{\ell_\text{max}} \mathcal{L}(C_{\ell\text{, theo}}^\text{tg}|C_{\ell\text{, data}}^\text{tg}),
+\begin{equation}\label{likelihood_cxy}
+	\mathcal{L}(\Omega_m|C^{xy}_\text{data})=\prod_{\ell=2}^{\ell_\text{max}} \mathcal{L}(C_{\ell\text{, theo}}^\text{xy}|C_{\ell\text{, data}}^\text{xy}).
 \end{equation}
 
-and the calculation of this likelihood relative to $C^{gg}$ is analogous. We have analysed the likelihoods relative to these two full correlation functions, as well as their joint likelihood:
+We have analysed the likelihoods relative to both $C^{tg}$ and $C^{gg}$, as well as their joint-likelihood:
 
 \begin{equation}\label{joint-likelihood}
 	\mathcal{L}(\Omega_m|C^{tg}_\text{data},C^{gg}_\text{data})=\mathcal{L}(\Omega_m|C^{tg}_\text{data})\mathcal{L}(\Omega_m|C^{gg}_\text{data}).
 \end{equation}
 
-We have calculated these three likelihoods for all 4 bands of the 2MASS catalog and normalized them relative to the maximum value obtained in each separate instance, the results are shown and discussed in the next section.
+Equation \eqref{joint-likelihood} is calculated in each band of the 2MASS catalog, the results can be normalized with respect to the maximum value obtained for each band, or multiplied to form a full 2MASS joint-likelihood of all 4 bands and then normalized with respect to the maximum value. 
 
 \section{Results}
 
-RESULTS
+Figure ?? shows the $C^{tg}+C^{gg}$ joint-likelihood calculated for each of the 4 bands of the 2MASS catalog, as well as the full 2MASS joint-likelihood of all the bands together. 
+
+FIGURE OF CTG+CGG RESULTS
+
+DISCUSSION OF RESULTS
+
+The contributions of both $C^{tg}$ and $C^{gg}$ to the likelihoods shown in Figure ?? are shown in Figure ??, where the likelihoods of each single spectrum applied to their data was calculated as shown in equation \eqref{likelihood_cxy}.
+
+FIGURES OF CTG AND CGG SEPARATELY
+
+DISCUSSION OF RESULTS (CTG HAS VERY LITTLE CONSTRAINT POWER, IS THERE A RELATION BETWEEN THE ANALYSIS OF CHAPTER 3 AND THESE RESULTS? ETC)
 
 \chapter{Conclusions}
 
