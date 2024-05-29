@@ -28,5 +28,5 @@
 \contentsline {chapter}{\numberline {5}Cosmological Constraints}{42}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Likelihood Profiling}{42}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Results}{43}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusions}{44}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{46}{appendix.A}%
+\contentsline {chapter}{\numberline {6}Conclusions}{45}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{47}{appendix.A}%

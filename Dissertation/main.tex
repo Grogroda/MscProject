@@ -1255,17 +1255,38 @@ Equation \eqref{joint-likelihood} is calculated in each band of the 2MASS catalo
 
 \section{Results}
 
-Figure ?? shows the $C^{tg}+C^{gg}$ joint-likelihood calculated for each of the 4 bands of the 2MASS catalog, as well as the full 2MASS joint-likelihood of all the bands together. 
+Figure \ref{fig:likelihood_prof_ctg+cgg} shows the $C^{tg}+C^{gg}$ joint-likelihood calculated for each of the 4 bands of the 2MASS catalog, as well as the full 2MASS joint-likelihood of all the bands together. 
 
-FIGURE OF CTG+CGG RESULTS
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.7\linewidth]{Imagens/profile_allbands_Nmc2e7.png}
+	\caption{Normalized $C^{tg}+C^{gg}$ joint-likelihoods for each band of the 2MASS catalog and full joint-likelihood of all bands.}
+	\label{fig:likelihood_prof_ctg+cgg}
+\end{figure}
 
 DISCUSSION OF RESULTS
 
-The contributions of both $C^{tg}$ and $C^{gg}$ to the likelihoods shown in Figure ?? are shown in Figure ??, where the likelihoods of each single spectrum applied to their data was calculated as shown in equation \eqref{likelihood_cxy}.
+The contribution of $C^{tg}$ to the likelihoods are shown in Figure ?? are shown in Figure \ref{fig:likelihood_prof_ctg}, which was calculated using equation \eqref{likelihood_cxy}.
 
-FIGURES OF CTG AND CGG SEPARATELY
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.7\linewidth]{Imagens/profile_ctg_Nmc2e7.png}
+	\caption{Normalized $C^{tg}$ likelihood of each band of the 2MASS catalog and combination of all bands' likelihoods.}
+	\label{fig:likelihood_prof_ctg}
+\end{figure}
 
 DISCUSSION OF RESULTS (CTG HAS VERY LITTLE CONSTRAINT POWER, IS THERE A RELATION BETWEEN THE ANALYSIS OF CHAPTER 3 AND THESE RESULTS? ETC)
+
+We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so (EXPLAIN THE PROCEDURE). The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}. %o gráfico já ta exponenciado
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.7\linewidth]{Imagens/profile_BestBand.png}
+	\caption{My caption}
+	\label{fig:likelihood_band_optimal}
+\end{figure}
+
+DISCUSSION OF THE RESULT
 
 \chapter{Conclusions}
 
