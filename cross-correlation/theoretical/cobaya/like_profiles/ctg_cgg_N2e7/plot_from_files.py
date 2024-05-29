@@ -53,6 +53,9 @@ diff_logp=[sum_table['raw_logp'][i]-max_logp for i in range(len(sum_table['raw_l
 exp_pdiff=[np.exp(logp) for logp in diff_logp]
 
 plt.plot(sum_table['Omegas'], exp_pdiff, label='All bands')
+plt.vlines(0.3135, -0.05, 2, linestyle='dashed', colors='k', label='Planck best-fit')
+plt.ylim(-0.02,1.02)
+plt.xlim(min(sum_table['Omegas']), max(sum_table['Omegas']))
 
 plt.legend()
 plt.savefig('profile_allbands_Nmc2e7.png')
