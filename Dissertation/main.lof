@@ -21,8 +21,8 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Mollweide projection of the 2MASS-XSC galaxy contrast maps with the combined 2MASS+WMAP mask applied.\relax }}{40}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The red band corresponds to the cosmic variance, calculated using equations \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {data_cosmic_variance}\unskip \@@italiccorr )}} and \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {cosmic_variance_cross}\unskip \@@italiccorr )}}.\relax }}{41}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Normalized $C^{tg}+C^{gg}$ joint-likelihoods for each band of the 2MASS catalog and full joint-likelihood of all bands.\relax }}{43}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Normalized $C^{tg}+C^{gg}$ joint-likelihoods for each band of the 2MASS catalog and full joint-likelihood of all bands. The Planck best-fit for $\Omega _m$ is shown for comparison.\relax }}{43}{figure.caption.29}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Normalized $C^{tg}$ likelihood of each band of the 2MASS catalog and combination of all bands' likelihoods.\relax }}{44}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces My caption\relax }}{44}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces My caption\relax }}{45}{figure.caption.31}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
