@@ -18,7 +18,9 @@ P=[np.exp(logp) for logp in rel_logp]
 
 plt.figure()
 plt.plot(Omegas, P)
-plt.vlines(0.3135, 0, 2, linestyle='dashed', colors='k', label='Planck best-fit')
+planck_bf, error=0.3135, 0.0073
+plt.vlines(planck_bf, 0, 2, linestyle='dashed', colors='k', label='Planck best-fit')
+plt.axvspan(planck_bf-error, planck_bf+error, alpha=0.5, color='gray')
 #plt.show()
 plt.ylim(0.84, 1.01)
 plt.xlabel(r'$\Omega_m$')
