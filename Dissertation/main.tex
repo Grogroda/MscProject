@@ -1287,7 +1287,7 @@ Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation
 
 Despite this, bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2, a behavior not noticeable in the joint-likelihoods shown in Figure \ref{fig:likelihood_prof_ctg+cgg}. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a cross-correlation signal with a higher constraint power.
 
-We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so (EXPLAIN THE PROCEDURE). The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}. %o gráfico já ta exponenciado
+We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, with errors equal to 10\% of the calculated correlation for each multipole ($\sigma_\ell=0.1C_\ell^{tg}$). Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}. %o gráfico já ta exponenciado
 
 \begin{figure}[!htb]
 	\centering
@@ -1296,7 +1296,9 @@ We have also performed an analysis using artificial data following the optimized
 	\label{fig:likelihood_band_optimal}
 \end{figure}
 
-DISCUSSION OF THE RESULT (IS THERE A RELATION BETWEEN THE ANALYSIS OF CHAPTER 3 AND THESE RESULTS?)
+The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_optimal} is simillar to those shown for bands 3 and 4 of 2MASS in Figure \ref{fig:likelihood_prof_ctg}, and the width of the curve is higher in the current analysis, suggesting that this optimal band does not hold a stronger constraint power over $\Omega_m$ at least. 
+
+It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, a result that does not have a direct consequence with regards to the constraint power of this optimal band with respect to cosmological parameters. 
 
 \chapter{Conclusions}
 
