@@ -662,14 +662,16 @@ While the CMB is usually described as a two dimensional map measured around the 
     \av{\delta(\mathbf{k}, z) \delta^*(\mathbf{k}', z)}=(2\pi)^3 P(k,z) \delta_D(\mathbf{k}-\mathbf{k}'),
 \end{equation}
 
-\noindent where $\delta_D$ is the Dirac delta, $\delta$ is the previously shown matter perturbation distribution in the Universe and the $*$ superscript indicates the complex conjugate of a quantity. Again, using appropriate initial conditions, one can determine $\delta(\mathbf{k})$ and thus $P(k,z)$, and again these results can be obtained numerically using CAMB, Figure \ref{fig:matter_PS} shows the results for this calculation using the HALOFIT model\cite{Halofit2020}, a semi-analytical method to determine a non-linear solution for $P(k,z)$.  
+\noindent where $\delta_D$ is the Dirac delta, $\delta$ is the previously shown matter perturbation distribution in the Universe and the $*$ superscript indicates the complex conjugate of a quantity. Again, using appropriate initial conditions, one can determine $\delta(\mathbf{k})$ and thus $P(k,z)$, and again these results can be obtained numerically using CAMB, Figure \ref{fig:matter_PS} shows the results for this calculation.  
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=.75\linewidth]{Imagens/Pk_3dmatter_LCDM.png}
-    \caption{Matter power spectrum calculated as a function of $k/h$, where $h$ is the already defined reduced Hubble constant, using the HALOFIT model with cosmological parameters according to our fiducial $\Lambda$CDM model.}
+    \caption{Matter power spectrum calculated as a function of $k/h$, where $h$ is the already defined reduced Hubble constant, using both a linear approximation and the so-called HALOFIT model\cite{Halofit2020} with cosmological parameters according to our fiducial $\Lambda$CDM model.}
     \label{fig:matter_PS}
 \end{figure}
+
+The HALOFIT model is a semi-analytical method to determine a non-linear solution for $P(k,z)$.  EXPLAIN HALOFIT? DISCUSS WHY USING HALOFIT IS IMPORTANT
 
 \subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
 
@@ -681,7 +683,9 @@ Similarly, instead of calculating an autocorrelation spectrum, one can calculate
     \av{a_{\ell m}^ta_{\ell' m'}^g}=C^{tg}_\ell\delta_{\ell \ell'}\delta_{mm'}.
 \end{equation}
 
-One can determine a general and direct equation to calculate these spectra. In this work we have used the form shown in \cite{Moura-Santos_2016}, which is specific to the ISW contribution to these correlation spectra:
+By using equation \eqref{ch2:Theta_spherical harmonics} one can express $a_{\ell m}$ in terms of $\Theta_\ell$, which can be expanded using equation \eqref{ch2:Thetal_approx}, this expansion and the correlation definitions allows us to find analytical expressions for all correlation functions discussed so far using the approximations discussed, but we can also use the ISW contribution to equation \eqref{ch2:Thetal_approx} to calculate the sole contribution of the ISW effect to the full correlation spectra. 
+
+In this work we have used the form shown in \cite{Moura-Santos_2016}, which is specific to the ISW contribution to these correlation spectra:
 
 \begin{equation}\label{Cl_direct_calculation}
     C^{xy}_\ell=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
@@ -696,7 +700,7 @@ One can determine a general and direct equation to calculate these spectra. In t
     W_\ell^g=\int dz b_g(z)\dv{N}{z}D(z)j_\ell[k\chi(z)],
 \end{equation}
 
-\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}. A demonstration of this equation can be found in Appendix \ref{App:correlations_demo}
+\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}. A demonstration of this equation can be found in Appendix \ref{app:correlations_demo}.
 
 With equation \eqref{Cl_direct_calculation}, we can determine the theoretical spectra for CMB and galaxy autocorrelations and CMB-galaxy cross-correlation directly. Figure \ref{fig:Ctt_ISW_comparison} shows the total CMB autocorrelation and the ISW contribution, both at $z=0$.
 
@@ -1351,7 +1355,7 @@ Falar sobre espaço de fourier
 Falar do conceito de spectral density/power spectrum
 \fi
 
-\chapter{Demonstration of Correlation Functions}\label{App:correlations_demo}
+\chapter{Demonstration of Correlation Functions}\label{app:correlations_demo}
 
 Expanding the definition of $C_\ell^{TT}$ given in \eqref{def:autocorrelation} one can show that\cite{dodelson2020modern}:
 
