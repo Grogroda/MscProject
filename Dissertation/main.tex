@@ -169,7 +169,7 @@ RESUMO AQUI
 
 The discovery of the Cosmic Microwave Background (CMB) is a fine example of serendipity, Arno A. Penzias and Robert W. Wilson found an unexpected excess temperature while measuring the effective zenith noise temperature in 1964, and after some investigation, they attributed this excess temperature to an isotropic radiation field that today we call the CMB \cite{1965CMB_discovery}. The CMB has since been used as one of the main probes to studying cosmology, being able to provide various tests and insights into cosmological models \cite{Large_scale_anomalies, nongaussianity_inflation, rees_sciama_effect} and measurements of cosmological parameters \cite{WMAP_results, Planck_results}. 
 
-In the standard cosmological model, commonly called the $\Lambda$CDM model, the CMB is a radiation field that has permeated the Universe since the Big Bang, its photons have been freely traveling the Universe since their decoupling from electrons and protons during the very early stages of the Universe's history \cite{CMB_physical_explanation}. The current measurement for the black body spectrum temperature of the CMB is \SI{2.72548 \pm 0.00057}{\kelvin} \cite{CMB_temperature:Fixsen_2009}, and despite being isotropic to many orders of precision, it does contain anisotropies in the order of $\SI{e-5}{\kelvin}$, which is expected in the $\Lambda$CDM model \cite{CMB_analytical_anisotropies}. These fluctuations are the result of many physical effects that contribute to the CMB's emission or are acting on the photons as they travel through the Universe, making them an excellent probe to constrain cosmological parameters.
+In the concordance cosmological model, commonly called the $\Lambda$CDM model, the Universe was very compact and energetic at its very early stages, and has always been in expansion, resulting in a constant reduction in overall energy density. Eventually, when it reached temperatures of around \SI{4000}{\kelvin}, photons decoupled from electrons and protons, which resulted in a radiation field that permeates the Universe ever since. This is, according to the $\Lambda$CDM model, the CMB\cite{CMB_physical_explanation}. The current measurement for the black body spectrum temperature of the CMB is \SI{2.72548 \pm 0.00057}{\kelvin} \cite{CMB_temperature:Fixsen_2009}, and despite being isotropic to many orders of precision, it does contain anisotropies in the order of $\SI{e-5}{\kelvin}$, which is expected in the $\Lambda$CDM model \cite{CMB_analytical_anisotropies}. These fluctuations are the result of many physical effects that contribute to the CMB's emission or are acting on the photons as they travel through the Universe, making them an excellent probe to constrain cosmological parameters.
 
 Some mappings of the CMB were carried out in the last few decades, the first satellite launched specifically dedicated to doing this was the Cosmic Background Explorer (COBE) satellite with a $7\degree$ angular resolution \cite{COBE}, followed by the Wilkinson Microwave Anisotropy Probe (WMAP) with a $0.3\degree$ angular resolution, which was also able to show that CMB photons are polarized, a property related to other physical effects that assisted cosmologists in further understanding the history of the Universe\cite{polarization_1997, polarization_2014, BMode_constraints}. In 2009, the Planck Satellite was launched, improving upon WMAP's precision to an impressive value of 5' ($\sim 0.083\degree$) angular resolution \cite{theplanckcollaboration2006scientific}, allowing cosmologists to access the finest details in the CMB anisotropies to this day. Figure \ref{fig:cmb_satellites} shows a comparison between the resolution of these maps.
 
@@ -231,9 +231,8 @@ To describe the Universe, a coordinate system is embedded in the entire Universe
 These properties are not exclusive to a particular cosmological model, instead being present in all of them. The standard model of cosmology, called $\Lambda$CDM, usually takes a few assumptions on top of the ones described previously:
 
 \begin{itemize}
-    \item The Universe emerged from a space-time singularity that started expanding several billion years ago, in an event called the Big Bang;
+    \item During the very early stages of the Universe, it was very compact and energetic, and eventually it went through a period of rapidly accelerated expansion, called the inflation period, which was driven by a scalar quantum field;
     \item Aside from baryonic matter, radiation and neutrinos, there are two other main components in the Universe: non-relativistic (cold) dark matter and an energy component with constant density called dark energy, which is related to a cosmological constant $\Lambda$;
-    \item During the early stages of the Universe's history, it went through a period of rapid acceleration driven by a scalar quantum field.
 \end{itemize}
 
 %Although the universe is predominantly uniform, it contains both inhomogeneities and anisotropies in its finer details that need to be studied. The traditional approach is to first set up a homogeneous background and study its properties, which is the task of this section, and then add perturbations to this background to solve for the precise statistical behavior of the universe, which will be done in the section after this one.
@@ -513,25 +512,31 @@ If we use the Bose-Einstein distribution for the temperature defined in \eqref{T
 We can then expand the Boltzmann equation using the results in \eqref{f(x,p,t)_first_order} and \eqref{f(0)} and take into account Compton scattering to calculate the collision term $C[f]$ to obtain a differential equation for the CMB photons. We can use similar procedures, using adequate distribution functions, and obtain a set of coupled differential equations to describe the evolution of the perturbations of every known component of the Universe in Fourier space\cite{dodelson2020modern}:
 
 \begin{equation}\label{diff_eq_radiation_perturbs}
-    \dot{\Theta}+ik\mu\Theta=-\dot{\Phi}-ik\mu\Psi-\dot{\tau}\left[\Theta_0-\Theta+\mu v_b-\frac{1}{2}\mathcal{P}_2(\mu)(\Theta_2+\Theta_{P2}+\Theta_{P0})\right],
+    \dot{\Theta}+\frac{ik\mu}{a}(\Theta+\Psi)=-\dot{\Phi}-\dot{\tau}\left[\Theta_0-\Theta+\mu v_b-\frac{1}{2}\mathcal{P}_2(\mu)(\Theta_2+\Theta_{P2}+\Theta_{P0})\right],
+\end{equation}
+%\begin{equation}
+%    \dot{\Theta}_P+ik\mu\Theta_P=-\dot{\tau}\left\{-\Theta_P+\frac{1}{2}[1-\mathcal{P}_2(\mu)](\Theta_2+\Theta_{P2}+\Theta_{P0})\right\},
+%\end{equation}
+\begin{equation}
+    \dot{\delta}+\frac{ik}{a}v=-3\dot{\Phi},
 \end{equation}
 \begin{equation}
-    \dot{\Theta}_P+ik\mu\Theta_P=-\dot{\tau}\left\{-\Theta_P+\frac{1}{2}[1-\mathcal{P}_2(\mu)](\Theta_2+\Theta_{P2}+\Theta_{P0})\right\},
+    \dot{v}+\frac{H}{a}v=-\frac{ik}{a}\Psi,
 \end{equation}
 \begin{equation}
-    \dot{\delta}+ikv=-3\dot{\Phi},
-\end{equation}
-\begin{equation}
-    \dot{v}+Hv=-ik\Psi,
-\end{equation}
-\begin{equation}
-    \dot{v_b}+Hv_b=-ik\Psi+\frac{4\rho_\gamma}{3\rho_b}\dot{\tau}(v_b+3i\Theta_1),
+    \dot{v_b}+\frac{H}{a}v_b=-\frac{ik}{a}\Psi+\frac{4\rho_\gamma}{3\rho_b}\dot{\tau}(v_b+3i\Theta_1),
 \end{equation}
 \begin{equation}\label{diff_eqs:neutrino_perturbations}
-    \dot{\mathcal{N}}+ik\mu\mathcal{N}=-\dot{\Phi}-ik\mu\Psi.
+    \dot{\mathcal{N}}+\frac{ik\mu}{a}\mathcal{N}=-\dot{\Phi}-\frac{ik\mu}{a}\Psi.
 \end{equation}
 
-Here, $\Theta_P$ is the polarization field and $\Theta_{P\ell}$ is defined by equation \eqref{ch2:Fl} using $F=\Theta_P$; $\delta$ and $\delta_b$ are the perturbations to the matter and baryon distributions respectively; $v$ and $v_b$ are the bulk velocities of the fluids in the stress-energy tensor for matter and baryons respectively; $\rho_b$ and $\rho_\gamma$ are the baryon and radiation energy densities respectively; and $\tau$ is the optical depth of the Universe.
+Here, $\Theta_{P\ell}$ is defined by equation \eqref{ch2:Fl} using $F=\Theta_P$, where $\Theta_P$ is the polarization field; $\delta$ and $\delta_b$ are the perturbations to the matter and baryon distributions respectively; $v$ and $v_b$ are the bulk velocities of the fluids in the stress-energy tensor for matter and baryons respectively; $\rho_b$ and $\rho_\gamma$ are the baryon and radiation energy densities respectively; and $\tau$ is the optical depth to recombination, which in this context measures the transperacy of the Universe at a certain redshift $z$:	
+
+\begin{equation}\label{def:optical_depth}
+	\tau(z)=\int_0^z \frac{\sigma_T n_e(z')}{H(z')} dz',
+\end{equation}
+
+\noindent where $\sigma_T$ is the Thomson scattering cross-section and $n_e$ is the number density of free electrons in the Universe at redshift $z'$.
 
 These equations, alongside equations \eqref{ch2:first_dynamic_equation} and \eqref{ch2:second_dynamic_equation}, are very complex to be solved analytically, so it is common to evolve them numerically, and there are a few codes developed specifically to do this. One of them, that has been used in this project, is CAMB.\cite{CAMB:Lewis1999bs, CAMB:Lewis2002ah}
 
