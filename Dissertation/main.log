@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  3 JUN 2024 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  3 JUN 2024 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,7 +1020,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.12 ...he legend.\relax }}{28}{figure.caption.19}
+l.12 ...he legend.\relax }}{29}{figure.caption.19}
                                                   % [6
 
 ])
@@ -1365,9 +1365,6 @@ Overfull \hbox (20.03078pt too wide) in paragraph at lines 1452--1452
  []
 
 [53] [54] [55] [56] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 67583B43F90697CCEABEB596EB3A06EB;5955.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1377,7 +1374,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  27899 strings out of 478287
  533415 string characters out of 5849289
- 1253269 words of memory out of 5000000
+ 1254269 words of memory out of 5000000
  45056 multiletter control sequences out of 15000+600000
  548907 words of font info for 333 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1400,7 +1397,7 @@ ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (68 pages, 4919101 bytes).
+Output written on main.pdf (68 pages, 4919097 bytes).
 PDF statistics:
  1709 PDF objects out of 1728 (max. 8388607)
  1269 compressed objects within 13 object streams
