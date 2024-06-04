@@ -29,4 +29,5 @@
 \contentsline {section}{\numberline {5.1}Likelihood Profiling}{43}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Results}{44}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Conclusions}{47}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Demonstration of Correlation Functions}{49}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Demonstration of Dark Energy Era Redshift}{49}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{51}{appendix.B}%

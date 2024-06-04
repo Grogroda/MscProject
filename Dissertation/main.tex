@@ -849,13 +849,13 @@ Following \cite{cross_corr:Afshordi}, we are assuming the selection function can
 	\label{fig:2MASS_selections}
 \end{figure}
 
-To start the search for an ideal selection function, a good first guess would be to find functions that favor galaxies at redshifts close to the period of transition to the current dark energy dominated universe. The beginning of the period of accelerated expansion can be estimated by inputing the $\Lambda$CDM values for cosmological parameters in the following equation
+To start the search for an ideal selection function, a good first guess would be to find functions that favor galaxies at redshifts close to the period of transition to the current dark energy dominated universe. The beginning of the period of accelerated expansion can be calculated by inputing the $\Lambda$CDM values for cosmological parameters in the following equation
 
 \begin{equation}\label{dark_energy_era_redshift}
-	z^*=\left[-(1+3w_{DE})\frac{\Omega_{DE}}{\Omega_m}\right]^{-\frac{1}{3w_{DE}}}-1,
+	z^*=\left[-(1+3w_\text{de})\frac{\Omega_\text{de}}{\Omega_m}\right]^{-\frac{1}{3w_\text{de}}}-1,
 \end{equation}
 
-\noindent which assumes a constant equation of state parameter $w_{DE}$ for dark energy\cite{dark_energy_era}. If we use the values of Table \ref{tab:rhos&Omegas}, we estimate that $z^*\approx 0.63$. By analysing Figure \ref{fig:2MASS_selections}, it is possible to see that none of the 2MASS bands have peak sensitivity close to this redshift.
+\noindent for which a demonstration is provided in Appendix \ref{app:dark_energy_era}. If we use the values of Table \ref{tab:rhos&Omegas}, we obtain $z^*\approx 0.63$. By analysing Figure \ref{fig:2MASS_selections}, it is possible to see that none of the 2MASS bands have peak sensitivity close to this redshift.
 
 To determine the region in the parameter space that favors redshift $z^*$, a study of the influence of each parameter in the selection function was necessary. Figure \ref{fig:selection_tripleplot} shows how the selection function varies with changes in each of its parameters.
 
@@ -1354,6 +1354,56 @@ Fourier space is commonly used to study functions related to waves, and in that 
 Falar sobre espaço de fourier
 Falar do conceito de spectral density/power spectrum
 \fi
+
+\chapter{Demonstration of Dark Energy Era Redshift}\label{app:dark_energy_era}
+
+We will start defining the decelerating parameter $q(a)$
+
+\begin{equation}\label{def:decelerating_parameter}
+	q(a)\equiv -\frac{\ddot{a}a}{\dot{a}}.
+\end{equation} 
+
+An expression for this parameter can be determined by dividing the second Friedmann equation (equation \eqref{fried_second_eq}) by the first Friedmann equation (equation \eqref{fried_first_eq}) and multiplying the result by minus one:
+
+\begin{equation}\label{app_DE:step1}
+	q(a)=-\frac{\ddot{a}a}{\dot{a}}=\frac{1}{2}\left(\frac{\rho+3P}{\rho}\right).
+\end{equation}
+
+We will use $\rho=\rho_m+\rho_\text{de}+\rho_r$ and assume $\Omega_k=0$, meaning $\rho=\rho_\text{crit}$, so equation \eqref{app_DE:step1} becomes
+
+\begin{equation}\label{app_DE:step2}
+	q(a)=\frac{1}{2}\left(\frac{\rho_m+\rho_\text{de}+\rho_r+3P}{\rho_\text{crit}}\right).
+\end{equation}
+
+As discussed in Section \ref{subsect:Ch2_Energy_Content}, it is commonly assumed that $P_s=w_s\rho_s$, so equation \eqref{app_DE:step2} becomes
+
+\begin{equation}\label{app_DE:step3}
+	q(a)=\frac{1}{2}\left[\frac{\rho_m+\rho_\text{de}+\rho_r+3(w_m\rho_m+w_r\rho_r+w_\text{de}\rho_\text{de})}{\rho_\text{crit}}\right].
+\end{equation}
+
+We can use the values shown in Table \ref{tab:rhos&Omegas} and use the definition of $\Omega_s$ (equation \eqref{eq:Omega_def}) to obtain
+
+\begin{equation}\label{q(a)_expression}
+	q(a)=\frac{1}{2}\Omega_m(a)+\Omega_r(a)+\frac{3w_\text{de}+1}{2}\Omega_\text{de}(a)
+\end{equation}
+
+Using the evolution equations for $\Omega_s(a)$ in terms of $\Omega_s=\Omega_s(a_0)$ shown in \cite{dark_energy_era}:
+
+\begin{align}\label{evolution_eqs}
+	\Omega_m(a)&=\frac{\Omega_m}{E(a)}a, & \Omega_r(a)&=\frac{\Omega_r}{E(a)}, & \Omega_\text{de}&=\frac{\Omega_\text{de}}{E(a)}a^{1-3w_\text{de}},
+\end{align}
+
+\noindent where $E(a)=\Omega_r+\Omega_m a +\Omega_\text{de}a^{1-3w_\text{de}}$, and taking $\Omega_r=0$, we obtain
+
+\begin{equation}\label{app_DE:step4}
+	q(a)=\frac{1}{2}\left[\frac{\Omega_m a+(1+3w_\text{de})\Omega_\text{de}a^{1-3w_\text{de}}}{\Omega_m a +\Omega_\text{de}a^{1-3w_\text{de}}}\right].
+\end{equation}
+
+To find the scale factor in which the expansion's acceleration becomes positive, we can simply impose that $q(a^*)=0$. Then we can change variables using $a^*=1/(1+z^*)$ and solve for $z^*$, obtaining
+
+\begin{equation}
+	z^*=\left[-(1+3w_\text{de})\frac{\Omega_\text{de}}{\Omega_m}\right]^{-\frac{1}{3w_\text{de}}}-1
+\end{equation}
 
 \chapter{Demonstration of Correlation Functions}\label{app:correlations_demo}
 
