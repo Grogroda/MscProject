@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  4 JUN 2024 18:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  7 JUN 2024 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,37 +1124,38 @@ LaTeX Warning: Command \textasciiacute invalid in math mode on input line 732.
 LaTeX Warning: Command \textasciiacute invalid in math mode on input line 732.
 
 Missing character: There is no ´ in font cmr12!
-<Imagens/full_doublscale_Wafixo0.33.png, id=1001, 722.7pt x 491.436pt>
+[24]
+<Imagens/full_doublscale_Wafixo0.33.png, id=1014, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Wafixo0.33.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo0.33.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo0.33.png  used on input 
 line 789.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Wafixo0.67.png, id=1002, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Wafixo0.67.png, id=1015, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Wafixo0.67.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo0.67.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo0.67.png  used on input 
 line 789.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Wafixo1.00.png, id=1003, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Wafixo1.00.png, id=1016, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Wafixo1.00.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo1.00.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo1.00.png  used on input 
 line 804.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Cs2fixo0.01.png, id=1004, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Cs2fixo0.01.png, id=1017, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Cs2fixo0.01.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo0.01.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo0.01.png  used on input
  line 804.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Cs2fixo0.10.png, id=1005, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Cs2fixo0.10.png, id=1018, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Cs2fixo0.10.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo0.10.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo0.10.png  used on input
  line 819.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
-<Imagens/full_doublscale_Cs2fixo1.00.png, id=1006, 722.7pt x 491.436pt>
+<Imagens/full_doublscale_Cs2fixo1.00.png, id=1019, 722.7pt x 491.436pt>
 File: Imagens/full_doublscale_Cs2fixo1.00.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo1.00.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo1.00.png  used on input
@@ -1178,12 +1179,12 @@ Overfull \hbox (64.58481pt too wide) in paragraph at lines 775--820
 
 LaTeX Warning: Float too large for page by 22.08372pt on input line 822.
 
-[24] [25] [26 <./Imagens/full_doublscale_Wafixo0.33.png> <./Imagens/full_doubls
-cale_Wafixo0.67.png> <./Imagens/full_doublscale_Wafixo1.00.png> <./Imagens/full
-_doublscale_Cs2fixo0.01.png> <./Imagens/full_doublscale_Cs2fixo0.10.png> <./Ima
-gens/full_doublscale_Cs2fixo1.00.png>]
+[25] [26 <./Imagens/full_doublscale_Wafixo0.33.png> <./Imagens/full_doublscale_
+Wafixo0.67.png> <./Imagens/full_doublscale_Wafixo1.00.png> <./Imagens/full_doub
+lscale_Cs2fixo0.01.png> <./Imagens/full_doublscale_Cs2fixo0.10.png> <./Imagens/
+full_doublscale_Cs2fixo1.00.png>]
 Chapter 3.
-<Imagens/selection_2MASS.png, id=1051, 456.0237pt x 338.2236pt>
+<Imagens/selection_2MASS.png, id=1052, 456.0237pt x 338.2236pt>
 File: Imagens/selection_2MASS.png Graphic file (type png)
 <use Imagens/selection_2MASS.png>
 Package pdftex.def Info: Imagens/selection_2MASS.png  used on input line 853.
@@ -1191,53 +1192,53 @@ Package pdftex.def Info: Imagens/selection_2MASS.png  used on input line 853.
 [27
 
 ]
-<Imagens/Selection_TriplePlot.png, id=1063, 930.8376pt x 336.0555pt>
+<Imagens/Selection_TriplePlot.png, id=1064, 930.8376pt x 336.0555pt>
 File: Imagens/Selection_TriplePlot.png Graphic file (type png)
 <use Imagens/Selection_TriplePlot.png>
 Package pdftex.def Info: Imagens/Selection_TriplePlot.png  used on input line 8
 70.
 (pdftex.def)             Requested size: 446.13727pt x 161.06892pt.
  [28 <./Imagens/selection_2MASS.png>]
-<Imagens/SynthMap_CMB.png, id=1078, 614.295pt x 390.258pt>
+<Imagens/SynthMap_CMB.png, id=1079, 614.295pt x 390.258pt>
 File: Imagens/SynthMap_CMB.png Graphic file (type png)
 <use Imagens/SynthMap_CMB.png>
 Package pdftex.def Info: Imagens/SynthMap_CMB.png  used on input line 888.
 (pdftex.def)             Requested size: 223.07211pt x 141.7135pt.
-<Imagens/SynthMap_Galaxy.png, id=1079, 614.295pt x 390.258pt>
+<Imagens/SynthMap_Galaxy.png, id=1080, 614.295pt x 390.258pt>
 File: Imagens/SynthMap_Galaxy.png Graphic file (type png)
 <use Imagens/SynthMap_Galaxy.png>
 Package pdftex.def Info: Imagens/SynthMap_Galaxy.png  used on input line 894.
 (pdftex.def)             Requested size: 223.07211pt x 141.7135pt.
-<Imagens/Synth_TriplePlot.png, id=1081, 1300.86pt x 361.35pt>
+<Imagens/Synth_TriplePlot.png, id=1082, 1300.86pt x 361.35pt>
 File: Imagens/Synth_TriplePlot.png Graphic file (type png)
 <use Imagens/Synth_TriplePlot.png>
 Package pdftex.def Info: Imagens/Synth_TriplePlot.png  used on input line 906.
 (pdftex.def)             Requested size: 455.24411pt x 126.45786pt.
  [29 <./Imagens/Selection_TriplePlot.png>]
-<Imagens/hist_l4.png, id=1088, 722.7pt x 533.3526pt>
+<Imagens/hist_l4.png, id=1089, 722.7pt x 533.3526pt>
 File: Imagens/hist_l4.png Graphic file (type png)
 <use Imagens/hist_l4.png>
 Package pdftex.def Info: Imagens/hist_l4.png  used on input line 916.
 (pdftex.def)             Requested size: 223.07211pt x 164.62956pt.
-<Imagens/hist_l30.png, id=1089, 722.7pt x 534.798pt>
+<Imagens/hist_l30.png, id=1090, 722.7pt x 534.798pt>
 File: Imagens/hist_l30.png Graphic file (type png)
 <use Imagens/hist_l30.png>
 Package pdftex.def Info: Imagens/hist_l30.png  used on input line 922.
 (pdftex.def)             Requested size: 223.07211pt x 165.07571pt.
  [30 <./Imagens/SynthMap_CMB.png> <./Imagens/SynthMap_Galaxy.png> <./Imagens/Sy
 nth_TriplePlot.png>]
-<Imagens/triple_colorplot.png, id=1101, 462.528pt x 323.0469pt>
+<Imagens/triple_colorplot.png, id=1102, 462.528pt x 323.0469pt>
 File: Imagens/triple_colorplot.png Graphic file (type png)
 <use Imagens/triple_colorplot.png>
 Package pdftex.def Info: Imagens/triple_colorplot.png  used on input line 944.
 (pdftex.def)             Requested size: 418.82375pt x 292.53871pt.
  [31 <./Imagens/hist_l4.png> <./Imagens/hist_l30.png>]
-<Imagens/minimum_SelFunc.png, id=1116, 650.43pt x 433.62pt>
+<Imagens/minimum_SelFunc.png, id=1117, 650.43pt x 433.62pt>
 File: Imagens/minimum_SelFunc.png Graphic file (type png)
 <use Imagens/minimum_SelFunc.png>
 Package pdftex.def Info: Imagens/minimum_SelFunc.png  used on input line 963.
 (pdftex.def)             Requested size: 223.07211pt x 148.71245pt.
-<Imagens/minimumX2mass.png, id=1117, 650.43pt x 433.62pt>
+<Imagens/minimumX2mass.png, id=1118, 650.43pt x 433.62pt>
 File: Imagens/minimumX2mass.png Graphic file (type png)
 <use Imagens/minimumX2mass.png>
 Package pdftex.def Info: Imagens/minimumX2mass.png  used on input line 970.
@@ -1249,7 +1250,7 @@ Chapter 4.
 [34
 
 ]
-<Imagens/beam_pattern.png, id=1146, 803.0pt x 803.0pt>
+<Imagens/beam_pattern.png, id=1147, 803.0pt x 803.0pt>
 File: Imagens/beam_pattern.png Graphic file (type png)
 <use Imagens/beam_pattern.png>
 Package pdftex.def Info: Imagens/beam_pattern.png  used on input line 1034.
@@ -1262,45 +1263,45 @@ x is di-ag-o-nal: $\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 N[]
  []
 
 [38]
-<Imagens/wmap_Q_wmask.png, id=1200, 614.295pt x 361.35pt>
+<Imagens/wmap_Q_wmask.png, id=1201, 614.295pt x 361.35pt>
 File: Imagens/wmap_Q_wmask.png Graphic file (type png)
 <use Imagens/wmap_Q_wmask.png>
 Package pdftex.def Info: Imagens/wmap_Q_wmask.png  used on input line 1151.
 (pdftex.def)             Requested size: 223.07211pt x 131.21622pt.
-<Imagens/wmap_V_wmask.png, id=1201, 614.295pt x 361.35pt>
+<Imagens/wmap_V_wmask.png, id=1202, 614.295pt x 361.35pt>
 File: Imagens/wmap_V_wmask.png Graphic file (type png)
 <use Imagens/wmap_V_wmask.png>
 Package pdftex.def Info: Imagens/wmap_V_wmask.png  used on input line 1158.
 (pdftex.def)             Requested size: 223.07211pt x 131.21622pt.
-<Imagens/wmap_W_wmask.png, id=1202, 613.5723pt x 361.35pt>
+<Imagens/wmap_W_wmask.png, id=1203, 613.5723pt x 361.35pt>
 File: Imagens/wmap_W_wmask.png Graphic file (type png)
 <use Imagens/wmap_W_wmask.png>
 Package pdftex.def Info: Imagens/wmap_W_wmask.png  used on input line 1165.
 (pdftex.def)             Requested size: 223.07211pt x 131.3706pt.
  [39 <./Imagens/wmap_Q_wmask.png> <./Imagens/wmap_V_wmask.png> <./Imagens/wmap_
 W_wmask.png>]
-<Imagens/band1_wmask_xsc.png, id=1222, 613.5723pt x 361.35pt>
+<Imagens/band1_wmask_xsc.png, id=1223, 613.5723pt x 361.35pt>
 File: Imagens/band1_wmask_xsc.png Graphic file (type png)
 <use Imagens/band1_wmask_xsc.png>
 Package pdftex.def Info: Imagens/band1_wmask_xsc.png  used on input line 1189.
 (pdftex.def)             Requested size: 225.3436pt x 132.71043pt.
-<Imagens/band2_wmask_xsc.png, id=1223, 614.295pt x 361.35pt>
+<Imagens/band2_wmask_xsc.png, id=1224, 614.295pt x 361.35pt>
 File: Imagens/band2_wmask_xsc.png Graphic file (type png)
 <use Imagens/band2_wmask_xsc.png>
 Package pdftex.def Info: Imagens/band2_wmask_xsc.png  used on input line 1196.
 (pdftex.def)             Requested size: 225.3436pt x 132.55606pt.
-<Imagens/band3_wmask_xsc.png, id=1224, 614.295pt x 361.35pt>
+<Imagens/band3_wmask_xsc.png, id=1225, 614.295pt x 361.35pt>
 File: Imagens/band3_wmask_xsc.png Graphic file (type png)
 <use Imagens/band3_wmask_xsc.png>
 Package pdftex.def Info: Imagens/band3_wmask_xsc.png  used on input line 1203.
 (pdftex.def)             Requested size: 225.3436pt x 132.55606pt.
-<Imagens/band4_wmask_xsc.png, id=1225, 614.295pt x 361.35pt>
+<Imagens/band4_wmask_xsc.png, id=1226, 614.295pt x 361.35pt>
 File: Imagens/band4_wmask_xsc.png Graphic file (type png)
 <use Imagens/band4_wmask_xsc.png>
 Package pdftex.def Info: Imagens/band4_wmask_xsc.png  used on input line 1210.
 (pdftex.def)             Requested size: 225.3436pt x 132.55606pt.
  [40]
-<Imagens/Full_Data_Plot.png, id=1240, 1445.4pt x 1156.32pt>
+<Imagens/Full_Data_Plot.png, id=1241, 1445.4pt x 1156.32pt>
 File: Imagens/Full_Data_Plot.png Graphic file (type png)
 <use Imagens/Full_Data_Plot.png>
 Package pdftex.def Info: Imagens/Full_Data_Plot.png  used on input line 1238.
@@ -1312,13 +1313,13 @@ Chapter 5.
 [43
 
 ]
-<Imagens/profile_allbands_Nmc2e7.png, id=1276, 462.528pt x 346.896pt>
+<Imagens/profile_allbands_Nmc2e7.png, id=1277, 462.528pt x 346.896pt>
 File: Imagens/profile_allbands_Nmc2e7.png Graphic file (type png)
 <use Imagens/profile_allbands_Nmc2e7.png>
 Package pdftex.def Info: Imagens/profile_allbands_Nmc2e7.png  used on input lin
 e 1283.
 (pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
-<Imagens/profile_ctg_Nmc2e7.png, id=1279, 462.528pt x 346.896pt>
+<Imagens/profile_ctg_Nmc2e7.png, id=1280, 462.528pt x 346.896pt>
 File: Imagens/profile_ctg_Nmc2e7.png Graphic file (type png)
 <use Imagens/profile_ctg_Nmc2e7.png>
 Package pdftex.def Info: Imagens/profile_ctg_Nmc2e7.png  used on input line 129
@@ -1326,7 +1327,7 @@ Package pdftex.def Info: Imagens/profile_ctg_Nmc2e7.png  used on input line 129
 (pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
  [44 <./Imagens/profile_allbands_Nmc2e7.png>] [45 <./Imagens/profile_ctg_Nmc2e7
 .png>]
-<Imagens/profile_BestBand.png, id=1296, 447.3513pt x 337.5009pt>
+<Imagens/profile_BestBand.png, id=1297, 447.3513pt x 337.5009pt>
 File: Imagens/profile_BestBand.png Graphic file (type png)
 <use Imagens/profile_BestBand.png>
 Package pdftex.def Info: Imagens/profile_BestBand.png  used on input line 1309.
@@ -1397,10 +1398,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27931 strings out of 478287
- 533890 string characters out of 5849289
- 1253969 words of memory out of 5000000
- 45073 multiletter control sequences out of 15000+600000
+ 27930 strings out of 478287
+ 533871 string characters out of 5849289
+ 1253886 words of memory out of 5000000
+ 45072 multiletter control sequences out of 15000+600000
  550074 words of font info for 336 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,17n,77p,1203b,1868s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1422,10 +1423,10 @@ ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (70 pages, 4924456 bytes).
+Output written on main.pdf (70 pages, 4924985 bytes).
 PDF statistics:
- 1741 PDF objects out of 2073 (max. 8388607)
- 1299 compressed objects within 13 object streams
+ 1742 PDF objects out of 2073 (max. 8388607)
+ 1300 compressed objects within 13 object streams
  298 named destinations out of 1000 (max. 500000)
  82867 words of extra memory for PDF output out of 89155 (max. 10000000)
 
