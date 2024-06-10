@@ -212,7 +212,7 @@ One of the fundamental principles of cosmology is called the Cosmological Princi
 
 %\noindent This means that under the assumption of the Cosmological Principle, the metric of the universe can only be that of an euclidian plane, a hypersphere or a hyperbolic space. 
 
-In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology: Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the earth\cite{hubble}, these results were studied using general relativity and cosmological models at the time\cite{Lemaitre:1927zz}. It was then established another principle that physicists were avoiding in their theoretical models for quite some time: The Universe is not static, in fact it is expanding, and for objects not too far (REFERÊNCIA), there is a linear relationship between the redshift of an observed object and its distance to the observer. 
+In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology: Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the earth\cite{hubble}, these results were studied using general relativity and cosmological models at the time\cite{Lemaitre:1927zz}. It was then established another principle that physicists were avoiding in their theoretical models for quite some time: The Universe is not static, in fact it is expanding, and for objects not too far, there is a linear relationship between the redshift of an observed object and its distance to the observer. 
 
 To describe the Universe, a coordinate system is embedded in the entire Universe, and to describe its dynamical nature, the scale factor $a$ is introduced to the theoretical model: $a$ is set to 1 at the present as a convention (usually called $a_0$), and its value at any given time $a(t)$ is the size of the Universe relative to its present size. A simple relation can be established between the scale factor of an observed object and its redshift $z$:
 
@@ -518,10 +518,13 @@ We can then expand the Boltzmann equation using the results in \eqref{f(x,p,t)_f
 %    \dot{\Theta}_P+ik\mu\Theta_P=-\dot{\tau}\left\{-\Theta_P+\frac{1}{2}[1-\mathcal{P}_2(\mu)](\Theta_2+\Theta_{P2}+\Theta_{P0})\right\},
 %\end{equation}
 \begin{equation}
-    \dot{\delta}+\frac{ik}{a}v=-3\dot{\Phi},
+    \dot{\delta_c}+\frac{ik}{a}v_c=-3\dot{\Phi},
 \end{equation}
 \begin{equation}
-    \dot{v}+\frac{H}{a}v=-\frac{ik}{a}\Psi,
+    \dot{\delta_b}+\frac{ik}{a}v_b=-3\dot{\Phi},
+\end{equation}
+\begin{equation}
+    \dot{v_c}+\frac{H}{a}v_c=-\frac{ik}{a}\Psi,
 \end{equation}
 \begin{equation}
     \dot{v_b}+\frac{H}{a}v_b=-\frac{ik}{a}\Psi+\frac{4\rho_\gamma}{3\rho_b}\dot{\tau}(v_b+3i\Theta_1),
@@ -671,7 +674,7 @@ While the CMB is usually described as a two dimensional map measured around the 
     \label{fig:matter_PS}
 \end{figure}
 
-The HALOFIT model is a semi-analytical method to determine a non-linear solution for $P(k,z)$.  EXPLAIN HALOFIT? DISCUSS WHY USING HALOFIT IS IMPORTANT
+The HALOFIT model is a semi-analytical method to determine a non-linear solution for $P(k,z)$, it is based in the Halo Model, which posits that all matter resides in haloes, and uses this hypothesis to describe the evolution of perturbations in the universe. The corrections due to the HALOFIT model are not relevant in large scales, as shown in Figure \ref{fig:matter_PS}, in which both spectra are indistinguishable at low values of $k$, only at higher values of k -- small scales -- the two spectra clearly diverge. In terms of the correlation power spectra, one can already notice a significant difference in the predicted spectra at around $\ell=40$\cite{Moura-Santos_2016}, showing very clearly the importance of using HALOFIT for our analysis.
 
 \subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
 
@@ -720,11 +723,11 @@ Figure \ref{fig:correlations_theoretical} shows the galaxy autocorrelation spect
 	\label{fig:correlations_theoretical}
 \end{figure}
 
-These plots, show very clearly that the ISW effect has a lot more relevance in the lower multipoles, where cosmic variance has a significant influence. The selection function is an important aspect of this signal, in chapter \ref{chapter:select_func_optimal} the matter of how to optimize the signal with the use of an idealized selection function will be discussed.
+These plots show very clearly that the ISW effect has a lot more relevance in the lower multipoles, where cosmic variance has a significant influence. The selection function is an important aspect of this signal, in chapter \ref{chapter:select_func_optimal} the matter of how to optimize the signal with the use of an idealized selection function will be discussed.
 
 \section{Dependence on Dark Energy Models}\label{sect:dark_energy}
 
-Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid} and modifications to general relativity\cite{Brane_cosmo_model}. 
+Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid, review_DE_ronaldo} and modifications to general relativity\cite{Brane_cosmo_model}. 
 
 A general class of dark energy models are the ones called the k-essence models. The energy-momentum tensor for a k-essence type dark energy is
 
@@ -740,9 +743,13 @@ A general class of dark energy models are the ones called the k-essence models. 
 
 \noindent where $c_s^2$ is the so-called sound speed of the k-essence fluid. The value of this parameter influences, for instance, the evolution of the gravitational potentials\cite{DE_variable_soundspeed_Linton2018} and their perturbations -- especially at low values of $c_s$ -- and many other factors that relate to the evolution of the universe, thus having an impact on observables. 
 
-(ENTER THE QUINTESSENCE DISCUSSIONS AND TRY TO CONNECT WITH THE PARAMETRIZATION)
+Within k-essence, a very common class of models are the quintessence models, which are defined by $\mathcal{L}=X-V(\varphi)$, for which we can obtain an equation of state parameter $w=p/\rho$ and sound speed of
 
-The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization\cite{CPL_DE_parametrization,DE_models}:
+\begin{align}\label{quintessence1}
+	w&=\frac{X-V}{X+V}, & c_s^2&=1.
+\end{align}
+
+Equation \eqref{quintessence1} can be time dependent, and its form depends on the form of the potential $V$. Parametrizing this equation as a funtion of redshift and fitting it to the data can be a powerful tool to find what models might better describe dark energy. The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization\cite{CPL_DE_parametrization,DE_models}:
 
 \begin{equation}\label{CPL}
     w(z)=w_0+\left(1-\frac{1}{1+z}\right)w_a.
@@ -821,6 +828,8 @@ Figure \ref{fig:Dark_energy_tests} shows the influence of different parameter va
 \label{fig:Dark_energy_tests}
 \end{figure}
 
+In Figure \ref{fig:Dark_energy_tests}, it is important to note that $w_a=1$ is a very extreme scenario, where $w_\text{de}=0$ at very high redshifts, meaning it would behave like matter, which is a behavior very incompatible with what's expected in the models. (reference?)
+
 \chapter{Optimizing the Selection Function}\label{chapter:select_func_optimal}
 
 Equation \eqref{Wg} introduced the selection function $\dv{N}{z}$, which simply corresponds to the redshift distribution of galaxy counts $N$ and can vary depending on the galaxy catalog used, thus having an influence on the expected cross-correlation and galaxy autocorrelation signals that can be extracted from that catalog. As shown in Figure \ref{fig:correlations_theoretical}, the ISW signal is mostly present at low multipoles, where cosmic variance has a strong influence, making it hard to determine whether the data follow the model or the null hypothesis of zero cross-correlation. This motivated us to study the possibility of optimizing the cross-correlation signal by determining a selection function that could theoretically maximize it, this study will be presented in this chapter.
@@ -867,7 +876,7 @@ To determine the region in the parameter space that favors redshift $z^*$, a stu
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=.98\linewidth]{Imagens/Selection_TriplePlot.png}
+	\includegraphics[width=\linewidth]{Imagens/Selection_TriplePlot.png}
 	\caption{Selection function calculated for various parameter values according to the parametrization \eqref{select_func_par}. Each plot is made by keeping 2 of its three parameters fixed, corresponding to the band 2 of the 2MASS catalog (see Table \ref{tab:bands_2MASS}), the corresponding values of the varied parameter can be seen on the legend.}
 	\label{fig:selection_tripleplot}
 \end{figure}
@@ -1302,7 +1311,7 @@ Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation
 
 Despite this, bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2, a behavior not noticeable in the joint-likelihoods shown in Figure \ref{fig:likelihood_prof_ctg+cgg}. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a cross-correlation signal with a higher constraint power.
 
-We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, with errors equal to 10\% of the calculated correlation for each multipole ($\sigma_\ell=0.1C_\ell^{tg}$). Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}. %o gráfico já ta exponenciado
+We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, with errors equal to 10\% of the calculated correlation for each multipole ($\sigma_\ell=0.1C_\ell^{tg}$). Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
 
 \begin{figure}[!htb]
 	\centering
@@ -1313,7 +1322,9 @@ We have also performed an analysis using artificial data following the optimized
 
 The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_optimal} is simillar to those shown for bands 3 and 4 of 2MASS in Figure \ref{fig:likelihood_prof_ctg}, and the width of the curve is higher in the current analysis, suggesting that this optimal band does not hold a stronger constraint power over $\Omega_m$ at least. 
 
-It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, a result that does not have a direct consequence with regards to the constraint power of this optimal band with respect to cosmological parameters. 
+It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis leads to $\Omega_m=1$ (POR QUE?), thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
+
+Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the null cross-correlation hypothesis, and studied wether new changes in the data sets to possibly improve the signal, such as greated galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
 \chapter{Conclusions}
 
@@ -1361,7 +1372,7 @@ Falar sobre espaço de fourier
 Falar do conceito de spectral density/power spectrum
 \fi
 
-\chapter{Demonstration of Dark Energy Era Redshift}\label{app:dark_energy_era}
+\chapter{Demonstration of Accelerated Expansion Redshift}\label{app:dark_energy_era}
 
 We will start defining the decelerating parameter $q(a)$
 

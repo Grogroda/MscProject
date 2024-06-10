@@ -1767,8 +1767,8 @@
       \strng{authorbibnamehash}{53f244e4637ad4195691332a873462b9}
       \strng{authornamehash}{53f244e4637ad4195691332a873462b9}
       \strng{authorfullhash}{53f244e4637ad4195691332a873462b9}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{astro-ph}
@@ -2102,8 +2102,8 @@
       \strng{authorbibnamehash}{d8eeffef32dbf31b3ae225290a3acbb6}
       \strng{authornamehash}{d8eeffef32dbf31b3ae225290a3acbb6}
       \strng{authorfullhash}{d8eeffef32dbf31b3ae225290a3acbb6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780128159484}
@@ -3240,8 +3240,8 @@
       \strng{authorbibnamehash}{1d9ee49f1da3fb12791f203960214672}
       \strng{authornamehash}{1d9ee49f1da3fb12791f203960214672}
       \strng{authorfullhash}{bf2fb5c4b72568630705450c579930b3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ApJ}
@@ -4234,8 +4234,8 @@
       \strng{authorbibnamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authornamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authorfullhash}{5123506542509cdec9b3cb16dcfe07b9}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-8711}
@@ -4382,8 +4382,8 @@
       \strng{authorbibnamehash}{42dc1c3413419702284c47ae89fcb0ec}
       \strng{authornamehash}{42dc1c3413419702284c47ae89fcb0ec}
       \strng{authorfullhash}{b6dca0929e5cf5cb1c87695d0c8293ef}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{6}
@@ -4402,6 +4402,40 @@
       \endverb
       \verb{url}
       \verb https://link.aps.org/doi/10.1103/PhysRevD.101.063516
+      \endverb
+    \endentry
+    \entry{review_DE_ronaldo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a5530ef95c92d9c6313030bab63a253e}{%
+           family={Batista},
+           familyi={B\bibinitperiod},
+           given={Ronaldo\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5530ef95c92d9c6313030bab63a253e}
+      \strng{fullhash}{a5530ef95c92d9c6313030bab63a253e}
+      \strng{bibnamehash}{a5530ef95c92d9c6313030bab63a253e}
+      \strng{authorbibnamehash}{a5530ef95c92d9c6313030bab63a253e}
+      \strng{authornamehash}{a5530ef95c92d9c6313030bab63a253e}
+      \strng{authorfullhash}{a5530ef95c92d9c6313030bab63a253e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2218-1997}
+      \field{journaltitle}{Universe}
+      \field{number}{1}
+      \field{title}{A Short Review on Clustering Dark Energy}
+      \field{volume}{8}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.3390/universe8010022
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2218-1997/8/1/22
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2218-1997/8/1/22
       \endverb
     \endentry
     \entry{Brane_cosmo_model}{article}{}
@@ -4438,8 +4472,8 @@
       \strng{authorbibnamehash}{df0a96c23f25f10f6b59874b079516f6}
       \strng{authornamehash}{df0a96c23f25f10f6b59874b079516f6}
       \strng{authorfullhash}{9368bb5d5c9472741d41eaf7a1d907d4}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
@@ -4459,6 +4493,51 @@
       \verb{url}
       \verb https://dx.doi.org/10.1088/1475-7516/2019/10/007
       \endverb
+    \endentry
+    \entry{DE_variable_soundspeed_Linton2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a2ed603f0cd70bb0fa9229ee9725ca1f}{%
+           family={Linton},
+           familyi={L\bibinitperiod},
+           given={Mark\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=33a1f29426c1968feaeb994318e1e402}{%
+           family={Pourtsidou},
+           familyi={P\bibinitperiod},
+           given={Alkistis},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fd52e2aac757409221b2f21c85e219ea}{%
+           family={Crittenden},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4d53d8bcf5590c985ee9d372538de954}{%
+           family={Maartens},
+           familyi={M\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{fullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
+      \strng{bibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authorbibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
+      \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Cosmol. Astropart. Phys.}
+      \field{month}{04}
+      \field{number}{04}
+      \field{title}{Variable sound speed in interacting dark energy models}
+      \field{volume}{2018}
+      \field{year}{2018}
+      \field{pages}{043\bibrangedash 043}
+      \range{pages}{1}
     \endentry
     \entry{Hubble_tension_review}{article}{}
       \name{author}{2}{}{%
@@ -5549,104 +5628,6 @@
       \endverb
       \keyw{cosmological parameters,dark energy,Astrophysics - Cosmology and Nongalactic Astrophysics}
     \endentry
-    \entry{DE_sound}{article}{}
-      \name{author}{4}{}{%
-        {{hash=a2ed603f0cd70bb0fa9229ee9725ca1f}{%
-           family={Linton},
-           familyi={L\bibinitperiod},
-           given={Mark\bibnamedelima S.},
-           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=33a1f29426c1968feaeb994318e1e402}{%
-           family={Pourtsidou},
-           familyi={P\bibinitperiod},
-           given={Alkistis},
-           giveni={A\bibinitperiod}}}%
-        {{hash=fd52e2aac757409221b2f21c85e219ea}{%
-           family={Crittenden},
-           familyi={C\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-        {{hash=4d53d8bcf5590c985ee9d372538de954}{%
-           family={Maartens},
-           familyi={M\bibinitperiod},
-           given={Roy},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{fullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
-      \strng{bibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{authorbibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
-      \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
-      \field{month}{4}
-      \field{number}{04}
-      \field{title}{Variable sound speed in interacting dark energy models}
-      \field{volume}{2018}
-      \field{year}{2018}
-      \field{pages}{043}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1088/1475-7516/2018/04/043
-      \endverb
-      \verb{urlraw}
-      \verb https://dx.doi.org/10.1088/1475-7516/2018/04/043
-      \endverb
-      \verb{url}
-      \verb https://dx.doi.org/10.1088/1475-7516/2018/04/043
-      \endverb
-    \endentry
-    \entry{DE_variable_soundspeed_Linton2018}{article}{}
-      \name{author}{4}{}{%
-        {{hash=a2ed603f0cd70bb0fa9229ee9725ca1f}{%
-           family={Linton},
-           familyi={L\bibinitperiod},
-           given={Mark\bibnamedelima S},
-           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=33a1f29426c1968feaeb994318e1e402}{%
-           family={Pourtsidou},
-           familyi={P\bibinitperiod},
-           given={Alkistis},
-           giveni={A\bibinitperiod}}}%
-        {{hash=fd52e2aac757409221b2f21c85e219ea}{%
-           family={Crittenden},
-           familyi={C\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-        {{hash=4d53d8bcf5590c985ee9d372538de954}{%
-           family={Maartens},
-           familyi={M\bibinitperiod},
-           given={Roy},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IOP Publishing}%
-      }
-      \strng{namehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{fullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
-      \strng{bibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{authorbibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
-      \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
-      \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{J. Cosmol. Astropart. Phys.}
-      \field{month}{04}
-      \field{number}{04}
-      \field{title}{Variable sound speed in interacting dark energy models}
-      \field{volume}{2018}
-      \field{year}{2018}
-      \field{pages}{043\bibrangedash 043}
-      \range{pages}{1}
-    \endentry
     \entry{gsl-manual}{manual}{}
       \list{organization}{1}{%
         {GNU Project}%
@@ -6460,8 +6441,8 @@
       \strng{authorbibnamehash}{7e53c72f1880c9abe55c4f4616cff5d0}
       \strng{authornamehash}{7e53c72f1880c9abe55c4f4616cff5d0}
       \strng{authorfullhash}{8f1d7c704a6ea02af33bbfc7f49d7be6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{astro-ph}
@@ -6985,6 +6966,51 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1088%5C%2F1475-7516%5C%2F2021%5C%2F05%5C%2F057
+      \endverb
+    \endentry
+    \entry{simillar_ISW_analysis}{article}{}
+      \name{author}{2}{}{%
+        {{hash=115048e7bfff03880038ce60a5b41a71}{%
+           family={Francis},
+           familyi={F\bibinitperiod},
+           given={Caroline\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=f533a1ec276c4dfadd557bc79ca41271}{%
+           family={Peacock},
+           familyi={P\bibinitperiod},
+           given={John\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{fullhash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{bibnamehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{authorbibnamehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{authornamehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{authorfullhash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0035-8711}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{07}
+      \field{number}{1}
+      \field{title}{{Integrated Sachs–Wolfe measurements with photometric redshift surveys: 2MASS results and future prospects}}
+      \field{volume}{406}
+      \field{year}{2010}
+      \field{pages}{2\bibrangedash 13}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1111/j.1365-2966.2010.16278.x
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/mnras/article-pdf/406/1/2/3673745/mnras0406-0002.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/j.1365-2966.2010.16278.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/j.1365-2966.2010.16278.x
       \endverb
     \endentry
   \enddatalist
