@@ -4,6 +4,9 @@ import scipy.special as scp
 
 #reference values correspond to band 2 of the 2MASS catalog:
 z0,lbda,beta=0.054,1.6,1.8
+z0s=[0.02, 0.06, 0.1, 0.14, 0.18]
+betas=[0.4, 1.0, 1.6, 2.2, 2.8]
+lbdas=[0.4, 1.0, 1.6, 2.2, 2.8]
 
 def selection(z,z0,lbda,beta):
     
@@ -15,7 +18,7 @@ def selection(z,z0,lbda,beta):
 #fixing lbda and beta:
 
 def vary_z0(zs):
-    z0s=[0.02*(i+1) for i in range(10)]
+    #z0s=[0.02*(i+1) for i in range(10)]
     dNdz_list=[]
     for z0 in z0s:
         dNdz=[selection(z,z0,lbda,beta) for z in zs]
@@ -24,7 +27,7 @@ def vary_z0(zs):
     return dNdz_list, z0s
     
 def vary_lbda(zs):
-    lbdas=[0.4*(i+1) for i in range(10)]
+    #lbdas=[0.4*(i+1) for i in range(10)]
     dNdz_list=[]
     for lbda in lbdas:
         dNdz=[selection(z,z0,lbda,beta) for z in zs]
@@ -33,7 +36,7 @@ def vary_lbda(zs):
     return dNdz_list, lbdas
     
 def vary_beta(zs):
-    betas=[0.4*(i+1) for i in range(10)]
+    #betas=[0.4*(i+1) for i in range(10)]
     dNdz_list=[]
     for beta in betas:
         dNdz=[selection(z,z0,lbda,beta) for z in zs]
@@ -99,13 +102,14 @@ def main():
         axs[2].plot(zs, select4lbdas[i], label=r'$\lambda$={:.1f}'.format(lbdas[i]))
 
     axs[0].set_ylim((-1, 40))
-    axs[0].set_xlim((0, 1.15))
-    axs[1].set_xlim((0, 0.7))
-    axs[2].set_xlim((0,0.45))
+    axs[0].set_xlim((0, 0.67))
+    axs[1].set_xlim((0, 0.47))
+    axs[2].set_xlim((0,0.4))
     axs[0].legend()
     axs[1].legend()
     axs[2].legend()
 
+    plt.tight_layout()
     plt.savefig('Selection_TriplePlot.png')
 
 if __name__=='__main__':
