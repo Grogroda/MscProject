@@ -29,5 +29,5 @@
 \contentsline {section}{\numberline {5.1}Likelihood Profiling}{44}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Results}{45}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Conclusions}{48}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Demonstration of Accelerated Expansion Redshift}{50}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{52}{appendix.B}%
+\contentsline {chapter}{\numberline {A}Demonstration of Accelerated Expansion Redshift}{51}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{53}{appendix.B}%
