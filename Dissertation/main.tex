@@ -180,24 +180,32 @@ Some mappings of the CMB were carried out in the last few decades, the first sat
     \label{fig:cmb_satellites}
 \end{figure}
 
-Amongst the many effects that affect the CMB, the Integrated Sachs-Wolfe (ISW) Effect is one of the most important ones. First described by Rainer K. Sachs and Arthur M. Wolfe in 1967, the ISW effect is a mechanism that causes photons (including CMB photons) to blueshift in cosmological periods when gravitational potentials change rapidly. One such period is the time between the current dark energy dominated era and the dark matter dominated era before it. During this transition, gravitational potentials decay (or "flatten") over time, causing CMB photons that entered potential wells with a certain gravitational blueshift to leave these wells with a redshift that does not compensate for the initial blueshift, leaving a net blueshift in these photons, creating patterns that can be observed in the CMB temperature map and spectrum\cite{Sachs:1967er}.
+Amongst the many effects that affect the CMB, the Integrated Sachs-Wolfe (ISW) Effect is one of the most important ones. First described by Rainer K. Sachs and Arthur M. Wolfe in 1967, the ISW effect is a mechanism that causes photons (including CMB photons) to blueshift or redshift in cosmological periods when gravitational potentials change rapidly. One such period is the time between the current dark energy dominated era and the dark matter dominated era before it. During this transition, gravitational potentials decay (or "flatten") over time, causing CMB photons that entered potential wells with a certain gravitational blueshift to leave these wells with a redshift that does not compensate for the initial blueshift, leaving a net blueshift in these photons, creating patterns that can be observed in the CMB temperature map and spectrum\cite{Sachs:1967er}. This mechanism is illustrated in Figure \ref{fig:ISW_illustration}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.7\linewidth]{Imagens/ISW_illustration.png}
-	\caption{Illustration of the Integrated Sachs-Wolfe Effect (...). Extracted from \url{http://www.cellularuniverse.org/SachsWolfe-Disproof(ijass)-Ranzan.pdf}.}	
+	\caption{Illustration of the Integrated Sachs-Wolfe Effect, in which a photon is shown entering a deep gravitational well that flattens with time, leaving the photon with a net blueshift. Extracted from \url{http://www.cellularuniverse.org/SachsWolfe-Disproof(ijass)-Ranzan.pdf}.}	
 	\label{fig:ISW_illustration}
 \end{figure}
 
-There are two contributions to the ISW effect: The early-time ISW effect occurs immediately after the last scattering surface (COMPLEMENTAR AQUI DEPOIS), and the late-time ISW effect, which is more recent, occurring in the current dark energy dominated era. 
+There are two contributions to the ISW effect: The early-time ISW effect occurs immediately after the last scattering surface, and the late-time ISW effect, which is more recent, occurring in the transition to the current dark energy dominated era. 
 
-From this association between blueshifted CMB photons and gravity wells, it is natural to assume that the matter distribution of the Universe should hold a statistical cross-correlation between with the CMB temperature map. When looking at the theoretical model, we will see that this cross-correlation is expected, and many works in the past have already searched and found such cross-correlation (EXAMPLE REFS) (COMPLETAR AQUI, VOU COMPLEMENTAR NISSO? APRESENTAR ALGO NOVO? ETC). 
+From this association between blueshifted CMB photons and gravity wells, it is natural to assume that the matter distribution of the Universe should hold a statistical cross-correlation with the CMB temperature map. When looking at the theoretical model, we will see that this cross-correlation is expected\cite{ISW_detect_Crittenden1996, ISW_detect_Cooray2002}, and many works in the past have reported detections of the ISW effect using such cross-correlation using various sources of data and statistical methods\cite{ISW_detect_Boughn2004, ISW_detect_Nolta2004, ISW_detect_Gaztanga2006, ISW_detect_Abazajian2009, ISW_detect_and_review2011}. (SUMMARIZE THE RESULTS OF THESE WORKS AND HIGHLIGHT PROS AND CONS)
 
-The present work expands on a method (what characterizes this method and sets it apart from other ones?) presented in \cite{Moura-Santos_2016} to estimate these cross-correlations, using the models and some techniques presented there, with a more thorough selection of the data that is to be used in the analysis, using the newer Planck Satellite data instead of the WMAP data, and applying the method to alternative dark energy models, making it possible to compare them with the $\Lambda $CDM model and providing insights about the nature of dark energy. 
+The present work uses the bayesian methods presented in \cite{Moura-Santos_2016} to estimate these cross-correlation spectra using WMAP\cite{WMAP_results,WMAP_data} CMB temperature maps and 2MASS\cite{2MASS} galaxy contrast maps, and study the constraint power of the results over a specific cosmological parameter. We have also investigated the impact of the redshift distribution of the galaxies in the catalog used on the resulting cross-correlation spectrum, and studied what would be the distribution that optimizes this signal.  
 
-The rest of this dissertation will be organized as follows: DESCRIBE HOW THE SECTIONS ARE ORGANIZED WHEN THE REST OF THE DISSERTATION IS DONE.
+The rest of this dissertation will be organized as follows: 
 
-\chapter{Cosmology's Standard Model}
+In Chapter \ref{chapter:model}, we start by presenting the fundamental observations and principles of cosmology, some of its fundamental equations, and discuss what makes up the $\Lambda$CDM model. We first describe the universe in terms of a homogeneous and isotropic background and later introduce perturbations to this background, which allows us to determine the linear differential equations that describe the energy contents of the universe. With these equations, we can focus on the radiation equation to describe the statistical distribution of the CMB today, finally reaching a point where we can mathematically define the ISW effect and its properties, as well as discuss the so called cosmic variance, a source of irreducible error in the signal. Finally, we discuss how alternative dark energy models can influence our observables.
+
+In Chapter \ref{chapter:select_func_optimal}, we study how the redshift distribution of galaxy catalogs are generally parametrized, the general properties of this parametrization and the distributions of the 4 bands we are using of the 2MASS catalog. In order to maximize the cross-correlation signal taking into account the high cosmic variance in this region, we define the probability that a certain cross-correlation function calculated from a certain galaxy distribution is compatible with a 0 cross-correlation model and determine the parametrization that minimizes this probability.
+
+In Chapter \ref{chapter:extracting_correlations_from_data}
+
+In Chapter \ref{chapter:constraints}
+
+\chapter{Cosmology's Concordance Model}\label{chapter:model}
 
 The advent of general relativity in the early 20th century allowed physicists to conceptualize mathematical models of the Universe. Albert Einstein proposed a model for a static Universe using his theory\cite{Einstein:1917ce}, and other Universe models were proposed in the following years. To start this chapter, the fundamental principles of cosmology will be discussed and used to setup a simple background for the Universe, and the specificities of the currently most accepted model for the Universe -- the $\Lambda$CDM model -- will be discussed. After this, we will complement this simple background with finer details and provide a statistical description of cosmological observables that can be used to test our models.
 
@@ -1349,7 +1357,7 @@ We have also used the cross-correlation spectrum for our $\Lambda$CDM fiducial m
 
 It is also important to highlight the work made in \cite{simillar_ISW_analysis}, in which the authors have analysed if changes in the data, including changes in the redshift distribution of the galaxies of the catalog used, would significantly improve the ISW signal. Despite exploring very different changes in the selection function compared to the ones made in this project, and other idealized properties for the data, it was also reported that the ISW signal would still evade detection in $>10\%$ of cases.
 
-COMO FECHAR?
+ 
 
 \appendix
 
