@@ -201,9 +201,11 @@ In Chapter \ref{chapter:model}, we start by presenting the fundamental observati
 
 In Chapter \ref{chapter:select_func_optimal}, we study how the redshift distribution of galaxy catalogs are generally parametrized, the general properties of this parametrization and the distributions of the 4 bands we are using of the 2MASS catalog. In order to maximize the cross-correlation signal taking into account the high cosmic variance in this region, we define the probability that a certain cross-correlation function calculated from a certain galaxy distribution is compatible with a 0 cross-correlation model and determine the parametrization that minimizes this probability.
 
-In Chapter \ref{chapter:extracting_correlations_from_data}
+In Chapter \ref{chapter:extracting_correlations_from_data}, we briefly discuss some of the properties of the data obtained from the sattelites and some traditional methods used to process that data, motivating the discussion about the Monte Carlo method used in this work. Later, the WMAP and 2MASS maps are shown, as well as the results for the correlation spectra obtained from these maps, which show how present cosmic variance is in the region.
 
-In Chapter \ref{chapter:constraints}
+Finally, in Chapter \ref{chapter:constraints}, the method used to calculate the contraints on the cosmological parameter $\Omega_m$ -- which will be defined in Chapter \ref{chapter:model} -- for the correlation spectra is discussed. We have studied these constraints not only for the 4 2MASS bands, but also for an artificial dataset generated based on the idealized galaxy redshift distribution found in Chapter \ref{chapter:select_func_optimal}. 
+
+We summarize all the results from this project in Chapter \ref{chapter:conclusions}, draw some conclusions based on this and other works that have studied the same problem in various different ways, and present future perspectives.
 
 \chapter{Cosmology's Concordance Model}\label{chapter:model}
 
@@ -1339,7 +1341,7 @@ It is important to remind that the analysis made in Chapter \ref{chapter:select_
 
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the null cross-correlation hypothesis, and studied wether new changes in the data sets to possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
-\chapter{Conclusions}
+\chapter{Conclusions}\label{chapter:conclusions}
 
 In this work we have studied the possibility of using the integrated Sachs-Wolfe effect as a probe for analysing cosmological data. More specifically, we have studied the properties of the cross-correlation spectrum between a CMB temperature map and a galaxy contrast map. The method used to obtain this spectrum from the corresponding maps has already been tested and validated in \cite{Moura-Santos_2016}, as discussed in Chapter \ref{chapter:extracting_correlations_from_data}, and although the signal was obtained, it was nearly indistinguishable from a zero cross-correlation hypothesis. As discussed, this difficulty arises from the fact the the ISW signal is mostly present at low multipoles, meaning there is a very high irreducible error contribution from cosmic variance. 
 
