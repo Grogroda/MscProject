@@ -49,7 +49,7 @@ plt.hist(bins[:-1], bins, density=True,weights=weights, label='Normalized\ndistr
 plt.plot(xs, ys, label='Gaussian Fit')
 #plt.title(r'$\ell={}$'.format(l))
 plt.xlabel(r'$C^{tg}_{\ell}$', fontsize=25)
-plt.ylabel(r'$f_{\ell}(C^{tg}_{\ell})$', fontsize=25)
+#plt.ylabel(r'$f_{\ell}(C^{tg}_{\ell})$', fontsize=25)
 plt.legend(loc='upper left')
 plt.tight_layout()
 plt.savefig('hist_l{}.png'.format(l))
