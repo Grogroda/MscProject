@@ -1268,15 +1268,19 @@ Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
-With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but I was not able to implement our theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
+With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but during our testing stages, the process showcased a very slow convergence speed even while sampling a single parameter, making this analysis unviable. Upon inspecting the partial results of this process, we have noticed that the likelihood of the parameter we tested is very wide, which strongly reduced the acceptance rate of the chain.
 
-%\section{Monte Carlo Markov Chains}
+This limitation led us to instead calculate the likelihood profile for $\Omega_m$ only, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
+
+\section{Monte Carlo Markov Chains}
 
 %EXPLAIN THE IDEA OF POSSIBLY USING MCMC FOR MULTIPLE PARAMETER CONSTRAINTS AND WHY IT BECAME UNVIABLE
 
 \section{Likelihood Profiling}
 
-For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table\ref{tab:planck_parameters}, we can use CAMB to calculate theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
+\subsection{Procedure}
+
+For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table\ref{tab:planck_parameters}, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
 
 We have assumed that for each multipole $\ell$ and for all the three different spectra, the likelihood is a Gaussian distribution of the form
 
@@ -1298,7 +1302,20 @@ We have analysed the likelihoods relative to both $C^{tg}$ and $C^{gg}$, as well
 
 Equation \eqref{joint-likelihood} is calculated in each band of the 2MASS catalog, the results can be normalized with respect to the maximum value obtained for each band, or multiplied to form a full 2MASS joint-likelihood of all 4 bands and then normalized with respect to the maximum value. 
 
-\section{Results}
+\subsection{Results}
+
+The likelihoods calculated using $C^{tg}$ data from all 4 2MASS bands and the combination of all bands' likelihoods are shown in Figure \ref{fig:likelihood_prof_ctg}. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.7\linewidth]{Imagens/profile_ctg_Nmc2e7.png}
+	\caption{Normalized $C^{tg}$ likelihood of each band of the 2MASS catalog and combination of all bands' likelihoods. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
+	\label{fig:likelihood_prof_ctg}
+\end{figure}
+
+Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constraint the $\Omega_m$ parameter, due to the fact that the likelihoods calculated for every physically meaningful value of $\Omega_m$ is within 70\% of the maximum likelihoods calculated. 
+
+Bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a cross-correlation signal with a higher constraint power.
 
 Figure \ref{fig:likelihood_prof_ctg+cgg} shows the $C^{tg}+C^{gg}$ joint-likelihood calculated for each of the 4 bands of the 2MASS catalog, as well as the full 2MASS joint-likelihood of all the bands together. 
 
@@ -1309,37 +1326,26 @@ Figure \ref{fig:likelihood_prof_ctg+cgg} shows the $C^{tg}+C^{gg}$ joint-likelih
 	\label{fig:likelihood_prof_ctg+cgg}
 \end{figure}
 
-Simply visualizing the gray band and comparing it with the peaks of the likelihoods indicate that both the bands 3 and 4 of 2MASS and the full joint-likelihood are compatible with the Planck results, while bands 1 and 2 seem to be compatible within the errors. The width of the likelihoods in all bands are very similar, showing very little differences between the constraint power of each band in this analysis.
+Simply visualizing the gray band and comparing it with the peaks of the likelihoods indicate that bands 3 and 4 of 2MASS and the full joint-likelihood are compatible with the Planck's results within $1\sigma$, and bands 1 and 2 are also compatible. The width of the likelihoods in all bands are very similar, showing very little differences between the constraint power of each band in this analysis. 
 
-The width of the curves obtained in this project, using only $C^{tg}$ and $C^{gg}$ data, is comparable to the 68\% Planck error for $\Omega_m$, showing that the combination of these two spectra have a very strong constraint power with respect to this parameter.
+Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^{gg}$ has a much higher constraint power over $\Omega_m$ than $C^{tg}$: while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, the results for $C^{tg}$ only show very high relative likelihood values across all physical values of $\Omega_m$, as previously discussed.
 
-The likelihoods calculated only using $C^{tg}$ data are shown in Figure \ref{fig:likelihood_prof_ctg}. These show the contribution each band's cross-correlation signal has on the final likelihoods shown in Figure \ref{fig:likelihood_prof_ctg+cgg}.
+The width of the curves obtained in this project, using only $C^{tg}$ and $C^{gg}$ data, is comparable to the 68\% Planck error for $\Omega_m$, showing that the combination of these two spectra have a very strong constraint power with respect to this parameter. It is important to highlight that this analysis only uses one variable parameter, while Planck's analysis used 6. If this analysis had been done with the same variable parameters, the width of the likelihoods would certainly increase, reducing the quality of the contraints, but increasing the compatibility with Planck's results. Despite this, $C^{gg}$ is highly dependent on $\Omega_m$, so this increase would probably not be so high.
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=.7\linewidth]{Imagens/profile_ctg_Nmc2e7.png}
-	\caption{Normalized $C^{tg}$ likelihood of each band of the 2MASS catalog and combination of all bands' likelihoods. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
-	\label{fig:likelihood_prof_ctg}
-\end{figure}
-
-Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constraint the $\Omega_m$ parameter, due to the fact that the likelihoods calculated for every physically meaningful value of $\Omega_m$ is within 70\% of the maximum likelihoods calculated, while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, which also indicates that $C^{gg}$ has a very strong constraint power on $\Omega_m$.
-
-Despite this, bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2, a behavior not noticeable in the joint-likelihoods shown in Figure \ref{fig:likelihood_prof_ctg+cgg}. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a cross-correlation signal with a higher constraint power.
-
-We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, with errors equal to 10\% of the calculated correlation for each multipole ($\sigma_\ell=0.1C_\ell^{tg}$). Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
+We have also performed an analysis using synthetic data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, we have used the errors of 2MASS' band 4 as errors for this sample. Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.7\linewidth]{Imagens/profile_BestBand.png}
-	\caption{My caption. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
+	\caption{Normalized $C^{tg}$ likelihood calculated using synthetic data estimated as the theoretical cross-correlation obtained using the idealized band estimated in Chapter \ref{chapter:select_func_optimal} for the selection function, with 2MASS' band 4 errors. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
 	\label{fig:likelihood_band_optimal}
 \end{figure}
 
 The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_optimal} is simillar to those shown for bands 3 and 4 of 2MASS in Figure \ref{fig:likelihood_prof_ctg}, and the width of the curve is higher in the current analysis, suggesting that this optimal band does not hold a stronger constraint power over $\Omega_m$ at least. 
 
-It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis leads to $\Omega_m=1$ (POR QUE?), thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
+It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe\cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
 
-Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the null cross-correlation hypothesis, and studied wether new changes in the data sets to possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
+Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets could possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
 \chapter{Conclusions}\label{chapter:conclusions}
 

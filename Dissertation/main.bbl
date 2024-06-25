@@ -7277,6 +7277,44 @@
       \verb https://doi.org/10.1088%5C%2F1475-7516%5C%2F2021%5C%2F05%5C%2F057
       \endverb
     \endentry
+    \entry{ronaldo_inhDE}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2e309bcb6c650da722b6a9f0256cdae2}{%
+           family={Batista},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9c7cdccbba3f5fbeb48a434f5cc1ac54}{%
+           family={Pace},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{39238e8ecae25f7390e6c6a346a99be7}
+      \strng{fullhash}{39238e8ecae25f7390e6c6a346a99be7}
+      \strng{bibnamehash}{39238e8ecae25f7390e6c6a346a99be7}
+      \strng{authorbibnamehash}{39238e8ecae25f7390e6c6a346a99be7}
+      \strng{authornamehash}{39238e8ecae25f7390e6c6a346a99be7}
+      \strng{authorfullhash}{39238e8ecae25f7390e6c6a346a99be7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JCAP}
+      \field{title}{{Structure formation in inhomogeneous Early Dark Energy models}}
+      \field{volume}{06}
+      \field{year}{2013}
+      \field{pages}{044}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2013/06/044
+      \endverb
+      \verb{eprint}
+      \verb 1303.0414
+      \endverb
+    \endentry
     \entry{simillar_ISW_analysis}{article}{}
       \name{author}{2}{}{%
         {{hash=115048e7bfff03880038ce60a5b41a71}{%
