@@ -185,15 +185,15 @@ Amongst the many effects that affect the CMB, the Integrated Sachs-Wolfe (ISW) E
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.7\linewidth]{Imagens/ISW_illustration.png}
-	\caption{Illustration of the Integrated Sachs-Wolfe Effect, in which a photon is shown entering a deep gravitational well that flattens with time, leaving the photon with a net blueshift. Extracted from \url{http://www.cellularuniverse.org/SachsWolfe-Disproof(ijass)-Ranzan.pdf}.}	
+	\caption{Illustration of the Integrated Sachs-Wolfe Effect, in which a photon is shown entering a deep gravitational well that flattens with time, leaving the photon with a net blueshift. Credit: \href{http://www.cellularuniverse.org/SachsWolfe-Disproof(ijass)-Ranzan.pdf}{DSSU Research}.}	
 	\label{fig:ISW_illustration}
 \end{figure}
 
 There are two contributions to the ISW effect: The early-time ISW effect occurs immediately after the last scattering surface, and the late-time ISW effect, which is more recent, occurring in the transition to the current dark energy dominated era. 
 
-From this association between blueshifted CMB photons and gravity wells, it is natural to assume that the matter distribution of the Universe should hold a statistical cross-correlation with the CMB temperature map. When looking at the theoretical model, we will see that this cross-correlation is expected\cite{ISW_detect_Crittenden1996, ISW_detect_Cooray2002}, and many works in the past have reported detections of the ISW effect using such cross-correlation using various sources of data and statistical methods\cite{ISW_detect_Boughn2004, ISW_detect_Nolta2004, ISW_detect_Gaztanga2006, ISW_detect_and_review2011}. (SUMMARIZE THE RESULTS OF THESE WORKS AND HIGHLIGHT PROS AND CONS)
+From this association between blueshifted CMB photons and gravity wells, it is natural to assume that the matter distribution of the Universe should hold a statistical cross-correlation with the CMB temperature map. When looking at the theoretical model, we will see that this cross-correlation is expected\cite{ISW_detect_Crittenden1996, ISW_detect_Cooray2002}, and many works in the past have reported detections of the ISW effect using such cross-correlation using various sources of data and statistical methods\cite{ISW_detect_Boughn2004, ISW_detect_Nolta2004, ISW_detect_Gaztanga2006, ISW_detect_and_review2011}. Overall, the ISW signal was favored in these works, but mostly with low significance levels. We highlight the results shown in \cite{cross_corr:Planck}, in which many large scale structure tracers were combined to obtain a $4\sigma$ detection, from which the two main contributors were Planck's convergence lensing maps (Kappa) and the NRAO VLA Sky Survey (NVSS)\cite{NVSS}.
 
-The present work uses the bayesian methods presented in \cite{Moura-Santos_2016} to estimate these cross-correlation spectra using WMAP\cite{WMAP_results,WMAP_data} CMB temperature maps and 2MASS\cite{2MASS} galaxy contrast maps, and study the constraint power of the results over a specific cosmological parameter. We have also investigated the impact of the redshift distribution of the galaxies in the catalog used on the resulting cross-correlation spectrum, and studied what would be the distribution that optimizes this signal.  
+The present work uses the bayesian methods presented in \cite{Moura-Santos_2016} to estimate these cross-correlation spectra using CMB temperature maps from WMAP\cite{WMAP_results,WMAP_data} and galaxy contrast maps provided by the Two Micron All Sky Survey (2MASS)\cite{2MASS}, and study the constraint power of the results over a specific cosmological parameter. We have also investigated the impact of the redshift distribution of the galaxies in the catalog used on the resulting cross-correlation spectrum, and studied what would be the distribution that optimizes this signal.  
 
 The rest of this dissertation will be organized as follows: 
 
@@ -201,7 +201,7 @@ In Chapter \ref{chapter:model}, we start by presenting the fundamental observati
 
 In Chapter \ref{chapter:select_func_optimal}, we study how the redshift distribution of galaxy catalogs are generally parametrized, the general properties of this parametrization and the distributions of the 4 bands we are using of the 2MASS catalog. In order to maximize the cross-correlation signal taking into account the high cosmic variance in this region, we define the probability that a certain cross-correlation function calculated from a certain galaxy distribution is compatible with a 0 cross-correlation model and determine the parametrization that minimizes this probability.
 
-In Chapter \ref{chapter:extracting_correlations_from_data}, we briefly discuss some of the properties of the data obtained from the sattelites and some traditional methods used to process that data, motivating the discussion about the Monte Carlo method used in this work. Later, the WMAP and 2MASS maps are shown, as well as the results for the correlation spectra obtained from these maps, which show how present cosmic variance is in the region.
+In Chapter \ref{chapter:extracting_correlations_from_data}, we briefly discuss some of the properties of the data obtained from the sattelites and some traditional methods used to process that data, motivating the discussion about the Monte Carlo method used in this work. Later, the WMAP and 2MASS data are described, the finals maps used are shown, as well as the results for the correlation spectra obtained from these maps, showing how present cosmic variance is in the region.
 
 Finally, in Chapter \ref{chapter:constraints}, the method used to calculate the contraints on the cosmological parameter $\Omega_m$ -- which will be defined in Chapter \ref{chapter:model} -- for the correlation spectra is discussed. We have studied these constraints not only for the 4 2MASS bands, but also for an artificial dataset generated based on the idealized galaxy redshift distribution found in Chapter \ref{chapter:select_func_optimal}. 
 
@@ -951,7 +951,13 @@ In order to determine the probability distribution of the null hypothesis for ea
 	\label{fig:synthmaps_histograms}
 \end{figure}
 
-Upon thorough inspection of the histograms, we decided to fit each histogram using Gaussian distributions, which are shown in Figure \ref{fig:synthmaps_histograms}, and used the fitted Gaussians as the probability density functions of $C^{tg}_{\ell}$ under the null hypothesis. Each of these distributions will be indicated by $f_\ell\left(C^{tg}_\ell\right)$.
+Upon thorough inspection of the histograms, we decided to fit each histogram using Gaussian distributions, which are shown in Figure \ref{fig:synthmaps_histograms}, and used the fitted Gaussians as the probability density functions of $C^{tg}_{\ell}$ under the null hypothesis. Each of these distributions will be indicated by $f_\ell\left(C^{tg}_\ell\right)$, so
+
+\begin{equation}\label{f(ctgl)}
+	f_\ell\left(C^{tg}_\ell\right)=\frac{1}{\sqrt{2\pi\sigma_\ell^2}}\text{exp}\left[-\frac{1}{2}\left(\frac{C^{tg}_\ell-\mu_\ell}{\sigma_\ell}\right)^2\right],
+\end{equation}
+
+\noindent where $\sigma_\ell^2$ and $\mu_\ell$ are the variance and average extracted from the distribution of $C_\ell^{tg}$ shown in Figure \ref{fig:synthmaps_histograms}.
 
 With that, we can finally define the probability $P_\text{null}$ that a correlation spectrum $C^{tg}$ follows the null hypothesis:
 
@@ -1268,7 +1274,11 @@ Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
+<<<<<<< HEAD
 With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but during our testing stages, the process showcased a very slow convergence speed even while sampling a single parameter, making this analysis unviable. Upon inspecting the partial results of this process, we have noticed that the likelihood of the parameter we tested is very wide, which strongly reduced the acceptance rate of the chain.
+=======
+With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but I was not able to implement our theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 This limitation led us to instead calculate the likelihood profile for $\Omega_m$ only, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
 
@@ -1278,9 +1288,13 @@ This limitation led us to instead calculate the likelihood profile for $\Omega_m
 
 \section{Likelihood Profiling}
 
+<<<<<<< HEAD
 \subsection{Procedure}
 
 For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table\ref{tab:planck_parameters}, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
+=======
+For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table \ref{tab:planck_parameters}, we can use CAMB to calculate theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 We have assumed that for each multipole $\ell$ and for all the three different spectra, the likelihood is a Gaussian distribution of the form
 
@@ -1332,7 +1346,22 @@ Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^
 
 The width of the curves obtained in this project, using only $C^{tg}$ and $C^{gg}$ data, is comparable to the 68\% Planck error for $\Omega_m$, showing that the combination of these two spectra have a very strong constraint power with respect to this parameter. It is important to highlight that this analysis only uses one variable parameter, while Planck's analysis used 6. If this analysis had been done with the same variable parameters, the width of the likelihoods would certainly increase, reducing the quality of the contraints, but increasing the compatibility with Planck's results. Despite this, $C^{gg}$ is highly dependent on $\Omega_m$, so this increase would probably not be so high.
 
+<<<<<<< HEAD
 We have also performed an analysis using synthetic data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, we have used the errors of 2MASS' band 4 as errors for this sample. Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
+=======
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.7\linewidth]{Imagens/profile_ctg_Nmc2e7.png}
+	\caption{Normalized $C^{tg}$ likelihood of each band of the 2MASS catalog and combination of all bands' likelihoods. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
+	\label{fig:likelihood_prof_ctg}
+\end{figure}
+
+Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constrain the $\Omega_m$ parameter, due to the fact that the likelihoods calculated for every physically meaningful value of $\Omega_m$ are within 70\% of the maximum likelihoods calculated, while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, which also indicates that $C^{gg}$ has a very strong constraint power on $\Omega_m$.
+
+Despite this, bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2, a behavior not noticeable in the joint-likelihoods shown in Figure \ref{fig:likelihood_prof_ctg+cgg}. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a deeper galaxy catalog may lead to a cross-correlation signal with a higher constraint power.
+
+We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, with errors equal to 10\% of the calculated correlation for each multipole ($\sigma_\ell=0.1C_\ell^{tg}$). Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 \begin{figure}[!htb]
 	\centering
@@ -1345,7 +1374,11 @@ The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_op
 
 It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe\cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
 
+<<<<<<< HEAD
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets could possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
+=======
+Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the null cross-correlation hypothesis, and studied wether new changes in the data sets could possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 \chapter{Conclusions}\label{chapter:conclusions}
 
@@ -1355,7 +1388,7 @@ In an attempt to solve this, we have first studied if a hypothetical galaxy surv
 
 In chapter \ref{chapter:select_func_optimal} we have studied the impact of the galaxy redshift distribution -- here called the selection function -- of a catalog in the cross-correlation signal. We have used a common parametrization for the selection function that uses 3 parameters, and analysed the impact of each parameter in the selection function (see Figure \ref{fig:selection_tripleplot}), which allowed us to control and search for a selection function that improves the cross-correlation signal, meaning this idealized galaxy catalog would maximize the likelihood function of the cross-correlation data relative to the null hypothesis that it is zero for all multipoles. 
 
-We have estimated the redshift at which the Universe started its accelerated expansion and opted to start searching the idealized selection function around that region. To do so, heat maps were produced in order to seach for regions in the parameter space that might contain a minimum value. Figure \ref{fig:Triple_ColorPlots} shows one of the most promising regions we have found, from which we have chosen a starting point to run an algorithm to minimize the likelihood function. Despite some promising properties of the idealized parametrization found (see Figure \ref{fig:minimum_properties}), its likelihood is only $3\%$ higher than that of 2MASS' band 1.
+We have estimated the redshift at which the Universe started its accelerated expansion and opted to start searching the idealized selection function around that region. To do so, heat maps were produced in order to search for regions in the parameter space that might contain a minimum value. Figure \ref{fig:Triple_ColorPlots} shows one of the most promising regions we have found, from which we have chosen a starting point to run an algorithm to minimize the likelihood function. Despite some promising properties of the idealized parametrization found (see Figure \ref{fig:minimum_properties}), the null hypothesis' likelihood in the optimal band is only $3\%$ lower than that of 2MASS' band 1.
 
 In Chapter \ref{chapter:constraints} we have studied the constraints obtained from the 2MASS+WMAP data on the $\Omega_m$ parameter. A full analysis would ideally include the contraints for other cosmological parameters, and possibly even parameters related to alternative dark energy models like the ones shown in \ref{sect:dark_energy}, but because we were unable to find an efficient way to run such an analysis, this project was limited to study the influence of these data to $\Omega_m$. 
 
@@ -1365,7 +1398,7 @@ We have also used the cross-correlation spectrum for our $\Lambda$CDM fiducial m
 
 It is also important to highlight the work made in \cite{simillar_ISW_analysis}, in which the authors have analysed if changes in the data, including changes in the redshift distribution of the galaxies of the catalog used, would significantly improve the ISW signal. Despite exploring very different changes in the selection function compared to the ones made in this project, and other idealized properties for the data, it was also reported that the ISW signal would still evade detection in $>10\%$ of cases.
 
- 
+Ideally, detecting the ISW signal should consist of a combination of methods that are complementary, the angular cross-correlation studied here is a powerful one, but clearly has limitations. We have attempted to reduce the cosmic variance contribution to the errors with limited success, and comparing the results obtained here with other references, especially \cite{cross_corr:Planck}, leads us to think that, for an analysis using galaxy maps as tracers, the best current approach is to use deeper surveys such as NVSS, which contains galaxies up to $z=3$, significantly deeper than both 2MASS and our idealized galaxy distribution. 
 
 \appendix
 

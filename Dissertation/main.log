@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  25 JUN 2024 16:14
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  18 JUN 2024 17:25
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1016,19 +1020,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 3.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.12 ...ccorr )}}.\relax }}{30}{figure.caption.19}
@@ -1072,7 +1065,11 @@ l.159 \cleardoublepage
 
 ]
 Chapter 1.
+<<<<<<< HEAD
 <Imagens/satellites.jpg, id=434, 722.7pt x 401.5pt>
+=======
+<Imagens/satellites.jpg, id=417, 722.7pt x 401.5pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/satellites.jpg Graphic file (type jpg)
 <use Imagens/satellites.jpg>
 Package pdftex.def Info: Imagens/satellites.jpg  used on input line 178.
@@ -1081,24 +1078,17 @@ Package pdftex.def Info: Imagens/satellites.jpg  used on input line 178.
 
 
 ]
+<<<<<<< HEAD
 <Imagens/ISW_illustration.png, id=454, 398.48875pt x 210.7875pt>
+=======
+<Imagens/ISW_illustration.png, id=437, 398.48875pt x 210.7875pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/ISW_illustration.png Graphic file (type png)
 <use Imagens/ISW_illustration.png>
 Package pdftex.def Info: Imagens/ISW_illustration.png  used on input line 187.
 (pdftex.def)             Requested size: 318.66948pt x 168.57233pt.
-
-Underfull \hbox (badness 1406) in paragraph at lines 188--188
-[]\T1/ptm/m/n/12 (+20) Figure 1.2: |Il-lus-tra-tion of the In-te-grated Sachs-W
-olfe Ef-fect, in which a pho-ton is
- []
-
-
-Underfull \hbox (badness 2521) in paragraph at lines 188--188
-\T1/ptm/m/n/12 (+20) shown en-ter-ing a deep grav-i-ta-tional well that flat-te
-ns with time, leav-ing the pho-
- []
-
-[2 <./Imagens/satellites.jpg> <./Imagens/ISW_illustration.png>] [3] [4]
+ [2 <./Imagens/satellites.jpg> <./Imagens/ISW_illustration.png>] [3]
+[4]
 Chapter 2.
 [5
 
@@ -1126,18 +1116,30 @@ File: Imagens/planck_spectrum.pdf Graphic file (type pdf)
 Package pdftex.def Info: Imagens/planck_spectrum.pdf  used on input line 609.
 (pdftex.def)             Requested size: 409.71692pt x 283.86595pt.
 [19 <./Imagens/planck_spectrum.pdf>] [20] [21]
+<<<<<<< HEAD
 <Imagens/Pk_3dmatter_LCDM.png, id=994, 462.528pt x 346.896pt>
+=======
+<Imagens/Pk_3dmatter_LCDM.png, id=981, 462.528pt x 346.896pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/Pk_3dmatter_LCDM.png Graphic file (type png)
 <use Imagens/Pk_3dmatter_LCDM.png>
 Package pdftex.def Info: Imagens/Pk_3dmatter_LCDM.png  used on input line 687.
 (pdftex.def)             Requested size: 341.43307pt x 256.08499pt.
  [22 <./Imagens/Pk_3dmatter_LCDM.png>] [23]
+<<<<<<< HEAD
 <Imagens/Ctt_comparison.png, id=1021, 578.16pt x 390.9807pt>
+=======
+<Imagens/Ctt_comparison.png, id=1008, 578.16pt x 390.9807pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/Ctt_comparison.png Graphic file (type png)
 <use Imagens/Ctt_comparison.png>
 Package pdftex.def Info: Imagens/Ctt_comparison.png  used on input line 727.
 (pdftex.def)             Requested size: 341.43307pt x 230.89137pt.
+<<<<<<< HEAD
 <Imagens/Correlations_DoublePlot.png, id=1025, 918.5517pt x 375.804pt>
+=======
+<Imagens/Correlations_DoublePlot.png, id=1012, 918.5517pt x 375.804pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/Correlations_DoublePlot.png Graphic file (type png)
 <use Imagens/Correlations_DoublePlot.png>
 Package pdftex.def Info: Imagens/Correlations_DoublePlot.png  used on input lin
@@ -1158,37 +1160,61 @@ LaTeX Warning: Command \textasciiacute invalid in math mode on input line 750.
 
 Missing character: There is no ´ in font cmr12!
 [25 <./Imagens/Correlations_DoublePlot.png>]
+<<<<<<< HEAD
 <Imagens/full_doublscale_Wafixo0.33.png, id=1076, 722.7pt x 491.436pt>
+=======
+<Imagens/full_doublscale_Wafixo0.33.png, id=1063, 722.7pt x 491.436pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/full_doublscale_Wafixo0.33.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo0.33.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo0.33.png  used on input 
 line 811.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
+<<<<<<< HEAD
 <Imagens/full_doublscale_Wafixo0.67.png, id=1077, 722.7pt x 491.436pt>
+=======
+<Imagens/full_doublscale_Wafixo0.67.png, id=1064, 722.7pt x 491.436pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/full_doublscale_Wafixo0.67.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo0.67.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo0.67.png  used on input 
 line 811.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
+<<<<<<< HEAD
 <Imagens/full_doublscale_Wafixo1.00.png, id=1078, 722.7pt x 491.436pt>
+=======
+<Imagens/full_doublscale_Wafixo1.00.png, id=1065, 722.7pt x 491.436pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/full_doublscale_Wafixo1.00.png Graphic file (type png)
 <use Imagens/full_doublscale_Wafixo1.00.png>
 Package pdftex.def Info: Imagens/full_doublscale_Wafixo1.00.png  used on input 
 line 826.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
+<<<<<<< HEAD
 <Imagens/full_doublscale_Cs2fixo0.01.png, id=1079, 722.7pt x 491.436pt>
+=======
+<Imagens/full_doublscale_Cs2fixo0.01.png, id=1066, 722.7pt x 491.436pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/full_doublscale_Cs2fixo0.01.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo0.01.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo0.01.png  used on input
  line 826.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
+<<<<<<< HEAD
 <Imagens/full_doublscale_Cs2fixo0.10.png, id=1080, 722.7pt x 491.436pt>
+=======
+<Imagens/full_doublscale_Cs2fixo0.10.png, id=1067, 722.7pt x 491.436pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/full_doublscale_Cs2fixo0.10.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo0.10.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo0.10.png  used on input
  line 841.
 (pdftex.def)             Requested size: 256.924pt x 174.7047pt.
+<<<<<<< HEAD
 <Imagens/full_doublscale_Cs2fixo1.00.png, id=1081, 722.7pt x 491.436pt>
+=======
+<Imagens/full_doublscale_Cs2fixo1.00.png, id=1068, 722.7pt x 491.436pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/full_doublscale_Cs2fixo1.00.png Graphic file (type png)
 <use Imagens/full_doublscale_Cs2fixo1.00.png>
 Package pdftex.def Info: Imagens/full_doublscale_Cs2fixo1.00.png  used on input
@@ -1217,7 +1243,11 @@ Wafixo0.67.png> <./Imagens/full_doublscale_Wafixo1.00.png> <./Imagens/full_doub
 lscale_Cs2fixo0.01.png> <./Imagens/full_doublscale_Cs2fixo0.10.png> <./Imagens/
 full_doublscale_Cs2fixo1.00.png>] [28]
 Chapter 3.
+<<<<<<< HEAD
 <Imagens/selection_2MASS.png, id=1120, 456.0237pt x 338.2236pt>
+=======
+<Imagens/selection_2MASS.png, id=1107, 456.0237pt x 338.2236pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/selection_2MASS.png Graphic file (type png)
 <use Imagens/selection_2MASS.png>
 Package pdftex.def Info: Imagens/selection_2MASS.png  used on input line 877.
@@ -1225,56 +1255,93 @@ Package pdftex.def Info: Imagens/selection_2MASS.png  used on input line 877.
 [29
 
 ]
+<<<<<<< HEAD
 <Imagens/Selection_TriplePlot.png, id=1131, 1084.05pt x 361.35pt>
+=======
+<Imagens/Selection_TriplePlot.png, id=1118, 1084.05pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/Selection_TriplePlot.png Graphic file (type png)
 <use Imagens/Selection_TriplePlot.png>
 Package pdftex.def Info: Imagens/Selection_TriplePlot.png  used on input line 8
 94.
 (pdftex.def)             Requested size: 455.24411pt x 151.74942pt.
  [30 <./Imagens/selection_2MASS.png>]
+<<<<<<< HEAD
 <Imagens/SynthMap_CMB.png, id=1147, 614.295pt x 390.258pt>
+=======
+<Imagens/SynthMap_CMB.png, id=1134, 614.295pt x 390.258pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/SynthMap_CMB.png Graphic file (type png)
 <use Imagens/SynthMap_CMB.png>
 Package pdftex.def Info: Imagens/SynthMap_CMB.png  used on input line 912.
 (pdftex.def)             Requested size: 223.07211pt x 141.7135pt.
+<<<<<<< HEAD
 <Imagens/SynthMap_Galaxy.png, id=1148, 614.295pt x 390.258pt>
+=======
+<Imagens/SynthMap_Galaxy.png, id=1135, 614.295pt x 390.258pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/SynthMap_Galaxy.png Graphic file (type png)
 <use Imagens/SynthMap_Galaxy.png>
 Package pdftex.def Info: Imagens/SynthMap_Galaxy.png  used on input line 918.
 (pdftex.def)             Requested size: 223.07211pt x 141.7135pt.
+<<<<<<< HEAD
 <Imagens/Synth_TriplePlot.png, id=1150, 1300.86pt x 361.35pt>
+=======
+<Imagens/Synth_TriplePlot.png, id=1137, 1300.86pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/Synth_TriplePlot.png Graphic file (type png)
 <use Imagens/Synth_TriplePlot.png>
 Package pdftex.def Info: Imagens/Synth_TriplePlot.png  used on input line 930.
 (pdftex.def)             Requested size: 455.24411pt x 126.45786pt.
  [31 <./Imagens/Selection_TriplePlot.png>]
+<<<<<<< HEAD
 <Imagens/hist_l4.png, id=1157, 722.7pt x 533.3526pt>
 File: Imagens/hist_l4.png Graphic file (type png)
 <use Imagens/hist_l4.png>
 Package pdftex.def Info: Imagens/hist_l4.png  used on input line 940.
 (pdftex.def)             Requested size: 223.07211pt x 164.62956pt.
 <Imagens/hist_l30.png, id=1158, 722.7pt x 534.798pt>
+=======
+<Imagens/hist_l4.png, id=1144, 722.7pt x 578.16pt>
+File: Imagens/hist_l4.png Graphic file (type png)
+<use Imagens/hist_l4.png>
+Package pdftex.def Info: Imagens/hist_l4.png  used on input line 940.
+(pdftex.def)             Requested size: 223.07211pt x 178.46024pt.
+<Imagens/hist_l30.png, id=1145, 722.7pt x 578.16pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/hist_l30.png Graphic file (type png)
 <use Imagens/hist_l30.png>
 Package pdftex.def Info: Imagens/hist_l30.png  used on input line 946.
-(pdftex.def)             Requested size: 223.07211pt x 165.07571pt.
+(pdftex.def)             Requested size: 223.07211pt x 178.46024pt.
  [32 <./Imagens/SynthMap_CMB.png> <./Imagens/SynthMap_Galaxy.png> <./Imagens/Sy
 nth_TriplePlot.png>]
+<<<<<<< HEAD
 <Imagens/triple_colorplot.png, id=1170, 462.528pt x 323.0469pt>
+=======
+<Imagens/triple_colorplot.png, id=1159, 462.528pt x 323.0469pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/triple_colorplot.png Graphic file (type png)
 <use Imagens/triple_colorplot.png>
-Package pdftex.def Info: Imagens/triple_colorplot.png  used on input line 968.
+Package pdftex.def Info: Imagens/triple_colorplot.png  used on input line 974.
 (pdftex.def)             Requested size: 418.82375pt x 292.53871pt.
  [33 <./Imagens/hist_l4.png> <./Imagens/hist_l30.png>]
+<<<<<<< HEAD
 <Imagens/minimum_SelFunc.png, id=1185, 650.43pt x 433.62pt>
+=======
+<Imagens/minimum_SelFunc.png, id=1173, 650.43pt x 433.62pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/minimum_SelFunc.png Graphic file (type png)
 <use Imagens/minimum_SelFunc.png>
-Package pdftex.def Info: Imagens/minimum_SelFunc.png  used on input line 987.
+Package pdftex.def Info: Imagens/minimum_SelFunc.png  used on input line 993.
 (pdftex.def)             Requested size: 223.07211pt x 148.71245pt.
+<<<<<<< HEAD
 <Imagens/minimumX2mass.png, id=1186, 650.43pt x 433.62pt>
+=======
+<Imagens/minimumX2mass.png, id=1174, 650.43pt x 433.62pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/minimumX2mass.png Graphic file (type png)
 <use Imagens/minimumX2mass.png>
-Package pdftex.def Info: Imagens/minimumX2mass.png  used on input line 994.
+Package pdftex.def Info: Imagens/minimumX2mass.png  used on input line 1000.
 (pdftex.def)             Requested size: 223.07211pt x 148.71245pt.
 
 [34 <./Imagens/triple_colorplot.png>] [35 <./Imagens/minimum_SelFunc.png> <./Im
@@ -1283,61 +1350,97 @@ Chapter 4.
 [36
 
 ]
+<<<<<<< HEAD
 <Imagens/beam_pattern.png, id=1216, 803.0pt x 803.0pt>
+=======
+<Imagens/beam_pattern.png, id=1205, 803.0pt x 803.0pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/beam_pattern.png Graphic file (type png)
 <use Imagens/beam_pattern.png>
-Package pdftex.def Info: Imagens/beam_pattern.png  used on input line 1058.
+Package pdftex.def Info: Imagens/beam_pattern.png  used on input line 1064.
 (pdftex.def)             Requested size: 250.38564pt x 250.38551pt.
  [37] [38 <./Imagens/beam_pattern.png>] [39]
-Overfull \hbox (23.67862pt too wide) in paragraph at lines 1148--1149
+Overfull \hbox (23.67862pt too wide) in paragraph at lines 1154--1155
 []\T1/ptm/m/n/12 (-20) It is also as-sumed that the noise's co-vari-ance ma-tri
 x is di-ag-o-nal: $\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 N[]
 ; [] ; N[]; [] ; N[]\OT1/cmr/m/n/12 )$
  []
 
 [40]
+<<<<<<< HEAD
 <Imagens/wmap_Q_wmask.png, id=1266, 614.295pt x 361.35pt>
+=======
+<Imagens/wmap_Q_wmask.png, id=1255, 614.295pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/wmap_Q_wmask.png Graphic file (type png)
 <use Imagens/wmap_Q_wmask.png>
-Package pdftex.def Info: Imagens/wmap_Q_wmask.png  used on input line 1175.
+Package pdftex.def Info: Imagens/wmap_Q_wmask.png  used on input line 1181.
 (pdftex.def)             Requested size: 223.07211pt x 131.21622pt.
+<<<<<<< HEAD
 <Imagens/wmap_V_wmask.png, id=1267, 614.295pt x 361.35pt>
+=======
+<Imagens/wmap_V_wmask.png, id=1256, 614.295pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/wmap_V_wmask.png Graphic file (type png)
 <use Imagens/wmap_V_wmask.png>
-Package pdftex.def Info: Imagens/wmap_V_wmask.png  used on input line 1182.
+Package pdftex.def Info: Imagens/wmap_V_wmask.png  used on input line 1188.
 (pdftex.def)             Requested size: 223.07211pt x 131.21622pt.
+<<<<<<< HEAD
 <Imagens/wmap_W_wmask.png, id=1268, 613.5723pt x 361.35pt>
+=======
+<Imagens/wmap_W_wmask.png, id=1257, 613.5723pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/wmap_W_wmask.png Graphic file (type png)
 <use Imagens/wmap_W_wmask.png>
-Package pdftex.def Info: Imagens/wmap_W_wmask.png  used on input line 1189.
+Package pdftex.def Info: Imagens/wmap_W_wmask.png  used on input line 1195.
 (pdftex.def)             Requested size: 223.07211pt x 131.3706pt.
  [41 <./Imagens/wmap_Q_wmask.png> <./Imagens/wmap_V_wmask.png> <./Imagens/wmap_
 W_wmask.png>]
+<<<<<<< HEAD
 <Imagens/band1_wmask_xsc.png, id=1288, 613.5723pt x 361.35pt>
+=======
+<Imagens/band1_wmask_xsc.png, id=1277, 613.5723pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/band1_wmask_xsc.png Graphic file (type png)
 <use Imagens/band1_wmask_xsc.png>
-Package pdftex.def Info: Imagens/band1_wmask_xsc.png  used on input line 1213.
+Package pdftex.def Info: Imagens/band1_wmask_xsc.png  used on input line 1219.
 (pdftex.def)             Requested size: 225.3436pt x 132.71043pt.
+<<<<<<< HEAD
 <Imagens/band2_wmask_xsc.png, id=1289, 614.295pt x 361.35pt>
+=======
+<Imagens/band2_wmask_xsc.png, id=1278, 614.295pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/band2_wmask_xsc.png Graphic file (type png)
 <use Imagens/band2_wmask_xsc.png>
-Package pdftex.def Info: Imagens/band2_wmask_xsc.png  used on input line 1220.
+Package pdftex.def Info: Imagens/band2_wmask_xsc.png  used on input line 1226.
 (pdftex.def)             Requested size: 225.3436pt x 132.55606pt.
+<<<<<<< HEAD
 <Imagens/band3_wmask_xsc.png, id=1290, 614.295pt x 361.35pt>
+=======
+<Imagens/band3_wmask_xsc.png, id=1279, 614.295pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/band3_wmask_xsc.png Graphic file (type png)
 <use Imagens/band3_wmask_xsc.png>
-Package pdftex.def Info: Imagens/band3_wmask_xsc.png  used on input line 1227.
+Package pdftex.def Info: Imagens/band3_wmask_xsc.png  used on input line 1233.
 (pdftex.def)             Requested size: 225.3436pt x 132.55606pt.
+<<<<<<< HEAD
 <Imagens/band4_wmask_xsc.png, id=1291, 614.295pt x 361.35pt>
+=======
+<Imagens/band4_wmask_xsc.png, id=1280, 614.295pt x 361.35pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/band4_wmask_xsc.png Graphic file (type png)
 <use Imagens/band4_wmask_xsc.png>
-Package pdftex.def Info: Imagens/band4_wmask_xsc.png  used on input line 1234.
+Package pdftex.def Info: Imagens/band4_wmask_xsc.png  used on input line 1240.
 (pdftex.def)             Requested size: 225.3436pt x 132.55606pt.
  [42]
+<<<<<<< HEAD
 <Imagens/Full_Data_Plot.png, id=1307, 1445.4pt x 1156.32pt>
+=======
+<Imagens/Full_Data_Plot.png, id=1296, 1445.4pt x 1156.32pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/Full_Data_Plot.png Graphic file (type png)
 <use Imagens/Full_Data_Plot.png>
-Package pdftex.def Info: Imagens/Full_Data_Plot.png  used on input line 1262.
+Package pdftex.def Info: Imagens/Full_Data_Plot.png  used on input line 1268.
 (pdftex.def)             Requested size: 455.24411pt x 364.1898pt.
  [43 <./Imagens/band1_wmask_xsc.png> <./Imagens/band2_wmask_xsc.png> <./Imagens
 /band3_wmask_xsc.png> <./Imagens/band4_wmask_xsc.png>]
@@ -1346,6 +1449,7 @@ Chapter 5.
 [45
 
 ]
+<<<<<<< HEAD
 <Imagens/profile_ctg_Nmc2e7.png, id=1341, 462.528pt x 346.896pt>
 File: Imagens/profile_ctg_Nmc2e7.png Graphic file (type png)
 <use Imagens/profile_ctg_Nmc2e7.png>
@@ -1361,12 +1465,32 @@ e 1324.
 (pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
  [47 <./Imagens/profile_allbands_Nmc2e7.png>]
 <Imagens/profile_BestBand.png, id=1362, 447.3513pt x 337.5009pt>
+=======
+<Imagens/profile_allbands_Nmc2e7.png, id=1332, 462.528pt x 346.896pt>
+File: Imagens/profile_allbands_Nmc2e7.png Graphic file (type png)
+<use Imagens/profile_allbands_Nmc2e7.png>
+Package pdftex.def Info: Imagens/profile_allbands_Nmc2e7.png  used on input lin
+e 1313.
+(pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
+<Imagens/profile_ctg_Nmc2e7.png, id=1335, 462.528pt x 346.896pt>
+File: Imagens/profile_ctg_Nmc2e7.png Graphic file (type png)
+<use Imagens/profile_ctg_Nmc2e7.png>
+Package pdftex.def Info: Imagens/profile_ctg_Nmc2e7.png  used on input line 132
+6.
+(pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
+ [46 <./Imagens/profile_allbands_Nmc2e7.png>]
+<Imagens/profile_BestBand.png, id=1347, 447.3513pt x 337.5009pt>
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 File: Imagens/profile_BestBand.png Graphic file (type png)
 <use Imagens/profile_BestBand.png>
 Package pdftex.def Info: Imagens/profile_BestBand.png  used on input line 1339.
 
 (pdftex.def)             Requested size: 318.66948pt x 240.4204pt.
+<<<<<<< HEAD
  [48 <./Imagens/profile_BestBand.png>] [49]
+=======
+ [47 <./Imagens/profile_ctg_Nmc2e7.png>] [48 <./Imagens/profile_BestBand.png>]
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 Chapter 6.
 [50
 
@@ -1378,7 +1502,21 @@ Appendix A.
 Appendix B.
 [55
 
+<<<<<<< HEAD
 ] [56]
+=======
+] [55]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 15
+57.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 Overfull \hbox (3.09627pt too wide) in paragraph at lines 1558--1558
 []\T1/ptm/m/n/12 (-20) D. J. Fixsen. ^^P  THE TEM-PER-A-TURE OF THE COS-MIC MI-
 CROWAVE BACK-GROUND^^Q.
@@ -1386,7 +1524,11 @@ CROWAVE BACK-GROUND^^Q.
 
 [57
 
+<<<<<<< HEAD
 ] [58]
+=======
+] [57]
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 Overfull \hbox (25.28688pt too wide) in paragraph at lines 1558--1558
 []\T1/ptm/m/n/12 (-20) S. Do-del-son and F. Schmidt. \T1/ptm/m/it/12 (-20) Mod-
 ern Cos-mol-ogy\T1/ptm/m/n/12 (-20) . El-se-vier Sci-ence, 2020. \T1/ptm/m/sc/1
@@ -1414,10 +1556,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  27995 strings out of 478287
+<<<<<<< HEAD
  535960 string characters out of 5849289
  1265878 words of memory out of 5000000
  45108 multiletter control sequences out of 15000+600000
  550757 words of font info for 343 fonts, out of 8000000 for 9000
+=======
+ 535902 string characters out of 5849289
+ 1266298 words of memory out of 5000000
+ 45107 multiletter control sequences out of 15000+600000
+ 550982 words of font info for 345 fonts, out of 8000000 for 9000
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
  1141 hyphenation exceptions out of 8191
  68i,17n,77p,1204b,1871s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1438,10 +1587,19 @@ ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+<<<<<<< HEAD
 Output written on main.pdf (76 pages, 4937306 bytes).
 PDF statistics:
  1865 PDF objects out of 2073 (max. 8388607)
  1411 compressed objects within 15 object streams
  316 named destinations out of 1000 (max. 500000)
  82888 words of extra memory for PDF output out of 89155 (max. 10000000)
+=======
+Output written on main.pdf (75 pages, 4936224 bytes).
+PDF statistics:
+ 1848 PDF objects out of 2073 (max. 8388607)
+ 1397 compressed objects within 14 object streams
+ 314 named destinations out of 1000 (max. 500000)
+ 82872 words of extra memory for PDF output out of 89155 (max. 10000000)
+>>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
