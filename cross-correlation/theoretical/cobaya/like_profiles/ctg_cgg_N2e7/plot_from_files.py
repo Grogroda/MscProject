@@ -52,9 +52,9 @@ max_logp=max(sum_table['raw_logp'])
 diff_logp=[sum_table['raw_logp'][i]-max_logp for i in range(len(sum_table['raw_logp']))]
 exp_pdiff=[np.exp(logp) for logp in diff_logp]
 
-plt.plot(sum_table['Omegas'], exp_pdiff, label='All bands')
+plt.plot(sum_table['Omegas'], exp_pdiff, label='All bands', linestyle='dashed')
 planck_bf, error=0.3135, 0.0073
-plt.vlines(planck_bf, -0.05, 2, linestyle='dashed', colors='k', label='Planck best-fit')
+plt.vlines(planck_bf, -0.05, 2, linestyle='dashdot', colors='k', label='Planck best-fit')
 plt.axvspan(planck_bf-error, planck_bf+error, alpha=0.5, color='gray')
 plt.ylim(-0.02,1.02)
 plt.xlim(min(sum_table['Omegas']), max(sum_table['Omegas']))
