@@ -1274,27 +1274,50 @@ Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
-<<<<<<< HEAD
-With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package called Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but during our testing stages, the process showcased a very slow convergence speed even while sampling a single parameter, making this analysis unviable. Upon inspecting the partial results of this process, we have noticed that the likelihood of the parameter we tested is very wide, which strongly reduced the acceptance rate of the chain.
-=======
-With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the a Python package Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but I was not able to implement our theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
->>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
+With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the Python package Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but I was not able to implement our theoretical estimation with Cobaya efficiently, so we decided to calculate the likelihood profile for $\Omega_m$, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
 
 This limitation led us to instead calculate the likelihood profile for $\Omega_m$ only, allowing us to analyse the influence that the cross-correlation data has on constraints of this parameter.
 
 \section{Monte Carlo Markov Chains}
 
-%EXPLAIN THE IDEA OF POSSIBLY USING MCMC FOR MULTIPLE PARAMETER CONSTRAINTS AND WHY IT BECAME UNVIABLE
+\subsection{Principles}
+
+The usage of MCMC methods for analysing data has become a standard practice in recent years. While traditional direct evaluation methods usually rely on inverting complex matrix expressions and constantly having to renormalize the distributions being used, expressions that sometimes might not be analytically tractable and numerically unviable, MCMC methods sample values for a parameter -- or multiple parameters -- based on simple probability distributions that only need to be proportional to the exact probability distribution of the parameters given the data. Not only that, but having a set of parameters instead of a direct distribution function simplify both the process of visualizing the joint distribution of two parameters and the calculation of percentile intervals.
+
+In a very general sense, three main probability functions are required to run an MCMC algorithm for this type of problem: 
+
+\begin{itemize}
+	\item The joint-likelihood function: The joint-likelihood function $\mathcal{L}(Y|\theta)$ is the probability that the data points $Y$ follow the model for a certain set of parameters $\theta$. As stated before, one does not need to normalize this function for the MCMC, this distribution will heavily depend on the properties of the dataset and the instruments;
+	\item The prior distributions: A prior distribution on the parameters $p(\theta)$ may be assumed, possibly based on the physical properties of the parameters. It also does not need to be normalized;
+	\item The proposal distribution: This probability will determine the transition probability from one point of the chain to the next, which -- to satisfy the so called Markov property -- only depends on the current state of the chain. Usually a Gaussian distribution is used as the proposal.
+\end{itemize}
+
+The stationary distribution of the chain will be the posterior distribution
+
+\begin{equation}\label{posterior_MCMC}
+	P(\theta|Y)=\mathcal{L}(Y|\theta)p(\theta),
+\end{equation}
+
+\noindent of a certain set of parameter values being the correct description of the data $Y$. In traditional methods, the normalization of this posterior distribution would be necessary for calculations of important statistical results, which can be unviable in many situations, especially if $\theta$ is a set of many parameters. Using this as the stationary distribution of the Markov chain using the adequate methods (such as the Metropolis-Hastings algorithm\cite{Metropolis_hastings}) does not require it to be normalized, and having a set of parameter values simplifies the calculation of the same statistical properties.
+
+Two other important aspects of this procedure are the burn-in phase and the lagging. Despite the fact that for an infinite number of steps in the chain the distribution converges, when dealing with a finite number of steps, the first steps of the chain can create a bias in the sample, so it is common practice to discard the first points of the chain, this initial convergence phase is called the burn-in phase. Also, each step is highly correlated with its previous steps, which can also create bias, so a number of points in between two points can also be discarded to further reduce bias, this is called the lagging.
+
+\subsection{Tools Used and Convergence}
+
+Cobaya is a Python package designed to run MCMC chains to analyse any type of data desired, but it is integrated with many sets of cosmological datasets and packages, such as Planck's data and CAMB, so it is more often used as a tool for analysis of cosmological data. Figure \ref{fig:cobaya_test} shows the results for a chain I have run to test the basic functionalities of the software, which can be compared with a similar plot in \cite{esteban_msc}, which verifies that the code was working appropriately.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\linewidth]{Imagens/compare_likelihoods.png}
+	\caption{Joint posterior distributions of cosmological parameters using CMB's temperature (T) and polarization (E) data. The TTTEEE dataset combines both autocorrelation data (TT and EE) and the cross-correlation data (TE).}
+	\label{fig:cobaya_test}
+\end{figure}
 
 \section{Likelihood Profiling}
 
-<<<<<<< HEAD
 \subsection{Procedure}
 
 For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table\ref{tab:planck_parameters}, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
-=======
-For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table \ref{tab:planck_parameters}, we can use CAMB to calculate theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
->>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 We have assumed that for each multipole $\ell$ and for all the three different spectra, the likelihood is a Gaussian distribution of the form
 
@@ -1327,7 +1350,7 @@ The likelihoods calculated using $C^{tg}$ data from all 4 2MASS bands and the co
 	\label{fig:likelihood_prof_ctg}
 \end{figure}
 
-Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constraint the $\Omega_m$ parameter, due to the fact that the likelihoods calculated for every physically meaningful value of $\Omega_m$ is within 70\% of the maximum likelihoods calculated. 
+Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constraint the $\Omega_m$ parameter, the likelihoods calculated for every physically meaningful value of $\Omega_m$ are within 70\% of the maximum likelihoods obtained. 
 
 Bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a cross-correlation signal with a higher constraint power.
 
@@ -1340,28 +1363,13 @@ Figure \ref{fig:likelihood_prof_ctg+cgg} shows the $C^{tg}+C^{gg}$ joint-likelih
 	\label{fig:likelihood_prof_ctg+cgg}
 \end{figure}
 
-Simply visualizing the gray band and comparing it with the peaks of the likelihoods indicate that bands 3 and 4 of 2MASS and the full joint-likelihood are compatible with the Planck's results within $1\sigma$, and bands 1 and 2 are also compatible. The width of the likelihoods in all bands are very similar, showing very little differences between the constraint power of each band in this analysis. 
+Simply visualizing the gray band and comparing it with the peaks of the likelihoods indicate that all bands and the full joint-likelihood are compatible with Planck's results, with bands 3 and 4 and the joint-likelihood having higher compatibility at less than $1\sigma$. The width of the likelihoods in all bands are very similar, showing very little differences between the constraint power of each band in this analysis. 
 
-Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^{gg}$ has a much higher constraint power over $\Omega_m$ than $C^{tg}$: while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, the results for $C^{tg}$ only show very high relative likelihood values across all physical values of $\Omega_m$, as previously discussed.
+Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^{gg}$ has a much higher constraint power over $\Omega_m$ than $C^{tg}$: while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, while the results for $C^{tg}$ show very high relative likelihood values across all physical values of $\Omega_m$, as previously discussed.
 
 The width of the curves obtained in this project, using only $C^{tg}$ and $C^{gg}$ data, is comparable to the 68\% Planck error for $\Omega_m$, showing that the combination of these two spectra have a very strong constraint power with respect to this parameter. It is important to highlight that this analysis only uses one variable parameter, while Planck's analysis used 6. If this analysis had been done with the same variable parameters, the width of the likelihoods would certainly increase, reducing the quality of the contraints, but increasing the compatibility with Planck's results. Despite this, $C^{gg}$ is highly dependent on $\Omega_m$, so this increase would probably not be so high.
 
-<<<<<<< HEAD
 We have also performed an analysis using synthetic data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, we have used the errors of 2MASS' band 4 as errors for this sample. Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
-=======
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=.7\linewidth]{Imagens/profile_ctg_Nmc2e7.png}
-	\caption{Normalized $C^{tg}$ likelihood of each band of the 2MASS catalog and combination of all bands' likelihoods. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
-	\label{fig:likelihood_prof_ctg}
-\end{figure}
-
-Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constrain the $\Omega_m$ parameter, due to the fact that the likelihoods calculated for every physically meaningful value of $\Omega_m$ are within 70\% of the maximum likelihoods calculated, while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, which also indicates that $C^{gg}$ has a very strong constraint power on $\Omega_m$.
-
-Despite this, bands 3 and 4 of 2MASS seem to have a higher contraint capability compared with bands 1 and 2, a behavior not noticeable in the joint-likelihoods shown in Figure \ref{fig:likelihood_prof_ctg+cgg}. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a deeper galaxy catalog may lead to a cross-correlation signal with a higher constraint power.
-
-We have also performed an analysis using artificial data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, with errors equal to 10\% of the calculated correlation for each multipole ($\sigma_\ell=0.1C_\ell^{tg}$). Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
->>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 \begin{figure}[!htb]
 	\centering
@@ -1374,11 +1382,7 @@ The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_op
 
 It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe\cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
 
-<<<<<<< HEAD
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets could possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
-=======
-Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the null cross-correlation hypothesis, and studied wether new changes in the data sets could possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
->>>>>>> 5bef5567320e702d4ef7915fc17c14d0f46b5bbf
 
 \chapter{Conclusions}\label{chapter:conclusions}
 
