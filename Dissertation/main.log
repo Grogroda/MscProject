@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  26 JUN 2024 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  26 JUN 2024 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1334,21 +1334,21 @@ Package pdftex.def Info: Imagens/compare_likelihoods.png  used on input line 13
 <Imagens/profile_ctg_Nmc2e7.png, id=1372, 462.528pt x 346.896pt>
 File: Imagens/profile_ctg_Nmc2e7.png Graphic file (type png)
 <use Imagens/profile_ctg_Nmc2e7.png>
-Package pdftex.def Info: Imagens/profile_ctg_Nmc2e7.png  used on input line 134
-8.
+Package pdftex.def Info: Imagens/profile_ctg_Nmc2e7.png  used on input line 135
+0.
 (pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
 <Imagens/profile_allbands_Nmc2e7.png, id=1376, 462.528pt x 346.896pt>
 File: Imagens/profile_allbands_Nmc2e7.png Graphic file (type png)
 <use Imagens/profile_allbands_Nmc2e7.png>
 Package pdftex.def Info: Imagens/profile_allbands_Nmc2e7.png  used on input lin
-e 1361.
+e 1363.
 (pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
  [48] [49 <./Imagens/profile_ctg_Nmc2e7.png> <./Imagens/profile_allbands_Nmc2e7
 .png>]
 <Imagens/profile_BestBand.png, id=1395, 447.3513pt x 337.5009pt>
 File: Imagens/profile_BestBand.png Graphic file (type png)
 <use Imagens/profile_BestBand.png>
-Package pdftex.def Info: Imagens/profile_BestBand.png  used on input line 1376.
+Package pdftex.def Info: Imagens/profile_BestBand.png  used on input line 1378.
 
 (pdftex.def)             Requested size: 318.66948pt x 240.4204pt.
  [50] [51 <./Imagens/profile_BestBand.png>]
@@ -1365,7 +1365,7 @@ Appendix B.
 
 ] [58]
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 15
-94.
+96.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1374,7 +1374,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (3.09627pt too wide) in paragraph at lines 1595--1595
+Overfull \hbox (3.09627pt too wide) in paragraph at lines 1597--1597
 []\T1/ptm/m/n/12 (-20) D. J. Fixsen. ^^P  THE TEM-PER-A-TURE OF THE COS-MIC MI-
 CROWAVE BACK-GROUND^^Q.
  []
@@ -1382,7 +1382,7 @@ CROWAVE BACK-GROUND^^Q.
 [59
 
 ] [60]
-Overfull \hbox (25.28688pt too wide) in paragraph at lines 1595--1595
+Overfull \hbox (25.28688pt too wide) in paragraph at lines 1597--1597
 []\T1/ptm/m/n/12 (-20) S. Do-del-son and F. Schmidt. \T1/ptm/m/it/12 (-20) Mod-
 ern Cos-mol-ogy\T1/ptm/m/n/12 (-20) . El-se-vier Sci-ence, 2020. \T1/ptm/m/sc/1
 2 (-20) isbn\T1/ptm/m/n/12 (-20) : 9780128159484.
@@ -1391,10 +1391,10 @@ ern Cos-mol-ogy\T1/ptm/m/n/12 (-20) . El-se-vier Sci-ence, 2020. \T1/ptm/m/sc/1
 [61]
 
 Package biblatex Warning: No driver for entry type 'masterthesis'.
-(biblatex)                Using fallback driver on input line 1594.
+(biblatex)                Using fallback driver on input line 1596.
 
 
-Overfull \hbox (20.03078pt too wide) in paragraph at lines 1595--1595
+Overfull \hbox (20.03078pt too wide) in paragraph at lines 1597--1597
 \T1/pcr/m/n/12 1016 / j . astropartphys . 2004 . 12 . 004$[]\T1/ptm/m/n/12 (-20
 ) . \T1/ptm/m/sc/12 (-20) url\T1/ptm/m/n/12 (-20) : []$\T1/pcr/m/n/12 https : /
  / www . sciencedirect .
@@ -1433,7 +1433,7 @@ ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (78 pages, 5063665 bytes).
+Output written on main.pdf (78 pages, 5063904 bytes).
 PDF statistics:
  1905 PDF objects out of 2073 (max. 8388607)
  1447 compressed objects within 15 object streams
