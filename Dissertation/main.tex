@@ -1280,8 +1280,6 @@ This limitation led us to instead calculate the likelihood profile for $\Omega_m
 
 \section{Monte Carlo Markov Chains}
 
-\subsection{Principles}
-
 The usage of MCMC methods for analysing data has become a standard practice in recent years. While traditional direct evaluation methods usually rely on inverting complex matrix expressions and constantly having to renormalize the distributions being used, expressions that sometimes might not be analytically tractable and numerically unviable, MCMC methods sample values for a parameter -- or multiple parameters -- based on simple probability distributions that only need to be proportional to the exact probability distribution of the parameters given the data. Not only that, but having a set of parameters instead of a direct distribution function simplify both the process of visualizing the joint distribution of two parameters and the calculation of percentile intervals.
 
 In a very general sense, three main probability functions are required to run an MCMC algorithm for this type of problem: 
@@ -1302,24 +1300,22 @@ The stationary distribution of the chain will be the posterior distribution
 
 Two other important aspects of this procedure are the burn-in phase and the lagging. Despite the fact that for an infinite number of steps in the chain the distribution converges, when dealing with a finite number of steps, the first steps of the chain can create a bias in the sample, so it is common practice to discard the first points of the chain, this initial convergence phase is called the burn-in phase. Also, each step is highly correlated with its previous steps, which can also create bias, so a number of points in between two points can also be discarded to further reduce bias, this is called the lagging.
 
-\subsection{Tools Used and Convergence}
-
-Cobaya is a Python package designed to run MCMC chains to analyse any type of data desired, but it is integrated with many sets of cosmological datasets and packages, such as Planck's data and CAMB, so it is more often used as a tool for analysis of cosmological data. Figure \ref{fig:cobaya_test} shows the results for a chain I have run to test the basic functionalities of the software, which can be compared with a similar plot in \cite{esteban_msc}, which verifies that the code was working appropriately.
+Cobaya is a Python package designed to run MCMC chains to analyse any type of data desired, but it is integrated with many sets of cosmological datasets and packages, such as Planck's data and CAMB, so it is more often used as a tool for analysis of cosmological data. Figure \ref{fig:cobaya_test} shows the constraints at $68\%$ and $95\%$ for a chain using data and likelihoods providade by the Planck collaboration, using the $\Lambda$CDM model.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\linewidth]{Imagens/compare_likelihoods.png}
-	\caption{Joint posterior distributions of cosmological parameters using CMB's temperature (T) and polarization (E) data. The TTTEEE dataset combines both autocorrelation data (TT and EE) and the cross-correlation data (TE).}
+	\caption{Joint posterior distributions of cosmological parameters using Planck's CMB temperature (T) and polarization (E) data. The TTTEEE dataset combines both autocorrelation data (TT and EE) and the cross-correlation data (TE).}
 	\label{fig:cobaya_test}
 \end{figure}
 
-Falar que eu usei o ctypes pra integrar o cobaya com o código em C++ e explicar o procedimento. Comentar sobre as regras de convergência do Cobaya. Discutir sobre as minhas cadeias não convergirem nem pra um parâmetro só e finalizar o capítulo passando a vez pro likelihood profiling.
+Cobaya uses the Gelman-Rubin Diagnostic\cite{Rminus1_paper92} to test the convergence of the chains. We have used the $R-1=10^{-3}$ criteria for the convergence of the chains.
 
-\section{Likelihood Profiling}
+To determine the parameter constraints that can be obtained from the correlation spectra discussed so far, we have used the points shown in Figure \ref{fig:correlation_data_final_plots} as data points. The theoretical calculations had to be integrated with Cobaya, so we have created a Python code capable of calling the C++ functions we have used to calculate the theoretical correlation spectra, which allowed us to integrate both codes. 
 
-\subsection{Procedure}
+\section{Likelihoods}
 
-For a given value of $\Omega_m$, fixing all other cosmological parameters according to Table\ref{tab:planck_parameters}, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, that can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain $\Omega_m$, also called the likelihood function for $\Omega_m$. 
+With the integrated code, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$ via a Python script, $C_{\ell\text{, theo}}^{xy}$ can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain set of parameters. 
 
 We have assumed that for each multipole $\ell$ and for all the three different spectra, the likelihood is a Gaussian distribution of the form
 
@@ -1327,7 +1323,7 @@ We have assumed that for each multipole $\ell$ and for all the three different s
 	\mathcal{L}(C_{\ell\text{, theo}}^{xy}|C_{\ell\text{, data}}^{xy})=\frac{1}{\sigma_\ell \sqrt{2\pi}}\text{exp}\left[-\frac{1}{2}\left(\frac{C_{\ell\text{, data}}^{xy}-C_{\ell\text{, theo}}^{xy}}{\sigma_\ell}\right)^2\right],
 \end{equation}
 
-\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole:
+\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. Before trying to run a chain varying all the cosmological parameters of interest, we decided to test the results of the procedure varying only $\Omega_m$. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole:
 
 \begin{equation}\label{likelihood_cxy}
 	\mathcal{L}(\Omega_m|C^{xy}_\text{data})=\prod_{\ell=2}^{\ell_\text{max}} \mathcal{L}(C_{\ell\text{, theo}}^\text{xy}|C_{\ell\text{, data}}^\text{xy}).
@@ -1340,8 +1336,6 @@ We have analysed the likelihoods relative to both $C^{tg}$ and $C^{gg}$, as well
 \end{equation}
 
 Equation \eqref{joint-likelihood} is calculated in each band of the 2MASS catalog, the results can be normalized with respect to the maximum value obtained for each band, or multiplied to form a full 2MASS joint-likelihood of all 4 bands and then normalized with respect to the maximum value. 
-
-\subsection{Results}
 
 The likelihoods calculated using $C^{tg}$ data from all 4 2MASS bands and the combination of all bands' likelihoods are shown in Figure \ref{fig:likelihood_prof_ctg}. 
 
@@ -1385,6 +1379,10 @@ The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_op
 It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe\cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
 
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets could possibly improve the signal, such as greater galaxy survey depths and fainter magnitude limits, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
+
+\section{MCMC Convergence}
+
+discuss the fact that, using the likelihoods shown previously, even for a single parameter (OmegaM), yielded markov chains with an incredibly low acceptance rate. discuss possible reasons for that.  
 
 \chapter{Conclusions}\label{chapter:conclusions}
 

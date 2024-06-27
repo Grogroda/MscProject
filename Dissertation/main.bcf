@@ -2478,7 +2478,7 @@
     <bcf:citekey order="114">CobayaASCL</bcf:citekey>
     <bcf:citekey order="114">Cobaya_preprint</bcf:citekey>
     <bcf:citekey order="115">Metropolis_hastings</bcf:citekey>
-    <bcf:citekey order="116">esteban_msc</bcf:citekey>
+    <bcf:citekey order="116">Rminus1_paper92</bcf:citekey>
     <bcf:citekey order="117">ronaldo_inhDE</bcf:citekey>
     <bcf:citekey order="118">simillar_ISW_analysis</bcf:citekey>
     <bcf:citekey order="119">Moura-Santos_2016</bcf:citekey>
@@ -2564,8 +2564,9 @@
     <bcf:citekey order="199">CobayaASCL</bcf:citekey>
     <bcf:citekey order="200">Cobaya_preprint</bcf:citekey>
     <bcf:citekey order="201">Metropolis_hastings</bcf:citekey>
-    <bcf:citekey order="202">ronaldo_inhDE</bcf:citekey>
-    <bcf:citekey order="203">simillar_ISW_analysis</bcf:citekey>
+    <bcf:citekey order="202">Rminus1_paper92</bcf:citekey>
+    <bcf:citekey order="203">ronaldo_inhDE</bcf:citekey>
+    <bcf:citekey order="204">simillar_ISW_analysis</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

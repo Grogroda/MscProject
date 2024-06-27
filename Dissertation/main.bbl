@@ -7388,6 +7388,50 @@
       \verb http://www.jstor.org/stable/2684568
       \endverb
     \endentry
+    \entry{Rminus1_paper92}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=49a367b6280de8a239f8bbdd573f996f}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{ace621ada30e7015366685782e55c297}
+      \strng{fullhash}{ace621ada30e7015366685782e55c297}
+      \strng{bibnamehash}{ace621ada30e7015366685782e55c297}
+      \strng{authorbibnamehash}{ace621ada30e7015366685782e55c297}
+      \strng{authornamehash}{ace621ada30e7015366685782e55c297}
+      \strng{authorfullhash}{ace621ada30e7015366685782e55c297}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{4}
+      \field{title}{{Inference from Iterative Simulation Using Multiple Sequences}}
+      \field{volume}{7}
+      \field{year}{1992}
+      \field{pages}{457\bibrangedash 472}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1214/ss/1177011136
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/ss/1177011136
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/ss/1177011136
+      \endverb
+      \keyw{Bayesian inference,Convergence of stochastic processes,ECM,EM,Gibbs sampler,importance sampling,Metropolis algorithm,multiple imputation,random-effects model,SIR}
+    \endentry
     \entry{ronaldo_inhDE}{article}{}
       \name{author}{2}{}{%
         {{hash=2e309bcb6c650da722b6a9f0256cdae2}{%
