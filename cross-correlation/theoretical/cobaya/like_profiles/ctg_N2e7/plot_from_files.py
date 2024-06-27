@@ -35,6 +35,9 @@ for band in list(full_data.keys()):
 
 print('Data dict:\n', full_data)
 
+data_DF=pd.DataFrame(full_data[4])
+data_DF.to_csv('full_data4.dat', sep=' ')
+
 sum_table={'Omegas':[]} #table containing the sums of raw_logp and raw_xi2
 
 sum_table['Omegas']=full_data[1]['Omegas']
