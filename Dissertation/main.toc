@@ -30,5 +30,5 @@
 \contentsline {section}{\numberline {5.2}Likelihoods}{47}{section.5.2}%
 \contentsline {section}{\numberline {5.3}MCMC Convergence}{51}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Conclusions}{52}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Demonstration of Accelerated Expansion Redshift}{55}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{57}{appendix.B}%
+\contentsline {chapter}{\numberline {A}Demonstration of Accelerated Expansion Redshift}{56}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{58}{appendix.B}%
