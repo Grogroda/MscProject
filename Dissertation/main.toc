@@ -19,16 +19,16 @@
 \contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{29}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{31}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{36}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Two Point Functions}{36}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Gibbs Sampling}{38}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Data Sets and Analysis}{40}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}WMAP Data}{40}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}2MASS Catalog}{41}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Correlation Spectra Obtained}{42}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Cosmological Constraints}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Monte Carlo Markov Chains}{45}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Likelihoods}{47}{section.5.2}%
-\contentsline {section}{\numberline {5.3}MCMC Convergence}{51}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusions}{52}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Demonstration of Accelerated Expansion Redshift}{56}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{58}{appendix.B}%
+\contentsline {section}{\numberline {4.1}Data Sets and Analysis}{36}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}WMAP Data}{36}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}2MASS Catalog}{38}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Two-Point Correlaton Functions}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.3}A likelihood-based estimator}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Correlation Spectra Obtained}{44}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Cosmological Constraints}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Monte Carlo Markov Chains}{46}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Likelihoods}{48}{section.5.2}%
+\contentsline {section}{\numberline {5.3}MCMC Convergence}{52}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Demonstration of Accelerated Expansion Redshift}{57}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Demonstration of Correlation Functions}{59}{appendix.B}%

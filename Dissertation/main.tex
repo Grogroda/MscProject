@@ -103,7 +103,7 @@ FICHA DA BIBLIOTECA
 \begin{center}
 \thispagestyle{empty}
 \vspace*{\fill}
-\textit{Frase bonita}
+\textit{Have patience with all things, but first of all with yourself.}
 \vspace*{\fill}
 \end{center}
 
@@ -132,7 +132,7 @@ O presente trabalho foi realizado com apoio do CNPq, Conselho Nacional de Desenv
 
 \chapter*{Abstract}
 
-ABSTRACT AQUI
+In this work, we study the use of the Integrated Sachs-Wolfe (ISW) Effect as a tool for cosmological analysis. We do this with the use of the cross-correlation spectrum between Cosmic Microwave Background (CMB) temperature maps and galaxy contrast maps, which are used as gravitational potential tracers. We discuss how this spectrum is calculated and discuss the influence of the galaxy redshift distribution on this signal, and propose a method capable of finding an optimized distribution capable of maximizing the cross-correlation signal, which is commonly dominated by cosmic variance, an irreducible source of error in the spectrum. With this method, we obtained a selection function capable of reducing in $3\%$ the probability defined for the expected spectrum to be compatible with the null hypothesis relative to one of the bands of the 2MASS catalog. Furthermore, we explore the methods used to extract cross-correlation data points from masked CMB temperature and galaxy contrast maps, and use these results to calculate the likelihood profiles for the $\Omega_m$ parameter using WMAP's CMB temperature maps and the 2MASS galaxy catalog. The results obtained for the likelihoods using only cross-correlation data are very wide, but the peak of the combined likelihoods seems to be compatible with Planck's results. Combining the cross-correlation data with galaxy contrast autocorrelation data strongly tights the constraints on $\Omega_m$, and all the results in this combination are compatible with Planck's. We also show the likelihood for a synthetic cross-correlation spectrum (properties of the spectrum) using one of 2MASS' bands errors, the results (summarize the results).
 
 \vspace{1cm}
 
@@ -140,7 +140,7 @@ ABSTRACT AQUI
 
 \chapter*{Resumo}
 
-RESUMO AQUI
+Neste trabalho, estudamos o uso do Efeito Sachs-Wolfe Integrado (ISW) como uma ferramenta para análises cosmológicas. Fazemos isso utilizando o espectro de correlação cruzada entre os mapas de temperatura da Radiação Cósmica de Fundo (CMB) e mapas de contraste de galáxias, que são usados como mapeadores de potenciais gravitacionais. Discutimos como esse espectro é calculado e a influência da distribuição do \textit{redshift} das galáxias nesse sinal, e propomos um método capaz de encontrar uma distribuição otimizada capaz de maximizar o sinal de correlação cruzada, que é comumente dominado por variância cósmica, uma fonte irreduzível de erro no espectro. Com esse método, obtivemos uma função de seleção capaz de reduzir em $3\%$ a probabilidade definida para que o espectro esperado seja compatível com a hipótese nula em relação a uma das bandas do catálogo 2MASS. Além disso, exploramos os métodos usados para obter dados de correlação cruzada a partir de mapas mascarados de temperatura da CMB e de contraste de galáxias, e usamos esses resultados para calcular os perfis de \textit{likelihood} para o parâmetro $\Omega_m$ usando os mapas de temperatura da CMB do WMAP e o catálogo de galáxias 2MASS. Os resultados obtidos para as \textit{likelihoods} usando apenas dados de correlação cruzada são muito amplos, mas o pico das probabilidades combinadas parece ser compatível com os resultados do Planck. A combinação dos dados de correlação cruzada com os dados de autocorrelação do contraste das galáxias restringe fortemente as limitações sobre $\Omega_m$, e todos os resultados dessa combinação são compatíveis com os do Planck. Também mostramos a probabilidade para um espectro de correlação cruzada sintético (propriedades do espectro) usando erros de uma das bandas do 2MASS, os resultados (resumir os resultados).
 
 \vspace{1cm}
 
@@ -1011,33 +1011,128 @@ Despite these insights, the statistical gains from this ideal set of parameters 
 
 \chapter{Extracting Correlations from Data} \label{chapter:extracting_correlations_from_data}
 
-CMB experiments do not directly measure correlation spectra, instead the data consists of time ordered data streams, each stream with information of the direction of observation and the sky temperature measured by that detector, which is contained within an array of detectors. 
+%CMB experiments do not directly measure correlation spectra, instead the data consists of time ordered data streams, each stream with information of the direction of observation and the sky temperature measured by that detector, which is contained within an array of detectors. 
 
-In this chapter, the process of converting this signal, taking into account the effects of detector noise and environmental variables such as the galactic background, will be discussed, not only for CMB but also for galaxy maps. A Monte Carlo Markov Chain (MCMC) algorithm capable of efficiently extracting these correlations, including the galaxy-CMB cross-correlation, will be presented.
+In this chapter, we present details on how the CMB temperature and galaxy contrast correlation spectra have been extracted from pixelized sky maps of these two observables. The data used for this purpose was measured by the Wilkinson Microwave Probe (WMAP) satellite and by Two Micron All Sky Survey (2MASS), respectively. The contamination introduced in the maps by the strong galactic emission has to be taken into account, that is, we should deal with partial sky coverage. Noise introduced by the electronics as well as natural fluctuations due to finite galaxy counts should also be dealt with. At last, the challenge associated to the computational complexity of evaluating a likelihood in a highly dimensional parameter space will be overcome by the use of a Monte Carlo sampling algorithm.
 
-\section{Two Point Functions}
+%In this chapter, the process of converting this signal, taking into account the effects of detector noise and environmental variables such as the galactic background, will be discussed, not only for CMB but also for galaxy maps. A Monte Carlo Markov Chain (MCMC) algorithm capable of efficiently extracting these correlations, including the galaxy-CMB cross-correlation, will be presented.
 
-To estimate any correlation spectrum, we first need to estimate the values of the multipole terms $a_{\ell m}$, but applying equation \eqref{def:autocorrelation} to these directly does not yield accurate results, one has to introduce factors such as noise and map masks first. 
 
-In general, it is common to introduce a weight function $W(\hat{\mathbf{n}})$ to account for various possible effects on the measured maps, such as galactic contamination, edge effects, and down-weighting more noisy pixels\cite{Hivon_2002}. If we ignore other effects for now (such as noise), the multipole terms $\tilde{a}_{\ell m}$ as defined in \eqref{ch2:alm=int...}, assuming a high number of small pixels to approximate a sum with an integral, becomes
+
+\section{Data Sets and Analysis}
+
+In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results,WMAP_data} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored. It is known that the state of the art in terms of CMB maps are nowadays provided by the Planck due to its arcminute angular resolution. However, the signal being probed here is expected to dominate at large scales, therefore WMAP and Planck data should be essentially equivalent for that purpose. On the other hand, since one is also interested in the two-point correlation functions in harmonic space of the projected CMB temperature and galaxy contrast, sky coverage is a key point in the analysis and that is the reason a galaxy survey with the largest sky coverage has been chosen here, even though the data of much deeper surveys are already available today.
+
+
+
+\subsection{WMAP Data}
+
+The WMAP satellite measured the CMB temperature over the entire sky in five frequency bands in the spectral region where the
+CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these five frequency bands, we have used in this work the data corresponding to the Q (40 GHz), V (60 GHz) and W (90 GHz) bands, which are the ones suitable for data analysis, due to their minimized galactic contamination. Its last data realease, WMAP9, which is the one used here, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a constant characteristic of each channel (2.188 mK (Q), 3.131 mK (V) and 6.544 mK (W) \cite{wmap_supplement}).
+
+Figure \ref{fig:Wmap_maps} shows the maps of the CMB temperature used for the analysis with a mask applied to them. The mask is intended to eliminate pixels highly contaminated by galactic foregrounds. The fraction of the sky that survives the masking procedure in this case is $f_{sky}=0.70$ and it is the result of combining two masks: WMAP KQ85 ($f_{sky}=0.77$) and 2MASS ($f_{sky}=0.72$). The monopole \cite{CMB_temperature:Fixsen_2009} and kinematic dipole due to the solar system movement with respect to the CMB isotropy frame have been already subtracted.
+
+\begin{figure}[!htb]
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/wmap_Q_wmask.png}
+         \caption{Q channel}
+         \label{fig:Qchannel}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/wmap_V_wmask.png}
+         \caption{V channel}
+         \label{fig:Vchannel}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/wmap_W_wmask.png}
+         \caption{W channel}
+         \label{fig:Wchannel}
+     \end{subfigure}
+        \caption{Mollweide projection of three (Q, V, W) WMAP9 CMB temperature (in mK) maps in galactic coordinates with an $f_{sky}=0.70$ mask applied to them to exclude pixels with galactic contamination. Monopole and dipole contributions have been subtracted. The maps have HEALPix resolution correspodning to $nside$=32.}
+        \label{fig:Wmap_maps}
+\end{figure}
+
+The CMB maps shown in figure \ref{fig:Wchannel} have been also smoothed using a Gaussian filter of 5$^\circ$ FWHM. The filtering dumps power at scales $\ell \gtrsim 20$, but also introduces correlations in the noise which are too complicated to model. Therefore, as final step in the CMB map preparation phase, regularizing uncorrelated white noise of RMS 2 $\mu$K pixel$^{-1}$ has been added to all the maps \cite{Moura-Santos_2016}. The mask, filtering and regularizing noise will be properly taken into account when extracting the correlation spectra from these maps.
+
+
+
+
+\subsection{2MASS Catalog}
+
+From 1997 to 2001, using two 1.3 dedicated telescopes at Mt. Hopkins and CTIO, Chile, 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
+
+The $K_s$ band's $20 \text{ mag arcsec}^{-2}$ isophotal circular aperture magnitudes (here simply called $K_{20}$) were corrected for galactic extinction using the reddening maps $E(B-V)$ at $\SI{100}{\mu \meter}$ from \cite{Schlegel_1998}, according to the expression $K_{20} \rightarrow K_{20}'=K_{20}-A_k$, where $A_k=0.367E(B-V)$.
+
+HEALPix was used to produce and analyse the maps with resolution parameter $nside=32$, a mask was applied to every pixel with $A_k>0.05$. This left the catalog with $801,476$ objects with $12<K_{20}'<14$, which were further divided into the four bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$). 
+
+This catalog is made using photometric measurements, meaning redshift information is not directly obtained with the measurements, but there are techniques to estimate photometric redshifts. In \cite{K20_lum_func} the luminosity function of 4192 2MASS galaxies were used to estimate the luminosity function of the entirety of the $K_s$ band, and then the photometric redshifts of these galaxies. In \cite{2MPZ} the authors trained a neural network and cross-correlated XSC with WISE\cite{WISE} and SuperCOSMOS\cite{SuperCOSMOS} to obtain the photometric redshifts of a big fraction of the sources in XSC, creating what is called the 2MPZ catalog. As shown in \cite{Moura-Santos_2016}, using the 2MPZ catalog over XSC does not yield significant changes in the results, so in this work we maintained the usage of the XSC data.
+
+As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}. The selecton functon parametrizations for each band are shown in Table \ref{tab:bands_2MASS} and their plots as a function of redshift are shown in Figure \ref{fig:2MASS_selections}. Figure \ref{fig:2MASS_maps} shows the final galaxy contrast maps produced after smoothing them with a 5$^\circ$ FWHM Gaussian filter and adding regularizing white noise of 5\% pixel$^{-1}$ to mitigate the correlation introduced by the filtering into the original shot noise of the maps.
+
+\begin{figure}[!htb]
+     \centering
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band1_wmask_xsc.png}
+         \caption{Band 1}
+         \label{fig:contrast_map1}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band2_wmask_xsc.png}
+         \caption{Band 2}
+         \label{fig:contrast_map2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band3_wmask_xsc.png}
+         \caption{Band 3}
+         \label{fig:contrast_map3}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Imagens/band4_wmask_xsc.png}
+         \caption{Band 4}
+         \label{fig:contrast_map4}
+     \end{subfigure}
+     \caption{Mollweide projection of the 2MASS-XSC galaxy contrast maps in galactic coordinates with the combined 2MASS+WMAP mask applied ($f_{sky}=0.70$). Four bands are shown: band 1 ($12.0<K'_{20}<12.5$), band 2 ($12.5<K'_{20}<13.0$), band 3 ($13.0<K'_{20}<13.5$) and band 4 ($13.5<K'_{20}<14.0$). A 5$^{\circ}$ FWHM filter has been applied over the maps and regularizing white noise of 5\%  pixel$^{-1}$ RMS strength finally added.}
+        \label{fig:2MASS_maps}
+      \end{figure}
+
+      
+
+\section{Two-Point Correlaton Functions}
+
+%To estimate any correlation spectrum, we first need to estimate the values of the multipole terms $a_{\ell m}$, but applying equation \eqref{def:autocorrelation} to these directly does not yield accurate results, one has to introduce factors such as noise and map masks first. 
+
+The presence of the mask in the previous maps introduces a complication when calculating correlation functions such as the power spectrum. To account fot the mask, in general, it is common to introduce a weight function $W(\hat{\mathbf{n}})$ which is 1 for unmasked pixels and 0 for masked ones \cite{Hivon_2002}. The spherical harmonics coefficients $\tilde{a}_{\ell m}$ obtained from these partial sky coverage maps are therefore
+% If we ignore other effects for now (such as noise), the multipole terms $\tilde{a}_{\ell m}$ as defined in \eqref{ch2:alm=int...}, assuming a high number of small pixels to approximate a sum with an integral, becomes
 
 \begin{equation}\label{ch3:tilde_a}
-    \tilde{a}_{\ell m}=\int d\Omega \Theta(\hat{\mathbf{n}})W(\hat{\mathbf{n}})Y_{\ell m}^* (\hat{\mathbf{n}}).
-\end{equation}
-
-With this, one can define the so-called pseudo-power spectrum $\tilde{C}_\ell$:
-
+    \tilde{a}_{\ell m}=\int d\Omega\, \Theta(\hat{\mathbf{n}})W(\hat{\mathbf{n}})Y_{\ell m}^* (\hat{\mathbf{n}}).
+  \end{equation}
+  and are called pseudo spherical harmonics coefficients. Likewise, the so-called pseudo-power spectrum $\tilde{C}_\ell$ is given by:
+  
 \begin{equation}\label{ch3:tilde_Cl}
     \tilde{C}_\ell=\frac{1}{2\ell+1}\sum_{m=-\ell}^\ell |\tilde{a}_{\ell m}|^2.
 \end{equation}
 
-Still ignoring noise and other factors, one can relate the ensemble average of the pseudo-power spectrum with the true power spectrum with a simple system of equations
+In terms of the power spectrum, the consequence of the mask is to introduce a mixing between different multipoles, that is, an artificial break of the statistical isotropy of the $a_{\ell m}$'s is introduced. It can be shown that in this situation the ensemble average of the pseudo-power spectrum is related to the true power spectrum via a system of linear equations \cite{Hivon_2002}
 
 \begin{equation}
     \av{\tilde{C}_\ell}=\sum_{\ell'} M_{\ell \ell'} \av{C_\ell},
 \end{equation}
 
-\noindent where $M_{\ell \ell'}$ is a matrix that describes the coupling between modes, called the multipole mixing matrix. If the mask applied to a CMB map is described by multipole functions $\mathcal{W}_\ell$, the mixing matrix corresponds to
+\noindent where $M_{\ell \ell'}$ is a matrix that describes the coupling between modes introduced by the mask, called the multipole mixing matrix or mixing kernel. If the mask itself is seen as a scalar field over the 2-sphere with power spectrum given by $\mathcal{W}_\ell$, the mixing matrix $M_{\ell \ell'}$ in turn is given by
 
 \begin{equation}
     M_{\ell \ell'}=\frac{2\ell'+1}{4\pi}\sum_{\ell''}(2\ell''+1)\mathcal{W}_\ell''
@@ -1049,46 +1144,59 @@ Still ignoring noise and other factors, one can relate the ensemble average of t
 
 \noindent in which the term in parenthesis is a Wigner-$3j$ symbol.
 
-To find the full form of the system of equations used to determine the real power spectrum, one has to take into consideration the so-called beam pattern. 
-
-In radio astronomy, telescopes take measurements in various angles in the sky, and for each direction $\hat{n}$, there is an area of the sky being covered by the measurement, each of these areas is called a beam. In an apparatus that measures CMB photons' temperatures, the measurement in each direction $\hat{n}$ is a temperature $T^\text{obs}(\hat{n})$, this measurement corresponds to a weighted combination of the real temperatures $T(\hat{n}')$ over the beam:% plus a noise $\eta(\hat{n})$:
+To find the full form of the system of equations used to determine the true power spectrum, one has to take into consideration the so-called beam pattern, since all astronomical observations are made with telescopes of finite angular resolution. More precisely, in an apparatus that measures CMB temperatures, the measurement in each direction $\hat{\mathbf{n}}$ is a value $T^\text{obs}(\hat{\mathbf{n}})$ corresponding to a weighted average of the real temperatures $T(\hat{\mathbf{n}} ')$:
+% plus a noise $\eta(\hat{n})$:
+% In radio astronomy, telescopes take measurements in various angles in the sky, and for each direction $\hat{n}$, there is an area of the sky being covered by the measurement, each of these areas is called a beam. In an apparatus that measures CMB photons' temperatures, the measurement in each direction $\hat{n}$ is a temperature $T^\text{obs}(\hat{n})$, this measurement corresponds to a weighted combination of the real temperatures $T(\hat{n}')$ over the beam:% plus a noise $\eta(\hat{n})$:
 
 \begin{equation}\label{def:beam_pattern}
-	T^\text{obs}(\hat{n})=\int_\text{beam} d\Omega B(\hat{n},\hat{n}')T(\hat{n}').
+	T^\text{obs}(\hat{\mathbf{n}})=\int_\text{beam} d\Omega\, B(\hat{\mathbf{n}}, \hat{\mathbf{n}}') T(\hat{\mathbf{n}} ').
 \end{equation}
 
-The function $B(\hat{n}, \hat{n}')$ is called the beam pattern, it weights the contributions of photons coming in the directions around the beam, and it can be estimated during the calibration of the apparatus, it is usually assumed to be Gaussian. Figure \ref{fig:beam_pattern} shows the beam pattern for the Planck instrument at $30\text{ GHz}$.
+The function $B(\hat{\mathbf{n}}, \hat{\mathbf{n}}')$ is called the beam pattern, it weights the contributions of photons coming from the directions around the telescope line of sight $\hat{\mathbf{n}}$, and can be estimated during the calibration of the apparatus. In many cases, it can be assumed to be Gaussian. %Figure \ref{fig:beam_pattern} shows the beam pattern for the Planck instrument at $30\text{ GHz}$.
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=.55\linewidth]{Imagens/beam_pattern.png}
-	\caption{Beam pattern for the Planck instrument at $30\text{ GHz}$. Contours delineate the regions where the beam function drops from its maximum to $50\%$, $10\%$, $1\%$ and $0.1\%$ respectively. Source: \href{https://wiki.cosmos.esa.int/planckpla/index.php/Effective_Beams}{Planck wiki}.}
-	\label{fig:beam_pattern}
-\end{figure}
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=.55\linewidth]{Imagens/beam_pattern.png}
+%	\caption{Beam pattern for the Planck instrument at $30\text{ GHz}$. Contours delineate the regions where the beam function drops from its maximum to $50\%$, $10\%$, $1\%$ and $0.1\%$ respectively. Source: \href{https://wiki.cosmos.esa.int/planckpla/index.php/Effective_Beams}{Planck wiki}.}
+%	\label{fig:beam_pattern}
+%\end{figure}
 
-With the multipole terms $B_\ell$ of the beam pattern $B(\hat{n}, \hat{n}')$, and given a noise map $N$ that can also be expanded in multipoles $N_\ell$, the correlation functions can be extracted by solving the following system of equations:
+The beam pattern itself can be seen as a scalar function over the sphere centered at the telescope line of sight. If its power spectrum is given by $B_\ell$ and given a noise map $N$ that can also be expanded in multipoles $N_\ell$, the final system of equations relating pseudo and true power spectrum ensemble average is given by:
 
 \begin{equation}\label{ch3:av(tilde_Cl)}
     \av{\tilde{C}_\ell}=\sum_{\ell'} M_{\ell \ell'}B_{\ell'}^2\av{C_{\ell'}}+\av{N_\ell}.
 \end{equation}
 
-Although this solution converges to the true power spectrum in the limit of a large number of sky realizations, having a single universe to retrieve sky map multipoles makes this solution highly affected by cosmic variance\cite{Moura-Santos_2016}. Another limitation of this method is its computational complexity of $O(N_p^3)$, where $N_p$ is the number of pixels of the sample maps. For experiments such as WMAP ($N_p\sim 10^6$) and Planck ($N_p \sim 10^7$), this time complexity becomes computationally unviable, thus motivating the introduction of a new technique, which will be presented now.
+Equation \ref{ch3:av(tilde_Cl)} is known as the Monte Carlo Apodized
+Spherical Transform Estimator (MASTER) solution \cite{Hivon_2002}. Although this solution converges to the true power spectrum in the limit of a large number of sky realizations, having a single universe to retrieve sky map multipoles makes it highly affected by cosmic variance \cite{Moura-Santos_2016}. Another complication is the fact that for very irregular masks the mixing kernel may be singular, preventing its inversion. In some cases, a kernel regularization procedure can be applied where a binned power spectrum is introduced instead of trying to calculate $C_{\ell}$ to all multipoles $\ell$.
 
-\section{Gibbs Sampling}
+%Another limitation of this method is its computational complexity of $O(N_p^3)$, where $N_p$ is the number of pixels of the sample maps. For experiments such as WMAP ($N_p\sim 10^6$) and Planck ($N_p \sim 10^7$), this time complexity becomes computationally unviable, thus motivating the introduction of a new technique, which will be presented now.
 
-For a more efficient method than the one presented previously, Monte Carlo (MC) methods to sample maps of the primordial signal from the a posteriori probability distribution taking into account cosmic variance, instrumental noise, and residual foregrounds were developed\cite{Jewell_2004,Eriksen_2004,Wandelt_2004}. 
 
-Let $d$ be a pixelized temperature map consisting of primordial signal $\mathbf{s}$ and instrumental noise $\mathbf{n}$, both following Gaussian distributions with covariance matrices $\mathbf{S}$ and $\mathbf{N}$ respectively, with a full covariance matrix $\mathbf{C}=\mathbf{S}+\mathbf{N}$. The likelihood for observing such a map, after marginalizing over the unknown signal $\mathbf{s}$, can be calculated using
+\section{A likelihood-based estimator}
+
+In order to properly take into account intrinsic fluctuations such as cosmic variance and shot noise, an approach based on a likelihood where the probability density of these fluctuations is naturally incorporated can be used instead of the MASTER approach described in the previous section. To be more precise, one is interested in reconstructing the a posteriori probability distribution of the two-point correlatons functions given some data available in the form of pixelized sky maps.
+
+%For a more efficient method than the one presented previously, Monte Carlo (MC) methods to sample maps of the primordial signal from the a posteriori probability distribution taking into account cosmic variance, instrumental noise, and residual foregrounds were developed\cite{Jewell_2004,Eriksen_2004,Wandelt_2004}. 
+
+For example, let $d$ be a pixelized temperature map consisting of primordial signal $\mathbf{s}$ and instrumental noise $\mathbf{n}$, both following Gaussian distributions with covariance matrices $\mathbf{S}$ and $\mathbf{N}$ respectively, such that the full covariance matrix is $\mathbf{C}=\mathbf{S}+\mathbf{N}$. The likelihood for observing such a map, after marginalizing over the unknown true temperature signal $\mathbf{s}$, is given by
 
 \begin{equation}\label{ch4:Likelihood}
 	\mathcal{L}=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right),
 \end{equation}
 
-\noindent where $n_\text{dim}=N_p^2$. The direct evaluation of this likelihood is not computationally viable due to the calculation of the determinant of $\mathbf{C}$, a matrix that cannot be represented in diagonal form, since $\mathbf{N}$ is typically close to diagonal in pixel space and $S$ is diagonal in harmonic space.
+\noindent where $n_\text{dim}=N_p^2$. The direct evaluation of this likelihood is not computationally viable due to the calculation of the determinant of $\mathbf{C}$, a matrix that cannot be represented in diagonal form, since $\mathbf{N}$ is typically close to diagonal in pixel space and $S$ is diagonal in harmonic space. The computational complexity of the operaton is $O(N_p^3)$, where $N_p$ is the number of pixels of the sample maps. For experiments such as WMAP ($N_p\sim 10^6$) and Planck ($N_p \sim 10^7$), the problem becomes computationally unviable, thus motivating the introduction of a new technique, which will be presented now.
 
-Using Bayes' theorem, this likelihood can be written as $P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C})$, where $\pi(\mathbf{S})$ is the prior on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. 
+Using Bayes' theorem, we can write
 
-The calculation $P(\mathbf{C}|\mathbf{d})$ can be done using an MC method called Gibbs sampling. Suppose we can sample from the conditional probabilities $P(\mathbf{C}|\mathbf{s}, \mathbf{d})$ and $P(\mathbf{s}|\mathbf{C}, \mathbf{d})$, we can then sample a set of $\{(\mathbf{s}^i, \mathbf{C}^i)\}$ by iterating the following sampling process\cite{Chu_2005}:
+\begin{equation}\label{ch4:bayes}
+  P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C}),
+\end{equation}
+
+\noindent where $\pi(\mathbf{S})$ is the prior probability on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. Sampling from \ref{ch4:bayes} can be done using standard Monte Carlo Markov Chain methods such as those based on the Metropolis-Hastings algorithm. For the particular case of the likelihood in equation \ref{ch4:Likelihood}, for which a set of conditional probabilities can be more directly used for sampling, the so called Gibbs sampling technique is efficient and useful for the problem at hand and has been succesfully implemented for CMB experiments in \cite{Jewell_2004,Eriksen_2004,Wandelt_2004, Larson_2007}. 
+
+% Sampling from $P(\mathbf{C}|\mathbf{d})$ can be done using a Monte Carlo method called Gibbs sampling.
+Suppose we can sample from the conditional probabilities $P(\mathbf{C}|\mathbf{s}, \mathbf{d})$ and $P(\mathbf{s}|\mathbf{C}, \mathbf{d})$. In this case, one can then sample a set of $\{(\mathbf{s}^i, \mathbf{C}^i)\}$ by iterating the following sampling process\cite{Chu_2005}:
 
 \begin{equation}\label{gibbs_sample1}
 \mathbf{s}^{i+1}\leftarrow P(\mathbf{s}|\mathbf{C}^i, \mathbf{d}),
@@ -1127,7 +1235,9 @@ With this, it is possible to derive the Blackwell-Rao estimator for the density 
 
 \noindent where $N_G$ is the number of Gibbs samples and $C_\ell$ are the multipole values due to the true signal $\mathbf{s}$.
 
-In this project, the same process presented in \cite{Moura-Santos_2016}, which is an extended version of what is presented in \cite{Larson_2007}, has been used. In this framework, the vector $\mathbf{s}$ and the matrix $\mathbf{S}$ are defined as
+The previous Gibbs sampling approach for a CMB experiment has been extended in \cite{Moura-Santos_2016} to deal with the problem of estimating the full two-point correlation function of a combined CMB-galaxy survey experiment. In the extended framework, the vector $\mathbf{s}$ and the matrix $\mathbf{S}$ are defined as
+
+%In this project, the same process presented in \cite{Moura-Santos_2016}, which is an extended version of what is presented in \cite{Larson_2007}, has been used. In this framework, the vector $\mathbf{s}$ and the matrix $\mathbf{S}$ are defined as
 
 \begin{equation}\label{vec_s}
 	\mathbf{s}^T=(s_{00}^{tg}, s_{01}^{tg}, s_{11}^{tg}, \dots, s_{\ell_\text{max}0}^{tg}, \dots, s_{\ell_\text{max} \ell_\text{max}}^{tg}),
@@ -1136,7 +1246,7 @@ In this project, the same process presented in \cite{Moura-Santos_2016}, which i
 	\mathbf{S}=\text{diag}(S_0^{tg}, S_1^{tg}, S_1^{tg},\dots, S_{\ell_\text{max}}^{tg}, \dots, S_{\ell_\text{max}}^{tg}),
 \end{equation}
 
-\noindent where 
+\noindent where the entries of the vector above are now 2-component vectors $\mathbf{s}_{\ell m}^{tg}$ containing the CMB temperature and the galaxy contrast spherical harmonics coefficients and $2\times 2$ signal correlation matrices $\mathbf{S}_\ell^{tg}$ including both the diagonal auto-correlations of CMB and galaxy contrasts as well as off-diagonal terms representing the cross-correlation between CMB and galaxy contrast which is a key observable in this work:
 
 \begin{align}\label{s_lm=}
 	\mathbf{s}_{\ell m}^{tg}&=
@@ -1161,89 +1271,9 @@ It is also assumed that the noise's covariance matrix is diagonal: $N=\text{diag
 	\end{pmatrix},
 \end{equation}
 
-\noindent since the noises affecting the temperature anisotropies and galaxy contrast are uncorrelated. 
+\noindent since the noises affecting the temperature anisotropies (due to the electronics) and galaxy contrast (Poissonian shot noise) are uncorrelated. 
 
-\section{Data Sets and Analysis}
 
-In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results,WMAP_data} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored.
-
-\subsection{WMAP Data}
-
-WMAP used radiometers and differential microwave receivers to measure the CMB temperature over the entire sky across five frequency bands in the spectral region where the
-CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these 5 frequency bands, we have used in this project the data corresponding to the Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$) bands, which are the ones suitable for data analysis. Its last data realease, WMAP9, which is the one used in this project, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a parameter present in the data for each channel.
-
-Figure \ref{fig:Wmap_maps} shows the maps used for the analysis with the so called KQ85 mask applied to them.
-
-\begin{figure}[!htb]
-     \centering
-     \begin{subfigure}[b]{0.49\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/wmap_Q_wmask.png}
-         \caption{Q channel}
-         \label{fig:Qchannel}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.49\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/wmap_V_wmask.png}
-         \caption{V channel}
-         \label{fig:Vchannel}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.49\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/wmap_W_wmask.png}
-         \caption{W channel}
-         \label{fig:Wchannel}
-     \end{subfigure}
-        \caption{Mollweide projection of the 3 WMAP9 CMB temperature maps with the combined 2MASS+WMAP mask applied.}
-        \label{fig:Wmap_maps}
-\end{figure}
-
-\subsection{2MASS Catalog}
-
-From 1997 to 2001, the 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
-
-The $K_s$ band's $20 \text{ mag arcsec}^{-2}$ isophotal circular aperture magnitudes (here simply called $K_{20}$) were corrected for galactic extinction using the reddening maps $E(B-V)$ at $\SI{100}{\mu \meter}$ in \cite{Schlegel_1998}, according to the expression $K_{20} \rightarrow K_{20}'=K_{20}-A_k$, where $A_k=0.367E(B-V)$.
-
-HEALPix was used to produce and analyse the maps with resolution parameter $nside=32$, a mask was applied to every pixel with $A_k>0.05$. This left the catalog at $801,476$ objects with $12<K_{20}'<14$, which were further divided into the four bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$). 
-
-This catalog is made using photometric measurements, meaning redshift information is not directly obtained with the measurements, but there are techniques to estimate photometric redshifts. In \cite{K20_lum_func} the luminosity function of 4192 2MASS galaxies were used to estimate the luminosity function of the entirety of the $K_s$ band, and then the photometric redshifts of these galaxies. In \cite{2MPZ} the authors trained a neural network and cross-correlated XSC with WISE\cite{WISE} and SuperCOSMOS\cite{SuperCOSMOS} to obtain the photometric redshifts of a big fraction of the sources in XSC, creating what is called the 2MPZ catalog. As shown in \cite{Moura-Santos_2016}, using the 2MPZ catalog over XSC does not yield significant changes in the results, so in this project we maintained the usage of the XSC data.
-
-As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}, the parametrizations for each band is shown in Table \ref{tab:bands_2MASS} and the plots of these selection functions is shown in Figure \ref{fig:2MASS_selections}. Figure \ref{fig:2MASS_maps} shows the final maps produced after this process.
-
-\begin{figure}[!htb]
-     \centering
-     \begin{subfigure}[b]{0.495\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/band1_wmask_xsc.png}
-         \caption{Band 1}
-         \label{fig:contrast_map1}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.495\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/band2_wmask_xsc.png}
-         \caption{Band 2}
-         \label{fig:contrast_map2}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.495\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/band3_wmask_xsc.png}
-         \caption{Band 3}
-         \label{fig:contrast_map3}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.495\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Imagens/band4_wmask_xsc.png}
-         \caption{Band 4}
-         \label{fig:contrast_map4}
-     \end{subfigure}
-        \caption{Mollweide projection of the 2MASS-XSC galaxy contrast maps with the combined 2MASS+WMAP mask applied.}
-        \label{fig:2MASS_maps}
-\end{figure}
 
 \section{Correlation Spectra Obtained}
 
@@ -1261,16 +1291,17 @@ Here, $C_\ell^{xx}$ can be substituted by either $C_\ell^{gg}$ or $C_\ell^{tt}$,
 	(\Delta C_\ell^{tg})_\text{cv}=\sqrt{\frac{2}{2\ell+1}\frac{C_\ell^{tt}C_\ell^{gg}+(C_\ell^{tg})^2}{f_{\text{sky},\ell}^2}}.
 \end{equation}
 
-The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the theoretical correlation spectra and the ones calculated from the 2MASS+Q, V, W channels' data, alongside cosmic variance bands.
+The procedures discussed so far in this chapter have already been done, more specifically the Gibbs sampling has already been done in \cite{Moura-Santos_2016} and all the data has been digitally stored and provided to be used in this project. Figure \ref{fig:correlation_data_final_plots} shows a comparison between the expected theoretical correlation spectra for a $\Lambda$CDM model and the ones calculated from real data coming from the combined 2MASS / WMAP Q, V, W channels, alongside cosmic variance bands. It is important to note that the solid curves do not represent fits to the data.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\linewidth]{Imagens/Full_Data_Plot.png}
-	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The red band corresponds to the cosmic variance, calculated using equations \eqref{data_cosmic_variance} and \eqref{cosmic_variance_cross}.}
+	\caption{Comparison of theoretical correlation spectra for each band of the 2MASS catalog and the estimated correlation values using the method presented in the current chapter. Data points with error bars are the weighted average for channels Q, V, and W, with weights given by the reciprocal of noise variances. The red band corresponds to the cosmic variance, calculated using equations \eqref{data_cosmic_variance} and \eqref{cosmic_variance_cross}. Data points are those obtained in \cite{Moura-Santos_2016}.}
 	\label{fig:correlation_data_final_plots}
 \end{figure}
 
 Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance strongly dominates the signal at low multipoles, the region that is most influenced by the ISW effect.
+
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
