@@ -1061,8 +1061,6 @@ Figure \ref{fig:Wmap_maps} shows the maps of the CMB temperature used for the an
 The CMB maps shown in figure \ref{fig:Wchannel} have been also smoothed using a Gaussian filter of 5$^\circ$ FWHM. The filtering dumps power at scales $\ell \gtrsim 20$, but also introduces correlations in the noise which are too complicated to model. Therefore, as final step in the CMB map preparation phase, regularizing uncorrelated white noise of RMS 2 $\mu$K pixel$^{-1}$ has been added to all the maps \cite{Moura-Santos_2016}. The mask, filtering and regularizing noise will be properly taken into account when extracting the correlation spectra from these maps.
 
 
-
-
 \subsection{2MASS Catalog}
 
 From 1997 to 2001, using two 1.3 dedicated telescopes at Mt. Hopkins and CTIO, Chile, 2MASS collected raw imaging data covering $99.998\%$ of the celestial sphere in three near-infrared bands: J ($\SI{1.25}{\mu \meter}$), H ($\SI{1.65}{\mu \meter}$) and $K_s$ ($\SI{2.16}{\mu \meter}$). This produced a Point Source Catalog containing more than $\SI{4.7e8}{}$ point sources and an Extended Source Catalog (XSC) of $1,647,599$ extended sources, which is the catalog we will use in this project to trace the galaxy contrast in the sky. This catalog contains sources that are extended with respect to instanteneous point source functions (PSF), such as galaxies and galactic nebulae.
@@ -1109,7 +1107,6 @@ As explained in section \ref{sect:sel_func_par}, the redshift distribution of ga
       \end{figure}
 
       
-
 \section{Two-Point Correlaton Functions}
 
 %To estimate any correlation spectrum, we first need to estimate the values of the multipole terms $a_{\ell m}$, but applying equation \eqref{def:autocorrelation} to these directly does not yield accurate results, one has to introduce factors such as noise and map masks first. 
@@ -1394,26 +1391,22 @@ Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^
 
 The width of the curves obtained in this project using only $C^{tg}$ and $C^{gg}$ data is comparable to the 68\% Planck error for $\Omega_m$, showing that the combination of these two spectra have a very strong constraining power with respect to this parameter. It is important to highlight that this analysis only uses one variable parameter, while Planck's analysis used 6. If this analysis had been done with the same variable parameters, the width of the likelihoods would certainly increase, reducing the quality of the contraints, but increasing the compatibility with Planck's results. Despite this, $C^{gg}$ is highly dependent on $\Omega_m$, so this increase would probably not be too high.
 
-We have also performed an analysis using synthetic data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have used a fiducial $\Lambda$CDM spectrum $C_\ell^{tg}$ as data points, we have used the errors of 2MASS' band 4 as errors for this sample. Only the cross-correlation spectrum was used in this analysis. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
+We have also performed an analysis using synthetic data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have calculated two cross-correlation spectrum: One according to the fiducial $\Lambda$CDM model, and another using $\Omega_m=0.188$, the value that maximizes the likelihood corresponding to band 4 in \ref{fig:likelihood_prof_ctg}. We have used these spectra as datasets with errors equal to that of 2MASS' band 4. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.7\linewidth]{Imagens/profile_BestBand.png}
-	\caption{Normalized $C^{tg}$ likelihood calculated using synthetic data estimated as the theoretical cross-correlation obtained using the idealized band estimated in Chapter \ref{chapter:select_func_optimal} for the selection function, with 2MASS' band 4 errors. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents the 68\% error.}
+	\caption{Normalized $C^{tg}$ likelihoods calculated using synthetic data estimated as the theoretical cross-correlation obtained using the idealized band estimated in Chapter \ref{chapter:select_func_optimal} for the selection function. The blue dashed line is calculated with a cross-correlation spectrum generated with $\Omega_m=0.188$ as data, while the orange curve is calculated using a fiducial $\Lambda$CDM cross-correlation sepctrum with 2MASS', both with errors equal to that of 2MASS' band 4. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents its 68\% error.}
 	\label{fig:likelihood_band_optimal}
 \end{figure}
 
-The range of the relative likelihood shown in Figure \ref{fig:likelihood_band_optimal} is simillar to those shown for bands 3 and 4 of 2MASS in Figure \ref{fig:likelihood_prof_ctg}, and the width of the curve is higher in the current analysis, suggesting that this optimal band does not hold a stronger constraint power over $\Omega_m$ at least. 
+Despite the fact that both likelihoods calculated from the synthetic data shown in Figure \ref{fig:likelihood_band_optimal} do not have a very strong constraining power, they do show an improvement in the $\Omega_m$ constraints compared to the 2MASS' likelihoods. The synthetic data correspond exactly to the theoretical model, which could possibly improve the constraints, but as seen in Figure \ref{fig:correlation_data_final_plots}, the errors are very high compared to the values of the spectra, so this lack of fluctuation in the synthetic data should not affect the results a lot.
 
 It is important to remind that the analysis made in Chapter \ref{chapter:select_func_optimal} we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe\cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$.
 
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets -- such as greater galaxy survey depths and fainter magnitude limits -- could possibly improve the signal, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
-\section{MCMC Convergence}
-
-In order to run the analyses in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia Cluster, our tests running the code varying only $\Omega_m$ have resulted in chains with a very low acceptance rate, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation.
-
-UNDERSTAND REASONS FOR THIS ACCEPTANCE RATE (ronaldo falou que as likelihoods mt flat resultam nisso mas na minha cabeça devia ser o contrário).
+In order to run the Markov Chains to find the full cosmological constraints in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia Cluster, our tests running the code varying only $\Omega_m$ have resulted in chains running very slowly and with a very low acceptance rate, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation.
 
 \chapter{Conclusions}\label{chapter:conclusions}
 
