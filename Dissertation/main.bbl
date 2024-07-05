@@ -4977,6 +4977,7 @@
       \strng{authorbibnamehash}{cca5e429f691337f2eae5e627fcce624}
       \strng{authornamehash}{cca5e429f691337f2eae5e627fcce624}
       \strng{authorfullhash}{cca5e429f691337f2eae5e627fcce624}
+      \field{extraname}{1}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -7513,6 +7514,95 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1111/j.1365-2966.2010.16278.x
+      \endverb
+    \endentry
+    \entry{growth_constraint}{article}{}
+      \name{author}{3}{}{%
+        {{hash=20090e38690aced384d5b40e74e895ed}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Nhat-Minh},
+           giveni={N\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=2eb76baeec02d3621d61bea619901cef}{%
+           family={Huterer},
+           familyi={H\bibinitperiod},
+           given={Dragan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8d4e253bc551b44c1810be2d6b97311a}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Yuewei},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{fullhash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{bibnamehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{authorbibnamehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{authornamehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{authorfullhash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{11}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{9}
+      \field{title}{Evidence for Suppression of Structure Growth in the Concordance Cosmological Model}
+      \field{volume}{131}
+      \field{year}{2023}
+      \field{pages}{111001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.131.111001
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.131.111001
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.131.111001
+      \endverb
+    \endentry
+    \entry{growth_model}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cca5e429f691337f2eae5e627fcce624}{%
+           family={Linder},
+           familyi={L\bibinitperiod},
+           given={Eric\bibnamedelima V.},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{cca5e429f691337f2eae5e627fcce624}
+      \strng{fullhash}{cca5e429f691337f2eae5e627fcce624}
+      \strng{bibnamehash}{cca5e429f691337f2eae5e627fcce624}
+      \strng{authorbibnamehash}{cca5e429f691337f2eae5e627fcce624}
+      \strng{authornamehash}{cca5e429f691337f2eae5e627fcce624}
+      \strng{authorfullhash}{cca5e429f691337f2eae5e627fcce624}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{4}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{7}
+      \field{title}{Cosmic growth history and expansion history}
+      \field{volume}{72}
+      \field{year}{2005}
+      \field{pages}{043529}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.72.043529
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.72.043529
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.72.043529
       \endverb
     \endentry
   \enddatalist
