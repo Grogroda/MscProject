@@ -167,11 +167,11 @@ Neste trabalho, estudamos o uso do Efeito Sachs-Wolfe Integrado (ISW) como uma f
 
 \chapter{Introduction}
 
-The discovery of the Cosmic Microwave Background (CMB) is a fine example of serendipity. Arno A. Penzias and Robert W. Wilson found an unexpected excess temperature while measuring the effective noise temperature as a function of zenith in 1964, and after some investigation, they attributed this excess temperature to an isotropic radiation field that today we call the CMB \cite{1965CMB_discovery}. The CMB has since been used as one of the main probes to studying cosmology, being able to provide various tests and insights into cosmological models \cite{Large_scale_anomalies, nongaussianity_inflation, rees_sciama_effect} and measurements of cosmological parameters \cite{WMAP_results, Planck_results}. 
+The discovery of the Cosmic Microwave Background (CMB) is a fine example of serendipity. Arno A. Penzias and Robert W. Wilson found an unexpected excess temperature while measuring the effective noise temperature as a function of zenith in 1964. After some investigation, they attributed this excess temperature to an isotropic radiation field that today we call the CMB \cite{1965CMB_discovery}. The CMB has since been used as one of the main probes to studying cosmology, being able to provide various tests and insights into cosmological models \cite{Large_scale_anomalies, nongaussianity_inflation, rees_sciama_effect} and measurements of cosmological parameters \cite{WMAP_results, Planck_results}. 
 
 In the concordance cosmological model, commonly called the $\Lambda$CDM model, the Universe was very compact and energetic at its very early stages, and has always been in expansion, resulting in a reduction in overall energy density. Eventually, when it reached temperatures of around \SI{4000}{\kelvin}, photons decoupled from electrons and protons, which resulted in a backbody radiation field that could essentially free stream across the Universe ever since \cite{CMB_physical_explanation}. The current measurement for the black body spectrum temperature of the CMB is \SI{2.72548 \pm 0.00057}{\kelvin} \cite{CMB_temperature:Fixsen_2009}, and despite being isotropic to many orders of precision, it does contain anisotropies in the order of $\SI{e-5}{\kelvin}$, which is expected in the $\Lambda$CDM model \cite{CMB_analytical_anisotropies}. These fluctuations are the result of physical effects at work during the earliest moments of the cosmos or are acting on the photons as they travel through the Universe, making them an excellent probe to constrain cosmological parameters.
 
-Some mappings of the CMB were carried out in the last few decades. The first satellite launched specifically dedicated to doing this was the Cosmic Background Explorer (COBE) satellite with a $7\degree$ angular resolution \cite{COBE}, followed by the Wilkinson Microwave Anisotropy Probe (WMAP) with a $0.3\degree$ angular resolution, which was also able to show that CMB photons are polarized, a property related to other physical effects that assisted cosmologists in further understanding the history of the Universe\cite{polarization_1997, polarization_2014, BMode_constraints}. In 2009, the Planck Satellite was launched, improving upon WMAP's precision to an impressive value of 5' ($\sim 0.083\degree$) angular resolution \cite{theplanckcollaboration2006scientific}, allowing cosmologists to access the finest details in the CMB anisotropies to this day. Figure \ref{fig:cmb_satellites} shows a comparison between the resolution of these maps.
+Some mappings of the CMB were carried out in the last few decades. The first satellite launched specifically dedicated to doing this was the Cosmic Background Explorer (COBE) satellite with a $7\degree$ angular resolution \cite{COBE}, followed by the Wilkinson Microwave Anisotropy Probe (WMAP) with a $0.3\degree$ angular resolution, which was also able to show that CMB photons are polarized, a property related to other physical effects that assisted cosmologists in further understanding the history of the Universe \cite{polarization_1997, polarization_2014, BMode_constraints}. In 2009, the Planck Satellite was launched, improving upon WMAP's precision to an impressive value of 5' ($\sim 0.083\degree$) angular resolution \cite{theplanckcollaboration2006scientific}, allowing cosmologists to access the finest details in the CMB anisotropies to this day. Figure \ref{fig:cmb_satellites} shows a comparison between the resolution of these maps.
 
 \begin{figure}
     \centering
@@ -180,7 +180,7 @@ Some mappings of the CMB were carried out in the last few decades. The first sat
     \label{fig:cmb_satellites}
 \end{figure}
 
-Amongst the many physical processes that affect the CMB, the Integrated Sachs-Wolfe (ISW) Effect is one of the most important. First described by Rainer K. Sachs and Arthur M. Wolfe in 1967, the ISW effect is a mechanism that causes CMB photons to blueshift or redshift in cosmological periods when gravitational potentials change rapidly. One such period is the time between the previous dark matter dominated era and the current dark energy dominated one. During this transition, gravitational potentials decay (or "flatten") over time, causing CMB photons that entered potential wells with a certain gravitational blueshift to leave these wells with a redshift that does not compensate for the initial blueshift, leaving a net temperature gain in these photons, therefore, creating patterns that can be observed in the CMB temperature map and spectrum\cite{Sachs:1967er}. The mechanism is illustrated in Figure \ref{fig:ISW_illustration}.
+Amongst the many physical processes that affect the CMB, the Integrated Sachs-Wolfe (ISW) Effect is one of the most important. First described by Rainer K. Sachs and Arthur M. Wolfe in 1967, the ISW effect is a mechanism that causes CMB photons to blueshift or redshift in cosmological periods when gravitational potentials change rapidly. One such period is the time between the previous matter-dominated era and the current dark energy-dominated one. During this transition, gravitational potentials decay (or "flatten") over time, causing CMB photons that entered potential wells with a certain gravitational blueshift to leave these wells with a redshift that does not compensate for the initial blueshift, leaving a net temperature gain in these photons, therefore, creating patterns that can be observed in the CMB temperature map and spectrum \cite{Sachs:1967er}. The mechanism is illustrated in Figure \ref{fig:ISW_illustration}.
 
 \begin{figure}[!htb]
 	\centering
@@ -191,9 +191,9 @@ Amongst the many physical processes that affect the CMB, the Integrated Sachs-Wo
 
 %There are two contributions to the ISW effect: The early-time ISW effect occurs immediately after the last scattering surface, and the late-time ISW effect, which is more recent, occurring in the transition to the current dark energy dominated era. 
 
-From this association between blueshifted CMB photons and gravity wells, it is natural to assume that the matter distribution of the Universe should hold a statistical cross-correlation with the CMB temperature map. When looking at the theoretical model, we will see that this cross-correlation is expected\cite{ISW_detect_Crittenden1996, ISW_detect_Cooray2002}, and many works in the past have reported detections of the ISW effect using such cross-correlation of various sources of data and statistical methods\cite{ISW_detect_Boughn2004, ISW_detect_Nolta2004, ISW_detect_Gaztanga2006, ISW_detect_and_review2011}. Overall, the ISW signal was favored in these works, but mostly with low significance levels. We highlight the results shown in \cite{cross_corr:Planck}, in which many large scale structure tracers were combined to obtain a $4\sigma$ detection, from which the two main contributors were Planck's convergence lensing maps (Kappa) and the NRAO VLA Sky Survey (NVSS)\cite{NVSS}.
+From this association between blueshifted CMB photons and gravity wells, it is natural to assume that the matter distribution of the Universe should hold a statistical cross-correlation with the CMB temperature map. When looking at the theoretical model, we will see that this cross-correlation is expected \cite{ISW_detect_Crittenden1996, ISW_detect_Cooray2002}, and many works in the past have reported detections of the ISW effect using such cross-correlation of various sources of data and statistical methods \cite{ISW_detect_Boughn2004, ISW_detect_Nolta2004, ISW_detect_Gaztanga2006, ISW_detect_and_review2011}. Overall, the ISW signal was favored in these works, but mostly with low significance levels. We highlight the results shown in \cite{cross_corr:Planck}, in which many large scale structure tracers were combined to obtain a $4\sigma$ detection, from which the two main contributors were Planck's convergence lensing maps (Kappa) and the NRAO VLA Sky Survey (NVSS) \cite{NVSS}.
 
-The present work uses the Bayesian methods presented in \cite{Moura-Santos_2016} to estimate cross-correlation spectra using CMB temperature maps from WMAP\cite{WMAP_results,WMAP_data} and galaxy contrast maps provided by the Two Micron All Sky Survey (2MASS)\cite{2MASS}, and study the constraint power of the results over a specific cosmological parameter. We have also investigated the impact of the redshift distribution of the galaxies in the catalog used on the resulting cross-correlation spectrum, and studied what would be the distribution that optimizes the signal.  
+The present work uses the Bayesian methods presented in \cite{Moura-Santos_2016} to estimate cross-correlation spectra using CMB temperature maps from WMAP \cite{WMAP_results,WMAP_data} and galaxy contrast maps provided by the Two Micron All Sky Survey (2MASS) \cite{2MASS}, and study the constraint power of the results over a specific cosmological parameter. We have also investigated the impact of the redshift distribution of the galaxies in the catalog used on the resulting cross-correlation spectrum, and studied what would be the distribution that optimizes the signal.  
 
 The rest of this dissertation will be organized as follows: 
 
@@ -209,13 +209,13 @@ We summarize all the results from this project in Chapter \ref{chapter:conclusio
 
 \chapter{Cosmology's Concordance Model}\label{chapter:model}
 
-The advent of general relativity in the early 20th century allowed physicists to conceptualize mathematical models of the Universe. Albert Einstein proposed a model for a static Universe using his theory\cite{Einstein:1917ce}, and other Universe models were proposed in the following years. To start this chapter, the fundamental principles of cosmology will be discussed and used to setup a simple background for the Universe, and the specificities of the currently most accepted model for the Universe -- the $\Lambda$CDM model -- will be discussed. After this, we will complement this simple background with finer details and provide a statistical description of cosmological observables that can be used to test our models.
+The advent of general relativity in the early 20th century allowed physicists to conceptualize mathematical models of the Universe. Albert Einstein proposed a model for a static Universe using his theory \cite{Einstein:1917ce}, and other Universe models were proposed in the following years. To start this chapter, the fundamental principles of cosmology will be discussed and used to setup a simple background for the Universe, and the specificities of the currently most accepted model for the Universe -- the $\Lambda$CDM model -- will be discussed. After this, we will complement this simple background with finer details and provide a statistical description of cosmological observables that can be used to test our models.
 
 \section{The Homogeneous Background}
 
 \subsection{Fundamental Observations and Principles}
 
-One of the fundamental principles of cosmology is called the Cosmological Principle: at large scales, the Universe is both homogeneous and isotropic. This principle can be used to simplify the description of the energy distribution in the Universe, but it also simplifies the possible metrics that can describe the Universe to those that have constant curvature (a quantity denoted as $k$), and it can be shown that any space with constant curvature is locally isometric to: The Euclidian flat space ($k=0$), a hyperspherical space ($k=+1$) or a hyperbolic space ($k=-1$)\cite{choquet2008general}. The Cosmological Principle has support from a good amount of cosmological observations, such as the CMB\cite{COBE}, the galaxy sky distribution\cite{galaxy_isotropy, galaxy_homogeneity_Pandey_2021}, amongst others. 
+One of the fundamental principles of cosmology is called the Cosmological Principle: at large scales, the Universe is both homogeneous and isotropic. This principle can be used to simplify the description of the energy distribution in the Universe, but it also simplifies the possible metrics that can describe the Universe to those that have constant curvature (a quantity denoted as $k$), and it can be shown that any space with constant curvature is locally isometric to: The Euclidian flat space ($k=0$), a hyperspherical space ($k=+1$) or a hyperbolic space ($k=-1$) \cite{choquet2008general}. The Cosmological Principle has support from a good amount of cosmological observations, such as the CMB \cite{COBE}, the galaxy sky distribution \cite{galaxy_isotropy, galaxy_homogeneity_Pandey_2021}, amongst others. 
 
 %This principle can be used to simplify the metric of the universe's space-time if we use a quantity called the sectional curvature $K(P, x)$. This number quantifies the average curvature in a certain subspace $P$ around a point $x$, and in general can vary depending on the subspace used to calculate this value, meaning in general this value can have an angular dependence. If, for each point in space, the sectional curvature for that point is independent of the subplane used to calculate it (this represents an isotropic space-time), and this sectional curvature is the same in every point throughout space (this represents a homogeneous space-time), it is said that this space has constant curvature $K$. It can be shown that a manifold of constant curvature $K$ is locally isometric to:
 
@@ -227,7 +227,7 @@ One of the fundamental principles of cosmology is called the Cosmological Princi
 
 %\noindent This means that under the assumption of the Cosmological Principle, the metric of the universe can only be that of an euclidian plane, a hypersphere or a hyperbolic space. 
 
-In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology: Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the earth\cite{hubble}, these results were studied using general relativity and cosmological models at the time\cite{Lemaitre:1927zz}. It was then established another principle that physicists were avoiding in their theoretical models for quite some time: The Universe is not static, in fact it is expanding, and for objects not too far, there is a linear relationship between the redshift of an observed object and its distance to the observer. 
+In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology: Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the earth \cite{hubble}, these results were studied using general relativity and cosmological models at the time \cite{Lemaitre:1927zz}. It was then established another principle that physicists were avoiding in their theoretical models for quite some time: The Universe is not static, in fact it is expanding, and for objects not too far, there is a linear relationship between the redshift of an observed object and its distance to the observer. 
 
 To describe the Universe, a coordinate system is embedded in the entire Universe, and to describe its dynamical nature, the scale factor $a$ is introduced to the theoretical model: $a$ is set to 1 at the present as a convention (usually called $a_0$), and its value at any given time $a(t)$ is the size of the Universe relative to its present size. A simple relation can be established between the scale factor of an observed object and its redshift $z$:
 
@@ -264,7 +264,7 @@ As already mentioned, the main theoretical framework to describe the Universe is
 
 \noindent where $R_{\mu\nu}$ is the Ricci curvature tensor for the Universe's metric $g_{\mu\nu}$, $R\equiv g_{\mu\nu} R^{\mu\nu}$ is the Ricci scalar, $G$ is the gravitational constant and $T_{\mu\nu}$ is the energy-momentum tensor. 
 
-In equation \eqref{field_eqs} and throughout this text (unless otherwise stated), we will use units such that the Boltzmann constant ($k_b$), the speed of light in a vacuum ($c$) and the reduced Planck constant ($\hbar$) are all equal to one. Furthermore, Greek letter tensor indices indicate that the time component of the tensor is included in the equation and Latin letter tensor indices indicate that only spatial components are included. Current results strongly indicate the metric $g_{\mu\nu}$ of the Universe to be flat ($k=0$)\cite{Planck_results}, thus justifying the use of an Euclidian metric scaled by $a(t)$, and we will assume a homogeneous and isotropic distribution of energy throughout the Universe to construct an energy-momentum tensor with constant energy density $\rho_0$ and constant pressure $P$\cite{dodelson2020modern}:
+In equation \eqref{field_eqs} and throughout this text (unless otherwise stated), we will use units such that the Boltzmann constant ($k_b$), the speed of light in a vacuum ($c$) and the reduced Planck constant ($\hbar$) are all equal to one. Furthermore, Greek letter tensor indices indicate that the time component of the tensor is included in the equation and Latin letter tensor indices indicate that only spatial components are included. Current results strongly indicate the metric $g_{\mu\nu}$ of the Universe to be flat ($k=0$)\cite{Planck_results}, thus justifying the use of an Euclidian metric scaled by $a(t)$, and we will assume a homogeneous and isotropic distribution of energy throughout the Universe to construct an energy-momentum tensor with constant energy density $\rho_0$ and constant pressure $P$ \cite{dodelson2020modern}:
 
 \begin{align}\label{cap2:initial_tensors}
     g_{\mu\nu}&=
@@ -283,7 +283,7 @@ In equation \eqref{field_eqs} and throughout this text (unless otherwise stated)
     \end{pmatrix}.
 \end{align}
 
-The metric $g_{\mu\nu}$ described in equation \eqref{cap2:initial_tensors} is called the Friedmann-Lemaître-Robertson-Walker (FLRW) metric\cite{FLRW_metric}. In order to expand any equation from \eqref{field_eqs}, it is necessary to determine $R=g^{\mu\nu}R_{\mu\nu}$. By expanding the expression using the matrices defined in \eqref{cap2:initial_tensors}, the result is
+The metric $g_{\mu\nu}$ described in equation \eqref{cap2:initial_tensors} is called the Friedmann-Lemaître-Robertson-Walker (FLRW) metric \cite{FLRW_metric}. In order to expand any equation from \eqref{field_eqs}, it is necessary to determine $R=g^{\mu\nu}R_{\mu\nu}$. By expanding the expression using the matrices defined in \eqref{cap2:initial_tensors}, the result is
 
 \begin{equation}\label{riemann_constant}
     R=6\left[\frac{\Ddot{a}}{a}+\left(\frac{\dot{a}}{a}\right)^2\right].
@@ -353,7 +353,7 @@ This solution ignores further interaction between components, it would apply to 
 
 The rigorous form of determining $w_s$ for some components of the Universe requires the usage of statistical physics. In cases where we have limited information on the physical properties of a certain component, such as dark energy, theoretical frameworks and assumptions have to be used, as well as the analysis of data.
 
-In the case of dark energy, assuming its origin is related to the cosmological constant, the data strongly suggests a value of $w_\Lambda=-1$, which also indicates a constant density for dark energy. From the quantum field theory point of view, the cosmological constant energy density would be associated to zero point energy of a quantum field. However, so far, no calculation has been successful in predicting a zero point energy whose density is consistent with the cosmological observations\cite{Weinberg_Lambda_1989}. Many models propose alternative possibilities, such as dynamical dark energy in which $w_{DE}$ is a function of $a$\cite{DE_models}, which would still be able to explain the accelerated expansion of the Universe as long as $w_{DE}<-\frac{1}{3}$, these are discussed in more detail in section \ref{sect:dark_energy}. Table \ref{tab:rhos&Omegas} summarizes the equation of state properties of each known component in the Universe.
+In the case of dark energy, assuming its origin is related to the cosmological constant, the data strongly suggests a value of $w_\Lambda=-1$, which also indicates a constant density for dark energy. From the quantum field theory point of view, the cosmological constant energy density would be associated to zero point energy of a quantum field. However, so far, no calculation has been successful in predicting a zero point energy whose density is consistent with the cosmological observations \cite{Weinberg_Lambda_1989}. Many models propose alternative possibilities, such as dynamical dark energy in which $w_{DE}$ is a function of $a$ \cite{DE_models}, which would still be able to explain the accelerated expansion of the Universe as long as $w_{DE}<-\frac{1}{3}$, these are discussed in more detail in section \ref{sect:dark_energy}. Table \ref{tab:rhos&Omegas} summarizes the equation of state properties of each known component in the Universe.
 
 It is very useful to also define the energy density fraction of each component of the Universe using
 
@@ -369,7 +369,7 @@ It is very useful to also define the energy density fraction of each component o
 
 \noindent where $H_0$ is the Hubble constant, the value of the Hubble parameter $H(t)$ defined in \eqref{def:H(t)} at the present.
 
-This energy density makes it possible to determine what is the curvature of the Universe: if the total sum of energy densities in the Universe is equal to the critical density, the Universe is flat; if this sum is higher than $\rho_\text{crit}$ the Universe would have positive curvature; and if this sum is lower than $\rho_\text{crit}$, the Universe would have negative curvature\cite{schutz2009first}. 
+This energy density makes it possible to determine what is the curvature of the Universe: if the total sum of energy densities in the Universe is equal to the critical density, the Universe is flat; if this sum is higher than $\rho_\text{crit}$ the Universe would have positive curvature; and if this sum is lower than $\rho_\text{crit}$, the Universe would have negative curvature \cite{schutz2009first}. 
 
 Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these energy fractions for the Universe in the present. It is important to note that commonly in cosmology (and throughout this text), the classification of baryons includes electrons, even though, according to the standard model of particle physics, electrons belong, together with their associated neutrinos, to one of the three families of leptons.
 
@@ -383,7 +383,7 @@ Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these en
      Dark energy ($\Omega_\Lambda$) & $\rho_0$ & $-1$ & $0.68$\\
      Curvature ($\Omega_k$) & $\rho_0 a^{-2}$ & $-\frac{1}{3}$ & $0.001$\\ \hline
     \end{tabular}
-    \caption{Equation of state parameters $w$, energy density functions $\rho(a)$ and energy density fractions for each known component of the Universe according to the $\Lambda$CDM model. Most data were adapted from Planck\cite{Planck_results}, the radiation data was calculated based on \cite{lahav2014cosmological}.}
+    \caption{Equation of state parameters $w$, energy density functions $\rho(a)$ and energy density fractions for each known component of the Universe according to the $\Lambda$CDM model. Most data were adapted from Planck \cite{Planck_results}, the radiation data was calculated based on \cite{lahav2014cosmological}.}
     \label{tab:rhos&Omegas}
 \end{table}
 
@@ -391,7 +391,7 @@ Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these en
 
 We commonly categorize different stages of the Universe according to important events that happened during its history. The $\Lambda$CDM model assumes the Universe started as a singularity; as it started expanding, quantum fluctuations at that time would eventually result in inhomogeneities thought to be the source for the formation of structures.
 
-The next important period of the Universe's evolution was a highly accelerated expansion epoch driven by an effect called cosmic inflation, first proposed as a solution to the horizon problem\cite{Guth81,linde82}, related to how can the CMB temperature differences across the sky be so small ($\sim 10^{-5}$ K), even between points apparently causally disconnected during all epochs of the Universe's thermal history. The $\Lambda$CDM model assumes inflation was driven by a quantum scalar field\cite{dodelson2020modern}. Definitive evidence of the inflationary model may be reached with the detection of a certain type of polarization of the CMB called the B-modes, which have not been detected yet, but have reached good constraints.\cite{BMode_constraints}
+The next important period of the Universe's evolution was a highly accelerated expansion epoch driven by an effect called cosmic inflation, first proposed as a solution to the horizon problem \cite{Guth81,linde82}, related to how can the CMB temperature differences across the sky be so small ($\sim 10^{-5}$ K), even between points apparently causally disconnected during all epochs of the Universe's thermal history. The $\Lambda$CDM model assumes inflation was driven by a quantum scalar field \cite{dodelson2020modern}. Definitive evidence of the inflationary model may be reached with the detection of a certain type of polarization of the CMB called the B-modes, which have not been detected yet, but have reached good constraints \cite{BMode_constraints}.
 
 Briefly after inflation, baryons and photons are still coupled through Compton scattering, thus photons are still unable to travel freely. The Universe at this point is composed of photons coupled with baryons, helium nuclei, and trace amounts of lithium. With the decrease in temperature, hydrogen atoms can form without being quickly ionized, Compton scattering eventually can no longer maintain baryons and photons coupled, resulting in a decoupling of these components. The photons are released to travel across the Universe, the radiation field formed from this period is what we currently measure as the CMB. 
 
@@ -408,7 +408,7 @@ Figure \ref{fig:cosmo_brief_history} shows a summarized and visual representatio
 
 \section{Inhomogeneities and Anisotropies}
 
-The existence of structures -- nebulae, stars, galaxies, clusters -- in the Universe indicates that, throughout its history, it has been inhomogeneous and anisotropic at some scale. These perturbations to the uniform background are relatively small though, take the CMB for instance: CMB anisotropies are around 5 orders of magnitude lower than its average blackbody temperature\cite{WMAP_results}. 
+The existence of structures -- nebulae, stars, galaxies, clusters -- in the Universe indicates that, throughout its history, it has been inhomogeneous and anisotropic at some scale. These perturbations to the uniform background are relatively small though, take the CMB for instance: CMB anisotropies are around 5 orders of magnitude lower than its average blackbody temperature \cite{WMAP_results}. 
 
 In this scenario, there is no known theoretical model that can predict the exact behavior of every particle in the Universe. Therefore, we turn to a statistical prediction taking into account the properties of space-time and the components of the Universe. In this section, the first order equations that govern these properties will be shown by introducing perturbations both to the metric and to the stress-energy tensor. 
 
@@ -424,7 +424,7 @@ In the $\Lambda$CDM model, to account for perturbations in the uniform backgroun
 \end{cases}
 \end{equation}
 
-In equation \eqref{eq:tensor_perturbations}, $\Psi$ corresponds to the Newtonian potential and governs the movement of nonrelativistic objects\cite{dodelson2020modern}, while $\Phi$ is a perturbation to the spatial curvature.
+In equation \eqref{eq:tensor_perturbations}, $\Psi$ corresponds to the Newtonian potential and governs the movement of nonrelativistic objects \cite{dodelson2020modern}, while $\Phi$ is a perturbation to the spatial curvature.
 
 With the use of the geodesic equation on this new tensor and using a first order approximation, it is possible to obtain the following results for the motion equations of particles traveling through the perturbed space-time:
 
@@ -450,7 +450,7 @@ We can use
     \dv{\hat{p}^i}{t}=\frac{E}{ap}[\delta^{ik}-\hat{p}^i\hat{p}^k]\partial_k\left(\frac{p^2}{E^2}\Phi-\Psi\right).
 \end{equation}
 
-As for the dynamics of the field perturbations, it is possible to use Einstein's field equations to obtain, in Fourier space, the equations for scalar perturbations on the gravitational potentials\cite{dodelson2020modern}
+As for the dynamics of the field perturbations, it is possible to use Einstein's field equations to obtain, in Fourier space, the equations for scalar perturbations on the gravitational potentials \cite{dodelson2020modern}
 
 \begin{equation}\label{ch2:first_dynamic_equation}
     k^2\Phi+3H(\dot{\Phi}-H\Psi)=-4\pi Ga^2(\rho_{DM}\delta_{DM}+\rho_b\delta_b+4\rho_\gamma \Theta_0+4\rho_\nu \mathcal{N}_0),
@@ -524,7 +524,7 @@ If we use the Bose-Einstein distribution for the temperature defined in \eqref{T
     f^{(0)}(p,t)=\left[\text{exp}\left(\frac{p}{\Bar{T}}\right)-1\right]^{-1}
 \end{equation}
 
-We can then expand the Boltzmann equation using the results in \eqref{f(x,p,t)_first_order} and \eqref{f(0)} and take into account Compton scattering to calculate the collision term $C[f]$ to obtain a differential equation for the CMB photons. We can use similar procedures, using adequate distribution functions, and obtain a set of coupled differential equations to describe the evolution of the perturbations of every known component of the Universe in Fourier space\cite{dodelson2020modern}:
+We can then expand the Boltzmann equation using the results in \eqref{f(x,p,t)_first_order} and \eqref{f(0)} and take into account Compton scattering to calculate the collision term $C[f]$ to obtain a differential equation for the CMB photons. We can use similar procedures, using adequate distribution functions, and obtain a set of coupled differential equations to describe the evolution of the perturbations of every known component of the Universe in Fourier space \cite{dodelson2020modern}:
 
 \begin{equation}\label{diff_eq_radiation_perturbs}
     \dot{\Theta}+\frac{ik\mu}{a}(\Theta+\Psi)=-\dot{\Phi}-\dot{\tau}\left[\Theta_0-\Theta+\mu v_b-\frac{1}{2}\mathcal{P}_2(\mu)(\Theta_2+\Theta_{P2}+\Theta_{P0})\right],
@@ -556,17 +556,17 @@ Here, $\Theta_{P\ell}$ is defined by equation \eqref{ch2:Fl} using $F=\Theta_P$,
 
 \noindent where $\sigma_T$ is the Thomson scattering cross-section and $n_e$ is the number density of free electrons in the Universe at redshift $z'$.
 
-These equations, alongside equations \eqref{ch2:first_dynamic_equation} and \eqref{ch2:second_dynamic_equation}, are very complex to be solved analytically, so it is common to evolve them numerically, and there are a few codes developed specifically to do this. One of them, that has been used in this project, is CAMB.\cite{CAMB:Lewis1999bs, CAMB:Lewis2002ah}
+These equations, alongside equations \eqref{ch2:first_dynamic_equation} and \eqref{ch2:second_dynamic_equation}, are very complex to be solved analytically, so it is common to evolve them numerically, and there are a few codes developed specifically to do this. One of them, that has been used in this project, is CAMB \cite{CAMB:Lewis1999bs, CAMB:Lewis2002ah}.
 
 \section{The Cosmic Microwave Background}
 
-With the dynamical equations for photons determined, one can obtain the temperature perturbation distribution $\Theta$ if initial conditions are provided. With the equations already presented, it is possible to show that the initial conditions at the early Universe depend only on the initial conditions for $\Phi$\cite{dodelson2020modern}, which are then evolved through the inflationary period assuming the existence of a quantum scalar field $\phi(\mathbf{x}, t)$ that drives a brief accelerated expansion. 
+With the dynamical equations for photons determined, one can obtain the temperature perturbation distribution $\Theta$ if initial conditions are provided. With the equations already presented, it is possible to show that the initial conditions at the early Universe depend only on the initial conditions for $\Phi$ \cite{dodelson2020modern}, which are then evolved through the inflationary period assuming the existence of a quantum scalar field $\phi(\mathbf{x}, t)$ that drives a brief accelerated expansion. 
 
 With time, particles start to form: Quarks, hadrons, neutrinos, amongst others, at different times. Eventually baryons have formed and the photons are tightly coupled to them, forming a baryon-photon fluid that can be described by the differential equations \eqref{diff_eq_radiation_perturbs} - \eqref{diff_eqs:neutrino_perturbations}, the initial distribution obtained for this fluid can then be used as the initial condition and evolved to predict the present anisotropies to the uniform background. To analyze these predictions, the statistical behavior of each component of the Universe is taken: either their spectral densities -- usually called their power spectra -- or what is known as their correlation spectra. 
 
 \subsection{CMB Autocorrelation Spectrum}
 
-Equation \eqref{T(x,p,t)} explicitly assumes a dependence in position, time, and momentum direction. Measurements made on Earth can assume a fixed value for time since our measurements related to the Universe are taken in a period negligible in the cosmological scale, but the translational movement of the Earth is relevant to our measurements: measurements of the CMB made by a non-comoving observer, when projected onto a sphere, lead to a strong dipole pattern in the temperature distribution, modulation of the multipole terms and a small relativistic aberration at angular scales of a few arcminutes\cite{COBE_calibration, Planck_doppler, esteban_msc}.
+Equation \eqref{T(x,p,t)} explicitly assumes a dependence in position, time, and momentum direction. Measurements made on Earth can assume a fixed value for time since our measurements related to the Universe are taken in a period negligible in the cosmological scale, but the translational movement of the Earth is relevant to our measurements: measurements of the CMB made by a non-comoving observer, when projected onto a sphere, lead to a strong dipole pattern in the temperature distribution, modulation of the multipole terms and a small relativistic aberration at angular scales of a few arcminutes \cite{COBE_calibration, Planck_doppler, esteban_msc}.
 
 Despite these effects, measurements of the temperature distribution can be projected onto a sphere independent of the Earth's position, making it possible to describe this distribution simply using two angle variables, or simply $\hat{\mathbf{p}}$.
 
@@ -576,7 +576,7 @@ We can expand the temperature perturbations in spherical harmonics:
     \Theta(\mathbf{x}, \hat{\mathbf{p}}, t)=\sum_{\ell=1}^\infty \sum_{m=-\ell}^\ell a_{\ell m}(\mathbf{x}, t)Y_{\ell m}(\hat{\mathbf{p}}).
 \end{equation}
 
-All the information about temperature maps of the CMB measured on Earth are contained in the set of $a_{\ell m}$ values. Given the limited number of pixels $N_\text{pix}$ of any of these maps, there is a maximum value of $\ell$ ($\ell_\text{max}$) up to which statistically meaningful information can be retrieved. For each value of $\ell$, there are $2\ell+1$ values of $m$ -- and $a_{\ell m}$ -- in the series, a hypothetical observed map with precision $p_r$ in squared radians would have $4\pi/p_r$ pixels, setting this number of pixels equal to the number of $a_{\ell m}$ used to describe this map gives a reasonable estimation of $\ell_\text{max}$\cite{dodelson2020modern}, so %a specific example of this is in page 252 of the 2020 edition of Dodelson, I just generalized it in terms of a general precision p_r instead of using the example's p_r=7º.
+All the information about temperature maps of the CMB measured on Earth are contained in the set of $a_{\ell m}$ values. Given the limited number of pixels $N_\text{pix}$ of any of these maps, there is a maximum value of $\ell$ ($\ell_\text{max}$) up to which statistically meaningful information can be retrieved. For each value of $\ell$, there are $2\ell+1$ values of $m$ -- and $a_{\ell m}$ -- in the series, a hypothetical observed map with precision $p_r$ in squared radians would have $4\pi/p_r$ pixels, setting this number of pixels equal to the number of $a_{\ell m}$ used to describe this map gives a reasonable estimation of $\ell_\text{max}$ \cite{dodelson2020modern}, so %a specific example of this is in page 252 of the 2020 edition of Dodelson, I just generalized it in terms of a general precision p_r instead of using the example's p_r=7º.
 
 \begin{equation}\label{Npix}
     \sum_{\ell=0}^{\ell=\ell_\text{max}}(2\ell+1)=(\ell_\text{max}+1)^2=N_\text{pix}=\frac{4\pi}{p_r}.
@@ -588,7 +588,7 @@ Using the orthogonality property of the spherical harmonics, one can obtain a di
     a_{\ell m}(\mathbf{x}, t)=\int \frac{d^3k}{(2\pi)^3}e^{i\mathbf{k}\cdot\mathbf{x}}\int d\Omega Y_{\ell m}^*(\hat{\mathbf{p}})\Theta(\mathbf{k}, \hat{\mathbf{p}}, t).
 \end{equation}
 
-Again, there are available codes that efficiently and precisely calculate $a_{\ell m}$ from a pixelized map and vice versa, the one used in this work was HEALPix\cite{Healpix}. Under the hypothesis that the spherical harmonics coefficients $a_{\ell m}$ are independent Gaussian random variables with zero mean, all its statistical properties are contained in the variance $C_\ell$, also known as the power spectrum:
+Again, there are available codes that efficiently and precisely calculate $a_{\ell m}$ from a pixelized map and vice versa, the one used in this work was HEALPix \cite{Healpix}. Under the hypothesis that the spherical harmonics coefficients $a_{\ell m}$ are independent Gaussian random variables with zero mean, all its statistical properties are contained in the variance $C_\ell$, also known as the power spectrum:
 
 \begin{equation}\label{def:autocorrelation}
     \av{a_{\ell m} a^*_{\ell' m'}}=\delta_{\ell\ell'}\delta_{mm'}C(\ell),
@@ -596,7 +596,7 @@ Again, there are available codes that efficiently and precisely calculate $a_{\e
 
 \noindent where $\delta_{mm'}$ is the Kronecker delta taking $m$ and $m'$ as arguments.
 
-The fact that for lower values of $\ell$ there are fewer coefficients $a_{\ell m}$ naturally leads to lower multipoles $\ell$ having higher uncertainty, this property is usually called cosmic variance and can be expressed using\cite{dodelson2020modern} 
+The fact that for lower values of $\ell$ there are fewer coefficients $a_{\ell m}$ naturally leads to lower multipoles $\ell$ having higher uncertainty, this property is usually called cosmic variance and can be expressed using \cite{dodelson2020modern} 
 
 \begin{equation}\label{cosmic_variance}
     \left(\frac{\Delta C(\ell)}{C(\ell)}\right)_\text{cosmic variance}=\sqrt{\frac{2}{2\ell+1}}.
@@ -636,7 +636,7 @@ The best fit values shown in Tables \ref{tab:rhos&Omegas} and \ref{tab:planck_pa
 
 \subsection{Analytical Approximation}
 
-Although solving equations such as \eqref{diff_eq_radiation_perturbs} numerically gives accurate results, obtaining an analytical approximation to these equations helps us understand the underlying physical effects that most influence the evolution of the perturbations. Working on the tightly coupled limit and assuming recombination to be an instantaneous process happening at conformal time $\eta=\eta_*$, one can obtain the following equation\cite{dodelson2020modern}:
+Although solving equations such as \eqref{diff_eq_radiation_perturbs} numerically gives accurate results, obtaining an analytical approximation to these equations helps us understand the underlying physical effects that most influence the evolution of the perturbations. Working on the tightly coupled limit and assuming recombination to be an instantaneous process happening at conformal time $\eta=\eta_*$, one can obtain the following equation \cite{dodelson2020modern}:
 
 \begin{equation}\label{ch2:Thetal_approx}
 \begin{split}
@@ -663,14 +663,14 @@ With these conventions, the derivative with respect to $\eta$ is being represent
 There are three main contributors to the solution \eqref{ch2:Thetal_approx}:
 
 \begin{itemize}
-    \item The $(\Theta_0+\Psi)$ term is usually called the Sachs-Wolfe term, which is associated with Baryon Acoustic Oscillations (BAO), which are fluctuations in the density of the visible baryonic matter of the Universe, caused by acoustic density waves in the primordial plasma of the early Universe\cite{dodelson2020modern};
+    \item The $(\Theta_0+\Psi)$ term is usually called the Sachs-Wolfe term, which is associated with Baryon Acoustic Oscillations (BAO), which are fluctuations in the density of the visible baryonic matter of the Universe, caused by acoustic density waves in the primordial plasma of the early Universe \cite{dodelson2020modern};
     \item The $iv_b$ term shows a contribution to the spectrum related to a Doppler shift of the BAO, due to its dependence on a non-zero bulk velocity of the baryons during recombination;
     \item The last term, an integral involving the time variations of the gravitational potentials, represents the Integrated Sachs-Wolfe (ISW) effect. Its dependence on the variation of the gravitational potential makes it so that it only has a non-negligible effect on the CMB at cosmological periods with high variation of these potentials: At around $a\approx 10^{-4}$ the Universe transitioned from a radiation-dominated to a matter-dominated Universe (early ISW), and recently -- around $a\approx 0.61$ or $z\approx 0.63$\cite{dark_energy_era} according to the $\Lambda$CDM model -- the Universe transitioned from a matter-dominated Universe to the current dark energy dominated Universe (late ISW). 
 \end{itemize}
 
 \section{The Integrated Sachs Wolfe Effect}\label{ch2:ISW_effect_section}
 
-It was proposed that the cross-correlation spectrum between CMB maps and matter contrast could be used to detect the ISW effect\cite{Turok96}, and since then many works have reported the detection of this signal\cite{cross_corr:Afshordi, cross_corr:Crittenden2005a, cross_corr:Crittenden2005b, cross_corr:Planck}. In this section, a framework for theoretical estimations of the ISW contribution to this cross-correlation will be discussed.
+It was proposed that the cross-correlation spectrum between CMB maps and matter contrast could be used to detect the ISW effect \cite{Turok96}, and since then many works have reported the detection of this signal \cite{cross_corr:Afshordi, cross_corr:Crittenden2005a, cross_corr:Crittenden2005b, cross_corr:Planck}. In this section, a framework for theoretical estimations of the ISW contribution to this cross-correlation will be discussed.
 
 \subsection{The Matter Power Spectrum}
 
@@ -685,11 +685,11 @@ While the CMB is usually described as a two dimensional map measured around the 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=.75\linewidth]{Imagens/Pk_3dmatter_LCDM.png}
-    \caption{Matter power spectrum calculated as a function of $k/h$, where $h$ is the already defined reduced Hubble constant, using both a linear approximation and the so-called HALOFIT model\cite{Halofit2020} with cosmological parameters according to our fiducial $\Lambda$CDM model.}
+    \caption{Matter power spectrum calculated as a function of $k/h$, where $h$ is the already defined reduced Hubble constant, using both a linear approximation and the so-called HALOFIT model \cite{Halofit2020} with cosmological parameters according to our fiducial $\Lambda$CDM model.}
     \label{fig:matter_PS}
 \end{figure}
 
-The HALOFIT model is a semi-analytical method to determine a non-linear solution for $P(k,z)$, it is based in the Halo Model, which posits that all matter resides in haloes, and uses this hypothesis to describe the evolution of perturbations in the universe. The corrections due to the HALOFIT model are not relevant in large scales, as shown in Figure \ref{fig:matter_PS}, in which both spectra are indistinguishable at low values of $k$, only at higher values of k -- small scales -- the two spectra clearly diverge. In terms of the correlation power spectra, one can already notice a significant difference in the predicted spectra at around $\ell=40$\cite{Moura-Santos_2016}, showing very clearly the importance of using HALOFIT for our analysis.
+The HALOFIT model is a semi-analytical method to determine a non-linear solution for $P(k,z)$, it is based in the Halo Model, which posits that all matter resides in haloes, and uses this hypothesis to describe the evolution of perturbations in the universe. The corrections due to the HALOFIT model are not relevant in large scales, as shown in Figure \ref{fig:matter_PS}, in which both spectra are indistinguishable at low values of $k$, only at higher values of k -- small scales -- the two spectra clearly diverge. In terms of the correlation power spectra, one can already notice a significant difference in the predicted spectra at around $\ell=40$ \cite{Moura-Santos_2016}, showing very clearly the importance of using HALOFIT for our analysis.
 
 \subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
 
@@ -718,14 +718,14 @@ In this work we have used the form shown in \cite{Moura-Santos_2016}, which is s
     W_\ell^g=\int dz b_g(z)\dv{N}{z}D(z)j_\ell[k\chi(z)],
 \end{equation}
 
-\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function\cite{cross_corr:Afshordi}. A demonstration of this equation can be found in Appendix \ref{app:correlations_demo}.
+\noindent where $D(z)$ is the linear growth function (normalized to 1 at $z=0$); $\chi(z)$ is the comoving distance; and $\dv{N}{z}$ is the normalized galaxy redshift distribution, also called the selection function \cite{cross_corr:Afshordi}. A demonstration of this equation can be found in Appendix \ref{app:correlations_demo}.
 
 With equation \eqref{Cl_direct_calculation}, we can determine the theoretical spectra for CMB and galaxy autocorrelations and CMB-galaxy cross-correlation directly. Figure \ref{fig:Ctt_ISW_comparison} shows the total CMB autocorrelation and the ISW contribution, both at $z=0$.
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=.75\linewidth]{Imagens/Ctt_comparison.png}
-	\caption{CMB autocorrelation comparison for the late-ISW term and the full spectrum. Calculations were made using CAMB (for the full spectrum) and codes developed during the project. The parameters used are those corresponding to the Planck best fit parameters\cite{Planck_results}.}
+	\caption{CMB autocorrelation comparison for the late-ISW term and the full spectrum. Calculations were made using CAMB (for the full spectrum) and codes developed during the project. The parameters used are those corresponding to the Planck best fit parameters \cite{Planck_results}.}
     \label{fig:Ctt_ISW_comparison}
 \end{figure}
 
@@ -734,7 +734,7 @@ Figure \ref{fig:correlations_theoretical} shows the galaxy autocorrelation spect
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.98\linewidth]{Imagens/Correlations_DoublePlot.png}
-	\caption{Galaxy autocorrelation spectrum (left) and late-ISW contribution to the galaxy-CMB cross-correlation (right). The selection function used to calculate these spectra was parametrized to be compatible with 2MASS' galaxy redshift distribution\cite{cross_corr:Afshordi, Moura-Santos_2016}.}
+	\caption{Galaxy autocorrelation spectrum (left) and late-ISW contribution to the galaxy-CMB cross-correlation (right). The selection function used to calculate these spectra was parametrized to be compatible with 2MASS' galaxy redshift distribution \cite{cross_corr:Afshordi, Moura-Santos_2016}.}
 	\label{fig:correlations_theoretical}
 \end{figure}
 
@@ -742,7 +742,7 @@ These plots show very clearly that the ISW effect has a lot more relevance in th
 
 \section{Dependence on Dark Energy Models}\label{sect:dark_energy}
 
-Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state\cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy\cite{DEDM_fluid, review_DE_ronaldo} and modifications to general relativity\cite{Brane_cosmo_model}. 
+Many approaches to study dark energy have been proposed, each of them with different properties, ranging from parameterization of the equation of state \cite{CPL_DE_parametrization, FSLL_DE_parametrization} to alternative fluid models for dark energy \cite{DEDM_fluid, review_DE_ronaldo} and modifications to general relativity \cite{Brane_cosmo_model}. 
 
 A general class of dark energy models are the ones called the k-essence models. The energy-momentum tensor for a k-essence type dark energy is
 
@@ -756,7 +756,7 @@ A general class of dark energy models are the ones called the k-essence models. 
 	\rho&=2X\partial_X\mathcal{L}-\mathcal{L}, & p&=\mathcal{L}, & c_s^2&=\frac{\partial_X p}{\partial_X \rho},
 \end{align}
 
-\noindent where $c_s^2$ is the so-called sound speed of the k-essence fluid. The value of this parameter influences, for instance, the evolution of the gravitational potentials\cite{DE_variable_soundspeed_Linton2018} and their perturbations -- especially at low values of $c_s$ -- and many other factors that relate to the evolution of the universe, thus having an impact on observables. 
+\noindent where $c_s^2$ is the so-called sound speed of the k-essence fluid. The value of this parameter influences, for instance, the evolution of the gravitational potentials \cite{DE_variable_soundspeed_Linton2018} and their perturbations -- especially at low values of $c_s$ -- and many other factors that relate to the evolution of the universe, thus having an impact on observables. 
 
 Within k-essence, a very common class of models are the quintessence models, which are defined by $\mathcal{L}=X-V(\varphi)$, for which we can obtain an equation of state parameter $w=p/\rho$ and sound speed of
 
@@ -764,7 +764,7 @@ Within k-essence, a very common class of models are the quintessence models, whi
 	w&=\frac{X-V}{X+V}, & c_s^2&=1.
 \end{align}
 
-Equation \eqref{quintessence1} can be time dependent, and its form depends on the form of the potential $V$. Parametrizing this equation as a funtion of redshift and fitting it to the data can be a powerful tool to find what models might better describe dark energy. The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization\cite{CPL_DE_parametrization,DE_models}:
+Equation \eqref{quintessence1} can be time dependent, and its form depends on the form of the potential $V$. Parametrizing this equation as a funtion of redshift and fitting it to the data can be a powerful tool to find what models might better describe dark energy. The simplest parametrization proposed for dark energy's equation of state is called the Chevallier-Polarski-Linder (CPL) parametrization \cite{CPL_DE_parametrization,DE_models}:
 
 \begin{equation}\label{CPL}
     w(z)=w_0+\left(1-\frac{1}{1+z}\right)w_a.
@@ -772,7 +772,7 @@ Equation \eqref{quintessence1} can be time dependent, and its form depends on th
 
 %One important property of this parametrization and most others is that the value of the equation of state parameter today ($z=0$) is the same as the equation of state parameter of the $\Lambda$CDM model $w_0$
 
-So far, this parametrization has not solved some of the current limitations being faced by the $\Lambda$CDM model, such as the Hubble tension \cite{Hubble_tension_review} and the $\sigma_8$ tension \cite{Planck_results}, it has not improved over the $\Lambda$CDM predictions, but it shows good compatibility with CMB, type IA supernovae and baryon acoustic oscillations (BAO) data\cite{Planck_results}. Planck results using this parametrization are shown in Table \ref{tab:planck_CPL}.
+So far, this parametrization has not solved some of the current limitations being faced by the $\Lambda$CDM model, such as the Hubble tension \cite{Hubble_tension_review} and the $\sigma_8$ tension \cite{Planck_results}. It has not improved over the $\Lambda$CDM predictions, but it shows good compatibility with CMB, type IA supernovae and baryon acoustic oscillations (BAO) data \cite{Planck_results}. Planck results using this parametrization are shown in Table \ref{tab:planck_CPL}.
 
 \begin{table}[!htb]
     \centering
@@ -784,7 +784,7 @@ So far, this parametrization has not solved some of the current limitations bein
      $\sigma_8$ & $0.820\pm 0.011$\\ \hline
      $\Delta \chi^2$ & -1.4 \\ \hline
     \end{tabular}
-    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming parametrization \eqref{CPL}, obtained by combining Planck temperature and polarization autocorrelation and cross-correlation spectra\cite{Planck_spectra}, type IA supernovae data from the Joint Light Curve Analysis (JLA)\cite{JLA} and BAO data from the Sloan Digital Sky Survey (SDSS)\cite{SDSS}. The $\Delta \chi^2$ value was computed with respect to the $\Lambda$CDM best fits computed from the same data set combination.}
+    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming parametrization \eqref{CPL}, obtained by combining Planck temperature and polarization autocorrelation and cross-correlation spectra \cite{Planck_spectra}, type IA supernovae data from the Joint Light Curve Analysis (JLA) \cite{JLA} and BAO data from the Sloan Digital Sky Survey (SDSS) \cite{SDSS}. The $\Delta \chi^2$ value was computed with respect to the $\Lambda$CDM best fits computed from the same data set combination.}
     \label{tab:planck_CPL}
 \end{table}
 
@@ -839,7 +839,7 @@ Figure \ref{fig:Dark_energy_tests} shows the influence of different parameter va
 		\label{fig:dark_energy_cs2=1}
 	\end{subfigure}
 }
-\caption{The solid lines in the plots correspond to theoretical predictions for the CMB temperature autocorrelation spectra corresponding to different parameter values of the dark energy equation of state with $w_0=-1$, the black data points correspond to Planck's data\cite{Planck_results}. Figures \ref{fig:dark_energy_wa=0.33}, \ref{fig:dark_energy_wa=0.67} and \ref{fig:dark_energy_wa=1} show how the spectrum changes for a constant value of $w_a$ shown on the top left of the axis and varying speeds of sound, while the other three figures show how the curve behaves with varying values of $w_a$ and a constant speed of sound. All theoretical calculations were done using CAMB.}
+\caption{The solid lines in the plots correspond to theoretical predictions for the CMB temperature autocorrelation spectra corresponding to different parameter values of the dark energy equation of state with $w_0=-1$, the black data points correspond to Planck's data \cite{Planck_results}. Figures \ref{fig:dark_energy_wa=0.33}, \ref{fig:dark_energy_wa=0.67} and \ref{fig:dark_energy_wa=1} show how the spectrum changes for a constant value of $w_a$ shown on the top left of the axis and varying speeds of sound, while the other three figures show how the curve behaves with varying values of $w_a$ and a constant speed of sound. All theoretical calculations were done using CAMB.}
 \label{fig:Dark_energy_tests}
 \end{figure}
 
@@ -947,7 +947,7 @@ In order to determine the probability distribution of the null hypothesis for ea
 		\caption{Distribution for $\ell=30$}
 		\label{subfig:Hist_l30}
 	\end{subfigure}
-	\caption{Distribution of cross-correlation values on different multipoles for $10^4$ maps synthesized with null cross-correlation. Gaussian fits of the samples are shown alnogside the normalized distributions. As expected, the averages of the distributions are close to zero, and the variance of the distribution is significantly higher in low multipoles due to cosmic variance.}
+	\caption{Distribution of cross-correlation values on different multipoles for $10^4$ maps synthesized with null cross-correlation. Gaussian fits of the samples are shown alongside the normalized distributions. As expected, the averages of the distributions are close to zero, and the variance of the distribution is significantly higher in low multipoles due to cosmic variance.}
 	\label{fig:synthmaps_histograms}
 \end{figure}
 
@@ -978,7 +978,7 @@ To perform an initial exploration of the parameter space for the parametrization
 
 As shown in Figure \ref{fig:Triple_ColorPlots}, the region explored does not present a significant reduction in the probability of a certain parameter combination being compatible with the null hypothesis relative to the band 1 of 2MASS, showing no more than a 3\% reduction in the ratio. In spite of this, it is possible to see a region of low values for this function where a function minimizer algorithm could possibly be able to start the search for a minimum value.
 
-A code for minimizing the function $P_\text{null}$ using the GSL library\cite{gsl-manual} was devised, a few points were used as initial guess to the minimizer, some of them in the dark blue region, and some of them in the light blue regions, to make sure the convergence of the minimizer is reliable, and in every case results were very simillar. The final value used for our analysis was
+A code for minimizing the function $P_\text{null}$ using the GSL library \cite{gsl-manual} was devised, a few points were used as initial guess to the minimizer, some of them in the dark blue region, and some of them in the light blue regions, to make sure the convergence of the minimizer is reliable, and in every case results were very simillar. The final value used for our analysis was
 
 \begin{equation}\label{minimizer}
 	(\beta, z_0, \lambda)_\text{min}=(3.088, 0.1508, 4.9401)
@@ -1021,14 +1021,14 @@ In this chapter, we present details on how the CMB temperature and galaxy contra
 
 \section{Data Sets and Analysis}
 
-In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP)\cite{WMAP_results,WMAP_data} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog\cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored. It is known that the state of the art in terms of CMB maps are nowadays provided by the Planck due to its arcminute angular resolution. However, the signal being probed here is expected to dominate at large scales, therefore WMAP and Planck data should be essentially equivalent for that purpose. On the other hand, since one is also interested in the two-point correlation functions in harmonic space of the projected CMB temperature and galaxy contrast, sky coverage is a key point in the analysis and that is the reason a galaxy survey with the largest sky coverage has been chosen here, even though the data of much deeper surveys are already available today.
+In this project, we have used two main datasets for our analysis: CMB data from the Wilkinson Microwave Anisotropy Probe (WMAP) \cite{WMAP_results,WMAP_data} and galaxy contrast data from the Two Micron All Sky Survey (2MASS) catalog \cite{2MASS}. In this section, the details about these data sets and their respective analysis pipelines will be explored. It is known that the state of the art in terms of CMB maps are nowadays provided by the Planck due to its arcminute angular resolution. However, the signal being probed here is expected to dominate at large scales, therefore WMAP and Planck data should be essentially equivalent for that purpose. On the other hand, since one is also interested in the two-point correlation functions in harmonic space of the projected CMB temperature and galaxy contrast, sky coverage is a key point in the analysis and that is the reason a galaxy survey with the largest sky coverage has been chosen here, even though the data of much deeper surveys are already available today.
 
 
 
 \subsection{WMAP Data}
 
 The WMAP satellite measured the CMB temperature over the entire sky in five frequency bands in the spectral region where the
-CMB-to-foreground ratio is near its maximum\cite{WMAP_data}. Out of these five frequency bands, we have used in this work the data corresponding to the Q (40 GHz), V (60 GHz) and W (90 GHz) bands, which are the ones suitable for data analysis, due to their minimized galactic contamination. Its last data realease, WMAP9, which is the one used here, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a constant characteristic of each channel (2.188 mK (Q), 3.131 mK (V) and 6.544 mK (W) \cite{wmap_supplement}).
+CMB-to-foreground ratio is near its maximum \cite{WMAP_data}. Out of these five frequency bands, we have used in this work the data corresponding to the Q (40 GHz), V (60 GHz) and W (90 GHz) bands, which are the ones suitable for data analysis, due to their minimized galactic contamination. Its last data realease, WMAP9, which is the one used here, contains high resolution temperature intensity maps with noise power that can be well modeled as uncorrelated Gaussian fluctuations with variances given by $\sigma_0^2/N_\text{obs}$, where $\sigma_0$ is a constant characteristic of each channel (2.188 mK (Q), 3.131 mK (V) and 6.544 mK (W) \cite{wmap_supplement}).
 
 Figure \ref{fig:Wmap_maps} shows the maps of the CMB temperature used for the analysis with a mask applied to them. The mask is intended to eliminate pixels highly contaminated by galactic foregrounds. The fraction of the sky that survives the masking procedure in this case is $f_{sky}=0.70$ and it is the result of combining two masks: WMAP KQ85 ($f_{sky}=0.77$) and 2MASS ($f_{sky}=0.72$). The monopole \cite{CMB_temperature:Fixsen_2009} and kinematic dipole due to the solar system movement with respect to the CMB isotropy frame have been already subtracted.
 
@@ -1069,9 +1069,9 @@ The $K_s$ band's $20 \text{ mag arcsec}^{-2}$ isophotal circular aperture magnit
 
 HEALPix was used to produce and analyse the maps with resolution parameter $nside=32$, a mask was applied to every pixel with $A_k>0.05$. This left the catalog with $801,476$ objects with $12<K_{20}'<14$, which were further divided into the four bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$). 
 
-This catalog is made using photometric measurements, meaning redshift information is not directly obtained with the measurements, but there are techniques to estimate photometric redshifts. In \cite{K20_lum_func} the luminosity function of 4192 2MASS galaxies were used to estimate the luminosity function of the entirety of the $K_s$ band, and then the photometric redshifts of these galaxies. In \cite{2MPZ} the authors trained a neural network and cross-correlated XSC with WISE\cite{WISE} and SuperCOSMOS\cite{SuperCOSMOS} to obtain the photometric redshifts of a big fraction of the sources in XSC, creating what is called the 2MPZ catalog. As shown in \cite{Moura-Santos_2016}, using the 2MPZ catalog over XSC does not yield significant changes in the results, so in this work we maintained the usage of the XSC data.
+This catalog is made using photometric measurements, meaning redshift information is not directly obtained with the measurements, but there are techniques to estimate photometric redshifts. In \cite{K20_lum_func} the luminosity function of 4192 2MASS galaxies were used to estimate the luminosity function of the entirety of the $K_s$ band, and then the photometric redshifts of these galaxies. In \cite{2MPZ} the authors trained a neural network and cross-correlated XSC with WISE \cite{WISE} and SuperCOSMOS \cite{SuperCOSMOS} to obtain the photometric redshifts of a big fraction of the sources in XSC, creating what is called the 2MPZ catalog. As shown in \cite{Moura-Santos_2016}, using the 2MPZ catalog over XSC does not yield significant changes in the results, so in this work we maintained the usage of the XSC data.
 
-As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}. The selecton functon parametrizations for each band are shown in Table \ref{tab:bands_2MASS} and their plots as a function of redshift are shown in Figure \ref{fig:2MASS_selections}. Figure \ref{fig:2MASS_maps} shows the final galaxy contrast maps produced after smoothing them with a 5$^\circ$ FWHM Gaussian filter and adding regularizing white noise of 5\% pixel$^{-1}$ to mitigate the correlation introduced by the filtering into the original shot noise of the maps.
+As explained in section \ref{sect:sel_func_par}, the redshift distribution of galaxy counts can be parametrized using the selection function defined in equation \eqref{select_func_par}. The selection function parametrizations for each band are shown in Table \ref{tab:bands_2MASS} and their plots as a function of redshift are shown in Figure \ref{fig:2MASS_selections}. Figure \ref{fig:2MASS_maps} shows the final galaxy contrast maps produced after smoothing them with a 5$^\circ$ FWHM Gaussian filter and adding regularizing white noise of 5\% pixel$^{-1}$ to mitigate the correlation introduced by the filtering into the original shot noise of the maps.
 
 \begin{figure}[!htb]
      \centering
@@ -1111,7 +1111,7 @@ As explained in section \ref{sect:sel_func_par}, the redshift distribution of ga
 
 %To estimate any correlation spectrum, we first need to estimate the values of the multipole terms $a_{\ell m}$, but applying equation \eqref{def:autocorrelation} to these directly does not yield accurate results, one has to introduce factors such as noise and map masks first. 
 
-The presence of the mask in the previous maps introduces a complication when calculating correlation functions such as the power spectrum. To account fot the mask, in general, it is common to introduce a weight function $W(\hat{\mathbf{n}})$ which is 1 for unmasked pixels and 0 for masked ones \cite{Hivon_2002}. The spherical harmonics coefficients $\tilde{a}_{\ell m}$ obtained from these partial sky coverage maps are therefore
+The presence of the mask in the previous maps introduces a complication when calculating correlation functions such as the power spectrum. To account for the mask, in general, it is common to introduce a weight function $W(\hat{\mathbf{n}})$ which is 1 for unmasked pixels and 0 for masked ones \cite{Hivon_2002}. The spherical harmonics coefficients $\tilde{a}_{\ell m}$ obtained from these partial sky coverage maps are therefore
 % If we ignore other effects for now (such as noise), the multipole terms $\tilde{a}_{\ell m}$ as defined in \eqref{ch2:alm=int...}, assuming a high number of small pixels to approximate a sum with an integral, becomes
 
 \begin{equation}\label{ch3:tilde_a}
@@ -1164,7 +1164,7 @@ The beam pattern itself can be seen as a scalar function over the sphere centere
     \av{\tilde{C}_\ell}=\sum_{\ell'} M_{\ell \ell'}B_{\ell'}^2\av{C_{\ell'}}+\av{N_\ell}.
 \end{equation}
 
-Equation \ref{ch3:av(tilde_Cl)} is known as the Monte Carlo Apodized
+Equation \eqref{ch3:av(tilde_Cl)} is known as the Monte Carlo Apodized
 Spherical Transform Estimator (MASTER) solution \cite{Hivon_2002}. Although this solution converges to the true power spectrum in the limit of a large number of sky realizations, having a single universe to retrieve sky map multipoles makes it highly affected by cosmic variance \cite{Moura-Santos_2016}. Another complication is the fact that for very irregular masks the mixing kernel may be singular, preventing its inversion. In some cases, a kernel regularization procedure can be applied where a binned power spectrum is introduced instead of trying to calculate $C_{\ell}$ to all multipoles $\ell$.
 
 %Another limitation of this method is its computational complexity of $O(N_p^3)$, where $N_p$ is the number of pixels of the sample maps. For experiments such as WMAP ($N_p\sim 10^6$) and Planck ($N_p \sim 10^7$), this time complexity becomes computationally unviable, thus motivating the introduction of a new technique, which will be presented now.
@@ -1190,10 +1190,10 @@ Using Bayes' theorem, we can write
   P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C}),
 \end{equation}
 
-\noindent where $\pi(\mathbf{S})$ is the prior probability on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. Sampling from \ref{ch4:bayes} can be done using standard Monte Carlo Markov Chain methods such as those based on the Metropolis-Hastings algorithm. For the particular case of the likelihood in equation \ref{ch4:Likelihood}, for which a set of conditional probabilities can be more directly used for sampling, the so called Gibbs sampling technique is efficient and useful for the problem at hand and has been succesfully implemented for CMB experiments in \cite{Jewell_2004,Eriksen_2004,Wandelt_2004, Larson_2007}. 
+\noindent where $\pi(\mathbf{S})$ is the prior probability on the power spectrum and $P(\mathbf{C}|\mathbf{d})$ is the posterior probability density. Sampling from \eqref{ch4:bayes} can be done using standard Monte Carlo Markov Chain methods such as those based on the Metropolis-Hastings algorithm. For the particular case of the likelihood in equation \eqref{ch4:Likelihood}, for which a set of conditional probabilities can be more directly used for sampling, the so called Gibbs sampling technique is efficient and useful for the problem at hand and has been succesfully implemented for CMB experiments in \cite{Jewell_2004,Eriksen_2004,Wandelt_2004, Larson_2007}. 
 
 % Sampling from $P(\mathbf{C}|\mathbf{d})$ can be done using a Monte Carlo method called Gibbs sampling.
-Suppose we can sample from the conditional probabilities $P(\mathbf{C}|\mathbf{s}, \mathbf{d})$ and $P(\mathbf{s}|\mathbf{C}, \mathbf{d})$. In this case, one can then sample a set of $\{(\mathbf{s}^i, \mathbf{C}^i)\}$ by iterating the following sampling process\cite{Chu_2005}:
+Suppose we can sample from the conditional probabilities $P(\mathbf{C}|\mathbf{s}, \mathbf{d})$ and $P(\mathbf{s}|\mathbf{C}, \mathbf{d})$. In this case, one can then sample a set of $\{(\mathbf{s}^i, \mathbf{C}^i)\}$ by iterating the following sampling process \cite{Chu_2005}:
 
 \begin{equation}\label{gibbs_sample1}
 \mathbf{s}^{i+1}\leftarrow P(\mathbf{s}|\mathbf{C}^i, \mathbf{d}),
@@ -1202,7 +1202,7 @@ Suppose we can sample from the conditional probabilities $P(\mathbf{C}|\mathbf{s
 \mathbf{C}^{i+1}\leftarrow P(\mathbf{C}|\mathbf{s}^{i+1}, \mathbf{d}).
 \end{equation}
 
-From this sample, one can use the so called Blackwell-Rao estimator to determine an approximation for $P(\mathbf{C}|\mathbf{d})$\cite{Chu_2005}. To construct this estimator, we first expand each element of the vector $\mathbf{s}$ in terms of spherical harmonics:
+From this sample, one can use the so called Blackwell-Rao estimator to determine an approximation for $P(\mathbf{C}|\mathbf{d})$ \cite{Chu_2005}. To construct this estimator, we first expand each element of the vector $\mathbf{s}$ in terms of spherical harmonics:
 
 %has an estimation of $P(\mathbf{C}, \mathbf{s}|\mathbf{d})$, thus only needing to marginalize over $\mathbf{s}$ to obtain the posterior distribution $P(\mathbf{C}|\mathbf{d})$. To do this marginalization, one can use the so called Blackwell-Rao estimator\cite{Chu_2005}.
 
@@ -1276,7 +1276,7 @@ It is also assumed that the noise's covariance matrix is diagonal: $N=\text{diag
 
 It was verified in \cite{Moura-Santos_2016} that fixing the monopole and dipole terms at 0 in the Gibbs chain results in anomalous states at those scales, so the WMAP9 maps were decomposed, and the results obtained for $C_0^{tt}$ and $C_1^{tt}$ were taken and fixed along the chain. A study of the systematic errors was also made in the same reference. 
 
-To estimate the cosmic variance contribution on a masked map, or any map without full sky coverage, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, obtaining the following equation for the cosmic variance affecting $C_\ell^{xx}$ of the given spectrum\cite{wmap_supplement}: 
+To estimate the cosmic variance contribution on a masked map, or any map without full sky coverage, equation \eqref{cosmic_variance} has to be modified to take into account the effective sky fraction $f_{\text{sky},\ell}$, obtaining the following equation for the cosmic variance affecting $C_\ell^{xx}$ of the given spectrum \cite{wmap_supplement}: 
 
 \begin{equation}\label{data_cosmic_variance}
 	(\Delta C_\ell^{xx})_\text{cv}=\frac{C_\ell^{xx}}{f_{\text{sky},\ell}}\sqrt{\frac{2}{2\ell+1}}.
@@ -1302,7 +1302,7 @@ Figure \ref{fig:correlation_data_final_plots} clearly shows that cosmic variance
 
 \chapter{Cosmological Constraints}\label{chapter:constraints}
 
-With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the Python package Cobaya\cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but due to a very low acceptance rate of the chains that lead to an unviably long sampling process, we decided to use the likelihood profiles for $\Omega_m$ as our analysis pipeline, allowing us to analyse the influence that the cross-correlation and galaxy autocorrelation data has on constraints of this parameter.
+With the data points and theoretical spectra shown in Figure \ref{fig:correlation_data_final_plots}, one can find new constraints for cosmological parameters. At first, we attempted to use an MCMC method with the Python package Cobaya \cite{CobayaASCL, Cobaya_preprint} to determine the constraints of multiple parameters, but due to a very low acceptance rate of the chains that lead to an unviably long sampling process, we decided to use the likelihood profiles for $\Omega_m$ as our analysis pipeline, allowing us to analyse the influence that the cross-correlation and galaxy autocorrelation data has on constraints of this parameter.
 
 \section{Monte Carlo Markov Chains}
 
@@ -1322,7 +1322,7 @@ The stationary distribution of the chain will be the posterior distribution
 	P(\theta|Y)=\mathcal{L}(Y|\theta)p(\theta),
 \end{equation}
 
-\noindent of a certain set of parameter values applied to the theory being the correct description of the data $Y$. In traditional methods, the normalization of this posterior distribution would be necessary for calculations of important statistical results, which can be unviable in many situations, especially if $\theta$ is a set of many parameters. Using this as the stationary distribution of the Markov chain using the adequate methods (such as the Metropolis-Hastings algorithm\cite{Metropolis_hastings}) does not require it to be normalized, which by itself simplifies the overall process, and also makes the calculation of the same statistical properties more viable.
+\noindent of a certain set of parameter values applied to the theory being the correct description of the data $Y$. In traditional methods, the normalization of this posterior distribution would be necessary for calculations of important statistical results, which can be unviable in many situations, especially if $\theta$ is a set of many parameters. Using this as the stationary distribution of the Markov chain using the adequate methods (such as the Metropolis-Hastings algorithm \cite{Metropolis_hastings}) does not require it to be normalized, which by itself simplifies the overall process, and also makes the calculation of the same statistical properties more viable.
 
 Two other important aspects of this procedure are the burn-in phase and the lagging. Despite the fact that an infinite sample converges to the desired distribution, when dealing with a finite sample, the first steps of the chain can create a bias, so it is common practice to discard the first points of the chain, this initial convergence phase is called the burn-in phase. Also, each step is highly correlated with its previous steps, which can also create bias, so for each accepted point in the chain, a number of points after it can be neglected for the final sample, using a point only after these in the final sample, and repeting the process for the entire chain, further reducing bias. This is called the lagging.
 
@@ -1335,7 +1335,7 @@ Cobaya is a Python package designed to run MCMC chains to analyse any type of da
 	\label{fig:cobaya_test}
 \end{figure}
 
-Cobaya uses the Gelman-Rubin Diagnostic\cite{Rminus1_paper92} to test the convergence of the chains. We have used $R-1=10^{-3}$ as a convergence criteria for all purposes in this work.
+Cobaya uses the Gelman-Rubin Diagnostic \cite{Rminus1_paper92} to test the convergence of the chains. We have used $R-1=10^{-3}$ as a convergence criteria for all purposes in this work.
 
 To determine the parameter constraints that can be obtained from the correlation spectra discussed so far, we have used the points shown in Figure \ref{fig:correlation_data_final_plots} as data points. The theoretical calculations had to be integrated with Cobaya, so we have created a Python code capable of calling the C++ functions we have used to calculate the theoretical correlation spectra, which allowed us to integrate both codes. 
 
@@ -1374,7 +1374,7 @@ The likelihoods calculated using $C^{tg}$ data from all 4 2MASS bands and the co
 
 Figure \ref{fig:likelihood_prof_ctg} shows that the CMB-galaxy cross-correlation data from 2MASS does not significantly constraint the $\Omega_m$ parameter, the likelihoods calculated for every physically meaningful value of $\Omega_m$ are within 70\% of the maximum likelihoods obtained. 
 
-Bands 3 and 4 of 2MASS seem to have a higher constraining capability compared with bands 1 and 2. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies in higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a better cross-correlation signal.
+Bands 3 and 4 of 2MASS seem to have a higher constraining capability compared with bands 1 and 2. As shown in Figure \ref{fig:2MASS_selections}, these bands contain galaxies at higher redshifts compared to the other two, which can be interpreted as another indication that using a galaxy catalog containing measurements of galaxies at higher redshifts may lead to a better cross-correlation signal.
 
 Figure \ref{fig:likelihood_prof_ctg+cgg} shows the $C^{tg}+C^{gg}$ joint-likelihood calculated for each of the 4 bands of the 2MASS catalog, as well as the full 2MASS joint-likelihood of all the bands together. 
 
@@ -1404,7 +1404,7 @@ Despite the fact that both likelihoods calculated from the synthetic data shown 
 
 The synthetic data correspond exactly to the theoretical model, which could possibly make the constraints better than the ones expected from real data, but as seen in Figure \ref{fig:correlation_data_final_plots}, the errors are very high compared to the values of the spectra, so this lack of fluctuation in the synthetic data should not affect the results a lot. Another important factor is that this idealized band is deeper than 2MASS, the amount of galaxies measured has a tendency to increase in that situation, reducing the errors, so in this regard it is possible to say the analysis done has been conservative, and the likelihoods could have been improved with more realistic errors.
 
-It is important to remind that, in the analysis made in Chapter \ref{chapter:select_func_optimal}, we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe\cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$. In fact, Figure \ref{fig:likelihood_band_optimal} shows that for the optimized band, both likelihoods decreases more rapidily for high values of $\Omega_m$ compared to any of the 2MASS likelihoods.
+It is important to remind that, in the analysis made in Chapter \ref{chapter:select_func_optimal}, we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe \cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$. In fact, Figure \ref{fig:likelihood_band_optimal} shows that for the optimized band, both likelihoods decreases more rapidily for high values of $\Omega_m$ compared to any of the 2MASS likelihoods.
 
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets -- such as greater galaxy survey depths and fainter magnitude limits -- could possibly improve the signal, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
@@ -1423,7 +1423,7 @@ We have estimated the redshift at which the Universe started its accelerated exp
 
 In Chapter \ref{chapter:extracting_correlations_from_data}, the matter of how to extract the correlation functions from data maps was discussed, in which the process presented in \cite{Moura-Santos_2016} was presented alongside the final results of its application to the 2MASS galaxy catalog and the WMAP CMB temperature map, which are shown in Figure \ref{fig:correlation_data_final_plots}. The points shown are used as data points for the data analysis. 
 
-In Chapter \ref{chapter:constraints}, we discuss the usage of an MCMC approach to analyse the data obtained previously in an attempt to find the first cosmological constraints in the ISW literature. The likelihood functions used are discussed and their profiles are obtained as a function of the $\Omega_m$ parameter, maintaining all other parameters fixed. A full analysis would ideally use these likelihood functions for the MCMC algorithm, resulting in contraints for other cosmological parameters, and possibly even parameters related to alternative dark energy models like the ones shown in \ref{sect:dark_energy}, but due to the dominance of cosmic variance at large scales, such constraints would be weak.
+In Chapter \ref{chapter:constraints}, we discuss the usage of an MCMC approach to analyse the data obtained previously in an attempt to find the first cosmological constraints in the ISW literature. The likelihood functions used are discussed and their profiles are obtained as a function of the $\Omega_m$ parameter, maintaining all other parameters fixed. A full analysis would ideally use these likelihood functions for the MCMC algorithm, resulting in contraints for other cosmological parameters, and possibly even parameters related to alternative dark energy models like the ones shown in Section \ref{sect:dark_energy}, but due to the dominance of cosmic variance at large scales, such constraints would be weak.
 
 Figure \ref{fig:likelihood_prof_ctg} shows the likelihood profiles for all 2MASS bands using only the $C^{tg}$ data, it shows a very low constraining power over the varied parameter. Figure \ref{fig:likelihood_prof_ctg+cgg} shows significantly better contraints are obtained when using the $C^{gg}$ data as a complement to the $C^{tg}$ data. In both cases, bands 3 and 4 of the 2MASS catalog show a better compatibility with Planck's results, while in the $C^{tg}$-only likelihoods they also show higher constraining power.
 
@@ -1549,7 +1549,7 @@ To find the scale factor in which the expansion's acceleration becomes positive,
 
 \chapter{Derivation of Correlation Function Formula}\label{app:correlations_demo}
 
-Expanding the definition of $C_\ell^{TT}$ given in \eqref{def:autocorrelation} one can show that\cite{dodelson2020modern}:
+Expanding the definition of $C_\ell^{TT}$ given in \eqref{def:autocorrelation} one can show that \cite{dodelson2020modern}:
 
 \begin{equation}\label{demo:Start_eq}
 	C_\ell^{tt}=\frac{2}{\pi}\int dk k^2P(k)\left|\frac{\Theta_\ell(k,\eta_0)}{\delta(k,\eta_0)}\right|^2.
