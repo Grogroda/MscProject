@@ -49,6 +49,7 @@
 \usepackage{graphicx}
 \usepackage{physics}
 \usepackage{csquotes}
+\usepackage{pdfpages}
 \usepackage{appendix}
 \usepackage{indentfirst}
 \usepackage{url}
@@ -87,12 +88,14 @@
 
 \newpage
 
-\begin{center}
-\thispagestyle{empty}
-\vspace*{\fill}
-FICHA DA BIBLIOTECA
-\vspace*{\fill}
-\end{center}
+\includepdf[pages={1}]{FichaCatalog.pdf}
+
+%\begin{center}
+%\thispagestyle{empty}
+%\vspace*{\fill}
+%FICHA DA BIBLIOTECA
+%\vspace*{\fill}
+%\end{center}
 
 \newpage
 
@@ -1400,7 +1403,7 @@ It is important to remind that, in the analysis made in Chapter \ref{chapter:sel
 
 Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets -- such as greater galaxy survey depths and fainter magnitude limits -- could possibly improve the signal, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
-In order to run the Markov Chains to find the full cosmological constraints in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia Cluster, our tests varying only $\Omega_m$ have resulted in chains running very slowly and with a very low acceptance rate, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation, so we have opted to keep our analysis limited to the ones presented for the likelihood profiles.
+In order to run the Markov Chains to find the full cosmological constraints in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia cluster and UFRN's NPAD cluster, our tests varying only $\Omega_m$ have resulted in chains running very slowly and with a very low acceptance rate, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation, so we have opted to keep our analysis limited to the ones presented for the likelihood profiles.
 
 \chapter{Conclusions}\label{chapter:conclusions}
 
