@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[61] biber:340> INFO - === Fri Jul 19, 2024, 23:43:28
-[71] Biber.pm:418> INFO - Reading 'main.bcf'
-[135] Biber.pm:972> INFO - Found 83 citekeys in bib section 0
-[144] Biber.pm:4383> INFO - Processing section 0
-[152] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[156] bibtex.pm:1713> INFO - LaTeX decoding ...
-[558] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[1895] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1895] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1895] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1895] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[1951] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[2332] bbl.pm:757> INFO - Output to main.bbl
-[2333] Biber.pm:130> WARN - legacy month field 'may' in entry 'NVSS' is not an integer - this will probably not sort properly.
-[2333] Biber.pm:132> INFO - WARNINGS: 1
+[67] biber:340> INFO - === Fri Jul 19, 2024, 23:57:52
+[78] Biber.pm:418> INFO - Reading 'main.bcf'
+[141] Biber.pm:972> INFO - Found 83 citekeys in bib section 0
+[150] Biber.pm:4383> INFO - Processing section 0
+[157] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[161] bibtex.pm:1713> INFO - LaTeX decoding ...
+[568] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[2894] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2895] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2895] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[2895] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[2951] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[3334] bbl.pm:757> INFO - Output to main.bbl
+[3334] Biber.pm:130> WARN - legacy month field 'may' in entry 'NVSS' is not an integer - this will probably not sort properly.
+[3334] Biber.pm:132> INFO - WARNINGS: 1
