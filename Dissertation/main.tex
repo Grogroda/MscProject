@@ -1342,13 +1342,13 @@ In order to test Cobaya and learn how to use it, we decided to use some of Planc
 
 Cobaya uses the Gelman-Rubin Diagnostic \cite{Rminus1_paper92} to test the convergence of the chains. We have used $R-1=10^{-2}$ as a convergence criteria for all purposes in this work.
 
-To determine the parameter constraints that can be obtained from the correlation spectra discussed so far, we have used the points shown in Figure \ref{fig:correlation_data_final_plots} as data points. The theoretical calculations had to be integrated with Cobaya, so we have created a Python code capable of calling the C++ functions we have used to calculate the theoretical correlation spectra, which allowed us to integrate both codes. 
+To determine the parameter constraints that can be obtained from the correlation spectra discussed so far, we have used the points shown in Figure \ref{fig:correlation_data_final_plots} as data points. The theoretical calculations had to be integrated with Cobaya, so we have created a Python wrapper capable of calling the C++ functions we have used to calculate the theoretical correlation spectra, which allowed us to integrate both codes. The wrapper was defined independently of Cobaya.
 
 The integrals calculated to obtain the theoretical spectra (see equation \eqref{Cl_direct_calculation}) are very numerically intensive, so in order to run the Markov Chains to find the full cosmological constraints in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia cluster and UFRN's NPAD cluster, our tests varying only $\Omega_m$ have resulted in chains running very slowly and with a very low acceptance rates, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation, so we have opted to instead calculate the likelihood profiles for the data as our analysis pipeline.
 
 \section{Likelihood Profiles}
 
-With the integrated code, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$ via a Python script, $C_{\ell\text{, theo}}^{xy}$ can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain set of parameters. 
+Using the Python wrapper, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$, $C_{\ell\text{, theo}}^{xy}$ can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain set of parameters. 
 
 We have assumed that for each multipole $\ell$ and for all the three different spectra, the likelihood is a Gaussian distribution of the form
 
@@ -1356,7 +1356,7 @@ We have assumed that for each multipole $\ell$ and for all the three different s
 	\mathcal{L}(C_{\ell\text{, theo}}^{xy}|C_{\ell\text{, data}}^{xy})=\frac{1}{\sigma_\ell \sqrt{2\pi}}\text{exp}\left[-\frac{1}{2}\left(\frac{C_{\ell\text{, data}}^{xy}-C_{\ell\text{, theo}}^{xy}}{\sigma_\ell}\right)^2\right],
 \end{equation}
 
-\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. Before trying to run a chain varying all the cosmological parameters of interest, we decided to test the results of the procedure varying only $\Omega_m$. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole:
+\noindent where $\sigma_\ell$ are the errors of $C_\ell^\text{data}$. We will profile the $\Omega_m$ parameter, meaning we will not vary any other cosmological parameter required to run the code, we will use the values of Table \ref{tab:planck_parameters} as fiducial values. Since the only theoretical parameter being varied is $\Omega_m$, $C_\ell^\text{theo}$ is basically a function of $\Omega_m$, and so is the likelihood of each point. The combined likelihood of a single correlation spectrum is a product of the likelihoods of each multipole:
 
 \begin{equation}\label{likelihood_cxy}
 	\mathcal{L}(\Omega_m|C^{xy}_\text{data})=\prod_{\ell=2}^{\ell_\text{max}} \mathcal{L}(C_{\ell\text{, theo}}^\text{xy}|C_{\ell\text{, data}}^\text{xy}).
