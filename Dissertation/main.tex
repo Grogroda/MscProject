@@ -609,7 +609,7 @@ Table \ref{tab:planck_parameters} summarizes the values of the best-fit paramete
 \begin{table}[!htb]
     \centering
     \begin{tabular}{cc} \hline
-     Parameter & Best fit \\ \hline
+     Parameter & Best-fit \\ \hline
      $\Omega_b h^2$ & $0.02237\pm 0.00015$\\
      $\Omega_c h^2$ & $0.1200\pm 0.0012$\\
      $100\Theta_{MC}$ & $1.04092\pm 0.00031$ \\
@@ -1301,27 +1301,37 @@ With the data points and theoretical spectra shown in Figure \ref{fig:correlatio
 
 \section{Monte Carlo Markov Chains}
 
-The usage of MCMC methods for analysing data has become a standard practice in recent years. While traditional direct evaluation methods usually rely on inverting complex matrix expressions and constantly having to renormalize the distributions being used, expressions that sometimes might not be analytically tractable and numerically unviable, MCMC methods sample values for a parameter -- or multiple parameters -- based on simple probability distributions that only need to be proportional to the exact probability distribution of the parameters given the data. Not only that, but having a set of parameters instead of a direct distribution function simplify both the process of visualizing the joint distribution of two parameters and the calculation of percentile intervals.
+The usage of MCMC methods for analysing data has become a standard practice in recent years. While more analytical evaluation methods usually rely on inverting complex matrix expressions and constantly having to renormalize the distributions being used, expressions that sometimes might not be analytically tractable and numerically unviable, MCMC methods sample values for a parameter -- or multiple parameters -- based on simple probability distributions that only need to be proportional to the exact probability distribution of the parameters given the data. Not only that, but having a sample of parameter values instead of a distribution function simplifies both the process of visualizing the joint distribution of two parameters and the calculation of percentile intervals.
+
+These methods are usually based on Bayes theorem, which states that the probability of an event A happening given that event B happens $P(A|B)$, can be calculated with
+
+\begin{equation}\label{bayes_theorem}
+	P(A|B)=\frac{P(A)P(B|A)}{P(B)}
+\end{equation}
+
+\noindent if $P(B)\neq 0$. The probabilities $P(A|B)$ and $P(B|A)$ are called conditional probabilities. To generate points for a Monte Carlo Markov Chain, one uses the current state $s^i$ of the chain and samples the next value $s^{i+1}$ using a conditional probability $P(s^{i+1}|s^i)$.
 
 In a very general sense, three main probability functions are required to run an MCMC algorithm for this type of problem: 
 
 \begin{itemize}
 	\item The joint-likelihood function: The joint-likelihood function $\mathcal{L}(Y|\theta)$ is the probability that the data points $Y$ follow the model for a certain set of parameters $\theta$. As stated before, one does not need to normalize this function for the MCMC. This distribution will heavily depend on the properties of the dataset and the instruments;
-	\item The prior distributions: A prior distribution on the parameters $p(\theta)$ may be assumed, possibly based on the physical properties of the parameters. It also does not need to be normalized;
+	\item The prior distributions: A prior distribution on the parameters $p(\theta)$ has to be assumed, possibly based on the physical properties of the parameters. It also does not need to be normalized, and if the prior is flat, one can simply use $p(\theta)=1$;
 	\item The proposal distribution: This probability will determine the transition probability from one point of the chain to the next, which -- to satisfy the so called Markov Property -- only depends on the current state of the chain. Usually a Gaussian distribution is used as the proposal.
 \end{itemize}
 
-The stationary distribution of the chain will be the posterior distribution
+The stationary distribution of the Markov Chain will be the posterior probability distribution
 
 \begin{equation}\label{posterior_MCMC}
 	P(\theta|Y)=\mathcal{L}(Y|\theta)p(\theta),
 \end{equation}
 
-\noindent of a certain set of parameter values applied to the theory being the correct description of the data $Y$. In traditional methods, the normalization of this posterior distribution would be necessary for calculations of important statistical results, which can be unviable in many situations, especially if $\theta$ is a set of many parameters. Using this as the stationary distribution of the Markov chain using the adequate methods (such as the Metropolis-Hastings algorithm \cite{Metropolis_hastings}) does not require it to be normalized, which by itself simplifies the overall process, and also makes the calculation of the same statistical properties more viable.
+\noindent of a certain set of parameter values applied to the theory correctly describing the data $Y$. In analytical methods, the normalization of this posterior distribution would be necessary for calculations of important statistical results, which can be unviable in many situations, especially if $\theta$ is a set of many parameters. Using this as the stationary distribution of the Markov chain using the adequate methods (such as the Metropolis-Hastings algorithm \cite{Metropolis_hastings}) does not require it to be normalized, which by itself simplifies the overall process, and also makes the calculation of the same statistical properties more viable.
 
 Two other important aspects of this procedure are the burn-in phase and the lagging. Despite the fact that an infinite sample converges to the desired distribution, when dealing with a finite sample, the first steps of the chain can create a bias, so it is common practice to discard the first points of the chain, this initial convergence phase is called the burn-in phase. Also, each step is highly correlated with its previous steps, which can also create bias, so for each accepted point in the chain, a number of points after it can be neglected for the final sample, using a point only after these in the final sample, and repeting the process for the entire chain, further reducing bias. This is called the lagging.
 
-Cobaya is a Python package designed to run MCMC chains to analyse any type of data desired, but it is integrated with many sets of cosmological datasets and numerical packages, such as Planck's data and CAMB, so it is more often used as a tool for analysis of cosmological data. Figure \ref{fig:cobaya_test} shows the constraints at $68\%$ and $95\%$ for a chain using data and likelihoods providade by the Planck collaboration, using the $\Lambda$CDM model.
+Cobaya is a Python package designed to run MCMC chains to analyse any type of data desired, it is integrated with many sets of cosmological datasets and numerical packages, such as Planck's data and CAMB. 
+ 
+In order to test Cobaya and learn how to use it, we decided to use some of Planck's data and their likelihoods (both available with Cobaya) to run a chain and see how the results for the cosmological parameters of Table \ref{tab:planck_parameters} compare, though we didn't use exactly the same datasets as the ones used for those results, so some differences are expected. Figure \ref{fig:cobaya_test} shows the constraints at $68\%$ and $95\%$ for that chain, which are in general compatible with Plancks best-fit values.
 
 \begin{figure}[!htb]
 	\centering
@@ -1330,11 +1340,13 @@ Cobaya is a Python package designed to run MCMC chains to analyse any type of da
 	\label{fig:cobaya_test}
 \end{figure}
 
-Cobaya uses the Gelman-Rubin Diagnostic \cite{Rminus1_paper92} to test the convergence of the chains. We have used $R-1=10^{-3}$ as a convergence criteria for all purposes in this work.
+Cobaya uses the Gelman-Rubin Diagnostic \cite{Rminus1_paper92} to test the convergence of the chains. We have used $R-1=10^{-2}$ as a convergence criteria for all purposes in this work.
 
 To determine the parameter constraints that can be obtained from the correlation spectra discussed so far, we have used the points shown in Figure \ref{fig:correlation_data_final_plots} as data points. The theoretical calculations had to be integrated with Cobaya, so we have created a Python code capable of calling the C++ functions we have used to calculate the theoretical correlation spectra, which allowed us to integrate both codes. 
 
-\section{Likelihoods}
+The integrals calculated to obtain the theoretical spectra (see equation \eqref{Cl_direct_calculation}) are very numerically intensive, so in order to run the Markov Chains to find the full cosmological constraints in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia cluster and UFRN's NPAD cluster, our tests varying only $\Omega_m$ have resulted in chains running very slowly and with a very low acceptance rates, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation, so we have opted to instead calculate the likelihood profiles for the data as our analysis pipeline.
+
+\section{Likelihood Profiles}
 
 With the integrated code, we can calculate the theoretical correlation spectra $C_{\ell\text{, theo}}^{xy}$ via a Python script, $C_{\ell\text{, theo}}^{xy}$ can correspond to either CMB temperature or galaxy autocorrelation spectra, or the CMB-galaxy cross-correlation spectrum. For any of these cases, we have used the results shown in Figure \ref{fig:correlation_data_final_plots} as data points $C_{\ell\text{, data}}^{xy}$ to calculate the probability of the $\Lambda$CDM model describing the data for a certain set of parameters. 
 
@@ -1382,28 +1394,28 @@ Figure \ref{fig:likelihood_prof_ctg+cgg} shows the $C^{tg}+C^{gg}$ joint-likelih
 
 Simply visualizing the gray band and comparing it with the peaks of the likelihoods indicate that all bands and the full joint-likelihood are compatible with Planck's results, with bands 3 and 4 and the joint-likelihood having higher compatibility at less than $1\sigma$. The width of the likelihoods in all bands are very similar, showing small differences between the constraining power of each band in this analysis. 
 
-Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^{gg}$ has a much higher constraining power over $\Omega_m$ than $C^{tg}$: while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space, with nearly null likelihoods outside of this small region, while the results for $C^{tg}$ show very high relative likelihood values across all physical values of $\Omega_m$, as previously discussed.
+Comparing these results with Figure \ref{fig:likelihood_prof_ctg} shows that $C^{gg}$ has a much higher constraining power over $\Omega_m$ than $C^{tg}$: while Figure \ref{fig:likelihood_prof_ctg+cgg} shows very narrow peaks in a very small region of the $\Omega_m$ space with nearly null likelihoods outside of this small region, the results for $C^{tg}$ show very high relative likelihood values across all physical values of $\Omega_m$, as previously discussed.
 
 The width of the curves obtained in this project are comparable to the 68\% Planck error for $\Omega_m$, showing that the combination of these two spectra have a very strong constraining power with respect to this parameter. It is important to highlight that this analysis only uses one variable parameter, while Planck's analysis used 6. If this analysis had been done with the same variable parameters, the width of the likelihoods would certainly increase, reducing the quality of the contraints, but increasing the compatibility with Planck's results. Despite this, $C^{gg}$ is highly dependent on $\Omega_m$, so this increase would probably not be too high.
+
+\section{Forecast for the Optimized Band}
 
 We have also performed an analysis using synthetic data following the optimized selection function discussed in Chapter \ref{chapter:select_func_optimal}. To do so, we have calculated two cross-correlation spectrum: One according to the fiducial $\Lambda$CDM model, and another using $\Omega_m=0.188$, the value that maximizes the likelihood corresponding to band 4 in \ref{fig:likelihood_prof_ctg}. We have used these spectra as datasets with errors equal to that of 2MASS' band 4. The results of this procedure are shown in Figure \ref{fig:likelihood_band_optimal}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.7\linewidth]{Imagens/profile_BestBand.png}
-	\caption{Normalized $C^{tg}$ likelihoods calculated using synthetic data estimated as the theoretical cross-correlation obtained using the idealized band estimated in Chapter \ref{chapter:select_func_optimal} for the selection function. The blue dashed line is calculated with a cross-correlation spectrum generated with $\Omega_m=0.188$ as data, while the orange curve is calculated using a fiducial $\Lambda$CDM cross-correlation sepctrum with 2MASS', both with errors equal to that of 2MASS' band 4. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents its 68\% error.}
+	\caption{Normalized $C^{tg}$ likelihoods calculated using synthetic data estimated as the theoretical cross-correlation obtained using the idealized band estimated in Chapter \ref{chapter:select_func_optimal} for the selection function. The blue dashed line is calculated with a cross-correlation spectrum generated with $\Omega_m=0.188$ as fiducial value, while the orange curve is calculated using a fiducial $\Lambda$CDM cross-correlation sepctrum with 2MASS', both with errors equal to that of 2MASS' band 4. The Planck best-fit for $\Omega_m$ is shown for comparison, the gray band represents represents its 68\% error.}
 	\label{fig:likelihood_band_optimal}
 \end{figure}
 
 Despite the fact that both likelihoods calculated from the synthetic data shown in Figure \ref{fig:likelihood_band_optimal} do not have a very strong constraining power, they show a considerable improvement in the $\Omega_m$ constraints compared to the 2MASS' likelihoods, including the combined likelihood, indicating that this idealized survey can in fact make a significant difference in this analysis. 
 
-The synthetic data correspond exactly to the theoretical model, which could possibly make the constraints better than the ones expected from real data, but as seen in Figure \ref{fig:correlation_data_final_plots}, the errors are very high compared to the values of the spectra, so this lack of fluctuation in the synthetic data should not affect the results a lot. Another important factor is that this idealized band is deeper than 2MASS, the amount of galaxies measured has a tendency to increase in that situation, reducing the errors, so in this regard it is possible to say the analysis done has been conservative, and the likelihoods could have been improved with more realistic errors.
+The synthetic data have no fluctuation, which could possibly make the constraints better than the ones expected from real data. But, as seen in Figure \ref{fig:correlation_data_final_plots}, the errors are very high compared to the values of the spectra, so this lack of fluctuation in the synthetic data should not affect the results a lot. Another important factor is that this idealized band is deeper than 2MASS, the amount of galaxies measured has a tendency to increase in that situation, reducing the errors, so in this regard it is possible to say the analysis done has been conservative, and the likelihoods could have been improved with more realistic errors.
 
-It is important to remind that, in the analysis made in Chapter \ref{chapter:select_func_optimal}, we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis that there is no cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe \cite{ronaldo_inhDE}, thus rejecting the null hypothesis likely rejects very high values of $\Omega_m$. In fact, Figure \ref{fig:likelihood_band_optimal} shows that for the optimized band, both likelihoods decreases more rapidily for high values of $\Omega_m$ compared to any of the 2MASS likelihoods.
+It is important to remind that, in the analysis made in Chapter \ref{chapter:select_func_optimal}, we have found a parametrization of the selection function that locally maximizes the likelihood of the theoretical spectrum relative to the null hypothesis of null cross-correlation spectrum, not the parametrization that improves the constraint power relative to $\Omega_m$. Despite this, the null hypothesis is a result of $\Omega_m=1$ since the gravitational potentials would not vary in such a universe \cite{ronaldo_inhDE}. In fact, Figure \ref{fig:likelihood_band_optimal} shows that for the optimized band, both likelihoods decreases more rapidily for high values of $\Omega_m$ compared to any of the 2MASS likelihoods.
 
-Another similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets -- such as greater galaxy survey depths and fainter magnitude limits -- could possibly improve the signal, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
-
-In order to run the Markov Chains to find the full cosmological constraints in a reasonable amount of time, we have used both the Cobaya parallel implementation and a parallelization in the calculation of the theoretical spectra. Despite our efforts to run the code efficiently in USP's Aguia cluster and UFRN's NPAD cluster, our tests varying only $\Omega_m$ have resulted in chains running very slowly and with a very low acceptance rate, making it unviable for us to run the chains in a reasonable time frame. We have tried running the chains using only $C^{tg}$ data and the combination $C^{tg}+C^{gg}$, both showing this limitation, so we have opted to keep our analysis limited to the ones presented for the likelihood profiles.
+A similar work has been done in \cite{simillar_ISW_analysis}, in which the authors also analysed the 2MASS+WMAP cross-correlation signal, also finding a very low preference towards the non-null cross-correlation hypothesis, and studied wether new changes in the data sets -- such as greater galaxy survey depths and fainter magnitude limits -- could possibly improve the signal, and reported that even with the best possible data in these frameworks, the signal would still evade detection in $>10\%$ of cases.
 
 \chapter{Conclusions}\label{chapter:conclusions}
 
