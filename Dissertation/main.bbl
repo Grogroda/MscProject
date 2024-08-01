@@ -4977,7 +4977,6 @@
       \strng{authorbibnamehash}{cca5e429f691337f2eae5e627fcce624}
       \strng{authornamehash}{cca5e429f691337f2eae5e627fcce624}
       \strng{authorfullhash}{cca5e429f691337f2eae5e627fcce624}
-      \field{extraname}{1}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -7262,43 +7261,6 @@
       \verb https://link.aps.org/doi/10.1103/PhysRevD.71.103002
       \endverb
     \endentry
-    \entry{CobayaASCL}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=bdc5441492358f62f7eec6bb0ba2468a}{%
-           family={{Torrado}},
-           familyi={T\bibinitperiod},
-           given={Jesús},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4b11fc59f6fb126c1f7f69d42064a356}{%
-           family={{Lewis}},
-           familyi={L\bibinitperiod},
-           given={Antony},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{f793e621da5150f74017ebcac267f02b}
-      \strng{fullhash}{f793e621da5150f74017ebcac267f02b}
-      \strng{bibnamehash}{f793e621da5150f74017ebcac267f02b}
-      \strng{authorbibnamehash}{f793e621da5150f74017ebcac267f02b}
-      \strng{authornamehash}{f793e621da5150f74017ebcac267f02b}
-      \strng{authorfullhash}{f793e621da5150f74017ebcac267f02b}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eid}{ascl:1910.019}
-      \field{eprinttype}{ascl}
-      \field{howpublished}{Astrophysics Source Code Library, record ascl:1910.019}
-      \field{month}{10}
-      \field{title}{{Cobaya: Bayesian analysis in cosmology}}
-      \field{year}{2019}
-      \field{pages}{ascl:1910.019}
-      \range{pages}{-1}
-      \verb{eprint}
-      \verb 1910.019
-      \endverb
-      \keyw{Software}
-    \endentry
     \entry{Cobaya_preprint}{article}{}
       \name{author}{2}{}{%
         {{hash=bdc5441492358f62f7eec6bb0ba2468a}{%
@@ -7321,7 +7283,7 @@
       \strng{authorbibnamehash}{f793e621da5150f74017ebcac267f02b}
       \strng{authornamehash}{f793e621da5150f74017ebcac267f02b}
       \strng{authorfullhash}{f793e621da5150f74017ebcac267f02b}
-      \field{extraname}{2}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7344,50 +7306,42 @@
       \verb https://doi.org/10.1088%5C%2F1475-7516%5C%2F2021%5C%2F05%5C%2F057
       \endverb
     \endentry
-    \entry{Metropolis_hastings}{article}{}
+    \entry{CobayaASCL}{misc}{}
       \name{author}{2}{}{%
-        {{hash=25628966014266922faf57d7f25b3abd}{%
-           family={Chib},
-           familyi={C\bibinitperiod},
-           given={Siddhartha},
-           giveni={S\bibinitperiod}}}%
-        {{hash=3510847942642ce269d829a17f50ccdb}{%
-           family={Greenberg},
-           familyi={G\bibinitperiod},
-           given={Edward},
-           giveni={E\bibinitperiod}}}%
+        {{hash=bdc5441492358f62f7eec6bb0ba2468a}{%
+           family={{Torrado}},
+           familyi={T\bibinitperiod},
+           given={Jesús},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4b11fc59f6fb126c1f7f69d42064a356}{%
+           family={{Lewis}},
+           familyi={L\bibinitperiod},
+           given={Antony},
+           giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {[American Statistical Association, Taylor & Francis, Ltd.]}%
-      }
-      \strng{namehash}{cbaefbe7de7545009db4abc7580761f2}
-      \strng{fullhash}{cbaefbe7de7545009db4abc7580761f2}
-      \strng{bibnamehash}{cbaefbe7de7545009db4abc7580761f2}
-      \strng{authorbibnamehash}{cbaefbe7de7545009db4abc7580761f2}
-      \strng{authornamehash}{cbaefbe7de7545009db4abc7580761f2}
-      \strng{authorfullhash}{cbaefbe7de7545009db4abc7580761f2}
+      \strng{namehash}{f793e621da5150f74017ebcac267f02b}
+      \strng{fullhash}{f793e621da5150f74017ebcac267f02b}
+      \strng{bibnamehash}{f793e621da5150f74017ebcac267f02b}
+      \strng{authorbibnamehash}{f793e621da5150f74017ebcac267f02b}
+      \strng{authornamehash}{f793e621da5150f74017ebcac267f02b}
+      \strng{authorfullhash}{f793e621da5150f74017ebcac267f02b}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{00031305}
-      \field{journaltitle}{The American Statistician}
-      \field{number}{4}
-      \field{title}{Understanding the Metropolis-Hastings Algorithm}
-      \field{urlday}{26}
-      \field{urlmonth}{6}
-      \field{urlyear}{2024}
-      \field{volume}{49}
-      \field{year}{1995}
-      \field{urldateera}{ce}
-      \field{pages}{327\bibrangedash 335}
-      \range{pages}{9}
-      \verb{urlraw}
-      \verb http://www.jstor.org/stable/2684568
+      \field{eid}{ascl:1910.019}
+      \field{eprinttype}{ascl}
+      \field{howpublished}{Astrophysics Source Code Library, record ascl:1910.019}
+      \field{month}{10}
+      \field{title}{{Cobaya: Bayesian analysis in cosmology}}
+      \field{year}{2019}
+      \field{pages}{ascl:1910.019}
+      \range{pages}{-1}
+      \verb{eprint}
+      \verb 1910.019
       \endverb
-      \verb{url}
-      \verb http://www.jstor.org/stable/2684568
-      \endverb
+      \keyw{Software}
     \endentry
     \entry{Rminus1_paper92}{article}{}
       \name{author}{2}{}{%
@@ -7514,95 +7468,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1111/j.1365-2966.2010.16278.x
-      \endverb
-    \endentry
-    \entry{growth_constraint}{article}{}
-      \name{author}{3}{}{%
-        {{hash=20090e38690aced384d5b40e74e895ed}{%
-           family={Nguyen},
-           familyi={N\bibinitperiod},
-           given={Nhat-Minh},
-           giveni={N\bibinithyphendelim M\bibinitperiod}}}%
-        {{hash=2eb76baeec02d3621d61bea619901cef}{%
-           family={Huterer},
-           familyi={H\bibinitperiod},
-           given={Dragan},
-           giveni={D\bibinitperiod}}}%
-        {{hash=8d4e253bc551b44c1810be2d6b97311a}{%
-           family={Wen},
-           familyi={W\bibinitperiod},
-           given={Yuewei},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Physical Society}%
-      }
-      \strng{namehash}{6bf1c94380fd13ab58874d38ba4caa20}
-      \strng{fullhash}{6bf1c94380fd13ab58874d38ba4caa20}
-      \strng{bibnamehash}{6bf1c94380fd13ab58874d38ba4caa20}
-      \strng{authorbibnamehash}{6bf1c94380fd13ab58874d38ba4caa20}
-      \strng{authornamehash}{6bf1c94380fd13ab58874d38ba4caa20}
-      \strng{authorfullhash}{6bf1c94380fd13ab58874d38ba4caa20}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{11}
-      \field{journaltitle}{Phys. Rev. Lett.}
-      \field{month}{9}
-      \field{title}{Evidence for Suppression of Structure Growth in the Concordance Cosmological Model}
-      \field{volume}{131}
-      \field{year}{2023}
-      \field{pages}{111001}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevLett.131.111001
-      \endverb
-      \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRevLett.131.111001
-      \endverb
-      \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRevLett.131.111001
-      \endverb
-    \endentry
-    \entry{growth_model}{article}{}
-      \name{author}{1}{}{%
-        {{hash=cca5e429f691337f2eae5e627fcce624}{%
-           family={Linder},
-           familyi={L\bibinitperiod},
-           given={Eric\bibnamedelima V.},
-           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Physical Society}%
-      }
-      \strng{namehash}{cca5e429f691337f2eae5e627fcce624}
-      \strng{fullhash}{cca5e429f691337f2eae5e627fcce624}
-      \strng{bibnamehash}{cca5e429f691337f2eae5e627fcce624}
-      \strng{authorbibnamehash}{cca5e429f691337f2eae5e627fcce624}
-      \strng{authornamehash}{cca5e429f691337f2eae5e627fcce624}
-      \strng{authorfullhash}{cca5e429f691337f2eae5e627fcce624}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{4}
-      \field{journaltitle}{Phys. Rev. D}
-      \field{month}{7}
-      \field{title}{Cosmic growth history and expansion history}
-      \field{volume}{72}
-      \field{year}{2005}
-      \field{pages}{043529}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevD.72.043529
-      \endverb
-      \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRevD.72.043529
-      \endverb
-      \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRevD.72.043529
       \endverb
     \endentry
   \enddatalist
