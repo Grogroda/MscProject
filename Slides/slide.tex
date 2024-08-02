@@ -119,6 +119,23 @@ subsubsectionstyle=show/shaded/hide]
     The homogeneous and isotropic background is first set up, and linear perturbations are added to it.
 \end{frame}
 
+\begin{frame}{The $\Lambda$CDM Model}
+	The $\Lambda$CDM model explains some important observations, such as
+	
+	\begin{itemize}
+	\item The CMB and its properties;
+	\item The accelerating expansion of the Universe;
+	\item The Universe's large scale structure;
+	\end{itemize}
+	
+	And made some important predictions, like
+	
+	\begin{itemize}
+	\item Baryon accoustic oscillations (BAO);
+	\item The CMB polarization and its properties.
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{The Cosmic Microwave Background}
     The temperature of the Cosmic Microwave Background (CMB) can be expressed by
 
@@ -249,7 +266,7 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
 \end{frame}
 
 \begin{frame}{Analytical Formula}
-    Given fields x and y, representing either the ISW contribution to the CMB temperature ($x,y=t$) or the galaxy contrast ($x,y=g$), we can calculate the associated auto- or cross-correlation spectra using
+    Given fields x and y, representing either the ISW contribution to the CMB temperature ($x,y=t$) or the galaxy contrast ($x,y=g$), we can calculate the associated auto- or cross-correlation spectra using \cite{Moura-Santos_2016}
 
     \begin{equation}
         C_\ell^{xy}=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
@@ -287,7 +304,7 @@ cross-correlation (right).}
 \section{Optimized Galaxy Survey}
 
 \begin{frame}{Selection Function Parametrization}
-    The function $\dv{N}{z}$ in equation \eqref{Wg} is called the selection function. We are assuming its parametrization to be
+    The function $\dv{N}{z}$ in equation \eqref{Wg} is called the selection function. We are assuming its parametrization to be \cite{select_func_par:Afshordi2004}
 
     \begin{equation}\label{select_func_par}
         \dv{N}{z}\left(z|\lambda, \beta, z_0\right)dz=\frac{\beta}{\Gamma(\lambda)}\left(\frac{z}{z_0}\right)^{\beta\lambda-1}\text{exp}\left[-\left(\frac{z}{z_0}\right)^\beta\right]d\left(\frac{z}{z_0}\right)
@@ -435,10 +452,15 @@ sized with null cross-correlation.}
     \begin{itemize}
         \item The ratio $P_\text{null}(z_0,\beta, \lambda)/P_\text{null}^\text{2MASS}=0.971$ for the minimum;
         \item Despite the small statistical gain, this optimal selection function yields reasonably better results for constraints on $\Omega_m$, as will be discussed;
+        \item A similar work has reported a small preference towards the non-null signal with changes to the depth of the survey and fainter magnitude limits \cite{simillar_ISW_analysis}.
     \end{itemize}
 \end{frame}
 
 \section{Data Processing}
+
+\begin{frame}{WMAP Data}
+INFO+MOTIVATION \cite{wmap_supplement}
+\end{frame}
 
 \begin{frame}{WMAP Data}
     \begin{figure}
@@ -463,6 +485,10 @@ sized with null cross-correlation.}
     \caption{Mollweide projection of three (Q, V, W) WMAP9 CMB temperature (in mK) maps in galactic coordinates with an $f_\text{sky}=0.70$ mask applied}
     \label{fig:wmap_maps}
     \end{figure}
+\end{frame}
+
+\begin{frame}{2MASS Catalog}
+INFO+MOTIVATION \cite{2MASS}
 \end{frame}
 
 \begin{frame}{2MASS Catalog}
@@ -508,7 +534,21 @@ sized with null cross-correlation.}
 \end{frame}
 
 \begin{frame}{Correlation Spectra Estimator}
-    To estimate the correlation spectra that describe the pixelized maps $d$ with primordial signal $s$ and noise $n$ (with $\mathbf{S}$ and $\mathbf{N}$ being the corresponding covariance matrices), we need to be able to sample from $P(\mathbf{C}|\mathbf{s},d)$ and $P(\mathbf{s}|\mathbf{C},d)$ with $\mathbf{C}=\mathbf{S}+\mathbf{N}$. Then we iterate
+	To estimate the correlation spectra that describe the pixelized maps $d$ with primordial signal $s$ and noise $n$ (with $\mathbf{S}$ and $\mathbf{N}$ being the corresponding covariance matrices), we could use the following likelihood function.
+
+	\begin{equation}\label{ch4:Likelihood}
+	\mathcal{L}=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right).
+	\end{equation}	
+
+	With a prior $\pi(\mathbf{S})$ we can use Bayes' Theorem to obtain
+	
+	\begin{equation}
+	P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{S})
+	\end{equation}	 
+\end{frame}
+
+\begin{frame}{Correlation Spectra Estimator}
+     With the posterior obtained previously, we can sample from $P(\mathbf{C}|\mathbf{s},d)$ and $P(\mathbf{s}|\mathbf{C},d)$. Then we iterate
 
     \begin{align}
         \mathbf{s}^{i+1}&\leftarrow P(\mathbf{s}|\mathbf{C},d)\\
@@ -531,8 +571,36 @@ sized with null cross-correlation.}
         \sigma_\ell^i = \frac{1}{2\ell+1}\sum_{m=-\ell}^\ell \mathbf{s}_{\ell m}\mathbf{s}_{\ell m}^\dagger.
     \end{equation}
 
-    We then maximize the probability $P(C_\ell|\mathbf{d})$ to obtain the best-fit $C_\ell$.
+    We then maximize the probability $P(C_\ell|\mathbf{d})$ to obtain the best-fit $C_\ell$. 
 \end{frame}
+
+\begin{frame}{Matrices Used}
+	In this work, $\mathbf{s}$ and $\mathbf{S}$ are defined by
+	
+	\begin{equation}\label{vec_s}
+	\mathbf{s}^T=(s_{00}^{tg}, s_{01}^{tg}, s_{11}^{tg}, \dots, s_{\ell_\text{max}0}^{tg}, \dots, s_{\ell_\text{max} \ell_\text{max}}^{tg}),
+\end{equation}
+\begin{equation}\label{matrix_S}
+	\mathbf{S}=\text{diag}(S_0^{tg}, S_1^{tg}, S_1^{tg},\dots, S_{\ell_\text{max}}^{tg}, \dots, S_{\ell_\text{max}}^{tg}),
+\end{equation}
+
+where 
+
+\begin{align}\label{s_lm=}
+	\mathbf{s}_{\ell m}^{tg}&=
+	\begin{pmatrix}
+	a_{\ell m}^t\\
+	a_{\ell m}^g
+	\end{pmatrix}, &
+	\mathbf{S}_\ell^{tg}&=
+	\begin{pmatrix}
+	C_\ell^{tt} & C_\ell^{tg}\\
+	C_\ell^{tg} & C_\ell^{gg}
+	\end{pmatrix}.
+\end{align}
+
+\end{frame}
+
 
 \begin{frame}{Correlation Spectra Obtained}
     \begin{figure}
@@ -633,8 +701,7 @@ sized with null cross-correlation.}
 \begin{frame}{Discussion}
     \begin{itemize}
         \item The optimized band being deeper than 2MASS means errors on the spectra should be higher, meaning the errors used are underestimated, which indicates the constraints could be better for a real survey following our optimized selection function;
-        \item The optimized band was not found by optimizing the $\Omega_m$ constraints, but rejecting the null cross-correlation hypothesis. This null hypothesis leads to $\Omega_m=1$, and the fast decrease in likelihood for higher $\Omega_m$ is noticeable;
-        \item A similar work ... ?
+        \item The optimized band was not found by optimizing the $\Omega_m$ constraints, but rejecting the null cross-correlation hypothesis. This null hypothesis leads to $\Omega_m=1$, and the fast decrease in likelihood for higher $\Omega_m$ is noticeable.
     \end{itemize}
 \end{frame}
 
@@ -669,6 +736,10 @@ sized with null cross-correlation.}
 
 \begin{frame}{Extra Content}
 	More extras
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Bibliography}
+\printbibliography
 \end{frame}
 
 \end{document}

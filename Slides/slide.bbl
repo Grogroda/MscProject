@@ -16,5 +16,392 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Moura-Santos_2016}{article}{}
+      \name{author}{5}{}{%
+        {{hash=bd108601b4c54c4339569bcc4e5c9a6b}{%
+           family={Moura-Santos},
+           familyi={M\bibinithyphendelim S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=6c71f4eab448c5cea9257777c2640f3f}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={F.\bibnamedelimi C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2c74ad7fb4604c3a7072f3cf3bbfd203}{%
+           family={Penna-Lima},
+           familyi={P\bibinithyphendelim L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3e0e611bf9b092e996293f0003944dc9}{%
+           family={Novaes},
+           familyi={N\bibinitperiod},
+           given={C.\bibnamedelimi P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=abc97a691704cb516457bda05ae897ad}{%
+           family={Wuensche},
+           familyi={W\bibinitperiod},
+           given={C.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The American Astronomical Society}%
+      }
+      \strng{namehash}{0734adabe3906f324b7cd17334de19de}
+      \strng{fullhash}{ac1af0b87862c446274540fae9004072}
+      \strng{bibnamehash}{0734adabe3906f324b7cd17334de19de}
+      \strng{authorbibnamehash}{0734adabe3906f324b7cd17334de19de}
+      \strng{authornamehash}{0734adabe3906f324b7cd17334de19de}
+      \strng{authorfullhash}{ac1af0b87862c446274540fae9004072}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{A Bayesian Estimate of the CMB–large-scale Structure Cross-correlation}
+      \field{volume}{826}
+      \field{year}{2016}
+      \field{pages}{121}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/0004-637X/826/2/121
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.3847/0004-637X/826/2/121
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.3847/0004-637X/826/2/121
+      \endverb
+    \endentry
+    \entry{select_func_par:Afshordi2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bea447a423c59c38674b5d30a14b26f6}{%
+           family={Afshordi},
+           familyi={A\bibinitperiod},
+           given={Niayesh},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f9b550b62cc395f431256d90631d4b0e}{%
+           family={Loh},
+           familyi={L\bibinitperiod},
+           given={Yeong-Shang},
+           giveni={Y\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=087e18f7bc79d363347b73e83a3bed63}{%
+           family={Strauss},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{36827480fc7a6f44d0d071b6efac6c5d}
+      \strng{fullhash}{36827480fc7a6f44d0d071b6efac6c5d}
+      \strng{bibnamehash}{36827480fc7a6f44d0d071b6efac6c5d}
+      \strng{authorbibnamehash}{36827480fc7a6f44d0d071b6efac6c5d}
+      \strng{authornamehash}{36827480fc7a6f44d0d071b6efac6c5d}
+      \strng{authorfullhash}{36827480fc7a6f44d0d071b6efac6c5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{8}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{4}
+      \field{title}{Cross-correlation of the cosmic microwave background with the 2MASS galaxy survey: Signatures of dark energy, hot gas, and point sources}
+      \field{volume}{69}
+      \field{year}{2004}
+      \field{pages}{083524}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.69.083524
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.69.083524
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.69.083524
+      \endverb
+    \endentry
+    \entry{simillar_ISW_analysis}{article}{}
+      \name{author}{2}{}{%
+        {{hash=115048e7bfff03880038ce60a5b41a71}{%
+           family={Francis},
+           familyi={F\bibinitperiod},
+           given={Caroline\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=f533a1ec276c4dfadd557bc79ca41271}{%
+           family={Peacock},
+           familyi={P\bibinitperiod},
+           given={John\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{fullhash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{bibnamehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{authorbibnamehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{authornamehash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \strng{authorfullhash}{9fa3cf4f561fb4c9aa8ee6eb274b34be}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0035-8711}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{07}
+      \field{number}{1}
+      \field{title}{{Integrated Sachs–Wolfe measurements with photometric redshift surveys: 2MASS results and future prospects}}
+      \field{volume}{406}
+      \field{year}{2010}
+      \field{pages}{2\bibrangedash 13}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1111/j.1365-2966.2010.16278.x
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/mnras/article-pdf/406/1/2/3673745/mnras0406-0002.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/j.1365-2966.2010.16278.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/j.1365-2966.2010.16278.x
+      \endverb
+    \endentry
+    \entry{wmap_supplement}{manual}{}
+      \name{author}{4}{}{%
+        {{hash=e6299e98be55bb66c071abbf8f55f638}{%
+           family={Greason},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2727116d6c77e614b841e503ad97ac29}{%
+           family={Limon},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c408c007d5dd9d1efce49e23ab902045}{%
+           family={Wollack},
+           familyi={W\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Greenbelt, MD}%
+      }
+      \list{organization}{1}{%
+        {NASA/GSFC}%
+      }
+      \strng{namehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{fullhash}{83140db96dc8f62463955adf1a954786}
+      \strng{bibnamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{authorbibnamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{authornamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
+      \strng{authorfullhash}{83140db96dc8f62463955adf1a954786}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Available in electronic form at \url{http://lambda.gsfc.nasa.gov/}}
+      \field{title}{{Wilkinson Microwave Anisotropy Probe (WMAP): Nine-Year Explanatory Supplement}}
+      \field{year}{2012}
+    \endentry
+    \entry{2MASS}{article}{}
+      \name{author}{31}{}{%
+        {{hash=daecb0b2fec62e8e209d92bcfad32306}{%
+           family={Skrutskie},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=66a95aa34271a8b4f957a1b251b232eb}{%
+           family={Cutri},
+           familyi={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=76c118995d78722e44c00a08bb4fc339}{%
+           family={Stiening},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ef6432da4448895b8cd601503482ba11}{%
+           family={Weinberg},
+           familyi={W\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=fddd7591877feba869ef6f11283a4d0e}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fe14371f20615167a81f0e5495337b8d}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=474cf2a36335ec5d09a8f598c27516de}{%
+           family={Beichman},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a5524f1782cd844ea8a105a01b18b464}{%
+           family={Capps},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3c9f6a3bd62c39e8bf07842b136836b5}{%
+           family={Chester},
+           familyi={C\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f2250e454e7944977aa603528a72411e}{%
+           family={Elias},
+           familyi={E\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fd6897aa74b1d4599a582db9a34e34b2}{%
+           family={Huchra},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2962b9fa1c0bf0a534a6cb38ff056fa2}{%
+           family={Liebert},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9b5c2da23b8904cc99e39fcc0a58381b}{%
+           family={Lonsdale},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7421acbb7728ec755451b7f4d6f14ca7}{%
+           family={Monet},
+           familyi={M\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=fa66c04b5076dd3b0afff91d081a5881}{%
+           family={Price},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c81c4677616072e8e4718516137dbaf0}{%
+           family={Seitzer},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8ea191ac6dfd9ba27007bbc22a50fc05}{%
+           family={Jarrett},
+           familyi={J\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=192e30b810a1055efaff29362be31dad}{%
+           family={Kirkpatrick},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=e6bf885f6cb696baf8fae17566d69633}{%
+           family={Gizis},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=4b0390c97b94699ba3772f92ad60cbcd}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9f7519907835a53652958e15da27b522}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7505c8d088353a3ccd441690e7c01029}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5a3bdb71bc9b7c53ba515d49d12c1621}{%
+           family={Fullmer},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ba8868f72d01ad697bdbac46e99bc275}{%
+           family={Hurt},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=460595857a9f7bb675f04eb6502a16bc}{%
+           family={Light},
+           familyi={L\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5dc0913bc54a9c7af883c13c5f8e9c9b}{%
+           family={Kopan},
+           familyi={K\bibinitperiod},
+           given={E.\bibnamedelimi L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=3f83dd093df0d1fc9c4c757f207ef5e8}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a8170a22a09197f65c1cfb52fa77a52c}{%
+           family={McCallon},
+           familyi={M\bibinitperiod},
+           given={H.\bibnamedelimi L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=38492670cad9e1bfc875a22e496421fd}{%
+           family={Tam},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=97478d34b2206f5322113c3451b36c0b}{%
+           family={Dyk},
+           familyi={D\bibinitperiod},
+           given={S.\bibnamedelimi Van},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=b8a9402e3e4ee26468ce02723821564b}{%
+           family={Wheelock},
+           familyi={W\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62b5c14de6f29151f1e5f9271bb67fac}
+      \strng{fullhash}{84f04784c583b674d1104b69ae3384ea}
+      \strng{bibnamehash}{62b5c14de6f29151f1e5f9271bb67fac}
+      \strng{authorbibnamehash}{62b5c14de6f29151f1e5f9271bb67fac}
+      \strng{authornamehash}{62b5c14de6f29151f1e5f9271bb67fac}
+      \strng{authorfullhash}{84f04784c583b674d1104b69ae3384ea}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astronomical Journal}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{The Two Micron All Sky Survey (2MASS)}
+      \field{volume}{131}
+      \field{year}{2006}
+      \field{pages}{1163}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/498708
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/498708
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/498708
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

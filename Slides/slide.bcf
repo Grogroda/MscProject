@@ -2344,6 +2344,16 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">Moura-Santos_2016</bcf:citekey>
+    <bcf:citekey order="2">select_func_par:Afshordi2004</bcf:citekey>
+    <bcf:citekey order="3">simillar_ISW_analysis</bcf:citekey>
+    <bcf:citekey order="4">wmap_supplement</bcf:citekey>
+    <bcf:citekey order="5">2MASS</bcf:citekey>
+    <bcf:citekey order="6">Moura-Santos_2016</bcf:citekey>
+    <bcf:citekey order="7">select_func_par:Afshordi2004</bcf:citekey>
+    <bcf:citekey order="8">simillar_ISW_analysis</bcf:citekey>
+    <bcf:citekey order="9">wmap_supplement</bcf:citekey>
+    <bcf:citekey order="10">2MASS</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2352,4 +2362,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>
