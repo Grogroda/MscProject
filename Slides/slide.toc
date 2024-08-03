@@ -2,4 +2,4 @@
 \beamer@sectionintoc {2}{Optimized Galaxy Survey}{19}{0}{2}
 \beamer@sectionintoc {3}{Data Processing}{31}{0}{3}
 \beamer@sectionintoc {4}{Analysis and Results}{42}{0}{4}
-\beamer@sectionintoc {5}{Conclusions}{49}{0}{5}
+\beamer@sectionintoc {5}{Conclusions}{51}{0}{5}

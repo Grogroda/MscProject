@@ -149,11 +149,11 @@ subsubsectionstyle=show/shaded/hide]
         \Theta(\hat{\mathbf{k}}, \mu)=\sum_{\ell=0}^\infty (2\ell+1)(-i)^\ell \Theta_\ell(\hat{\mathbf{k}})\mathcal{P}_\ell(\mu),
     \end{equation}
 
-    where
+    where $\mu=\hat{\mathbf{k}}\cdot \hat{\mathbf{p}}$ and $\mathcal{P}_\ell$ are Legendre polynomials.
 
-    \begin{align}
-        \Theta_\ell&=\frac{1}{(-1)^\ell}\int_{-1}^1 \frac{\mathcal{P}_\ell(\mu) \Theta(\mu)}{2}d\mu, & \mu&=\hat{\mathbf{k}}\cdot \hat{\mathbf{p}}. 
-    \end{align}
+    %\begin{align}
+    %    \Theta_\ell&=\frac{1}{(-1)^\ell}\int_{-1}^1 \frac{\mathcal{P}_\ell(\mu) \Theta(\mu)}{2}d\mu, & \mu&=\hat{\mathbf{k}}\cdot \hat{\mathbf{p}}. 
+    %\end{align}
 \end{frame}
 
 \begin{frame}{Analytical Approximation}
@@ -459,7 +459,15 @@ sized with null cross-correlation.}
 \section{Data Processing}
 
 \begin{frame}{WMAP Data}
-INFO+MOTIVATION \cite{wmap_supplement}
+The CMB temperature maps used in this project are the ones provided by WMAP9 \cite{wmap_supplement}.
+
+\begin{itemize}
+	\item Three frequency bands were used, which are named bands Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$);
+	\item The temperature intensity maps' noise power can be well modeled as uncorrelated Gaussian fluctuations;
+	\item The monopole and kinematic dipole due to the solar system movement have been removed;
+	\item Despite having a lower resolution ($0.3\deg$) compared to Planck's ($0.083\deg$), this project focuses on lower multipoles;
+	\item We have combined both maps' masks and used it for analysing each one, resulting in a fraction $f_\text{sky}=0.7$.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{WMAP Data}
@@ -488,7 +496,13 @@ INFO+MOTIVATION \cite{wmap_supplement}
 \end{frame}
 
 \begin{frame}{2MASS Catalog}
-INFO+MOTIVATION \cite{2MASS}
+Wide sky coverage is a very important aspect of studying cross-correlation spectra, and the 2MASS catalog contains raw imaging data covering $99.998\%$ of the sky \cite{2MASS}, which was the dataset used. 
+
+\begin{itemize}
+	\item We have used the $K_s$ ($\SI{2.16}{\mu \meter}$) band of the Extended Source Catalog (XSC);
+	\item The data of the $K_s$ band obtained from a 20 mag aperture ($K_{20}$) were corrected for galactic extinction, and the remaining data was further divided into 4 bands: Bands 1 ($12.0<K_{20}'<12.5$), 2 ($12.5<K_{20}'<13.0$), 3 ($13.0<K_{20}'<13.5$) and 4 ($13.5<K_{20}'<14.0$);
+	\item Each band has a different selection function, as shown in Figure \ref{fig:selection_2MASS}.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{2MASS Catalog}
@@ -612,6 +626,38 @@ where
 \end{frame}
 
 \section{Analysis and Results}
+
+\begin{frame}{Monte Carlo Markov Chains}
+	By using the likelihood $\mathcal{L}(C_\ell|\theta)$ of the data $C_\ell$ being described by a parameter combination $\theta$, one can use Markov chains to obtain samples of each parameter in $\theta$ following the posterior distribution
+	
+	\begin{equation}
+		P(\theta|C_\ell)=\mathcal{L}(C_\ell|\theta)p(\theta)
+	\end{equation}
+	
+	Joint posteriors can be easily obtained from each parameter sample, strongly simplifying data analysis for multiple parameter models.
+\end{frame}
+
+\begin{frame}{Planck Likelihoods}
+	\begin{columns}
+    \column{0.4\linewidth}
+	We have produced samples using the following Planck likelihoods
+	
+	\begin{itemize}
+		\item the CMB intensity  autocorrelation power spectrum (TT);
+
+		\item the CMB E-mode polarization  autocorrelation power spectrum (EE);
+
+		\item the CMB intensity-polarization cross-correlation spectrum (TE).
+	\end{itemize}
+	\column{0.6\linewidth}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{pic/compare_likelihoods.png}
+	\caption{Joint posterior distributions of cosmological parameters using Planck’s CMB temperature (T) and polarization (E) data.}
+	\label{fig:Planck_posteriors}
+	\end{figure}
+	\end{columns}
+\end{frame}
 
 \begin{frame}{Likelihood Profiling}
     To analyze the data, we have opted to profile the likelihood functions applied to $\Omega_m$. The likelihood of each point in the spectrum was assumed to be Gaussian

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  1 AUG 2024 23:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  2 AUG 2024 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1667,18 +1667,18 @@ Package biblatex Info: ... file 'slide.bbl' found.
 Package biblatex Info: Reference section=0 on input line 53.
 Package biblatex Info: Reference segment=0 on input line 53.
  (./slide.nav)
-<pic/USP-Brasão.jpg, id=111, 936.49875pt x 1084.05pt>
+<pic/USP-Brasão.jpg, id=113, 936.49875pt x 1084.05pt>
 File: pic/USP-Brasão.jpg Graphic file (type jpg)
 <use pic/USP-Brasão.jpg>
 Package pdftex.def Info: pic/USP-Brasão.jpg  used on input line 75.
 (pdftex.def)             Requested size: 67.71683pt x 78.37244pt.
-<pic/logo-ifusp-colorido_16.png, id=112, 416.15475pt x 163.45065pt>
+<pic/logo-ifusp-colorido_16.png, id=114, 416.15475pt x 163.45065pt>
 File: pic/logo-ifusp-colorido_16.png Graphic file (type png)
 <use pic/logo-ifusp-colorido_16.png>
 Package pdftex.def Info: pic/logo-ifusp-colorido_16.png  used on input line 75.
 
 (pdftex.def)             Requested size: 99.58464pt x 39.11172pt.
-<pic/CNPq_logo.png, id=114, 555.5154pt x 171.039pt>
+<pic/CNPq_logo.png, id=116, 555.5154pt x 171.039pt>
 File: pic/CNPq_logo.png Graphic file (type png)
 <use pic/CNPq_logo.png>
 Package pdftex.def Info: pic/CNPq_logo.png  used on input line 75.
@@ -1751,7 +1751,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [4
 
 ]
-<pic/ISW_illustration.png, id=525, 398.48875pt x 210.7875pt>
+<pic/ISW_illustration.png, id=537, 398.48875pt x 210.7875pt>
 File: pic/ISW_illustration.png Graphic file (type png)
 <use pic/ISW_illustration.png>
 Package pdftex.def Info: pic/ISW_illustration.png  used on input line 107.
@@ -1787,7 +1787,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 pdfTeX warning: /usr/bin/pdflatex (file ./pic/planck_spectrum.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<pic/planck_spectrum.pdf, id=1133, 475.05078pt x 329.1196pt>
+<pic/planck_spectrum.pdf, id=1159, 475.05078pt x 329.1196pt>
 File: pic/planck_spectrum.pdf Graphic file (type pdf)
 <use pic/planck_spectrum.pdf>
 Package pdftex.def Info: pic/planck_spectrum.pdf  used on input line 227.
@@ -1797,7 +1797,7 @@ Package pdftex.def Info: pic/planck_spectrum.pdf  used on input line 227.
  <./pic/planck_spectrum.pdf>] [13
 
 ]
-<pic/Pk_3dmatter_LCDM.png, id=1569, 462.528pt x 346.896pt>
+<pic/Pk_3dmatter_LCDM.png, id=1599, 462.528pt x 346.896pt>
 File: pic/Pk_3dmatter_LCDM.png Graphic file (type png)
 <use pic/Pk_3dmatter_LCDM.png>
 Package pdftex.def Info: pic/Pk_3dmatter_LCDM.png  used on input line 250.
@@ -1813,7 +1813,7 @@ Overfull \vbox (4.94621pt too high) detected at line 250
 ] [16
 
 ]
-<pic/Ctt_comparison.png, id=1830, 578.16pt x 390.9807pt>
+<pic/Ctt_comparison.png, id=1866, 578.16pt x 390.9807pt>
 File: pic/Ctt_comparison.png Graphic file (type png)
 <use pic/Ctt_comparison.png>
 Package pdftex.def Info: pic/Ctt_comparison.png  used on input line 292.
@@ -1825,7 +1825,7 @@ Overfull \vbox (4.7073pt too high) detected at line 292
 [17
 
  <./pic/Ctt_comparison.png>]
-<pic/Correlations_DoublePlot.png, id=1918, 918.5517pt x 375.804pt>
+<pic/Correlations_DoublePlot.png, id=1956, 918.5517pt x 375.804pt>
 File: pic/Correlations_DoublePlot.png Graphic file (type png)
 <use pic/Correlations_DoublePlot.png>
 Package pdftex.def Info: pic/Correlations_DoublePlot.png  used on input line 30
@@ -1842,7 +1842,7 @@ Overfull \vbox (4.58357pt too high) detected at line 302
 ] [20
 
 ]
-<pic/selection_2MASS.png, id=2185, 456.0237pt x 338.2236pt>
+<pic/selection_2MASS.png, id=2230, 456.0237pt x 338.2236pt>
 File: pic/selection_2MASS.png Graphic file (type png)
 <use pic/selection_2MASS.png>
 Package pdftex.def Info: pic/selection_2MASS.png  used on input line 340.
@@ -1854,7 +1854,7 @@ Overfull \vbox (6.10992pt too high) detected at line 340
 [21
 
  <./pic/selection_2MASS.png>]
-<pic/Selection_TriplePlot.png, id=2274, 1084.05pt x 361.35pt>
+<pic/Selection_TriplePlot.png, id=2320, 1084.05pt x 361.35pt>
 File: pic/Selection_TriplePlot.png Graphic file (type png)
 <use pic/Selection_TriplePlot.png>
 Package pdftex.def Info: pic/Selection_TriplePlot.png  used on input line 349.
@@ -1864,7 +1864,7 @@ Package pdftex.def Info: pic/Selection_TriplePlot.png  used on input line 349.
  <./pic/Selection_TriplePlot.png>] [23
 
 ]
-<pic/hist_l4.png, id=2447, 722.7pt x 578.16pt>
+<pic/hist_l4.png, id=2497, 722.7pt x 578.16pt>
 File: pic/hist_l4.png Graphic file (type png)
 <use pic/hist_l4.png>
 Package pdftex.def Info: pic/hist_l4.png  used on input line 383.
@@ -1873,7 +1873,7 @@ LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 383.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 383.
-<pic/hist_l30.png, id=2448, 722.7pt x 578.16pt>
+<pic/hist_l30.png, id=2498, 722.7pt x 578.16pt>
 File: pic/hist_l30.png Graphic file (type png)
 <use pic/hist_l30.png>
 Package pdftex.def Info: pic/hist_l30.png  used on input line 383.
@@ -1891,7 +1891,7 @@ Overfull \vbox (9.01637pt too high) detected at line 383
  <./pic/hist_l4.png> <./pic/hist_l30.png>] [25
 
 ]
-<pic/triple_colorplot.png, id=2627, 462.528pt x 323.0469pt>
+<pic/triple_colorplot.png, id=2682, 462.528pt x 323.0469pt>
 File: pic/triple_colorplot.png Graphic file (type png)
 <use pic/triple_colorplot.png>
 Package pdftex.def Info: pic/triple_colorplot.png  used on input line 412.
@@ -1905,7 +1905,7 @@ Overfull \vbox (10.54526pt too high) detected at line 412
  <./pic/triple_colorplot.png>] [27
 
 ]
-<pic/minimum_SelFunc.png, id=2800, 650.43pt x 433.62pt>
+<pic/minimum_SelFunc.png, id=2859, 650.43pt x 433.62pt>
 File: pic/minimum_SelFunc.png Graphic file (type png)
 <use pic/minimum_SelFunc.png>
 Package pdftex.def Info: pic/minimum_SelFunc.png  used on input line 434.
@@ -1913,7 +1913,7 @@ Package pdftex.def Info: pic/minimum_SelFunc.png  used on input line 434.
  [28
 
  <./pic/minimum_SelFunc.png>]
-<pic/minimumX2mass.png, id=2888, 650.43pt x 433.62pt>
+<pic/minimumX2mass.png, id=2949, 650.43pt x 433.62pt>
 File: pic/minimumX2mass.png Graphic file (type png)
 <use pic/minimumX2mass.png>
 Package pdftex.def Info: pic/minimumX2mass.png  used on input line 449.
@@ -1931,20 +1931,20 @@ Overfull \vbox (2.95332pt too high) detected at line 449
 ] [32
 
 ]
-<pic/wmap_Q_wmask.png, id=3240, 614.295pt x 361.35pt>
+<pic/wmap_Q_wmask.png, id=3309, 614.295pt x 361.35pt>
 File: pic/wmap_Q_wmask.png Graphic file (type png)
 <use pic/wmap_Q_wmask.png>
-Package pdftex.def Info: pic/wmap_Q_wmask.png  used on input line 488.
+Package pdftex.def Info: pic/wmap_Q_wmask.png  used on input line 496.
 (pdftex.def)             Requested size: 127.47125pt x 74.98148pt.
-<pic/wmap_V_wmask.png, id=3241, 614.295pt x 361.35pt>
+<pic/wmap_V_wmask.png, id=3310, 614.295pt x 361.35pt>
 File: pic/wmap_V_wmask.png Graphic file (type png)
 <use pic/wmap_V_wmask.png>
-Package pdftex.def Info: pic/wmap_V_wmask.png  used on input line 488.
+Package pdftex.def Info: pic/wmap_V_wmask.png  used on input line 496.
 (pdftex.def)             Requested size: 127.47125pt x 74.98148pt.
-<pic/wmap_W_wmask.png, id=3242, 613.5723pt x 361.35pt>
+<pic/wmap_W_wmask.png, id=3311, 613.5723pt x 361.35pt>
 File: pic/wmap_W_wmask.png Graphic file (type png)
 <use pic/wmap_W_wmask.png>
-Package pdftex.def Info: pic/wmap_W_wmask.png  used on input line 488.
+Package pdftex.def Info: pic/wmap_W_wmask.png  used on input line 496.
 (pdftex.def)             Requested size: 127.47125pt x 75.0697pt.
  [33
 
@@ -1952,28 +1952,28 @@ Package pdftex.def Info: pic/wmap_W_wmask.png  used on input line 488.
 4
 
 ]
-<pic/band1_wmask_xsc.png, id=3425, 613.5723pt x 361.35pt>
+<pic/band1_wmask_xsc.png, id=3499, 613.5723pt x 361.35pt>
 File: pic/band1_wmask_xsc.png Graphic file (type png)
 <use pic/band1_wmask_xsc.png>
-Package pdftex.def Info: pic/band1_wmask_xsc.png  used on input line 513.
+Package pdftex.def Info: pic/band1_wmask_xsc.png  used on input line 527.
 (pdftex.def)             Requested size: 195.1881pt x 114.95065pt.
-<pic/band2_wmask_xsc.png, id=3426, 614.295pt x 361.35pt>
+<pic/band2_wmask_xsc.png, id=3500, 614.295pt x 361.35pt>
 File: pic/band2_wmask_xsc.png Graphic file (type png)
 <use pic/band2_wmask_xsc.png>
-Package pdftex.def Info: pic/band2_wmask_xsc.png  used on input line 513.
+Package pdftex.def Info: pic/band2_wmask_xsc.png  used on input line 527.
 (pdftex.def)             Requested size: 195.1881pt x 114.81833pt.
  [35
 
  <./pic/band1_wmask_xsc.png> <./pic/band2_wmask_xsc.png>]
-<pic/band3_wmask_xsc.png, id=3519, 614.295pt x 361.35pt>
+<pic/band3_wmask_xsc.png, id=3595, 614.295pt x 361.35pt>
 File: pic/band3_wmask_xsc.png Graphic file (type png)
 <use pic/band3_wmask_xsc.png>
-Package pdftex.def Info: pic/band3_wmask_xsc.png  used on input line 534.
+Package pdftex.def Info: pic/band3_wmask_xsc.png  used on input line 548.
 (pdftex.def)             Requested size: 195.1881pt x 114.81833pt.
-<pic/band4_wmask_xsc.png, id=3520, 614.295pt x 361.35pt>
+<pic/band4_wmask_xsc.png, id=3596, 614.295pt x 361.35pt>
 File: pic/band4_wmask_xsc.png Graphic file (type png)
 <use pic/band4_wmask_xsc.png>
-Package pdftex.def Info: pic/band4_wmask_xsc.png  used on input line 534.
+Package pdftex.def Info: pic/band4_wmask_xsc.png  used on input line 548.
 (pdftex.def)             Requested size: 195.1881pt x 114.81833pt.
  [36
 
@@ -1986,13 +1986,13 @@ Package pdftex.def Info: pic/band4_wmask_xsc.png  used on input line 534.
 ] [40
 
 ]
-<pic/Full_Data_Plot.png, id=3957, 1445.4pt x 1156.32pt>
+<pic/Full_Data_Plot.png, id=4043, 1445.4pt x 1156.32pt>
 File: pic/Full_Data_Plot.png Graphic file (type png)
 <use pic/Full_Data_Plot.png>
-Package pdftex.def Info: pic/Full_Data_Plot.png  used on input line 612.
+Package pdftex.def Info: pic/Full_Data_Plot.png  used on input line 626.
 (pdftex.def)             Requested size: 278.8193pt x 165.99475pt.
 
-Overfull \vbox (7.60953pt too high) detected at line 612
+Overfull \vbox (7.60953pt too high) detected at line 626
  []
 
 [41
@@ -2002,71 +2002,81 @@ Overfull \vbox (7.60953pt too high) detected at line 612
 ] [43
 
 ]
-<pic/profile_ctg_Nmc2e7.png, id=4223, 462.528pt x 346.896pt>
-File: pic/profile_ctg_Nmc2e7.png Graphic file (type png)
-<use pic/profile_ctg_Nmc2e7.png>
-Package pdftex.def Info: pic/profile_ctg_Nmc2e7.png  used on input line 652.
-(pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
+<pic/compare_likelihoods.png, id=4313, 859.2903pt x 448.7967pt>
+File: pic/compare_likelihoods.png Graphic file (type png)
+<use pic/compare_likelihoods.png>
+Package pdftex.def Info: pic/compare_likelihoods.png  used on input line 660.
+(pdftex.def)             Requested size: 239.00558pt x 124.82675pt.
+ [44
 
-Overfull \vbox (10.86897pt too high) detected at line 652
- []
-
-[44
-
- <./pic/profile_ctg_Nmc2e7.png>]
-<pic/profile_allbands_Nmc2e7.png, id=4311, 462.528pt x 346.896pt>
-File: pic/profile_allbands_Nmc2e7.png Graphic file (type png)
-<use pic/profile_allbands_Nmc2e7.png>
-Package pdftex.def Info: pic/profile_allbands_Nmc2e7.png  used on input line 67
-0.
-(pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
-
-Overfull \vbox (10.86897pt too high) detected at line 670
- []
-
-[45
-
- <./pic/profile_allbands_Nmc2e7.png>] [46
+ <./pic/compare_likelihoods.png>] [45
 
 ]
-<pic/profile_BestBand.png, id=4484, 462.528pt x 346.896pt>
-File: pic/profile_BestBand.png Graphic file (type png)
-<use pic/profile_BestBand.png>
-Package pdftex.def Info: pic/profile_BestBand.png  used on input line 699.
+<pic/profile_ctg_Nmc2e7.png, id=4492, 462.528pt x 346.896pt>
+File: pic/profile_ctg_Nmc2e7.png Graphic file (type png)
+<use pic/profile_ctg_Nmc2e7.png>
+Package pdftex.def Info: pic/profile_ctg_Nmc2e7.png  used on input line 698.
 (pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
 
-Overfull \vbox (10.86897pt too high) detected at line 699
+Overfull \vbox (10.86897pt too high) detected at line 698
+ []
+
+[46
+
+ <./pic/profile_ctg_Nmc2e7.png>]
+<pic/profile_allbands_Nmc2e7.png, id=4581, 462.528pt x 346.896pt>
+File: pic/profile_allbands_Nmc2e7.png Graphic file (type png)
+<use pic/profile_allbands_Nmc2e7.png>
+Package pdftex.def Info: pic/profile_allbands_Nmc2e7.png  used on input line 71
+6.
+(pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
+
+Overfull \vbox (10.86897pt too high) detected at line 716
  []
 
 [47
 
- <./pic/profile_BestBand.png>] [48
+ <./pic/profile_allbands_Nmc2e7.png>] [48
 
-] (./slide.toc) [49
+]
+<pic/profile_BestBand.png, id=4758, 462.528pt x 346.896pt>
+File: pic/profile_BestBand.png Graphic file (type png)
+<use pic/profile_BestBand.png>
+Package pdftex.def Info: pic/profile_BestBand.png  used on input line 745.
+(pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
 
-] [50
+Overfull \vbox (10.86897pt too high) detected at line 745
+ []
 
-] [51
+[49
+
+ <./pic/profile_BestBand.png>] [50
+
+] (./slide.toc) [51
+
+] [52
+
+] [53
 
 ]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 729.
- [52
+(Font)              scaled to size 35.82726pt on input line 775.
+ [54
 
 ]
-[53
+[55
 
-] [54
+] [56
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-43.
+89.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [55
+) [57
 
 ]
-[56
+[58
 
 
 ]
@@ -2087,10 +2097,10 @@ Package logreq Info: Writing requests to 'slide.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40161 strings out of 478287
- 798691 string characters out of 5849289
- 1575300 words of memory out of 5000000
- 57415 multiletter control sequences out of 15000+600000
+ 40178 strings out of 478287
+ 799025 string characters out of 5849289
+ 1576446 words of memory out of 5000000
+ 57426 multiletter control sequences out of 15000+600000
  625775 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,20n,131p,738b,1706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2105,10 +2115,10 @@ ourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sftt1095.pfb>
-Output written on slide.pdf (56 pages, 2986213 bytes).
+Output written on slide.pdf (58 pages, 3123358 bytes).
 PDF statistics:
- 5441 PDF objects out of 6186 (max. 8388607)
- 4962 compressed objects within 50 object streams
- 175 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5736 PDF objects out of 6186 (max. 8388607)
+ 5248 compressed objects within 53 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

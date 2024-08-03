@@ -43,8 +43,9 @@
 \beamer@slide {matrix_S}{40}
 \beamer@slide {s_lm=}{40}
 \beamer@slide {fig:correlations_obtained}{41}
-\beamer@slide {likelihood_cl}{43}
-\beamer@slide {likelihood_cxy}{43}
-\beamer@slide {fig:prof_ctg}{44}
-\beamer@slide {fig:prof_ctg_cgg}{45}
-\beamer@slide {fig:profile_BestBand}{47}
+\beamer@slide {fig:Planck_posteriors}{44}
+\beamer@slide {likelihood_cl}{45}
+\beamer@slide {likelihood_cxy}{45}
+\beamer@slide {fig:prof_ctg}{46}
+\beamer@slide {fig:prof_ctg_cgg}{47}
+\beamer@slide {fig:profile_BestBand}{49}
