@@ -14,7 +14,7 @@
 \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
 \usepackage{graphicx,pstricks,listings,stackengine}
 \usepackage{lipsum}
-\usepackage{subcaption}
+%\usepackage{subcaption}
 \input{packages}
 
 \author{Arthur Diniz Meirelles \\
@@ -299,6 +299,88 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
 cross-correlation (right).}
         \label{fig:ISWplots_Cgg_and_Ctg}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Dark Energy Models}
+	\begin{columns}
+	\column{0.5\linewidth}
+	
+	Some alternative dark energy models allow for time varying equations of state. One of the most common parametrizations is the so called Chevallier-Polarski-Linder (CPL) parametrization:
+	
+	\begin{equation}
+		w(z)=w_0+\left(1-\frac{1}{1+z}\right)w_a
+	\end{equation}
+	
+	\column{0.5\linewidth}
+	
+	\begin{table}[!htb]
+    \centering
+    \begin{tabular}{cc} \hline
+     Parameter & Marginalized Value \\ \hline
+     $w_0$ & $-0.957\pm0.080$\\
+     $w_a$ & $-0.29\substack{+0.32 \\ -0.26}$\\
+     $H_0 [\text{km s}^{-1}\text{Mpc}^{-1}]$ & $68.31\pm0.82$ \\
+     $\sigma_8$ & $0.820\pm 0.011$\\ \hline
+     $\Delta \chi^2$ & -1.4 \\ \hline
+    \end{tabular}
+    \caption{Marginalized values and $68\%$ confidence limits for cosmological parameters, assuming the CPL parametrization.}
+    \label{tab:planck_CPL}
+\end{table}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Dark Energy Models}
+
+    \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{pic/full_doublscale_Wafixo0.33.png}
+            %\caption{Cap 1}
+            \label{fig:DE_wa033}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{pic/full_doublscale_Wafixo0.67.png}
+            %\caption{Cap 2}
+            \label{fig:DE_wa067}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{pic/full_doublscale_Wafixo1.00.png}
+            %\caption{Cap 3}
+            \label{fig:DE_wa1}
+        \end{subfigure}
+    \caption{CMB temperature autocorrelation spectrum calculated with parameter combinations using the CPL parametrization.}
+    \label{fig:DE_wa_fixo}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Dark Energy Models}
+
+    \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{pic/full_doublscale_Cs2fixo0.01.png}
+            %\caption{Cap 1}
+            \label{fig:DE_cs001}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{pic/full_doublscale_Cs2fixo0.10.png}
+            %\caption{Cap 2}
+            \label{fig:DE_cs01}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{pic/full_doublscale_Cs2fixo1.00.png}
+            %\caption{Cap 3}
+            \label{fig:DE_cs1}
+        \end{subfigure}
+    \caption{CMB temperature autocorrelation spectrum calculated with parameter combinations using the CPL parametrization.}
+    \label{fig:DE_cs_fixo}
+    \end{figure}
+
 \end{frame}
 
 \section{Optimized Galaxy Survey}
