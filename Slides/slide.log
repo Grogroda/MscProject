@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  4 AUG 2024 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  7 AUG 2024 01:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,7 +1089,10 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count385
 
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-(./packages.tex (/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
+(./packages.tex (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
@@ -1640,6 +1643,17 @@ Dictionary: translator-theorem-dictionary, Language: English
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 53.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 53.
 \c@lstlisting=\count540
+\symgns@font=\mathgroup11
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/futs/m/n --> TS1/futs/b/n on input line 53.
+Package gensymb Info: Math companion symbols declared on input line 53.
+LaTeX Info: Redefining \degree on input line 53.
+LaTeX Info: Redefining \celsius on input line 53.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 53.
+LaTeX Info: Redefining \ohm on input line 53.
+Package gensymb Info: Using \textohm for \ohm on input line 53.
+Package gensymb Info: Using \textmu for \micro on input line 53.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1667,18 +1681,18 @@ Package biblatex Info: ... file 'slide.bbl' found.
 Package biblatex Info: Reference section=0 on input line 53.
 Package biblatex Info: Reference segment=0 on input line 53.
  (./slide.nav)
-<pic/USP-Brasão.jpg, id=116, 936.49875pt x 1084.05pt>
+<pic/USP-Brasão.jpg, id=112, 936.49875pt x 1084.05pt>
 File: pic/USP-Brasão.jpg Graphic file (type jpg)
 <use pic/USP-Brasão.jpg>
 Package pdftex.def Info: pic/USP-Brasão.jpg  used on input line 75.
 (pdftex.def)             Requested size: 67.71683pt x 78.37244pt.
-<pic/logo-ifusp-colorido_16.png, id=117, 416.15475pt x 163.45065pt>
+<pic/logo-ifusp-colorido_16.png, id=113, 416.15475pt x 163.45065pt>
 File: pic/logo-ifusp-colorido_16.png Graphic file (type png)
 <use pic/logo-ifusp-colorido_16.png>
 Package pdftex.def Info: pic/logo-ifusp-colorido_16.png  used on input line 75.
 
 (pdftex.def)             Requested size: 99.58464pt x 39.11172pt.
-<pic/CNPq_logo.png, id=119, 555.5154pt x 171.039pt>
+<pic/CNPq_logo.png, id=115, 555.5154pt x 171.039pt>
 File: pic/CNPq_logo.png Graphic file (type png)
 <use pic/CNPq_logo.png>
 Package pdftex.def Info: pic/CNPq_logo.png  used on input line 75.
@@ -1714,64 +1728,70 @@ g>] (./slide.toc) [2
 
 ]
 LaTeX Font Info:    Trying to load font information for FML+futmi on input line
- 93.
+ 103.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 93.
+(Font)              scaled to size 10.07397pt on input line 103.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 93.
+(Font)              scaled to size 7.63599pt on input line 103.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 93.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
-
+(Font)              scaled to size 5.51999pt on input line 103.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 103
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 103
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 93.
+(Font)              scaled to size 10.07397pt on input line 103.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 93.
+(Font)              scaled to size 7.63599pt on input line 103.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 93.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 93
-.
+(Font)              scaled to size 5.51999pt on input line 103.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [4
+)
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
+103.
 
-]
-<pic/ISW_illustration.png, id=555, 398.48875pt x 210.7875pt>
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+)
+<pic/ISW_illustration.png, id=444, 398.48875pt x 210.7875pt>
 File: pic/ISW_illustration.png Graphic file (type png)
 <use pic/ISW_illustration.png>
-Package pdftex.def Info: pic/ISW_illustration.png  used on input line 107.
-(pdftex.def)             Requested size: 239.00558pt x 126.42523pt.
- [5
+Package pdftex.def Info: pic/ISW_illustration.png  used on input line 103.
+(pdftex.def)             Requested size: 199.1693pt x 105.35489pt.
+ [4
 
  <./pic/ISW_illustration.png>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 120.
+(Font)              scaled to size 11.03998pt on input line 115.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 120.
+(Font)              scaled to size 8.27998pt on input line 115.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 120.
+(Font)              scaled to size 6.43999pt on input line 115.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 120.
+(Font)              scaled to size 11.03998pt on input line 115.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 120.
+(Font)              scaled to size 8.27998pt on input line 115.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 120.
- [6
+(Font)              scaled to size 6.43999pt on input line 115.
+ [5
+
+] [6
 
 ] [7
 
@@ -1781,350 +1801,875 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 ] [10
 
-] [11
-
 ]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./pic/planck_spectrum.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<pic/planck_spectrum.pdf, id=1199, 475.05078pt x 329.1196pt>
+<pic/planck_spectrum.pdf, id=1060, 475.05078pt x 329.1196pt>
 File: pic/planck_spectrum.pdf Graphic file (type pdf)
 <use pic/planck_spectrum.pdf>
-Package pdftex.def Info: pic/planck_spectrum.pdf  used on input line 227.
+Package pdftex.def Info: pic/planck_spectrum.pdf  used on input line 222.
 (pdftex.def)             Requested size: 219.08743pt x 151.78354pt.
-[12
 
- <./pic/planck_spectrum.pdf>] [13
-
-]
-<pic/Pk_3dmatter_LCDM.png, id=1645, 462.528pt x 346.896pt>
-File: pic/Pk_3dmatter_LCDM.png Graphic file (type png)
-<use pic/Pk_3dmatter_LCDM.png>
-Package pdftex.def Info: pic/Pk_3dmatter_LCDM.png  used on input line 250.
-(pdftex.def)             Requested size: 215.10356pt x 161.33144pt.
-
-Overfull \vbox (4.94621pt too high) detected at line 250
+Overfull \vbox (14.21466pt too high) detected at line 222
  []
 
-[14
+[11
 
- <./pic/Pk_3dmatter_LCDM.png>] [15
-
-] [16
+ <./pic/planck_spectrum.pdf>] [12
 
 ]
-<pic/Ctt_comparison.png, id=1920, 578.16pt x 390.9807pt>
+<pic/Pk_3dmatter_LCDM.png, id=1497, 462.528pt x 346.896pt>
+File: pic/Pk_3dmatter_LCDM.png Graphic file (type png)
+<use pic/Pk_3dmatter_LCDM.png>
+Package pdftex.def Info: pic/Pk_3dmatter_LCDM.png  used on input line 245.
+(pdftex.def)             Requested size: 215.10356pt x 161.33144pt.
+
+Overfull \vbox (4.94621pt too high) detected at line 245
+ []
+
+[13
+
+ <./pic/Pk_3dmatter_LCDM.png>] [14
+
+]
+LaTeX Font Info:    Freeze math alphabet allocation in version normal.
+(Font)              Allocated math groups: 14 (local: 2) on input line 278.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 278.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 278.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 278.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 278.
+ [15
+
+]
+<pic/Ctt_comparison.png, id=1762, 578.16pt x 390.9807pt>
 File: pic/Ctt_comparison.png Graphic file (type png)
 <use pic/Ctt_comparison.png>
-Package pdftex.def Info: pic/Ctt_comparison.png  used on input line 292.
+Package pdftex.def Info: pic/Ctt_comparison.png  used on input line 287.
 (pdftex.def)             Requested size: 258.91765pt x 175.09253pt.
 
-Overfull \vbox (4.7073pt too high) detected at line 292
+Overfull \vbox (4.7073pt too high) detected at line 287
+ []
+
+[16
+
+ <./pic/Ctt_comparison.png>]
+<pic/Correlations_DoublePlot.png, id=1851, 918.5517pt x 375.804pt>
+File: pic/Correlations_DoublePlot.png Graphic file (type png)
+<use pic/Correlations_DoublePlot.png>
+Package pdftex.def Info: pic/Correlations_DoublePlot.png  used on input line 29
+7.
+(pdftex.def)             Requested size: 398.3386pt x 162.9688pt.
+
+Overfull \vbox (4.58357pt too high) detected at line 297
  []
 
 [17
 
- <./pic/Ctt_comparison.png>]
-<pic/Correlations_DoublePlot.png, id=2013, 918.5517pt x 375.804pt>
-File: pic/Correlations_DoublePlot.png Graphic file (type png)
-<use pic/Correlations_DoublePlot.png>
-Package pdftex.def Info: pic/Correlations_DoublePlot.png  used on input line 30
-2.
-(pdftex.def)             Requested size: 398.3386pt x 162.9688pt.
+ <./pic/Correlations_DoublePlot.png>] (./slide.toc) [18
 
-Overfull \vbox (4.58357pt too high) detected at line 302
- []
-
-[18
-
- <./pic/Correlations_DoublePlot.png>]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 330.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 330.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 330.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 330.
+]
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 394.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 394.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 394.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 394.
  [19
 
 ]
-<pic/full_doublscale_Wafixo0.33.png, id=2198, 657.657pt x 489.9906pt>
-File: pic/full_doublscale_Wafixo0.33.png Graphic file (type png)
-<use pic/full_doublscale_Wafixo0.33.png>
-Package pdftex.def Info: pic/full_doublscale_Wafixo0.33.png  used on input line
- 357.
-(pdftex.def)             Requested size: 127.47125pt x 94.96834pt.
-<pic/full_doublscale_Wafixo0.67.png, id=2199, 652.5981pt x 490.7133pt>
-File: pic/full_doublscale_Wafixo0.67.png Graphic file (type png)
-<use pic/full_doublscale_Wafixo0.67.png>
-Package pdftex.def Info: pic/full_doublscale_Wafixo0.67.png  used on input line
- 357.
-(pdftex.def)             Requested size: 127.47125pt x 95.84969pt.
-<pic/full_doublscale_Wafixo1.00.png, id=2200, 651.8754pt x 490.7133pt>
-File: pic/full_doublscale_Wafixo1.00.png Graphic file (type png)
-<use pic/full_doublscale_Wafixo1.00.png>
-Package pdftex.def Info: pic/full_doublscale_Wafixo1.00.png  used on input line
- 357.
-(pdftex.def)             Requested size: 127.47125pt x 95.95451pt.
- [20
-
- <./pic/full_doublscale_Wafixo0.33.png> <./pic/full_doublscale_Wafixo0.67.png> 
-<./pic/full_doublscale_Wafixo1.00.png>]
-<pic/full_doublscale_Cs2fixo0.01.png, id=2301, 656.9343pt x 489.9906pt>
-File: pic/full_doublscale_Cs2fixo0.01.png Graphic file (type png)
-<use pic/full_doublscale_Cs2fixo0.01.png>
-Package pdftex.def Info: pic/full_doublscale_Cs2fixo0.01.png  used on input lin
-e 384.
-(pdftex.def)             Requested size: 127.47125pt x 95.07301pt.
-<pic/full_doublscale_Cs2fixo0.10.png, id=2302, 658.3797pt x 490.7133pt>
-File: pic/full_doublscale_Cs2fixo0.10.png Graphic file (type png)
-<use pic/full_doublscale_Cs2fixo0.10.png>
-Package pdftex.def Info: pic/full_doublscale_Cs2fixo0.10.png  used on input lin
-e 384.
-(pdftex.def)             Requested size: 127.47125pt x 95.00359pt.
-<pic/full_doublscale_Cs2fixo1.00.png, id=2303, 651.1527pt x 489.2679pt>
-File: pic/full_doublscale_Cs2fixo1.00.png Graphic file (type png)
-<use pic/full_doublscale_Cs2fixo1.00.png>
-Package pdftex.def Info: pic/full_doublscale_Cs2fixo1.00.png  used on input lin
-e 384.
-(pdftex.def)             Requested size: 127.47125pt x 95.7764pt.
- [21
-
- <./pic/full_doublscale_Cs2fixo0.01.png> <./pic/full_doublscale_Cs2fixo0.10.png
-> <./pic/full_doublscale_Cs2fixo1.00.png>] (./slide.toc) [22
-
-]
-[23
-
-]
-<pic/selection_2MASS.png, id=2593, 456.0237pt x 338.2236pt>
+<pic/selection_2MASS.png, id=2122, 456.0237pt x 338.2236pt>
 File: pic/selection_2MASS.png Graphic file (type png)
 <use pic/selection_2MASS.png>
-Package pdftex.def Info: pic/selection_2MASS.png  used on input line 422.
+Package pdftex.def Info: pic/selection_2MASS.png  used on input line 420.
 (pdftex.def)             Requested size: 219.08743pt x 162.49515pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 420.
 
-Overfull \vbox (6.10992pt too high) detected at line 422
+Overfull \vbox (6.10992pt too high) detected at line 420
  []
 
-[24
+[20
 
  <./pic/selection_2MASS.png>]
-<pic/Selection_TriplePlot.png, id=2687, 1084.05pt x 361.35pt>
+<pic/Selection_TriplePlot.png, id=2211, 1084.05pt x 361.35pt>
 File: pic/Selection_TriplePlot.png Graphic file (type png)
 <use pic/Selection_TriplePlot.png>
-Package pdftex.def Info: pic/Selection_TriplePlot.png  used on input line 431.
+Package pdftex.def Info: pic/Selection_TriplePlot.png  used on input line 429.
 (pdftex.def)             Requested size: 398.3386pt x 132.77661pt.
- [25
+ [21
 
- <./pic/Selection_TriplePlot.png>] [26
+ <./pic/Selection_TriplePlot.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 442.
+ [22
 
 ]
-<pic/hist_l4.png, id=2871, 722.7pt x 578.16pt>
+<pic/hist_l4.png, id=2386, 722.7pt x 578.16pt>
 File: pic/hist_l4.png Graphic file (type png)
 <use pic/hist_l4.png>
 Package pdftex.def Info: pic/hist_l4.png  used on input line 465.
 (pdftex.def)             Requested size: 179.25114pt x 143.4016pt.
-<pic/hist_l30.png, id=2872, 722.7pt x 578.16pt>
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 465.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 465.
+<pic/hist_l30.png, id=2387, 722.7pt x 578.16pt>
 File: pic/hist_l30.png Graphic file (type png)
 <use pic/hist_l30.png>
 Package pdftex.def Info: pic/hist_l30.png  used on input line 465.
 (pdftex.def)             Requested size: 179.25114pt x 143.4016pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 465.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 465.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 465.
 
 Overfull \vbox (9.01637pt too high) detected at line 465
  []
 
-[27
+[23
 
- <./pic/hist_l4.png> <./pic/hist_l30.png>] [28
+ <./pic/hist_l4.png> <./pic/hist_l30.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 479.
+ [24
 
 ]
-<pic/triple_colorplot.png, id=3061, 462.528pt x 323.0469pt>
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
+<pic/triple_colorplot.png, id=2568, 462.528pt x 323.0469pt>
 File: pic/triple_colorplot.png Graphic file (type png)
 <use pic/triple_colorplot.png>
 Package pdftex.def Info: pic/triple_colorplot.png  used on input line 494.
 (pdftex.def)             Requested size: 239.00558pt x 166.93048pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 494.
 
 Overfull \vbox (10.54526pt too high) detected at line 494
  []
 
-[29
+[25
 
- <./pic/triple_colorplot.png>] [30
+ <./pic/triple_colorplot.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 502.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 502.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 502.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 502.
+ [26
 
 ]
-<pic/minimum_SelFunc.png, id=3243, 650.43pt x 433.62pt>
+<pic/minimum_SelFunc.png, id=2744, 650.43pt x 433.62pt>
 File: pic/minimum_SelFunc.png Graphic file (type png)
 <use pic/minimum_SelFunc.png>
 Package pdftex.def Info: pic/minimum_SelFunc.png  used on input line 516.
 (pdftex.def)             Requested size: 239.00558pt x 159.33855pt.
- [31
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 516.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 516.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 516.
+ [27
 
  <./pic/minimum_SelFunc.png>]
-<pic/minimumX2mass.png, id=3337, 650.43pt x 433.62pt>
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 531.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 531.
+<pic/minimumX2mass.png, id=2832, 650.43pt x 433.62pt>
 File: pic/minimumX2mass.png Graphic file (type png)
 <use pic/minimumX2mass.png>
 Package pdftex.def Info: pic/minimumX2mass.png  used on input line 531.
 (pdftex.def)             Requested size: 239.00558pt x 159.33855pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 531.
 
 Overfull \vbox (2.95332pt too high) detected at line 531
  []
 
-[32
+[28
 
- <./pic/minimumX2mass.png>] [33
+ <./pic/minimumX2mass.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 539.
+ [29
 
-] (./slide.toc) [34
-
-] [35
+] (./slide.toc) [30
 
 ]
-<pic/wmap_Q_wmask.png, id=3709, 614.295pt x 361.35pt>
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+ [31
+
+]
+<pic/wmap_Q_wmask.png, id=3189, 614.295pt x 361.35pt>
 File: pic/wmap_Q_wmask.png Graphic file (type png)
 <use pic/wmap_Q_wmask.png>
-Package pdftex.def Info: pic/wmap_Q_wmask.png  used on input line 578.
+Package pdftex.def Info: pic/wmap_Q_wmask.png  used on input line 577.
 (pdftex.def)             Requested size: 127.47125pt x 74.98148pt.
-<pic/wmap_V_wmask.png, id=3710, 614.295pt x 361.35pt>
+<pic/wmap_V_wmask.png, id=3190, 614.295pt x 361.35pt>
 File: pic/wmap_V_wmask.png Graphic file (type png)
 <use pic/wmap_V_wmask.png>
-Package pdftex.def Info: pic/wmap_V_wmask.png  used on input line 578.
+Package pdftex.def Info: pic/wmap_V_wmask.png  used on input line 577.
 (pdftex.def)             Requested size: 127.47125pt x 74.98148pt.
-<pic/wmap_W_wmask.png, id=3711, 613.5723pt x 361.35pt>
+<pic/wmap_W_wmask.png, id=3191, 613.5723pt x 361.35pt>
 File: pic/wmap_W_wmask.png Graphic file (type png)
 <use pic/wmap_W_wmask.png>
-Package pdftex.def Info: pic/wmap_W_wmask.png  used on input line 578.
+Package pdftex.def Info: pic/wmap_W_wmask.png  used on input line 577.
 (pdftex.def)             Requested size: 127.47125pt x 75.0697pt.
- [36
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 577.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 577.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 577.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 577.
+ [32
 
- <./pic/wmap_Q_wmask.png> <./pic/wmap_V_wmask.png> <./pic/wmap_W_wmask.png>] [3
-7
+ <./pic/wmap_Q_wmask.png> <./pic/wmap_V_wmask.png> <./pic/wmap_W_wmask.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 587.
+ [33
 
 ]
-<pic/band1_wmask_xsc.png, id=3906, 613.5723pt x 361.35pt>
+<pic/band1_wmask_xsc.png, id=3377, 613.5723pt x 361.35pt>
 File: pic/band1_wmask_xsc.png Graphic file (type png)
 <use pic/band1_wmask_xsc.png>
-Package pdftex.def Info: pic/band1_wmask_xsc.png  used on input line 609.
+Package pdftex.def Info: pic/band1_wmask_xsc.png  used on input line 608.
 (pdftex.def)             Requested size: 195.1881pt x 114.95065pt.
-<pic/band2_wmask_xsc.png, id=3907, 614.295pt x 361.35pt>
+<pic/band2_wmask_xsc.png, id=3378, 614.295pt x 361.35pt>
 File: pic/band2_wmask_xsc.png Graphic file (type png)
 <use pic/band2_wmask_xsc.png>
-Package pdftex.def Info: pic/band2_wmask_xsc.png  used on input line 609.
+Package pdftex.def Info: pic/band2_wmask_xsc.png  used on input line 608.
 (pdftex.def)             Requested size: 195.1881pt x 114.81833pt.
- [38
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 608.
+ [34
 
  <./pic/band1_wmask_xsc.png> <./pic/band2_wmask_xsc.png>]
-<pic/band3_wmask_xsc.png, id=4005, 614.295pt x 361.35pt>
+<pic/band3_wmask_xsc.png, id=3472, 614.295pt x 361.35pt>
 File: pic/band3_wmask_xsc.png Graphic file (type png)
 <use pic/band3_wmask_xsc.png>
-Package pdftex.def Info: pic/band3_wmask_xsc.png  used on input line 630.
+Package pdftex.def Info: pic/band3_wmask_xsc.png  used on input line 629.
 (pdftex.def)             Requested size: 195.1881pt x 114.81833pt.
-<pic/band4_wmask_xsc.png, id=4006, 614.295pt x 361.35pt>
+<pic/band4_wmask_xsc.png, id=3473, 614.295pt x 361.35pt>
 File: pic/band4_wmask_xsc.png Graphic file (type png)
 <use pic/band4_wmask_xsc.png>
-Package pdftex.def Info: pic/band4_wmask_xsc.png  used on input line 630.
+Package pdftex.def Info: pic/band4_wmask_xsc.png  used on input line 629.
 (pdftex.def)             Requested size: 195.1881pt x 114.81833pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 629.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 629.
+ [35
+
+ <./pic/band3_wmask_xsc.png> <./pic/band4_wmask_xsc.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 643.
+ [36
+
+]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 654.
+ [37
+
+]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 670.
+ [38
+
+]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 697.
  [39
 
- <./pic/band3_wmask_xsc.png> <./pic/band4_wmask_xsc.png>] [40
-
-] [41
-
-] [42
-
-] [43
-
 ]
-<pic/Full_Data_Plot.png, id=4468, 1445.4pt x 1156.32pt>
+<pic/Full_Data_Plot.png, id=3915, 1445.4pt x 1156.32pt>
 File: pic/Full_Data_Plot.png Graphic file (type png)
 <use pic/Full_Data_Plot.png>
-Package pdftex.def Info: pic/Full_Data_Plot.png  used on input line 708.
+Package pdftex.def Info: pic/Full_Data_Plot.png  used on input line 707.
 (pdftex.def)             Requested size: 278.8193pt x 165.99475pt.
 
-Overfull \vbox (7.60953pt too high) detected at line 708
+Overfull \vbox (7.60953pt too high) detected at line 707
  []
 
-[44
+[40
 
- <./pic/Full_Data_Plot.png>] (./slide.toc) [45
-
-] [46
+ <./pic/Full_Data_Plot.png>] (./slide.toc) [41
 
 ]
-<pic/compare_likelihoods.png, id=4746, 859.2903pt x 448.7967pt>
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 719.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 719.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 719.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 719.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 719.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 719.
+ [42
+
+]
+<pic/compare_likelihoods.png, id=4181, 859.2903pt x 448.7967pt>
 File: pic/compare_likelihoods.png Graphic file (type png)
 <use pic/compare_likelihoods.png>
-Package pdftex.def Info: pic/compare_likelihoods.png  used on input line 742.
-(pdftex.def)             Requested size: 239.00558pt x 124.82675pt.
- [47
+Package pdftex.def Info: pic/compare_likelihoods.png  used on input line 728.
+(pdftex.def)             Requested size: 298.75394pt x 156.03343pt.
+ [43
 
- <./pic/compare_likelihoods.png>] [48
+ <./pic/compare_likelihoods.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 748.
+ [44
 
 ]
-<pic/profile_ctg_Nmc2e7.png, id=4931, 462.528pt x 346.896pt>
+<pic/profile_ctg_Nmc2e7.png, id=4358, 462.528pt x 346.896pt>
 File: pic/profile_ctg_Nmc2e7.png Graphic file (type png)
 <use pic/profile_ctg_Nmc2e7.png>
-Package pdftex.def Info: pic/profile_ctg_Nmc2e7.png  used on input line 780.
+Package pdftex.def Info: pic/profile_ctg_Nmc2e7.png  used on input line 766.
 (pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 766.
 
-Overfull \vbox (10.86897pt too high) detected at line 780
+Overfull \vbox (10.86897pt too high) detected at line 766
  []
 
-[49
+[45
 
  <./pic/profile_ctg_Nmc2e7.png>]
-<pic/profile_allbands_Nmc2e7.png, id=5025, 462.528pt x 346.896pt>
+<pic/profile_allbands_Nmc2e7.png, id=4447, 462.528pt x 346.896pt>
 File: pic/profile_allbands_Nmc2e7.png Graphic file (type png)
 <use pic/profile_allbands_Nmc2e7.png>
-Package pdftex.def Info: pic/profile_allbands_Nmc2e7.png  used on input line 79
-8.
+Package pdftex.def Info: pic/profile_allbands_Nmc2e7.png  used on input line 78
+4.
 (pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 784.
 
-Overfull \vbox (10.86897pt too high) detected at line 798
+Overfull \vbox (10.86897pt too high) detected at line 784
  []
 
-[50
+[46
 
- <./pic/profile_allbands_Nmc2e7.png>] [51
+ <./pic/profile_allbands_Nmc2e7.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 795.
+ [47
 
 ]
-<pic/profile_BestBand.png, id=5207, 462.528pt x 346.896pt>
+<pic/profile_BestBand.png, id=4622, 462.528pt x 346.896pt>
 File: pic/profile_BestBand.png Graphic file (type png)
 <use pic/profile_BestBand.png>
-Package pdftex.def Info: pic/profile_BestBand.png  used on input line 827.
+Package pdftex.def Info: pic/profile_BestBand.png  used on input line 813.
 (pdftex.def)             Requested size: 239.00558pt x 179.2542pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 813.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 813.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 813.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 813.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 813.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 813.
 
-Overfull \vbox (10.86897pt too high) detected at line 827
+Overfull \vbox (10.86897pt too high) detected at line 813
  []
 
-[52
+[48
 
- <./pic/profile_BestBand.png>] [53
+ <./pic/profile_BestBand.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+ [49
 
-] (./slide.toc) [54
+] (./slide.toc) [50
 
-] [55
+]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 831.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 831.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 831.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 831.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 831.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 831.
+ [51
 
-] [56
+]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 838.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 838.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 838.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 838.
+ [52
 
 ]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 857.
- [57
+(Font)              scaled to size 35.82726pt on input line 844.
+ [53
 
 ]
-[58
+[54
 
-] [59
+] [55
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
-71.
+58.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [60
+)
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 858.
+ [56
 
 ]
-[61
+[57
+
+
+] [58
 
 
 ]
@@ -2145,13 +2690,13 @@ Package logreq Info: Writing requests to 'slide.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40262 strings out of 478287
- 801177 string characters out of 5849289
- 1579554 words of memory out of 5000000
- 57483 multiletter control sequences out of 15000+600000
- 625775 words of font info for 175 fonts, out of 8000000 for 9000
+ 40284 strings out of 478287
+ 800979 string characters out of 5849289
+ 1576940 words of memory out of 5000000
+ 57521 multiletter control sequences out of 15000+600000
+ 628506 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,20n,134p,738b,1706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,20n,134p,738b,1707s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/calligra-type1/callig15.pfb></usr/share/texlive/texmf-dist/fonts/ty
@@ -2163,10 +2708,10 @@ ourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sftt1095.pfb>
-Output written on slide.pdf (61 pages, 3517429 bytes).
+Output written on slide.pdf (58 pages, 3122212 bytes).
 PDF statistics:
- 6221 PDF objects out of 7423 (max. 8388607)
- 5710 compressed objects within 58 object streams
- 201 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5686 PDF objects out of 6186 (max. 8388607)
+ 5200 compressed objects within 52 object streams
+ 182 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

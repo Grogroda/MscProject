@@ -2349,11 +2349,15 @@
     <bcf:citekey order="3">simillar_ISW_analysis</bcf:citekey>
     <bcf:citekey order="4">wmap_supplement</bcf:citekey>
     <bcf:citekey order="5">2MASS</bcf:citekey>
-    <bcf:citekey order="6">Moura-Santos_2016</bcf:citekey>
-    <bcf:citekey order="7">select_func_par:Afshordi2004</bcf:citekey>
-    <bcf:citekey order="8">simillar_ISW_analysis</bcf:citekey>
-    <bcf:citekey order="9">wmap_supplement</bcf:citekey>
-    <bcf:citekey order="10">2MASS</bcf:citekey>
+    <bcf:citekey order="6">cross_corr:Planck</bcf:citekey>
+    <bcf:citekey order="7">NVSS</bcf:citekey>
+    <bcf:citekey order="8">Moura-Santos_2016</bcf:citekey>
+    <bcf:citekey order="9">select_func_par:Afshordi2004</bcf:citekey>
+    <bcf:citekey order="10">simillar_ISW_analysis</bcf:citekey>
+    <bcf:citekey order="11">wmap_supplement</bcf:citekey>
+    <bcf:citekey order="12">2MASS</bcf:citekey>
+    <bcf:citekey order="13">cross_corr:Planck</bcf:citekey>
+    <bcf:citekey order="14">NVSS</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

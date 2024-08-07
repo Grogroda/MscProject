@@ -85,24 +85,20 @@ subsubsectionstyle=show/shaded/hide]
 \section{Theoretical Aspects}
 
 \begin{frame}{Introduction}
-    \begin{itemize}
+    \begin{columns}
+        \column{0.5\linewidth}
+        \begin{itemize}
         \item The integrated Sachs-Wolfe (ISW) effect occurs due to time changes in gravitational potentials;
         \item During periods of transition from or to matter-dominated eras of the Universe, potentials change more rapidly;
-        \item Photons that enter gravity wells are affected by gravitational blueshift. After traveling across them during these transition periods, the redshift affecting the photon when it escapes that well does not match the previous blueshift, leaving either a net blueshift or redshift in the photon.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Introduction}
-    \begin{columns}
-        \column{0.6\linewidth}
+        \item Naturally, a statistical correlation between CMB temperature maps and gravitational potentials is expected.
+        \end{itemize}
+        \column{0.5\linewidth}
         \begin{figure}
             \centering
             \includegraphics[width=\linewidth]{pic/ISW_illustration.png}
             \caption{Illustration of the ISW effect. In this case, the gravity wells flattened, leaving a net blueshift.}
             \label{fig:ISW_illustration}
         \end{figure}
-        \column{0.4\linewidth}
-        Naturally, a statistical correlation between CMB temperature maps and gravitational potentials is expected.
     \end{columns}
 \end{frame}
 
@@ -111,8 +107,7 @@ subsubsectionstyle=show/shaded/hide]
 
     \begin{itemize}
         \item The Universe is homogeneous and isotropic at large scales; %talk about consequences
-        \item During its very early stages, it was very compact and energetic;
-        \item An inflationary period is assumed;
+        \item Initial conditions are obtained by assuming an inflationary period when the Universe was very compact and energetic;
         \item Aside from baryonic matter, radiation and neutrinos, the Universe is also composed of cold dark matter and a dark energy component described by a cosmological constant $\Lambda$;
     \end{itemize}
 
@@ -157,7 +152,7 @@ subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
 \begin{frame}{Analytical Approximation}
-Working with first-order equations and the tightly coupled limit, and assuming recombination to be an instantaneous process happening at conformal time $\eta=\eta*$, we can obtain the following analytical solution for the CMB temperature perturbations
+Working with first-order equations and the tightly coupled limit, and assuming recombination to be an instantaneous process happening at conformal time $\eta=\eta*$, we can obtain
 
 \begin{equation}\label{Thetal_approx}
 \begin{split}
@@ -220,7 +215,7 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
      $H_0$ & $67.36 \pm 0.54$ km/s/Mpc \\
      $\sigma_8$ & $0.8111 \pm 0.0060$ \\ \hline
     \end{tabular}
-    \caption{Best fit values of cosmological parameters reported in Planck 2018 results.}
+    \caption{Best-fit values of cosmological parameters reported in Planck 2018 results using TT+TE+EE+lowE and gravitational lensing data.}
     \label{tab:planck_parameters}
 \end{table}
     \end{columns}
@@ -256,7 +251,7 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
         \delta_g(\mathbf{k})=\frac{\rho_g(\mathbf{k})-\bar{\rho}_g}{\bar{\rho}_g}
     \end{equation}
 
-    It is assumed that $\delta_g=b_g\delta$, where $b_g$, which we assume to be a slowly varying function of redshift. 
+    It is assumed that $\delta_g=b_g\delta$, where $b_g$ is the bias factor, which we assume to be a slowly varying function of redshift. 
 
     The cross-correlation function $C_\ell^{tg}$ can then be calculated with
 
@@ -301,7 +296,9 @@ cross-correlation (right).}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Dark Energy Models}
+\iffalse %Everything below this and before \fi is commented
+%All frames commented will be highlighted
+\begin{frame}{Dark Energy Models} %commented
 	\begin{columns}
 	\column{0.5\linewidth}
 	
@@ -329,7 +326,7 @@ cross-correlation (right).}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Dark Energy Models}
+\begin{frame}{Dark Energy Models}%commented
 
     \begin{figure}
         \centering
@@ -356,7 +353,7 @@ cross-correlation (right).}
 
 \end{frame}
 
-\begin{frame}{Dark Energy Models}
+\begin{frame}{Dark Energy Models}%Commented
 
     \begin{figure}
         \centering
@@ -382,6 +379,7 @@ cross-correlation (right).}
     \end{figure}
 
 \end{frame}
+\fi
 
 \section{Optimized Galaxy Survey}
 
@@ -439,6 +437,8 @@ cross-correlation (right).}
         \item For each multipole $\ell$, a histogram of $C_\ell^{tg}$ was produced;
         \item Each histogram was fit with Gaussian distributions with average $\mu=\mu_\ell\approx 0$ and $\sigma^2=\sigma_\ell^2$.
     \end{itemize}
+    
+    The null hypothesis is compatible with $\Omega_m=1$.
 \end{frame}
 
 \begin{frame}{Synthesized Maps' Histograms}
@@ -511,7 +511,7 @@ sized with null cross-correlation.}
         \label{fig:minimum_SelFunc}
     \end{figure}
     \column{0.4\linewidth}
-    The selection function found is deeper than that of 2MASS band 1, but does not favor galaxies at the expected value of $z^*=0.63$, the estimated redshift at which the accelerated expansion started.
+    The selection function found is deeper than that of 2MASS band 1. It does not favor galaxies at $z^*=0.63$, the estimated redshift at which the accelerated expansion started.
 \end{columns}
 \end{frame}
 
@@ -546,8 +546,7 @@ The CMB temperature maps used in this project are the ones provided by WMAP9 \ci
 \begin{itemize}
 	\item Three frequency bands were used, which are named bands Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$);
 	\item The temperature intensity maps' noise power can be well modeled as uncorrelated Gaussian fluctuations;
-	\item The monopole and kinematic dipole due to the solar system movement have been removed;
-	\item Despite having a lower resolution ($0.3\deg$) compared to Planck's ($0.083\deg$), this project focuses on lower multipoles;
+	\item Despite having a lower resolution ($0.3\degree$) compared to Planck's ($0.083\degree$), this project focuses on lower multipoles;
 	\item We have combined both maps' masks and used it for analysing each one, resulting in a fraction $f_\text{sky}=0.7$.
 \end{itemize}
 \end{frame}
@@ -578,7 +577,7 @@ The CMB temperature maps used in this project are the ones provided by WMAP9 \ci
 \end{frame}
 
 \begin{frame}{2MASS Catalog}
-Wide sky coverage is a very important aspect of studying cross-correlation spectra, and the 2MASS catalog contains raw imaging data covering $99.998\%$ of the sky \cite{2MASS}, which was the dataset used. 
+Wide sky coverage is a very influential aspect of studying cross-correlation spectra, and the 2MASS catalog contains raw imaging data covering $99.998\%$ of the sky \cite{2MASS}, which was the dataset used. 
 
 \begin{itemize}
 	\item We have used the $K_s$ ($\SI{2.16}{\mu \meter}$) band of the Extended Source Catalog (XSC);
@@ -639,12 +638,12 @@ Wide sky coverage is a very important aspect of studying cross-correlation spect
 	With a prior $\pi(\mathbf{S})$ we can use Bayes' Theorem to obtain
 	
 	\begin{equation}
-	P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{S})
+	P(\mathbf{C}|\mathbf{d})\propto \pi(\mathbf{S})P(\mathbf{d}|\mathbf{C})
 	\end{equation}	 
 \end{frame}
 
 \begin{frame}{Correlation Spectra Estimator}
-     With the posterior obtained previously, we can sample from $P(\mathbf{C}|\mathbf{s},d)$ and $P(\mathbf{s}|\mathbf{C},d)$. Then we iterate
+     If we can sample from $P(\mathbf{C}|\mathbf{s},d)$ and $P(\mathbf{s}|\mathbf{C},d)$. Then we iterate
 
     \begin{align}
         \mathbf{s}^{i+1}&\leftarrow P(\mathbf{s}|\mathbf{C},d)\\
@@ -720,25 +719,12 @@ where
 \end{frame}
 
 \begin{frame}{Planck Likelihoods}
-	\begin{columns}
-    \column{0.4\linewidth}
-	We have produced samples using the following Planck likelihoods
-	
-	\begin{itemize}
-		\item the CMB intensity  autocorrelation power spectrum (TT);
-
-		\item the CMB E-mode polarization  autocorrelation power spectrum (EE);
-
-		\item the CMB intensity-polarization cross-correlation spectrum (TE).
-	\end{itemize}
-	\column{0.6\linewidth}
 	\begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{pic/compare_likelihoods.png}
+	\includegraphics[width=.75\linewidth]{pic/compare_likelihoods.png}
 	\caption{Joint posterior distributions of cosmological parameters using Planck’s CMB temperature (T) and polarization (E) data.}
 	\label{fig:Planck_posteriors}
 	\end{figure}
-	\end{columns}
 \end{frame}
 
 \begin{frame}{Likelihood Profiling}
@@ -828,8 +814,8 @@ where
 
 \begin{frame}{Discussion}
     \begin{itemize}
-        \item The optimized band being deeper than 2MASS means errors on the spectra should be higher, meaning the errors used are underestimated, which indicates the constraints could be better for a real survey following our optimized selection function;
-        \item The optimized band was not found by optimizing the $\Omega_m$ constraints, but rejecting the null cross-correlation hypothesis. This null hypothesis leads to $\Omega_m=1$, and the fast decrease in likelihood for higher $\Omega_m$ is noticeable.
+        \item The optimized band being deeper than 2MASS means errors on the spectra should be lower, meaning the errors used are overestimated, which indicates the constraints could be better for a real survey following our optimized selection function;
+        \item The optimized band was not found by optimizing the $\Omega_m$ constraints, but rejecting the null cross-correlation hypothesis. $\Omega_m=1$ leads to $C_\ell^{tg}=0$, and the fast decrease in likelihood for higher $\Omega_m$ is noticeable.
     \end{itemize}
 \end{frame}
 
@@ -840,6 +826,7 @@ where
         \item We have obtained the likelihood profiles for $\Omega_m$ obtained from cross-correlation data by studying the ISW effect;
         \item The constraints obtained using only $C^{tg}$ were not strong, but can be used as a complement to other datasets for a combined analysis;
         \item In the 2MASS catalog, the 2 deepest bands -- bands 3 and 4 -- yielded better constraining power;
+        \item The Planck collaboration also studied the ISW effect using the cross-correlation spectrum\cite{cross_corr:Planck}, obtaining significantly better results with deeper surveys (SDSS\cite{NVSS} and Planck's Kappa map).
     \end{itemize}
 \end{frame}
 \begin{frame}{Conclusions}
