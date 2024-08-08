@@ -108,10 +108,22 @@ subsubsectionstyle=show/shaded/hide]
     \begin{itemize}
         \item The Universe is homogeneous and isotropic at large scales; %talk about consequences
         \item Initial conditions are obtained by assuming an inflationary period when the Universe was very compact and energetic;
-        \item Aside from baryonic matter, radiation and neutrinos, the Universe is also composed of cold dark matter and a dark energy component described by a cosmological constant $\Lambda$;
+        \item The Universe is composed of baryonic matter, radiation, neutrinos, cold dark matter and a dark energy component described by a cosmological constant $\Lambda$;
     \end{itemize}
 
     The homogeneous and isotropic background is first set up, and linear perturbations are added to it.
+\end{frame}
+
+\begin{frame}{The Perturbed Metric}
+	We express the perturbed metric with two functions $\Psi(\mathbf{x},t)$ and $\Phi(\mathbf{x},t)$
+	
+	\begin{equation}
+	\begin{cases}
+    		g_{00}=-1-2\Psi(\mathbf{x},t),\\
+    		g_{0i}=g_{i0}=0,\\
+    		g_{ij}=a^2(t)\delta_{ij}[1+2\Phi(\mathbf{x}, t)].
+	\end{cases}
+	\end{equation}
 \end{frame}
 
 \begin{frame}{The $\Lambda$CDM Model}
@@ -222,23 +234,21 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
 \end{frame}
 
 \begin{frame}{The Matter Power Spectrum}
-    To calculate a cross-correlation function, we need the 3D matter power spectrum $P(k,z)$, defined by
-
-    \begin{equation}
-        \av{\delta(\mathbf{k},z) \delta^*(\mathbf{k}',z)}=(2\pi)^3 P(k,z)\delta_D(\mathbf{k}-\mathbf{k}')
-    \end{equation}
-\end{frame}
-
-\begin{frame}{The Matter Power Spectrum}
     \begin{columns}
     \column{0.4\linewidth}
-        Throughout this project, we have used CAMB's implementation of the HALOFIT model to calculate the matter power spectrum.
+    	To calculate a cross-correlation function, we need the 3D matter power spectrum $P(k,z)$, defined by
+    	
+    \begin{equation*}
+        \av{\delta(\mathbf{k},z) \delta^*(\mathbf{k}',z)}=(2\pi)^3 P(k,z)\delta_D(\mathbf{k}-\mathbf{k}')
+    \end{equation*}
+    
+        We have used CAMB's implementation of the HALOFIT model to calculate the matter power spectrum.
         
     \column{0.6\linewidth}
     \begin{figure}
         \centering
         \includegraphics[width=0.9\linewidth]{pic/Pk_3dmatter_LCDM.png}
-        \caption{Matter power spectrum calculated using both a linear approximation and the so-called HALOFIT model.}
+        \caption{Matter power spectrum calculated using both a linear approximation and the HALOFIT model.}
         \label{fig:Pk3dmatter}
     \end{figure}
 \end{columns}
@@ -709,7 +719,7 @@ where
 \section{Analysis and Results}
 
 \begin{frame}{Monte Carlo Markov Chains}
-	By using the likelihood $\mathcal{L}(C_\ell|\theta)$ of the data $C_\ell$ being described by a parameter combination $\theta$, one can use Markov chains to obtain samples of each parameter in $\theta$ following the posterior distribution
+	By defining the likelihood $\mathcal{L}(C_\ell|\theta)$ and the prior $p(\theta)$, one can use Markov chains to obtain samples of each parameter in $\theta$ following the posterior
 	
 	\begin{equation}
 		P(\theta|C_\ell)=\mathcal{L}(C_\ell|\theta)p(\theta)

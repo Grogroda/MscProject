@@ -1,0 +1,41 @@
+P.S.: Todo slide que eu não tiver com "script" aqui, a ideia é explicar organicamente. Onde tiver algo no script, não é a explicação do slide inteira, mas um pin point que eu entenda na hora da apresentação.
+
+Capa: Boa tarde pessoal, meu nome é Arthur, hoje eu vou apresentar defesa da minha dissertação de mestrado, entitulada "Otimização do sinal de correlação cruzada CMB-galaxias para estudos do efeito Sachs-Wolfe integrado". Durante o projeto eu fui orientado pelos professores Edivaldo Moura Santos e Ronaldo Carloto Batista, e deixo aqui meus agradecimentos ao CNPq por providenciar apoio financeiro ao projeto.
+
+- Theory
+
+Vou começar discutindo algumas questões teóricas e conceituais relacionadas ao projeto. 
+
+Intro 1: Ultimo ponto: o redshift ocorrido pode ser maior ou menor do que o blueshift, resultando em uma mudança efetiva da energia do fóton em sua saída comparado à sua entrada.
+
+LCDM 1: Completar com "esses itens em conjunto formam o que chamamos de modelo Lambda CDM, atualmente o mais aceito da cosmologia".
+
+Analytic Approx: Temos 3 termos: um denominado Sachs-Wolfe, um termo associado a efeito Doppler, e por último o termo que nos interessa, o termo Sachs-Wolfe integrado (continuar a explicação dos potenciais variando)
+
+Analytical formula: Esclarecer que são equações pesadas numericamente e integradores analíticos até deram alguns problemas aqui.Lembrar de esclarecer que as equações são referentes à contribuição do ISW e como são obtidas.
+
+- Optimization
+
+
+
+- Data processing
+
+2MASS cat.: Como expressar o ponto 2? (*) Pensei em "A banda Ks seleciona fontes detectadas com 20 de magnitude".
+
+Corr Spect Estimat: Perguntar pro Edivaldo como funciona exatamente o processo, como obtemos essas probs condicionais, se a eq 19 ta certa, etc. (*)
+
+Samplear = amostrar, obter amostras, etc
+
+- Analysis
+
+Disc: Faz sentido o primeiro ponto? 
+
+- Conclusions
+
+
+
+
+
+
+
+
