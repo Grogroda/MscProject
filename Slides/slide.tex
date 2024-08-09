@@ -126,21 +126,41 @@ subsubsectionstyle=show/shaded/hide]
 	\end{equation}
 \end{frame}
 
+%\begin{frame}{The $\Lambda$CDM Model}
+%	The $\Lambda$CDM model explains some important observations, such as
+%	
+%	\begin{itemize}
+%	\item The CMB and its properties;
+%	\item The accelerating expansion of the Universe;
+%	\item The Universe's large scale structure;
+%	\end{itemize}
+%	
+%	And made some important predictions, like
+%	
+%	\begin{itemize}
+%	\item Baryon accoustic oscillations (BAO);
+%	\item The CMB polarization and its properties.
+%	\end{itemize}
+%\end{frame}
+
 \begin{frame}{The $\Lambda$CDM Model}
-	The $\Lambda$CDM model explains some important observations, such as
+	\begin{columns}
 	
-	\begin{itemize}
-	\item The CMB and its properties;
-	\item The accelerating expansion of the Universe;
-	\item The Universe's large scale structure;
-	\end{itemize}
+	\column{0.4\linewidth}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{pic/OmegaL_riess98.png}
+	%\caption{Hubble diagram comparing different cosmological constants. Extracted from \cite{Riess_1998}.}
+	%\label{fig:riess_OmegaL}
+	\end{figure}
 	
-	And made some important predictions, like
+	\column{0.6\linewidth}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{pic/polarization_cross_spec.png}
+	\end{figure}
 	
-	\begin{itemize}
-	\item Baryon accoustic oscillations (BAO);
-	\item The CMB polarization and its properties.
-	\end{itemize}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{The Cosmic Microwave Background}
@@ -258,16 +278,16 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
     To trace the matter density anisotropies, we used galaxy contrast maps, which can be calculated using
 
     \begin{equation}
-        \delta_g(\mathbf{k})=\frac{\rho_g(\mathbf{k})-\bar{\rho}_g}{\bar{\rho}_g}
+        \delta_g(\mathbf{n})=\frac{N_g(\mathbf{n})-\bar{N}_g}{\bar{N}_g}
     \end{equation}
 
     It is assumed that $\delta_g=b_g\delta$, where $b_g$ is the bias factor, which we assume to be a slowly varying function of redshift. 
 
-    The cross-correlation function $C_\ell^{tg}$ can then be calculated with
+    The galaxy autocorrelation $C_{\ell}^{gg}$ and cross-correlation function $C_\ell^{tg}$ can then be calculated with
 
-    \begin{equation}
-        \av{a_{\ell m}^t a_{\ell'm'}^g}=C_\ell^{tg}\delta_{\ell \ell'}\delta_{mm'}
-    \end{equation}
+    \begin{align}
+        \av{a_{\ell m}^t a_{\ell'm'}^g}&=C_\ell^{tg}\delta_{\ell \ell'}\delta_{mm'} & \av{a_{\ell m}^g a_{\ell'm'}^g}&=C_\ell^{gg}\delta_{\ell \ell'}\delta_{mm'}
+    \end{align}
 \end{frame}
 
 \begin{frame}{Analytical Formula}
@@ -641,9 +661,9 @@ Wide sky coverage is a very influential aspect of studying cross-correlation spe
 \begin{frame}{Correlation Spectra Estimator}
 	To estimate the correlation spectra that describe the pixelized maps $d$ with primordial signal $s$ and noise $n$ (with $\mathbf{S}$ and $\mathbf{N}$ being the corresponding covariance matrices), we could use the following likelihood function.
 
-	\begin{equation}\label{ch4:Likelihood}
-	\mathcal{L}=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right).
-	\end{equation}	
+	\begin{align}\label{ch4:Likelihood}
+	\mathcal{L}&=P(\mathbf{d}|\mathbf{C})=\frac{1}{(2\pi)^{n_\text{dim}/2}|\mathbf{C}|^{1/2}}\text{exp}\left(-\frac{1}{2}\mathbf{d}^T \mathbf{C}^{-1} \mathbf{d}\right), & \mathbf{C}&=\mathbf{S}+\mathbf{N}
+	\end{align}	
 
 	With a prior $\pi(\mathbf{S})$ we can use Bayes' Theorem to obtain
 	
@@ -656,8 +676,8 @@ Wide sky coverage is a very influential aspect of studying cross-correlation spe
      If we can sample from $P(\mathbf{C}|\mathbf{s},d)$ and $P(\mathbf{s}|\mathbf{C},d)$. Then we iterate
 
     \begin{align}
-        \mathbf{s}^{i+1}&\leftarrow P(\mathbf{s}|\mathbf{C},d)\\
-        \mathbf{C}^{i+1}&\leftarrow P(\mathbf{C}|\mathbf{s},d),
+        \mathbf{s}^{i+1}&\leftarrow P(\mathbf{s}|\mathbf{C}^i,d)\\
+        \mathbf{C}^{i+1}&\leftarrow P(\mathbf{C}|\mathbf{s}^{i+1},d),
     \end{align}
 
     to obtain a sample of $\{(\mathbf{s}^i, \mathbf{C}^i)\}$.
@@ -738,7 +758,9 @@ where
 \end{frame}
 
 \begin{frame}{Likelihood Profiling}
-    To analyze the data, we have opted to profile the likelihood functions applied to $\Omega_m$. The likelihood of each point in the spectrum was assumed to be Gaussian
+    %To analyze the data, we have opted to profile the likelihood functions applied to $\Omega_m$. 
+    
+    The likelihood of each point in the spectrum was assumed to be Gaussian
 
     \begin{equation}\label{likelihood_cl}
     	\mathcal{L}(C_{\ell\text{, theo}}^{xy}|C_{\ell\text{, data}}^{xy})=\frac{1}{\sigma_\ell \sqrt{2\pi}}\text{exp}\left[-\frac{1}{2}\left(\frac{C_{\ell\text{, data}}^{xy}-C_{\ell\text{, theo}}^{xy}}{\sigma_\ell}\right)^2\right].
