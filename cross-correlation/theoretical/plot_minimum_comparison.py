@@ -8,14 +8,14 @@ import scipy.special as scp
 
 matplotlib.rcParams.update({'font.size':21})
 
-LCDM_correlations=pd.read_csv('./tables/final_table.dat', sep=' ', header=None, names=['ls', 'ctt', 'cgg', 'ctg'])
+band1_correlations=pd.read_csv('./cobaya/ctg_cgg_band1.dat', sep=' ', index_col=0, header=None, names=['ls', 'ctg', 'cgg'])
 min_correlations=pd.read_csv('./cobaya/ctg_bandmin.dat', sep=' ', header=None, names=['ind', 'ls', 'ctg'])
 
-ls=LCDM_correlations['ls']
-ctg_2mass=LCDM_correlations['ctg']
+ls=band1_correlations['ls']
+ctg_2mass=band1_correlations['ctg']
 
 pars_min={'lbda':4.9401, 'z0':0.1508, 'beta':3.088}
-pars_2mass={'lbda':1.524, 'z0':0.043, 'beta':1.800}
+pars_2mass={'lbda':1.524, 'z0':0.043, 'beta':1.825}
 
 def selection(z, z0, lbda, beta):
     k=(beta/scp.gamma(lbda))*(z/z0)**(beta*lbda-1)
@@ -61,7 +61,7 @@ Dtg_min=[ls_min[i]*(ls_min[i]+1)*ctg_min[i]/(2*np.pi) for i in range(len(ls_min)
 def plot_ctg():
     
     plt.figure(figsize=(9,6))
-    plt.plot(ls[2:], Dtg_2mass[2:], label='2MASS')
+    plt.plot(ls, Dtg_2mass, label='2MASS')
     plt.plot(ls_min, Dtg_min, label='Minimum')
     plt.xlabel(r'$\ell$')
     plt.ylabel(r'$\ell(\ell+1)/2\pi$ $C^{tg}$')
