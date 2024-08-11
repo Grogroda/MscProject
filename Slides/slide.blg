@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'slide.blg'
-[61] biber:340> INFO - === Fri Aug  9, 2024, 20:12:29
-[72] Biber.pm:418> INFO - Reading 'slide.bcf'
-[118] Biber.pm:972> INFO - Found 7 citekeys in bib section 0
-[128] Biber.pm:4383> INFO - Processing section 0
-[135] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[59] biber:340> INFO - === Sat Aug 10, 2024, 18:30:50
+[71] Biber.pm:418> INFO - Reading 'slide.bcf'
+[117] Biber.pm:972> INFO - Found 7 citekeys in bib section 0
+[126] Biber.pm:4383> INFO - Processing section 0
+[134] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
 [139] bibtex.pm:1713> INFO - LaTeX decoding ...
-[551] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[857] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[857] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[858] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[858] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[869] bbl.pm:654> INFO - Writing 'slide.bbl' with encoding 'UTF-8'
-[978] bbl.pm:757> INFO - Output to slide.bbl
-[979] Biber.pm:130> WARN - legacy month field 'may' in entry 'NVSS' is not an integer - this will probably not sort properly.
-[979] Biber.pm:132> INFO - WARNINGS: 1
+[531] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[824] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[824] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[824] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[824] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[836] bbl.pm:654> INFO - Writing 'slide.bbl' with encoding 'UTF-8'
+[945] bbl.pm:757> INFO - Output to slide.bbl
+[945] Biber.pm:130> WARN - legacy month field 'may' in entry 'NVSS' is not an integer - this will probably not sort properly.
+[945] Biber.pm:132> INFO - WARNINGS: 1
