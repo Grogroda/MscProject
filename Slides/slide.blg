@@ -1,17 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'slide.blg'
-[63] biber:340> INFO - === Sun Aug 11, 2024, 18:36:57
-[74] Biber.pm:418> INFO - Reading 'slide.bcf'
-[122] Biber.pm:972> INFO - Found 7 citekeys in bib section 0
-[132] Biber.pm:4383> INFO - Processing section 0
-[140] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[144] bibtex.pm:1713> INFO - LaTeX decoding ...
-[545] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[844] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[844] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[844] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[844] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[856] bbl.pm:654> INFO - Writing 'slide.bbl' with encoding 'UTF-8'
-[968] bbl.pm:757> INFO - Output to slide.bbl
-[968] Biber.pm:130> WARN - legacy month field 'may' in entry 'NVSS' is not an integer - this will probably not sort properly.
-[968] Biber.pm:132> INFO - WARNINGS: 1
+[64] biber:340> INFO - === Tue Aug 13, 2024, 01:05:20
+[75] Biber.pm:418> INFO - Reading 'slide.bcf'
+[124] Biber.pm:972> INFO - Found 9 citekeys in bib section 0
+[135] Biber.pm:4383> INFO - Processing section 0
+[142] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[146] bibtex.pm:1713> INFO - LaTeX decoding ...
+[556] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[873] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[873] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[873] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[873] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[885] bbl.pm:654> INFO - Writing 'slide.bbl' with encoding 'UTF-8'
+[997] bbl.pm:757> INFO - Output to slide.bbl
+[997] Biber.pm:130> WARN - Duplicate entry key: 'growth_constraint' in file 'bibliography.bib', skipping ...
+[997] Biber.pm:130> WARN - Duplicate entry key: 'growth_model' in file 'bibliography.bib', skipping ...
+[997] Biber.pm:130> WARN - legacy month field 'may' in entry 'NVSS' is not an integer - this will probably not sort properly.
+[997] Biber.pm:132> INFO - WARNINGS: 3

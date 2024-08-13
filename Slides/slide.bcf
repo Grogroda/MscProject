@@ -2351,13 +2351,17 @@
     <bcf:citekey order="5">2MASS</bcf:citekey>
     <bcf:citekey order="6">cross_corr:Planck</bcf:citekey>
     <bcf:citekey order="7">NVSS</bcf:citekey>
-    <bcf:citekey order="8">Moura-Santos_2016</bcf:citekey>
-    <bcf:citekey order="9">select_func_par:Afshordi2004</bcf:citekey>
-    <bcf:citekey order="10">simillar_ISW_analysis</bcf:citekey>
-    <bcf:citekey order="11">wmap_supplement</bcf:citekey>
-    <bcf:citekey order="12">2MASS</bcf:citekey>
-    <bcf:citekey order="13">cross_corr:Planck</bcf:citekey>
-    <bcf:citekey order="14">NVSS</bcf:citekey>
+    <bcf:citekey order="8">growth_model</bcf:citekey>
+    <bcf:citekey order="9">growth_constraint</bcf:citekey>
+    <bcf:citekey order="10">Moura-Santos_2016</bcf:citekey>
+    <bcf:citekey order="11">select_func_par:Afshordi2004</bcf:citekey>
+    <bcf:citekey order="12">simillar_ISW_analysis</bcf:citekey>
+    <bcf:citekey order="13">wmap_supplement</bcf:citekey>
+    <bcf:citekey order="14">2MASS</bcf:citekey>
+    <bcf:citekey order="15">cross_corr:Planck</bcf:citekey>
+    <bcf:citekey order="16">NVSS</bcf:citekey>
+    <bcf:citekey order="17">growth_model</bcf:citekey>
+    <bcf:citekey order="18">growth_constraint</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

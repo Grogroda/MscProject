@@ -879,14 +879,39 @@ where
     \end{center}
 \end{frame}
 
-\section*{Extras}
+\section*{Backup}
 
-\begin{frame}{Extra Content}
-    Discussão de Future prospects
+\begin{frame}{Future Prospects}
+	\begin{columns}
+	
+	\column{.4\linewidth}
+	Exploring the growth function parametrization \cite{growth_model}
+
+    \begin{equation}\label{growth_func_new}
+		\dv{\ln{D(a)}}{\ln{a}}=\Omega_m^\gamma (a),
+	\end{equation}
+	
+	with $\gamma$ as a free parameter \cite{growth_constraint} might be worth to explore.
+	
+	\column{.6\linewidth}
+	
+	\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{pic/gamma_constraints.png}
+	\end{figure}
+	\end{columns}
 \end{frame}
 
-\begin{frame}{Extra Content}
-	More extras
+\begin{frame}{Bias Factor Fit}
+	\begin{columns}
+	\column{0.5\linewidth}
+	The bias factor was fitted to the data using the galaxy autocorrelation function with limiting multipoles for the linear model and HALOFIT.
+	\column{0.5\linewidth}
+	\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{pic/bias_factor_fit.png}
+	\end{figure}
+	\end{columns}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Bibliography}

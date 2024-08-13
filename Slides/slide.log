@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  11 AUG 2024 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  13 AUG 2024 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2674,48 +2674,82 @@ LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
  [53
 
 ]
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 903.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 903.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 903.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 903.
+<pic/gamma_constraints.png, id=5157, 847.165pt x 291.0875pt>
+File: pic/gamma_constraints.png Graphic file (type png)
+<use pic/gamma_constraints.png>
+Package pdftex.def Info: pic/gamma_constraints.png  used on input line 903.
+(pdftex.def)             Requested size: 239.00558pt x 82.12132pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 903.
+
 [54
 
-] [55
+ <./pic/gamma_constraints.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 915.
+<pic/bias_factor_fit.png, id=5248, 773.89125pt x 793.96625pt>
+File: pic/bias_factor_fit.png Graphic file (type png)
+<use pic/bias_factor_fit.png>
+Package pdftex.def Info: pic/bias_factor_fit.png  used on input line 915.
+(pdftex.def)             Requested size: 179.25114pt x 183.89258pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 915.
+ [55
 
-]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
-94.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ <./pic/bias_factor_fit.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
+19.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 894.
+ine 919.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 919.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 919.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 919.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 919.
  [56
 
-]
-[57
+] [57
 
 
 ] [58
@@ -2731,21 +2765,22 @@ ine 894.
 \tf@snm=\write9
 \openout9 = `slide.snm'.
 
- (./slide.aux)
+
+(./slide.aux)
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: 514562AA46EC2F9378C1317A202B5AD5;839.
+(rerunfilecheck)             Checksum: 01006FAF798E59A29119AEE0630323D0;839.
 Package logreq Info: Writing requests to 'slide.run.xml'.
 \openout1 = `slide.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40300 strings out of 478287
- 801431 string characters out of 5849289
- 1576931 words of memory out of 5000000
- 57535 multiletter control sequences out of 15000+600000
+ 40324 strings out of 478287
+ 802179 string characters out of 5849289
+ 1577079 words of memory out of 5000000
+ 57554 multiletter control sequences out of 15000+600000
  636706 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,20n,134p,738b,1707s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,20n,134p,738b,1737s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/calligra-type1/callig15.pfb></usr/share/texlive/texmf-dist/fonts/ty
@@ -2757,10 +2792,10 @@ ourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sftt1095.pfb>
-Output written on slide.pdf (58 pages, 3235421 bytes).
+Output written on slide.pdf (58 pages, 3360842 bytes).
 PDF statistics:
- 5690 PDF objects out of 6186 (max. 8388607)
- 5200 compressed objects within 52 object streams
- 182 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5704 PDF objects out of 6186 (max. 8388607)
+ 5209 compressed objects within 53 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
