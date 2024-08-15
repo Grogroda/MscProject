@@ -2344,24 +2344,8 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Moura-Santos_2016</bcf:citekey>
-    <bcf:citekey order="2">select_func_par:Afshordi2004</bcf:citekey>
-    <bcf:citekey order="3">simillar_ISW_analysis</bcf:citekey>
-    <bcf:citekey order="4">wmap_supplement</bcf:citekey>
-    <bcf:citekey order="5">2MASS</bcf:citekey>
-    <bcf:citekey order="6">cross_corr:Planck</bcf:citekey>
-    <bcf:citekey order="7">NVSS</bcf:citekey>
-    <bcf:citekey order="8">growth_model</bcf:citekey>
-    <bcf:citekey order="9">growth_constraint</bcf:citekey>
-    <bcf:citekey order="10">Moura-Santos_2016</bcf:citekey>
-    <bcf:citekey order="11">select_func_par:Afshordi2004</bcf:citekey>
-    <bcf:citekey order="12">simillar_ISW_analysis</bcf:citekey>
-    <bcf:citekey order="13">wmap_supplement</bcf:citekey>
-    <bcf:citekey order="14">2MASS</bcf:citekey>
-    <bcf:citekey order="15">cross_corr:Planck</bcf:citekey>
-    <bcf:citekey order="16">NVSS</bcf:citekey>
-    <bcf:citekey order="17">growth_model</bcf:citekey>
-    <bcf:citekey order="18">growth_constraint</bcf:citekey>
+    <bcf:citekey order="1">simillar_ISW_analysis</bcf:citekey>
+    <bcf:citekey order="2">simillar_ISW_analysis</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2370,13 +2354,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="none/global//global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

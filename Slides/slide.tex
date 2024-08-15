@@ -16,6 +16,7 @@
 \usepackage{lipsum}
 %\usepackage{subcaption}
 \input{packages}
+%\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
 
 \author{Arthur Diniz Meirelles \\
 	\vspace{0.2cm}
@@ -115,7 +116,7 @@ subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
 \begin{frame}{The Perturbed Metric}
-	We express the perturbed metric with two functions $\Psi(\mathbf{x},t)$ and $\Phi(\mathbf{x},t)$
+	We express the perturbed Friedman-Lemaître-Robertson-Walker (FLRW) metric with two functions $\Psi(\mathbf{x},t)$ and $\Phi(\mathbf{x},t)$
 	
 	\begin{equation}
 	\begin{cases}
@@ -144,20 +145,22 @@ subsubsectionstyle=show/shaded/hide]
 %\end{frame}
 
 \begin{frame}{The $\Lambda$CDM Model}
-	\begin{columns}
+	\begin{columns}[t]
 	
-	\column{0.4\linewidth}
-	\begin{figure}
+	\column{0.5\linewidth}
+	\begin{figure}[t]
 	\centering
-	\includegraphics[width=\linewidth]{pic/OmegaL_riess98.png}
-	%\caption{Hubble diagram comparing different cosmological constants. Extracted from \cite{Riess_1998}.}
-	%\label{fig:riess_OmegaL}
+	\includegraphics[width=.5\linewidth, height=.5\textheight]{pic/OmegaL_riess98.png}
+	\caption{Distance modulus comparing different cosmological constants. Extracted from Adam G. Riess et al. “Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant” (1996).}
+	\label{fig:riess_OmegaL}
 	\end{figure}
 	
-	\column{0.6\linewidth}
-	\begin{figure}
+	\column{0.5\linewidth}
+	\begin{figure}[t]
 	\centering
-	\includegraphics[width=\linewidth]{pic/polarization_cross_spec.png}
+	\includegraphics[width=.85\linewidth]{pic/polarization_cross_spec.png}
+	\caption{CMB temperature and polarization cross-correlation spectrum. Extracted from Planck Collaboration et al. "Planck 2018 results. VI. Cosmological Parameters" (2018).}	
+	\label{fig:cte_planck}
 	\end{figure}
 	
 	\end{columns}
@@ -231,8 +234,8 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
         \column{0.55\linewidth}
         \begin{figure}
             \centering
-            \includegraphics[width=\linewidth]{pic/planck_spectrum.pdf}
-            \caption{Planck 2018 CMB temperature power spectrum.}
+            \includegraphics[width=.85\linewidth]{pic/planck_spectrum.pdf}
+            \caption{Planck 2018 CMB temperature power spectrum. Figure and table extracted from Planck Collaboration et al. "Planck 2018 results. VI. Cosmological Parameters" (2018).}
             \label{fig:planck_spectrum}
         \end{figure}
         \column{0.45\linewidth}
@@ -251,10 +254,18 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
      $H_0$ & $67.36 \pm 0.54$ km/s/Mpc \\
      $\sigma_8$ & $0.8111 \pm 0.0060$ \\ \hline
     \end{tabular}
-    \caption{Best-fit values of cosmological parameters reported in Planck 2018 results using TT+TE+EE+lowE and gravitational lensing data.}
+    \caption{Best-fit values of cosmological parameters using TT+TE+EE+lowE and gravitational lensing data.}
     \label{tab:planck_parameters}
 \end{table}
     \end{columns}
+\end{frame}
+
+\begin{frame}{CMB Autocorrelation Contributions}
+	\begin{figure}
+	\centering
+	\includegraphics[width=.6\linewidth]{pic/CMB_contributions.png}
+	\caption{Contributions to the CMB autocorrelation power spectrum. Extracted from D. Baumann, "Lecture notes in Advanced Cosmology" (2014).}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{The Matter Power Spectrum}
@@ -295,7 +306,7 @@ Other autocorrelation spectra $C_\ell^{xx}$ follow the same process. It is commo
 \end{frame}
 
 \begin{frame}{Analytical Formula}
-    Given fields x and y, representing either the ISW contribution to the CMB temperature ($x,y=t$) or the galaxy contrast ($x,y=g$), we can calculate the associated auto- or cross-correlation spectra using \cite{Moura-Santos_2016}
+    Given fields x and y, representing either the ISW contribution to the CMB temperature ($x,y=t$) or the galaxy contrast ($x,y=g$), we can calculate the associated auto- or cross-correlation spectra using
 
     \begin{equation}
         C_\ell^{xy}=\frac{2}{\pi}\int dk k^2 W_\ell^x(k)W_\ell^y(k)P(k),
@@ -418,7 +429,7 @@ cross-correlation (right).}
 \section{Optimized Galaxy Survey}
 
 \begin{frame}{Selection Function Parametrization}
-    The function $\dv{N}{z}$ in equation \eqref{Wg} is called the selection function. We are assuming its parametrization to be \cite{select_func_par:Afshordi2004}
+    The function $\dv{N}{z}$ in equation \eqref{Wg} is called the selection function. We are assuming its parametrization to be\footnote{Afshordi et al. "Cross-correlation of the cosmic microwave background with the 2MASS galaxy survey: Signatures of dark energy, hot gas, and point sources" (2004).}.
 
     \begin{equation}\label{select_func_par}
         \dv{N}{z}\left(z|\lambda, \beta, z_0\right)dz=\frac{\beta}{\Gamma(\lambda)}\left(\frac{z}{z_0}\right)^{\beta\lambda-1}\text{exp}\left[-\left(\frac{z}{z_0}\right)^\beta\right]d\left(\frac{z}{z_0}\right)
@@ -475,7 +486,7 @@ cross-correlation (right).}
     The null hypothesis is compatible with $\Omega_m=1$.
 \end{frame}
 
-\begin{frame}{Synthesized Maps' Histograms}
+\begin{frame}{Synthesized Maps' Null Hypothesis Histograms}
     \begin{figure}
 
         \begin{subfigure}[b]{0.45\linewidth}
@@ -575,7 +586,7 @@ sized with null cross-correlation.}
 \section{Data Processing}
 
 \begin{frame}{WMAP Data}
-The CMB temperature maps used in this project are the ones provided by WMAP9 \cite{wmap_supplement}.
+The CMB temperature maps used in this project are the ones provided by WMAP9.
 
 \begin{itemize}
 	\item Three frequency bands were used, which are named bands Q ($40\text{GHz}$), V ($60\text{GHz}$) and W ($90\text{GHz}$);
@@ -611,7 +622,7 @@ The CMB temperature maps used in this project are the ones provided by WMAP9 \ci
 \end{frame}
 
 \begin{frame}{2MASS Catalog}
-Wide sky coverage is a very influential aspect of studying cross-correlation spectra, and the 2MASS catalog contains raw imaging data covering $99.998\%$ of the sky \cite{2MASS}, which was the dataset used. 
+Wide sky coverage is a very influential aspect of studying cross-correlation spectra, and the 2MASS catalog contains raw imaging data covering $99.998\%$ of the sky, which was the dataset used. 
 
 \begin{itemize}
 	\item We have used the $K_s$ ($\SI{2.16}{\mu \meter}$) band of the Extended Source Catalog (XSC);
@@ -862,7 +873,7 @@ where
         \item We have obtained the likelihood profiles for $\Omega_m$ obtained from cross-correlation data by studying the ISW effect;
         \item The constraints obtained using only $C^{tg}$ were not strong, but can be used as a complement to other datasets for a combined analysis;
         \item In the 2MASS catalog, the 2 deepest bands -- bands 3 and 4 -- yielded better constraining power;
-        \item The Planck collaboration also studied the ISW effect using the cross-correlation spectrum\cite{cross_corr:Planck}, obtaining significantly better results with deeper surveys (SDSS\cite{NVSS} and Planck's Kappa map).
+        \item The Planck collaboration also studied the ISW effect using the cross-correlation spectrum\footnote{Planck Collaboration et al. “Planck 2015 results - XXI. The integrated Sachs-Wolfe effect” (2016).}, obtaining significantly better results with deeper surveys (NVSS and Planck's Kappa map).
     \end{itemize}
 \end{frame}
 \begin{frame}{Conclusions}
@@ -881,23 +892,39 @@ where
 
 \section*{Backup}
 
+\begin{frame}{Blackwell-Rao Best-fit Solution}
+	The best-fit solution for the posterior obtained using the Blackwell-Rao estimator is
+	
+	\begin{equation}
+		\mathbf{S}_\ell=\frac{1}{2\ell+1+2q}\bar{\sigma}_\ell
+	\end{equation}
+	
+	with
+	
+	\begin{equation}
+		\bar{\sigma}_\ell=\frac{1}{N_G}\sum_{i=1}^{N_G}\sigma_\ell
+	\end{equation}
+\end{frame}
+
 \begin{frame}{Future Prospects}
 	\begin{columns}
 	
 	\column{.4\linewidth}
-	Exploring the growth function parametrization \cite{growth_model}
+	Exploring the growth function parametrization 
 
     \begin{equation}\label{growth_func_new}
 		\dv{\ln{D(a)}}{\ln{a}}=\Omega_m^\gamma (a),
 	\end{equation}
 	
-	with $\gamma$ as a free parameter \cite{growth_constraint} might be worth to explore.
+	with $\gamma$ as a free parameter might be worth to explore.
 	
 	\column{.6\linewidth}
 	
 	\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{pic/gamma_constraints.png}
+	\caption{Figure extracted from Nhat-Minh Nguyen, Dragan Huterer, and Yuewei Wen. “Evidence for Suppression of Structure Growth in the Concordance Cosmological Model” (2023).}
+	\label{fig:gamma_par}	
 	\end{figure}
 	\end{columns}
 \end{frame}
@@ -914,8 +941,94 @@ where
 	\end{columns}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Bibliography}
-\printbibliography
+\begin{frame}{Bias Factor Fit}
+	\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{pic/bg_table.png}
+	\end{figure}
+	
+	Figure and table extracted from E. Moura-Santos et al. “A Bayesian Estimate of the CMB–large-scale Structure Cross-correlation” (2016).
 \end{frame}
+
+\begin{frame}{Planck Selection Functions}
+	\begin{figure}
+	\centering
+	\includegraphics[width=.45\linewidth]{pic/selection_Planck.png}
+	\caption{Selection functions of tracers used for Planck's analysis. Extracted from Planck Collabortaion et al. "Planck 2015 results. XXI. The integrated Sachs-Wolfe effect" (2016).}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Influence of Parameters on $C_\ell^{tt}$}
+	\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{pic/Ctt_ParVar1.png}
+	\caption{Extracted from Alexandra T. Petreca "The impact of systematic effects on the cosmic distance ladder" (2024)}
+	\label{fig:ParVar1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Influence of Parameters on $C_\ell^{tt}$}
+	\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{pic/Ctt_ParVar2.png}
+	\caption{Extracted from Alexandra T. Petreca "The impact of systematic effects on the cosmic distance ladder" (2024)}
+	\label{fig:ParVar2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Influence of Parameters on $C_\ell^{tt}$}
+	\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{pic/Ctt_ParVar3.png}
+	\caption{Extracted from Alexandra T. Petreca "The impact of systematic effects on the cosmic distance ladder" (2024)}
+	\label{fig:ParVar3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+	\centering
+	\begin{subfigure}[t]{.32\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic/full_doublscale_Cs2fixo0.01.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.32\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic/full_doublscale_Cs2fixo0.10.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.32\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic/full_doublscale_Cs2fixo1.00.png}
+	\end{subfigure}
+	\caption{CPL parameters' influence on CMB temperature autocorrelation spectrum.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+	\centering
+	\begin{subfigure}[t]{.32\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic/full_doublscale_Wafixo0.33.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.32\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic/full_doublscale_Wafixo0.67.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.32\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic/full_doublscale_Wafixo1.00.png}
+	\end{subfigure}
+	\caption{CPL parameters' influence on CMB temperature autocorrelation spectrum.}
+	\end{figure}
+\end{frame}
+
+%\begin{frame}[allowframebreaks]{Bibliography}
+%\printbibliography
+%\end{frame}
 
 \end{document}
