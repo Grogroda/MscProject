@@ -170,7 +170,7 @@ Neste trabalho, estudamos o uso do Efeito Sachs-Wolfe Integrado (ISW) como uma f
 
 \chapter{Introduction}
 
-The discovery of the Cosmic Microwave Background (CMB) is a fine example of serendipity. Arno A. Penzias and Robert W. Wilson found an unexpected excess temperature while measuring the effective noise temperature with a microwave antenna as a function of zenith in 1964. After some investigation, they attributed this excess temperature to an isotropic radiation field that today we call the CMB \cite{1965CMB_discovery}. The CMB has since been used as one of the main probes to studying cosmology, being able to provide various tests and insights into cosmological models \cite{Large_scale_anomalies, nongaussianity_inflation, rees_sciama_effect} and measurements of cosmological parameters \cite{WMAP_results, Planck_results}. 
+The discovery of the Cosmic Microwave Background (CMB) is a fine example of serendipity. Arno A. Penzias and Robert W. Wilson found an unexpected excess temperature while measuring the effective noise temperature with a microwave antenna as a function of zenith in 1964. After some investigation, they attributed this excess temperature to an isotropic radiation field that today we call the CMB \cite{1965CMB_discovery}, based on previous predictions of a remnant radiation field made by Ralph Alpher and Robert Herman \cite{1948_pred_CMB}. The CMB has since been used as one of the main probes to studying cosmology, being able to provide various tests and insights into cosmological models \cite{Large_scale_anomalies, nongaussianity_inflation, rees_sciama_effect} and measurements of cosmological parameters \cite{WMAP_results, Planck_results}. 
 
 In the concordance cosmological model, commonly called the $\Lambda$CDM model, the Universe was very compact and energetic at its very early stages, and has always been in expansion, resulting in a reduction in overall energy density. Eventually, when it reached temperatures of around \SI{4000}{\kelvin}, photons decoupled from electrons and protons, which made possible for photons, with a blackbody spectrum, to essentially free stream across the Universe ever since \cite{CMB_physical_explanation}. The current measurement for the black body spectrum temperature of the CMB is \SI{2.72548 \pm 0.00057}{\kelvin} \cite{CMB_temperature:Fixsen_2009}, containing very small anisotropies in the order of $\SI{e-5}{\kelvin}$, which is expected in the $\Lambda$CDM model \cite{CMB_analytical_anisotropies}. These fluctuations are the result of physical effects at work during the earliest moments of the cosmos or are acting on the photons as they travel through the Universe, making them an excellent probe to constrain cosmological parameters.
 
@@ -370,11 +370,11 @@ Table \ref{tab:rhos&Omegas} summarizes the current estimated values for these en
 \centering
     \begin{tabular}{cccc} \hline
      Component & $\rho(a)$ & $w$ & $\Omega$ \\ \hline
-     Baryonic matter ($\Omega_b$) & $\rho_0a^{-3}$ & $0$ & $0.05$\\
-     Cold dark matter ($\Omega_c$) & $\rho_0a^{-3}$ & $0$ & $0.26$ \\
+     Baryonic matter ($\Omega_b$) & $\rho_0a^{-3}$ & $0$ & $0.0493\pm 0.0009$\\
+     Cold dark matter ($\Omega_c$) & $\rho_0a^{-3}$ & $0$ & $0.2645 \pm 0.0050$ \\
      Radiation ($\Omega_r$) & $\rho_0a^{-4}$ & $\frac{1}{3}$ & $5.29\times 10^{-5}$\\
-     Dark energy ($\Omega_\Lambda$) & $\rho_0$ & $-1$ & $0.68$\\
-     Curvature ($\Omega_k$) & $\rho_0 a^{-2}$ & $-\frac{1}{3}$ & $0.001$\\ \hline
+     Dark energy ($\Omega_\Lambda$) & $\rho_0$ & $-1$ & $0.6847\pm 0.0073$\\
+     Curvature ($\Omega_k$) & $\rho_0 a^{-2}$ & $-\frac{1}{3}$ & $0.001\pm 0.002$\\ \hline
     \end{tabular}
     \caption{Equation of state parameters $w$, energy density functions $\rho(a)$ and energy density fractions for each known component of the Universe according to the $\Lambda$CDM model. Most data were adapted from Planck \cite{Planck_results}, the radiation data was calculated based on \cite{lahav2014cosmological}.}
     \label{tab:rhos&Omegas}
@@ -388,7 +388,7 @@ The next important period of the Universe's evolution was a highly accelerated e
 
 Briefly after inflation, baryons and photons are still coupled through Compton scattering, thus photons are still unable to travel freely. The Universe at this point is composed of photons coupled with baryons, helium nuclei, and trace amounts of lithium. With the decrease in temperature, hydrogen atoms can form without being quickly ionized, due to the fact that Compton scattering can no longer maintain baryons and photons coupled, resulting in a decoupling of these components. Therefore, the photons are released to travel across the Universe, and constitute what we currently measure as the CMB.
 
-After this, an epoch called "the Dark Ages" starts, in which the photons in the Universe are the result of the decoupling described before and stars are yet to be formed, which is the reason why it is called a dark age. Matter dominates this period, greatly decreasing the rate of expansion of the Universe. As a result of the quantum fluctuations in the early Universe, stars, galaxies, and other structures form. The study of the formation of structure is completely dependent on the study of the inhomogeneities of the Universe at small scales, where the cosmological principle is no longer expected to be valid. Some details of this theoretical framework will be covered in the next section.
+After this, an epoch called "the Dark Ages" starts, in which the photons in the Universe are the result of the decoupling described before and stars are yet to be formed, which is the reason why it is called a dark age. Matter dominates this period, greatly decreasing the rate of expansion of the Universe. As a result of the quantum fluctuations in the early Universe, stars, galaxies, and other structures form. The study of the formation of structure is completely dependent on the study of the inhomogeneities of the Universe, where the cosmological principle is no longer expected to be valid. Some details of this theoretical framework will be covered in the next section.
 
 Figure \ref{fig:cosmo_brief_history} shows a summarized and visual representation of some of the events described in this section.
 
@@ -625,7 +625,7 @@ Table \ref{tab:planck_parameters} summarizes the values of the best-fit paramete
     \label{tab:planck_parameters}
 \end{table}
 
-The best fit values shown in Tables \ref{tab:rhos&Omegas} and \ref{tab:planck_parameters} are the values that have been used in this project for the fiducial $\Lambda$CDM model.
+The best fit values shown in Tables \ref{tab:rhos&Omegas} and \ref{tab:planck_parameters} are the values that have been used in this project for the fiducial $\Lambda$CDM model, with $\Omega_k=0$ being used, justifying the assumption of a flat metric.
 
 \subsection{Analytical Approximation}
 
@@ -998,7 +998,7 @@ For this combination of parameters, $P_\text{null}(z_0, \beta,\lambda)/P_\text{n
          \caption{Power Spectra}
          \label{subfig:minimum_PowSpec}
      \end{subfigure}
-        \caption{Comparison between theoretical properties of the point in parameter space that minimizes the null hypothesis and the band 1 of 2MASS.}
+        \caption{Comparison between theoretical properties of the point in parameter space that minimizes the null hypothesis and that of 2MASS, band 1 in the case of Figure \ref{subfig:minimum_PowSpec}.}
         \label{fig:minimum_properties}
 \end{figure}
 
@@ -1524,7 +1524,7 @@ An expression for this parameter can be determined by dividing the second Friedm
 	q(a)=-\frac{\ddot{a}a}{\dot{a}}=\frac{1}{2}\left(\frac{\rho+3P}{\rho}\right).
 \end{equation}
 
-We will use $\rho=\rho_m+\rho_\text{de}+\rho_r$ and assume $\Omega_k=0$, meaning $\rho=\rho_\text{crit}$, so equation \eqref{app_DE:step1} becomes
+We will use $\rho=\rho_m+\rho_\text{de}+\rho_r$ and assume $\Omega_k=0$ (see Table \ref{tab:rhos&Omegas}), meaning $\rho=\rho_\text{crit}$, so equation \eqref{app_DE:step1} becomes
 
 \begin{equation}\label{app_DE:step2}
 	q(a)=\frac{1}{2}\left(\frac{\rho_m+\rho_\text{de}+\rho_r+3P}{\rho_\text{crit}}\right).

@@ -54,6 +54,41 @@
       \endverb
       \keyw{Microwave Background,Cosmic Background Radiation}
     \endentry
+    \entry{1948_pred_CMB}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ab4a1de5d363fb44935c62dfcca5e437}{%
+           family={{Alpher}},
+           familyi={A\bibinitperiod},
+           given={Ralph\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f82b96bd8eec6e6247bff4d44a0945f5}{%
+           family={{Herman}},
+           familyi={H\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{42fdf85d34f9e2a7db61117651b20a7d}
+      \strng{fullhash}{42fdf85d34f9e2a7db61117651b20a7d}
+      \strng{bibnamehash}{42fdf85d34f9e2a7db61117651b20a7d}
+      \strng{authorbibnamehash}{42fdf85d34f9e2a7db61117651b20a7d}
+      \strng{authornamehash}{42fdf85d34f9e2a7db61117651b20a7d}
+      \strng{authorfullhash}{42fdf85d34f9e2a7db61117651b20a7d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{11}
+      \field{number}{4124}
+      \field{title}{{Evolution of the Universe}}
+      \field{volume}{162}
+      \field{year}{1948}
+      \field{pages}{774\bibrangedash 775}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1038/162774b0
+      \endverb
+    \endentry
     \entry{Large_scale_anomalies}{article}{}
       \name{author}{3}{}{%
         {{hash=c2ccf2aab83712828f56db1e9deb44d0}{%
@@ -1120,8 +1155,8 @@
       \strng{authornamehash}{474e445168b8b43c845ea1293cdcef60}
       \strng{authorfullhash}{71ced2f0f33117236af0800d52d09837}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Astrophysical Journal}
@@ -2896,7 +2931,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Astronomical Journal}
-      \field{month}{5}
+      \field{month}{05}
       \field{number}{5}
       \field{title}{The NRAO VLA Sky Survey}
       \field{volume}{115}
@@ -3275,8 +3310,8 @@
       \strng{authorbibnamehash}{62b5c14de6f29151f1e5f9271bb67fac}
       \strng{authornamehash}{62b5c14de6f29151f1e5f9271bb67fac}
       \strng{authorfullhash}{84f04784c583b674d1104b69ae3384ea}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Astronomical Journal}
@@ -3597,8 +3632,8 @@
       \strng{authorbibnamehash}{15e144c72b0b9d10db00ddc6d37a19e6}
       \strng{authornamehash}{15e144c72b0b9d10db00ddc6d37a19e6}
       \strng{authorfullhash}{15e144c72b0b9d10db00ddc6d37a19e6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{1}
@@ -6379,8 +6414,8 @@
       \strng{authorbibnamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
       \strng{authornamehash}{da7f9bf7536c8c2c7e0ba6d13cf35f32}
       \strng{authorfullhash}{83140db96dc8f62463955adf1a954786}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Available in electronic form at \url{http://lambda.gsfc.nasa.gov/}}
