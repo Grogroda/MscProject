@@ -220,6 +220,8 @@ One of the fundamental principles of cosmology is called the Cosmological Princi
 
 In the period from 1927 to 1929, Edwin Hubble and Georges Lemaître, amongst other scientists, greatly contributed to the current understanding of cosmology. Observations were carried out and showed that most galaxies and nebulae data show a redshift proportional to their distances relative to the Earth \cite{hubble}, these results were studied using general relativity and cosmological models at the time \cite{Lemaitre:1927zz}. The results lead to idea of an expanding, i.e. non-static,  universe. In an expanding universe, it is straightforward to find a linear relationship between the redshift of the object and its distance, when that distance is not too large.
 
+Furthermore, data shows that the Universe's expansion is currently accelerated \cite{Riess2021}, which is a property described differently in many cosmological models. The simplest way to account for it is by introducing a cosmological constant $\Lambda$ in Einstein's field equations.
+
 After adopting a coordinate system, in order to describe the dynamics of the Universe, one introduces a scale factor $a$, whose present value is 1 (usually called $a_0$) and at any given time, $a(t)$ represents the size of the Universe with respect to its present size. A simple relation can be established between the scale factor of an observed object and its redshift $z$:
 
 \begin{equation}\label{1+z}
@@ -346,7 +348,7 @@ This solution ignores further interaction between components, it would apply to 
 
 The rigorous form of determining $w_s$ for some components of the Universe requires the usage of statistical physics. In cases where we have limited information on the physical properties of a certain component, such as dark energy, theoretical frameworks and assumptions have to be used, as well as the analysis of data.
 
-In the case of dark energy, assuming its origin is related to the cosmological constant, the data strongly suggests a value of $w_\Lambda=-1$, which also indicates a constant density for dark energy. From the quantum field theory point of view, the cosmological constant energy density would be associated to zero point energy of a quantum field. However, so far, no calculation has been successful in predicting a zero point energy whose density is consistent with the cosmological observations \cite{Weinberg_Lambda_1989}. Many models propose alternative possibilities, such as dynamical dark energy in which $w_{DE}$ is a function of $a$ \cite{DE_models}, which would still be able to explain the accelerated expansion of the Universe as long as $w_{DE}<-\frac{1}{3}$, these are discussed in more detail in section \ref{sect:dark_energy}. Table \ref{tab:rhos&Omegas} summarizes the equation of state properties of each known component in the Universe.
+In the case of dark energy, assuming its origin is related to the cosmological constant, the value of $w_\Lambda=-1$ is expected, which also indicates a constant density for dark energy. From the quantum field theory point of view, the cosmological constant energy density would be associated to zero point energy of a quantum field. However, so far, no calculation has been successful in predicting a zero point energy whose density is consistent with the cosmological observations \cite{Weinberg_Lambda_1989}. Many models propose alternative possibilities, the simplest being a constant equation of state parameter $w_{DE}$ that might not be $-1$. Recent preliminary results assuming this $wCDM$ scenario have found values marginally compatible with $w_\Lambda$ \cite{DES2024}. Other options assume dark energy to be dynamical, meaning $w_{DE}$ is a function of $a$ \cite{DE_models}, which would still be able to explain the accelerated expansion of the Universe as long as $w_{DE}<-\frac{1}{3}$, these are discussed in more detail in section \ref{sect:dark_energy}. Table \ref{tab:rhos&Omegas} summarizes the equation of state properties of each known component in the Universe.
 
 It is very useful to also define the energy density fraction of each component of the Universe using
 
@@ -627,6 +629,14 @@ Table \ref{tab:planck_parameters} summarizes the values of the best-fit paramete
 
 The best fit values shown in Tables \ref{tab:rhos&Omegas} and \ref{tab:planck_parameters} are the values that have been used in this project for the fiducial $\Lambda$CDM model, with $\Omega_k=0$ being used, justifying the assumption of a flat metric.
 
+\subsection{The Hubble Tension}
+
+There are multiple ways to estimate the Hubble constant $H_0$, we have discussed its determination through a heavily model-dependent technique, which is by sampling it's best-fit value by comparing the $\Lambda$CDM model's prediction of the CMB temperature power spectrum with CMB data. Planck's results using this technique have been showing a tension with a more direct technique, that relies on the so-called cosmic distance ladder to construct a relation of distance modulus $\mu_0$ of astronomical objects and redshift $z$ and determine $H_0$ from these datasets \cite{Riess2021}. The method uses different astronomical objects in different redshift intervals, thus needing different techniques and callibrations, data at lower redshift ranges (or rungs) are used to callibrate the following rung.
+
+The value obtained using this method in \cite{Riess2021} is $H_0=(73.04\pm 1.01) \text{km}\text{s}^{-1} \text{Mpc}^{-1}$, which consists of a $5\sigma$ difference compared with Planck's estimate shown in Table \ref{tab:planck_parameters}, showing a tension between the two results.
+
+Currently, there is a significant number of studies trying to understand this tension, with some papers studying the possibility of systematic effects being responsible for it \cite{systematics2023,alexandra_msc}, while other papers explore adjustments to the $\Lambda$CDM model\cite{growth_constraint}, mostly in regards to the description of dark energy, which will be discussed in a section \ref{sect:dark_energy}.
+
 \subsection{Analytical Approximation}
 
 Although solving equations such as \eqref{diff_eq_radiation_perturbs} numerically gives accurate results, obtaining an analytical approximation to these equations helps us understand the underlying physical effects that most influence the evolution of the perturbations. Working on the tightly coupled limit and assuming recombination to be an instantaneous process happening at conformal time $\eta=\eta_*$, one can obtain the following equation for the CMB temperature fluctuation multipoles in Fourier space \cite{dodelson2020modern}:
@@ -661,6 +671,15 @@ There are three main contributors to the solution \eqref{ch2:Thetal_approx}:
     \item The last term, an integral involving the time variations of the gravitational potentials, represents the Integrated Sachs-Wolfe (ISW) effect. Its dependence on the on the derivative with respect to conformal time of the gravitational potential makes it so that it only has a non-negligible effect on the CMB at cosmological periods with significant time variability of these potentials: At around $a\sim 10^{-4}$ the Universe transitioned from a radiation-dominated to a matter-dominated Universe (early ISW), and recently -- around $a\sim 0.6$\cite{dark_energy_era} according to the $\Lambda$CDM model -- the Universe transitioned from a matter-dominated Universe to the current dark energy dominated Universe (late ISW). 
 \end{itemize}
 
+Figure \ref{fig:CMB_contributions} shows how these terms contribute to the full CMB temperature autocorrelation power spectrum, it shows the relevance of the late-ISW contribution in lower multipoles, as well as the strong influence of the Sachs-Wolfe term with the accoustic peaks of the spectrum and the phase shift of the Doppler term's contribution compared to the Sachs-Wolfe one.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.75\linewidth]{Imagens/CMB_contributions.png}
+	\caption{Main contributions for the temperature power spectra for the Sachs-Wolfe effect (SW: red), Integrated Sachs-Wolfe effect (ISW: green and orange), Doppler effect (blue) and pure gravitational contribution (gray).}
+	\label{fig:CMB_contributions}
+\end{figure}
+
 \section{The Integrated Sachs Wolfe Effect}\label{ch2:ISW_effect_section}
 
 It was proposed that the cross-correlation spectrum between CMB maps and matter contrast could be used to detect the ISW effect \cite{Turok96}, and since then many works have reported the detection of this signal \cite{cross_corr:Afshordi, cross_corr:Crittenden2005a, cross_corr:Crittenden2005b, cross_corr:Planck}. In this section, a framework for theoretical estimations of the ISW contribution to this cross-correlation will be discussed.
@@ -683,6 +702,8 @@ While the CMB is usually described as a 2-dimensional map, the matter distributi
 \end{figure}
 
 The HALOFIT model is a semi-analytical method to determine a non-linear solution for $P(k,z)$, it is based in the Halo Model, which assumes that at small scales, the evolution of structures can be described by gravitational collapse to spherically symmetric halos whose evolution posterior to their formation decouple from the background cosmology. The corrections due to the HALOFIT model are not relevant in large scales, as shown in Figure \ref{fig:matter_PS}, in which both spectra are indistinguishable at low values of $k$, only at higher values of k -- small scales -- the two spectra clearly diverge. In terms of the correlation power spectra, one can already notice a significant difference in the predicted spectra at around $\ell=40$ \cite{Moura-Santos_2016}, showing very clearly the importance of using HALOFIT for our analysis.
+
+It is important to highlight that HALOFIT is only valid assuming an equation of state parameter of $w=-1$ to dark energy. For more general scenarios one can use, for instance, the more modern HMcode \cite{HMcode}.
 
 \subsection{The Galaxy-CMB Correlation Spectra}\label{ch2:correlations}
 

@@ -3541,6 +3541,40 @@
       \verb 10.1007/s10714-013-1548-3
       \endverb
     \endentry
+    \entry{Riess2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dd9b3522f940507843f84f4b732f36a4}{%
+           family={Riess},
+           familyi={R\bibinitperiod},
+           given={Adam\bibnamedelimb G.\bibnamedelimi et\bibnamedelima al.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{fullhash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{bibnamehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{authorbibnamehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{authornamehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{authorfullhash}{dd9b3522f940507843f84f4b732f36a4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Astrophys. J. Lett.}
+      \field{number}{1}
+      \field{title}{{A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km s$^{-1}$ Mpc$^{-1}$ Uncertainty from the Hubble Space Telescope and the SH0ES Team}}
+      \field{volume}{934}
+      \field{year}{2022}
+      \field{pages}{L7}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/2041-8213/ac5c5b
+      \endverb
+      \verb{eprint}
+      \verb 2112.04510
+      \endverb
+    \endentry
     \entry{dodelson2020modern}{book}{}
       \name{author}{2}{}{%
         {{hash=0a04b7b0eff3c29233106933e5934c3d}{%
@@ -3591,8 +3625,8 @@
       \strng{authorbibnamehash}{79f48a2c5aaa6d303950f7cbc66fbfa9}
       \strng{authornamehash}{79f48a2c5aaa6d303950f7cbc66fbfa9}
       \strng{authorfullhash}{79f48a2c5aaa6d303950f7cbc66fbfa9}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Modern Physics Letters A}
@@ -3652,6 +3686,35 @@
       \endverb
       \verb{url}
       \verb https://link.aps.org/doi/10.1103/RevModPhys.61.1
+      \endverb
+    \endentry
+    \entry{DES2024}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=2ce9b43a31215330f2ed70f24e152968}{%
+           family={Faga},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{b13adee0e3161a725a57c67a33e309bc}
+      \strng{fullhash}{b13adee0e3161a725a57c67a33e309bc}
+      \strng{bibnamehash}{b13adee0e3161a725a57c67a33e309bc}
+      \strng{authorbibnamehash}{b13adee0e3161a725a57c67a33e309bc}
+      \strng{authornamehash}{b13adee0e3161a725a57c67a33e309bc}
+      \strng{authorfullhash}{b13adee0e3161a725a57c67a33e309bc}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{title}{{Dark Energy Survey Year 3 Results: Cosmology from galaxy clustering and galaxy-galaxy lensing in harmonic space}}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2406.12675
       \endverb
     \endentry
     \entry{DE_models}{article}{}
@@ -4720,6 +4783,111 @@
       \endverb
       \keyw{Cosmology: Cosmic Microwave Background,Cosmology: Observations,Methods: Statistical}
     \endentry
+    \entry{systematics2023}{article}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{issn}{0370-2693}
+      \field{journaltitle}{Physics Letters B}
+      \field{title}{Investigating the Hubble tension: Effect of cepheid calibration}
+      \field{volume}{840}
+      \field{year}{2023}
+      \field{pages}{137886}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.physletb.2023.137886
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0370269323002204
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0370269323002204
+      \endverb
+    \endentry
+    \entry{alexandra_msc}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=1cf052a53341632e6cbd3f1183ce51a4}{%
+           family={Petreca},
+           familyi={P\bibinitperiod},
+           given={Alexandra\bibnamedelima Turmina},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Física, University of São Paulo}%
+      }
+      \strng{namehash}{1cf052a53341632e6cbd3f1183ce51a4}
+      \strng{fullhash}{1cf052a53341632e6cbd3f1183ce51a4}
+      \strng{bibnamehash}{1cf052a53341632e6cbd3f1183ce51a4}
+      \strng{authorbibnamehash}{1cf052a53341632e6cbd3f1183ce51a4}
+      \strng{authornamehash}{1cf052a53341632e6cbd3f1183ce51a4}
+      \strng{authorfullhash}{1cf052a53341632e6cbd3f1183ce51a4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{31}
+      \field{month}{8}
+      \field{note}{doi:10.11606/D.43.2024.tde-29022024-122517}
+      \field{title}{The Impact of Systematic Effects on the Cosmic Distance Ladder}
+      \field{type}{Master's Dissertation in Física}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://doi.org/10.11606/D.43.2024.tde-29022024-122517
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.11606/D.43.2024.tde-29022024-122517
+      \endverb
+    \endentry
+    \entry{growth_constraint}{article}{}
+      \name{author}{3}{}{%
+        {{hash=20090e38690aced384d5b40e74e895ed}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Nhat-Minh},
+           giveni={N\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=2eb76baeec02d3621d61bea619901cef}{%
+           family={Huterer},
+           familyi={H\bibinitperiod},
+           given={Dragan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8d4e253bc551b44c1810be2d6b97311a}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Yuewei},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{fullhash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{bibnamehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{authorbibnamehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{authornamehash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \strng{authorfullhash}{6bf1c94380fd13ab58874d38ba4caa20}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{11}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{9}
+      \field{title}{Evidence for Suppression of Structure Growth in the Concordance Cosmological Model}
+      \field{volume}{131}
+      \field{year}{2023}
+      \field{pages}{111001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.131.111001
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.131.111001
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.131.111001
+      \endverb
+    \endentry
     \entry{dark_energy_era}{article}{}
       \name{author}{1}{}{%
         {{hash=c12857cfee8df239a806e7118fd293a1}{%
@@ -4734,8 +4902,8 @@
       \strng{authorbibnamehash}{c12857cfee8df239a806e7118fd293a1}
       \strng{authornamehash}{c12857cfee8df239a806e7118fd293a1}
       \strng{authorfullhash}{c12857cfee8df239a806e7118fd293a1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0927-6505}
@@ -4780,8 +4948,8 @@
       \strng{authornamehash}{e90df9cde99ef67247dd6a7be950edea}
       \strng{authorfullhash}{e90df9cde99ef67247dd6a7be950edea}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{4}
@@ -4829,8 +4997,8 @@
       \strng{authorbibnamehash}{36827480fc7a6f44d0d071b6efac6c5d}
       \strng{authornamehash}{36827480fc7a6f44d0d071b6efac6c5d}
       \strng{authorfullhash}{36827480fc7a6f44d0d071b6efac6c5d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{8}
@@ -4871,8 +5039,8 @@
       \strng{authornamehash}{3b5c7b0b1ca7d137e1a9e3f6f24fa65b}
       \strng{authorfullhash}{3b5c7b0b1ca7d137e1a9e3f6f24fa65b}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-8711}
@@ -4917,8 +5085,8 @@
       \strng{authornamehash}{3b5c7b0b1ca7d137e1a9e3f6f24fa65b}
       \strng{authorfullhash}{3b5c7b0b1ca7d137e1a9e3f6f24fa65b}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1387-6473}
@@ -4969,8 +5137,9 @@
       \strng{authorbibnamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authornamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authorfullhash}{5123506542509cdec9b3cb16dcfe07b9}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-8711}
@@ -4978,6 +5147,62 @@
       \field{month}{01}
       \field{number}{1}
       \field{title}{{hmcode-2020: improved modelling of non-linear cosmological power spectra with baryonic feedback}}
+      \field{volume}{502}
+      \field{year}{2021}
+      \field{pages}{1401\bibrangedash 1422}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1093/mnras/stab082
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/mnras/article-pdf/502/1/1401/42438464/stab082.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/mnras/stab082
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/mnras/stab082
+      \endverb
+    \endentry
+    \entry{HMcode}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5510bcf69bab5e099ab58e83ab27567a}{%
+           family={Mead},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=22946172eceea45c4415e3e0845a4374}{%
+           family={Brieden},
+           familyi={B\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bf6861985f317589a9c6139fb1d26b13}{%
+           family={Tröster},
+           familyi={T\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=638bbf6c8a0de9c4115fd6819ff73279}{%
+           family={Heymans},
+           familyi={H\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3d427c68d713b61cb68770f0a36e8a2}
+      \strng{fullhash}{5123506542509cdec9b3cb16dcfe07b9}
+      \strng{bibnamehash}{a3d427c68d713b61cb68770f0a36e8a2}
+      \strng{authorbibnamehash}{a3d427c68d713b61cb68770f0a36e8a2}
+      \strng{authornamehash}{a3d427c68d713b61cb68770f0a36e8a2}
+      \strng{authorfullhash}{5123506542509cdec9b3cb16dcfe07b9}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0035-8711}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{{HMcode-2020: improved modelling of non-linear cosmological power spectra with baryonic feedback}}
       \field{volume}{502}
       \field{year}{2021}
       \field{pages}{1401\bibrangedash 1422}
@@ -5012,8 +5237,8 @@
       \strng{authorbibnamehash}{cca5e429f691337f2eae5e627fcce624}
       \strng{authornamehash}{cca5e429f691337f2eae5e627fcce624}
       \strng{authorfullhash}{cca5e429f691337f2eae5e627fcce624}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{9}
@@ -5063,8 +5288,8 @@
       \strng{authorbibnamehash}{16c407f4299fa139745a310362c8ad66}
       \strng{authornamehash}{16c407f4299fa139745a310362c8ad66}
       \strng{authorfullhash}{967dfd49caab1f3ede682ca59267757a}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
@@ -5117,8 +5342,8 @@
       \strng{authorbibnamehash}{42dc1c3413419702284c47ae89fcb0ec}
       \strng{authornamehash}{42dc1c3413419702284c47ae89fcb0ec}
       \strng{authorfullhash}{b6dca0929e5cf5cb1c87695d0c8293ef}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{6}
@@ -5153,8 +5378,8 @@
       \strng{authorbibnamehash}{a5530ef95c92d9c6313030bab63a253e}
       \strng{authornamehash}{a5530ef95c92d9c6313030bab63a253e}
       \strng{authorfullhash}{a5530ef95c92d9c6313030bab63a253e}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2218-1997}
@@ -5207,8 +5432,8 @@
       \strng{authorbibnamehash}{df0a96c23f25f10f6b59874b079516f6}
       \strng{authornamehash}{df0a96c23f25f10f6b59874b079516f6}
       \strng{authorfullhash}{9368bb5d5c9472741d41eaf7a1d907d4}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
@@ -5261,8 +5486,8 @@
       \strng{authorbibnamehash}{248dc8452a2d676a66adeb70dcd2caf9}
       \strng{authornamehash}{248dc8452a2d676a66adeb70dcd2caf9}
       \strng{authorfullhash}{1d4c2212ec3dc6bfadb3e8385996beed}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Cosmol. Astropart. Phys.}
@@ -5831,8 +6056,8 @@
       \strng{authornamehash}{5dfdcadb99b33e605d7c68c181edd8de}
       \strng{authorfullhash}{c888a1ee0fba3757a40549a93a75252a}
       \field{extraname}{4}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Astronomy \& Astrophysics}
@@ -6175,8 +6400,8 @@
       \strng{authorbibnamehash}{1f8644e3da0b7fe0b18f503c421d2f12}
       \strng{authornamehash}{1f8644e3da0b7fe0b18f503c421d2f12}
       \strng{authorfullhash}{7522fe49ed7af6e4a6d48a78a85f6acb}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{A22}
@@ -6341,8 +6566,8 @@
       \strng{authorbibnamehash}{f5e70c2c26436b50c348d6584408b22f}
       \strng{authornamehash}{f5e70c2c26436b50c348d6584408b22f}
       \strng{authorfullhash}{8984caecc6ecb17e4728b75c4ebc1a72}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{A12}
@@ -6367,8 +6592,8 @@
       \list{organization}{1}{%
         {GNU Project}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
       \field{title}{GNU Scientific Library Reference Manual}

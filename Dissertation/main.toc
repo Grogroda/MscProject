@@ -2,33 +2,34 @@
 \contentsline {chapter}{\numberline {2}Cosmology's Concordance Model}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}The Homogeneous Background}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Fundamental Observations and Principles}{5}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Friedmann Equations}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}Friedmann Equations}{7}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Energy Content}{8}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}A Brief History of the Universe}{10}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Inhomogeneities and Anisotropies}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.4}A Brief History of the Universe}{11}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Inhomogeneities and Anisotropies}{12}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Perturbed Space-Time}{13}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}The Boltzmann Equation}{14}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}The Cosmic Microwave Background}{17}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}CMB Autocorrelation Spectrum}{17}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Analytical Approximation}{19}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}The Integrated Sachs Wolfe Effect}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}The Matter Power Spectrum}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}The Galaxy-CMB Correlation Spectra}{23}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Alternative Dark Energy Models}{25}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Optimizing the Selection Function}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{31}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{36}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Data Sets and Analysis}{36}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}WMAP Data}{36}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}2MASS Catalog}{38}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Two-Point Correlaton Functions}{39}{section.4.2}%
-\contentsline {section}{\numberline {4.3}A likelihood-based estimator}{41}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Correlation Spectra Obtained}{44}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Cosmological Constraints}{46}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Monte Carlo Markov Chains}{46}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Likelihood Profiles}{48}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Forecast for the Optimized Band}{51}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Transition Redshift for a Dark Energy Dominated Universe}{57}{appendix.A}%
-\contentsline {chapter}{\numberline {B}CMB-galaxy Cross-correlation Formulae}{59}{appendix.B}%
+\contentsline {subsection}{\numberline {2.3.2}The Hubble Tension}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Analytical Approximation}{21}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}The Integrated Sachs Wolfe Effect}{22}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}The Matter Power Spectrum}{23}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}The Galaxy-CMB Correlation Spectra}{24}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Alternative Dark Energy Models}{26}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Optimizing the Selection Function}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Parametrization of the Selection Function}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Maximizing the Cross-Correlation Signal}{32}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Extracting Correlations from Data}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Data Sets and Analysis}{37}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}WMAP Data}{37}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}2MASS Catalog}{39}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Two-Point Correlaton Functions}{40}{section.4.2}%
+\contentsline {section}{\numberline {4.3}A likelihood-based estimator}{42}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Correlation Spectra Obtained}{45}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Cosmological Constraints}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Monte Carlo Markov Chains}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Likelihood Profiles}{49}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Forecast for the Optimized Band}{52}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusions}{54}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Transition Redshift for a Dark Energy Dominated Universe}{58}{appendix.A}%
+\contentsline {chapter}{\numberline {B}CMB-galaxy Cross-correlation Formulae}{60}{appendix.B}%
