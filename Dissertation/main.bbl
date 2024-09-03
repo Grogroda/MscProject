@@ -3541,38 +3541,331 @@
       \verb 10.1007/s10714-013-1548-3
       \endverb
     \endentry
-    \entry{Riess2021}{article}{}
-      \name{author}{1}{}{%
-        {{hash=dd9b3522f940507843f84f4b732f36a4}{%
+    \entry{Riess_1998}{article}{}
+      \name{author}{20}{}{%
+        {{hash=bcb83d57032e16edd4941911fcf6ef0a}{%
            family={Riess},
            familyi={R\bibinitperiod},
-           given={Adam\bibnamedelimb G.\bibnamedelimi et\bibnamedelima al.},
-           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+           given={Adam\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=84f028fc010e8033d8f0260e08773371}{%
+           family={Filippenko},
+           familyi={F\bibinitperiod},
+           given={Alexei\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=83373bf85d3b6841a506f17f67819691}{%
+           family={Challis},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9465f17467f8424992a882ca8b3ba4cb}{%
+           family={Clocchiatti},
+           familyi={C\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=02f12911a6b8c8d0d43e2ba272d6354a}{%
+           family={Diercks},
+           familyi={D\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cfed38a61c5a621ba644c17ea3612efb}{%
+           family={Garnavich},
+           familyi={G\bibinitperiod},
+           given={Peter\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=accd585c45b68c062710c90384b914bf}{%
+           family={Gilliland},
+           familyi={G\bibinitperiod},
+           given={Ron\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=3ced51ad313010ff2389923fe8de6e98}{%
+           family={Hogan},
+           familyi={H\bibinitperiod},
+           given={Craig\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ce75d55f9935aa78a8222ede1b00ae31}{%
+           family={Jha},
+           familyi={J\bibinitperiod},
+           given={Saurabh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7427780d3666fb948493e544dc3be2ed}{%
+           family={Kirshner},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d3e2cd73a0bdd8291b4ec6479b7ffc3f}{%
+           family={Leibundgut},
+           familyi={L\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bc3fcb2f8e5d247b12b87cabe9ccb35a}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=57137f68b723e742f18f86f514bc462c}{%
+           family={Reiss},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7f4507a0596ab63a03a1db6780b03f27}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Brian\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=86f6c6e7a50fd4382200289e0d2f3de5}{%
+           family={Schommer},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1e05b665f1409fff8fa7317248ce9299}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi Chris},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f7373018820846b1d189842ca2a194b6}{%
+           family={Spyromilio},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ef8b5a1b6332cd93b63e34607eeb08aa}{%
+           family={Stubbs},
+           familyi={S\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e775170ec1809c8f559ae0d2fb2a22ee}{%
+           family={Suntzeff},
+           familyi={S\bibinitperiod},
+           given={Nicholas\bibnamedelima B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=eeda5a7e6d442a640a38b133949203c2}{%
+           family={Tonry},
+           familyi={T\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{dd9b3522f940507843f84f4b732f36a4}
-      \strng{fullhash}{dd9b3522f940507843f84f4b732f36a4}
-      \strng{bibnamehash}{dd9b3522f940507843f84f4b732f36a4}
-      \strng{authorbibnamehash}{dd9b3522f940507843f84f4b732f36a4}
-      \strng{authornamehash}{dd9b3522f940507843f84f4b732f36a4}
-      \strng{authorfullhash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{namehash}{51ea31a1136a1d2cb9bd027767356238}
+      \strng{fullhash}{147585d0ee68a6690c3a183efd7b8f8b}
+      \strng{bibnamehash}{51ea31a1136a1d2cb9bd027767356238}
+      \strng{authorbibnamehash}{51ea31a1136a1d2cb9bd027767356238}
+      \strng{authornamehash}{51ea31a1136a1d2cb9bd027767356238}
+      \strng{authorfullhash}{147585d0ee68a6690c3a183efd7b8f8b}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{astro-ph.CO}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{Astrophys. J. Lett.}
-      \field{number}{1}
-      \field{title}{{A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km s$^{-1}$ Mpc$^{-1}$ Uncertainty from the Hubble Space Telescope and the SH0ES Team}}
-      \field{volume}{934}
-      \field{year}{2022}
-      \field{pages}{L7}
+      \field{journaltitle}{The Astronomical Journal}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant}
+      \field{volume}{116}
+      \field{year}{1998}
+      \field{pages}{1009}
       \range{pages}{1}
       \verb{doi}
-      \verb 10.3847/2041-8213/ac5c5b
+      \verb 10.1086/300499
       \endverb
-      \verb{eprint}
-      \verb 2112.04510
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/300499
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/300499
+      \endverb
+    \endentry
+    \entry{Perlmutter_1999}{article}{}
+      \name{author}{33}{}{%
+        {{hash=c3414afdf50b2debb6712d74ff0a9a6e}{%
+           family={Perlmutter},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=392c2503316151a38dc00aaa23615de1}{%
+           family={Aldering},
+           familyi={A\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c2b195cb896fa9fdf138b99cd3602d57}{%
+           family={Goldhaber},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=10b162efbb93d19359f5ea5df1b534a3}{%
+           family={Knop},
+           familyi={K\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5a6b4774292f61f470e52eb9591362c7}{%
+           family={Nugent},
+           familyi={N\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=66d037a985a8668ed1f4a5307dc6b8d1}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={P.\bibnamedelimi G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=cde1f4b26f07a272503fe0e72bcc7b3e}{%
+           family={Deustua},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2a03474ee12bdaedb358e149d5b59590}{%
+           family={Fabbro},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ea273ba21163ae6e29e3ec359f510563}{%
+           family={Goobar},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2523910bab939c1849988103a22b30d9}{%
+           family={Groom},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=66c4cff302392cabcaf22a019c27281f}{%
+           family={Hook},
+           familyi={H\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bbd3b0e76ef2a9bf5cc97916caa62a5e}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=626cce7da7a79526124c873848748fa8}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi Y.},
+           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=3df18e7a75df8715648ab0adfa03ad3c}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=97bbafd46e3e5fea4df119edc1f40617}{%
+           family={Nunes},
+           familyi={N\bibinitperiod},
+           given={N.\bibnamedelimi J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=31bbf4f75057060b97f35e119601bc79}{%
+           family={Pain},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=977c5a06e527af5e996fae582e0d3137}{%
+           family={Pennypacker},
+           familyi={P\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=8c43bc8c2e25f0ca8fd6e142a9754265}{%
+           family={Quimby},
+           familyi={Q\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ca3777f4da5ded00a550468d3cf5d03f}{%
+           family={Lidman},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c912c05fa246fc10f74e88ad1757b468}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=6118e459e9f7020a57477a6ef3b923df}{%
+           family={Irwin},
+           familyi={I\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9650e951439a5f389bc426519a825018}{%
+           family={McMahon},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=43ef0ab59dd4199f0bba17ce20d5038d}{%
+           family={Ruiz-Lapuente},
+           familyi={R\bibinithyphendelim L\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e630ab58f139ddf1c09d096586942cbf}{%
+           family={Walton},
+           familyi={W\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=596d5ab7cb5406df3d93c3e1d3a3218a}{%
+           family={Schaefer},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4badc3d044ffb6316e02e7a21790150c}{%
+           family={Boyle},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2998af531829b595cf52e1457f4cd626}{%
+           family={Filippenko},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=266d4dc62963a3238bc760add85aed09}{%
+           family={Matheson},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bd3f32d8ab406c24fca285f97cb99c8c}{%
+           family={Fruchter},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9255c7ba5c834beb448c3b80cc72f1e8}{%
+           family={Panagia},
+           familyi={P\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8c67dc695c3f20996567cc986f5b50e8}{%
+           family={Newberg},
+           familyi={N\bibinitperiod},
+           given={H.\bibnamedelimi J.\bibnamedelimi M.},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=dd366afa58011d9cf3f3d8d118ef3a09}{%
+           family={Couch},
+           familyi={C\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7ccfd6fc6c39f87ad49f8de6f3ef6ef2}{%
+           family={Project},
+           familyi={P\bibinitperiod},
+           given={The\bibnamedelimb Supernova\bibnamedelima Cosmology},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{13c08f4b314bde9107bf949ed56bf418}
+      \strng{fullhash}{cabca62cff35a86cda57a055c439b264}
+      \strng{bibnamehash}{13c08f4b314bde9107bf949ed56bf418}
+      \strng{authorbibnamehash}{13c08f4b314bde9107bf949ed56bf418}
+      \strng{authornamehash}{13c08f4b314bde9107bf949ed56bf418}
+      \strng{authorfullhash}{cabca62cff35a86cda57a055c439b264}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{6}
+      \field{number}{2}
+      \field{title}{Measurements of $\Omega$ and $\Lambda$ from 42 High-Redshift Supernovae}
+      \field{volume}{517}
+      \field{year}{1999}
+      \field{pages}{565}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/307221
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1086/307221
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1086/307221
       \endverb
     \endentry
     \entry{dodelson2020modern}{book}{}
@@ -3688,35 +3981,6 @@
       \verb https://link.aps.org/doi/10.1103/RevModPhys.61.1
       \endverb
     \endentry
-    \entry{DES2024}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=2ce9b43a31215330f2ed70f24e152968}{%
-           family={Faga},
-           familyi={F\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod}}}%
-      }
-      \strng{namehash}{b13adee0e3161a725a57c67a33e309bc}
-      \strng{fullhash}{b13adee0e3161a725a57c67a33e309bc}
-      \strng{bibnamehash}{b13adee0e3161a725a57c67a33e309bc}
-      \strng{authorbibnamehash}{b13adee0e3161a725a57c67a33e309bc}
-      \strng{authornamehash}{b13adee0e3161a725a57c67a33e309bc}
-      \strng{authorfullhash}{b13adee0e3161a725a57c67a33e309bc}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{astro-ph.CO}
-      \field{eprinttype}{arXiv}
-      \field{month}{6}
-      \field{title}{{Dark Energy Survey Year 3 Results: Cosmology from galaxy clustering and galaxy-galaxy lensing in harmonic space}}
-      \field{year}{2024}
-      \verb{eprint}
-      \verb 2406.12675
-      \endverb
-    \endentry
     \entry{DE_models}{article}{}
       \name{author}{5}{}{%
         {{hash=e95b27fdd0a58e808199ecd738d62061}{%
@@ -3769,6 +4033,35 @@
       \endverb
       \verb{eprint}
       \verb 2104.04642
+      \endverb
+    \endentry
+    \entry{DESI2024}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=ca082b326efdd4113e0acc1da37a642e}{%
+           family={Adame},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{fullhash}{6ae726e9116228760c7b4fada5324608}
+      \strng{bibnamehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{authorbibnamehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{authornamehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{authorfullhash}{6ae726e9116228760c7b4fada5324608}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{title}{{DESI 2024 VI: Cosmological Constraints from the Measurements of Baryon Acoustic Oscillations}}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2404.03002
       \endverb
     \endentry
     \entry{schutz2009first}{book}{}
@@ -4782,6 +5075,40 @@
       \verb astro-ph/0409513
       \endverb
       \keyw{Cosmology: Cosmic Microwave Background,Cosmology: Observations,Methods: Statistical}
+    \endentry
+    \entry{Riess2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dd9b3522f940507843f84f4b732f36a4}{%
+           family={Riess},
+           familyi={R\bibinitperiod},
+           given={Adam\bibnamedelimb G.\bibnamedelimi et\bibnamedelima al.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{fullhash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{bibnamehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{authorbibnamehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{authornamehash}{dd9b3522f940507843f84f4b732f36a4}
+      \strng{authorfullhash}{dd9b3522f940507843f84f4b732f36a4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Astrophys. J. Lett.}
+      \field{number}{1}
+      \field{title}{{A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km s$^{-1}$ Mpc$^{-1}$ Uncertainty from the Hubble Space Telescope and the SH0ES Team}}
+      \field{volume}{934}
+      \field{year}{2022}
+      \field{pages}{L7}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/2041-8213/ac5c5b
+      \endverb
+      \verb{eprint}
+      \verb 2112.04510
+      \endverb
     \endentry
     \entry{systematics2023}{article}{}
       \field{sortinit}{6}
